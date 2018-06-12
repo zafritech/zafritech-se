@@ -1,0 +1,30 @@
+<style>
+    .btn-fixed-width-100 {
+        width: 100px !important;
+        border-radius: 2px;
+    }    
+</style>
+   
+<form id="createItem" action="/api/integration/interface/create" method="post">
+
+    <input type="hidden" name="interfaceId" id="interfaceId" value="" />
+
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="form-group">
+                <label for="issueTitle">Interface Issue Title:</label>
+                <input class="form-control" type="text" id="issueTitle" name="issueTitle" />
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="form-group">
+                <label for="summernote">Interface Issue Description:</label>
+                <div id="summernote" class="summernote"></div>
+            </div>
+        </div>
+    </div>
+
+</form>

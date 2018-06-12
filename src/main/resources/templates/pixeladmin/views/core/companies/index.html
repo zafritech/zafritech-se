@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4"
+      layout:decorator="pixeladmin/layouts/main-default">
+
+    <head>
+        <title>Zafritech SE - Companies</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="UTF-8" />
+    </head>
+
+    <body>
+
+        <!-- Content -->
+        <div layout:fragment="content" class="px-content">
+
+            <div class="page-header">
+                <h1 id="pagetitle">Zafritech SE - Companies</h1>
+            </div>
+
+            <div class="row" style="margin-top:20px;">
+                <div class="col-md-12 font-size-14">
+                   
+                    <div class="panel panel-info panel-dark">
+                        <div class="panel-heading">
+                            <span class="panel-title"><i class="panel-title-icon fa fa-bar-chart"></i>Registered Companies</span>
+                        </div>
+                        <div class="panel-body">
+                            
+                            <div th:if="${!companies.isEmpty()}">
+                                <div th:each="company : ${companies}" class="row" style="margin-bottom: 10px;">
+                                    <div class="col-md-8">
+                                        <a th:href="'/companies/' + ${company.UuId}"><span th:text="${company.companyName}"></span></a>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <a th:href="'/companies/' + ${company.UuId}"><span th:text="${company.companyCode}"></span></a>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <span class="pull-right"><i class="panel-title-icon fa fa-unlock-alt text-primary"></i></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            
+        </div>
+
+    </body>
+</html>

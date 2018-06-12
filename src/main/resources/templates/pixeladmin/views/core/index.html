@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4"
+      layout:decorator="pixeladmin/layouts/main-default">
+
+    <head>
+        <title>Zafritech SE - Home</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="UTF-8" />
+    </head>
+
+    <body>
+
+        <!-- Content -->
+        <div layout:fragment="content" class="px-content">
+
+            <div class="page-header">
+                <h1 id="pagetitle">Zafritech SE - Home</h1>
+            </div>
+
+            <div class="row" style="margin-top:100px;">
+
+                <div class="col-md-6 col-md-offset-3">
+                    <!-- Panel -->
+                    <div class="panel panel-info panel-dark">
+                        <div class="panel-heading">
+                            <span class="panel-title"><i class="panel-title-icon fa fa-bar-chart"></i>Registeredd Projects</span>
+                        </div>
+                        <div class="panel-body">
+
+                            <div th:if="${!projects.isEmpty()}">
+                                <div th:each="project : ${projects}" class="row" style="margin-bottom: 10px;">
+                                    <div class="col-md-6">
+                                        <a th:href="'/projects/' + ${project.UuId}"><span th:text="${project.projectName}"></span></a>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <a th:href="'/projects/' + ${project.UuId}"><span th:text="${project.projectCode}"></span></a>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <span class="pull-right"><i class="panel-title-icon fa fa-unlock-alt text-primary"></i></span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div th:if="${projects.isEmpty()}" class="text-center">
+                                <p class="text-danger">Your are not registered for any projects in this application. Please contact your system administrator.</p>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            
+        </div>
+
+    </body>
+</html>

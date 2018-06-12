@@ -1,0 +1,6066 @@
+[
+ {
+   "term": "AADL",
+   "definition": "Architecture Analysis and Design Language",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "AAS",
+   "definition": "Advanced Automation System",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "ABD",
+   "definition": "Architecture Block Diagram",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "ACM",
+   "definition": "Association for Computing Machinery",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "ACS",
+   "definition": "Automated Case Support",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "ADM",
+   "definition": "Architecture Development Method",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "AECL",
+   "definition": "Atomic Energy of Canada",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "AF",
+   "definition": "Architecture Framework",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "AF CSE",
+   "definition": "Air Force Center for Systems Engineering (USA)",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "AFI",
+   "definition": "Air Force Instruction (USA)",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "AFIT",
+   "definition": "Air Force Institute of Technology (USA)",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "AFRI",
+   "definition": "Air Force Research Lab (USA)",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "AHP",
+   "definition": "Analytical Hierarchy Process",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "AIA",
+   "definition": "Aerospace Industries Association",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "AIAA",
+   "definition": "American Institute of Aeronautics and Astronautics (USA)",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "AIT",
+   "definition": "Analysis and Integration Team",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "AIT",
+   "definition": "Assembling, Integrating, and Testing",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "ALT",
+   "definition": "Accelerated Life Testing",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "ANSI",
+   "definition": "American National Standards Institute",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "AP-233",
+   "definition": "Application Protocol for Systems Engineering Data Exchange",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "API",
+   "definition": "Application Program Interface",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "APPEL",
+   "definition": "Academy Program/Project & Engineering Leadership",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "ASAECP",
+   "definition": "Aerospace Systems Architecting and Engineering Certificate Program",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "ASHE",
+   "definition": "American Society of Hospital Engineering",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "ASME",
+   "definition": "American Society of Mechanical Engineers",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "ASQ",
+   "definition": "American Society for Quality",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "ASTM",
+   "definition": "American Society for Testing & Materials",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "AT&L",
+   "definition": "Acquisition, Technology, and Logistics (US DoD)",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "ATAM",
+   "definition": "Architecture Trademark Analysis Method",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "ATC",
+   "definition": "Air Traffic Control",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "B2B",
+   "definition": "Business to Business",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "B2C",
+   "definition": "Business to Consumer",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "B2G",
+   "definition": "Business to Government",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "BCRM",
+   "definition": "Business Capability Road Map",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "BDD",
+   "definition": "Block Definition Diagram",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "BIT",
+   "definition": "Built-in Test",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "BKCASE",
+   "definition": "Body of Knowledge and Curriculum to Advance Systems Engineering",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "BOK",
+   "definition": "Body of Knowledge",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "BPM",
+   "definition": "Business Process Modeling",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "BPM",
+   "definition": "Business Process Management",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "BPMN",
+   "definition": "Business Process Modeling Notation",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "BSI",
+   "definition": "British Standards Institution",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "BSS",
+   "definition": "Business Support System",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "C&A",
+   "definition": "Certification and Accreditation",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "C2",
+   "definition": "Command and Control",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "C4ISR",
+   "definition": "Command, Control, Communications, Intelligence, Information, Surveillance, and Reconnaissance",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "CAA",
+   "definition": "Certification and Accreditation",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "CAS",
+   "definition": "Complex Adaptive System",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "CAS",
+   "definition": "Collision Avoidance System",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "CASE",
+   "definition": "Complex Adaptive Systems Engineering",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "CBK",
+   "definition": "Common Body of Knowledge",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "CCB",
+   "definition": "Change Control Board",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "CCR",
+   "definition": "Configuration Change Requirement",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "CDF",
+   "definition": "Cumulative Distribution Function",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "CDR",
+   "definition": "Critical Design Review",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "CDRL",
+   "definition": "Contractor Data Requirements List",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "CE",
+   "definition": "Compromising Emission",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "CI",
+   "definition": "Continuous Improvement",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "CIMOSA",
+   "definition": "Computer Integrated Manufacturing Open System Architecture",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "CIO",
+   "definition": "Chief Information Officer",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "CISSP",
+   "definition": "Certified Information Systems Security Professional",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "CM",
+   "definition": "Configuration Management",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "CMM",
+   "definition": "Capability Maturity Model",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "CMMI",
+   "definition": "Capability Maturity Model Integration",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "CO",
+   "definition": "Contract Officer",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "COCOMO",
+   "definition": "Constructive Cost Model",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "CONOPS",
+   "definition": "Concept of Operations",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "CorBoK",
+   "definition": "Core Body of Knowledge (see also GRCSE)",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "COSYSMO",
+   "definition": "Constructive Systems Engineering Cost Model",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "COTS",
+   "definition": "Commercial-off-the-Shelf",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "CPC",
+   "definition": "Corrosion Prevention and Control",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "CPI",
+   "definition": "Continuous Process Improvement",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "CRM",
+   "definition": "Customer Relationship Management",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "CSF",
+   "definition": "Critical Success Factor",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "CSI",
+   "definition": "Continuous Service Improvement",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "CST",
+   "definition": "Critical Systems Thinking",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "D/C IM",
+   "definition": "Design/Construction Interface Manual",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "DAU",
+   "definition": "Defense Acquisition University (USA)",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "DCR",
+   "definition": "Design Certification Review",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "DFD",
+   "definition": "Data Flow Diagram",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "DFX",
+   "definition": "Design for ?X?",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "DHS",
+   "definition": "Department of Homeland Security (USA)",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "DIA",
+   "definition": "Denver International Airport",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "DIS",
+   "definition": "Distributed Interactive Simulation",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "DLA",
+   "definition": "Defense Logistics Agency",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "DMADV",
+   "definition": "Define, Measure, Analyze, Design, Verify",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "DMAIC",
+   "definition": "Define, Measure, Analyze, Improve, Control",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "DMSMS",
+   "definition": "Diminishing Manufacturing Sources and Material Shortages",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "DNA",
+   "definition": "Deoxyribonucleic Acid",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "DoD",
+   "definition": "Department of Defense (DoD)",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "DoDAF",
+   "definition": "Department of Defense Architecture Framework (USA)",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "DoDD",
+   "definition": "Department of Defense Directive (USA)",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "DoDI",
+   "definition": "Department of Defense Instruction (USA)",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "DoJ",
+   "definition": "Department of Justice (USA)",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "DoT",
+   "definition": "Department of Transporation (USA)",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "DSM",
+   "definition": "Design Structure Matrix",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "DTC",
+   "definition": "Design to Cost",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "E&M",
+   "definition": "Electrical and Machinery",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "EA",
+   "definition": "Enterprise Architecture",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "EC",
+   "definition": "European Commission",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "ECP",
+   "definition": "Engineering Change Proposal",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "ECHA",
+   "definition": "European Chemicals Agency",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "ECP",
+   "definition": "Engineering Change Proposal",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "ECR",
+   "definition": "Engineering Change Request",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "EDP",
+   "definition": "Evaluation and Discussion Point",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "EE&A",
+   "definition": "Enterprise Evaluation and Assessment",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "EESH",
+   "definition": "Energy, Environmental, Safety and Health Management",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "eFFBD",
+   "definition": "Enhanced Functional Flow Block Diagram",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "EIS",
+   "definition": "Environmental Impact Statement",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "EISA",
+   "definition": "Energy Independence and Security Act of 2007 (USA)",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "EM",
+   "definition": "Enterprise Modeling",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "EMC",
+   "definition": "Electromagnetic Capability",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "EMI",
+   "definition": "Electromagnetic Interference",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "EMP",
+   "definition": "Electromagnetic Pulse",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "EPA",
+   "definition": "Environmental Protection Agency (USA)",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "ERB",
+   "definition": "Engineering Review Board",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "ERP",
+   "definition": "Enterprise Resource Planning",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "ES",
+   "definition": "Engineered System",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "ESE",
+   "definition": "Enterprise Systems Engineering",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "e-TOM",
+   "definition": "Enhanced-Telecomm Operations Map",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "F3I",
+   "definition": "Form, Fit, Function, and Interface",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "FAA",
+   "definition": "Federal Aviation Administration (USA)",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "FAST",
+   "definition": "Function Analysis System Technique",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "FBI",
+   "definition": "Federal Bureau of Investigation (USA)",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "FCC",
+   "definition": "Federal Communications Commission (USA)",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "FDA",
+   "definition": "Food and Drug Administration (USA)",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "FDIR",
+   "definition": "Failure Detection, Identification, and Recovery",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "FEAF",
+   "definition": "Federal Enterprise Architecture Framework (USA)",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "FEEP",
+   "definition": "Foreign Excess Personal Property",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "FFBD",
+   "definition": "Functional Flow Block Diagram",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "FMEA",
+   "definition": "Failure Modes and Effects Analysis",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "FMECA",
+   "definition": "Failure Modes, Effects, and Criticality Analysis",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "FONSI",
+   "definition": "Finding of No Significant Impact",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "FoS",
+   "definition": "Federation of Systems",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "FPMR",
+   "definition": "Federal Property Management Regulation",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "FRACA",
+   "definition": "Failure Reporting and Corrective Actions",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "FRACAS",
+   "definition": "Failure Reporting and Corrective Action System",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "FRP",
+   "definition": "Full-Rate Production",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "FUML",
+   "definition": "Foundational Subset for Executable UML Models",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "G2B",
+   "definition": "Government to Business",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "G2C",
+   "definition": "Government to Consumer",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "G2G",
+   "definition": "Government to Government",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "GAO",
+   "definition": "Government Accountability Office (USA)",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "GDP",
+   "definition": "Gross Domestic Product",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "GERAM",
+   "definition": "Generalize Enterprise Reference Architecture and Methodology",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "GIGO",
+   "definition": "Garbage In Garbage Out",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "GOTS",
+   "definition": "Government-off-the-Shelf",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "GPS",
+   "definition": "Global Positioning System",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "GQM",
+   "definition": "Goal-Question-Metric",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "GRCSE",
+   "definition": "Graduate Reference Curriculum for Systems Engineering",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "GST",
+   "definition": "General System Theory",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "HAZMAT",
+   "definition": "Hazardous Materials",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "HCI",
+   "definition": "Human-Computer Interaction",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "HEMP",
+   "definition": "High-altitude Electromagnetic Pulse",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "HLA",
+   "definition": "High-Level Architecture",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "HMI",
+   "definition": "Human-Machine Interface",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "HNA",
+   "definition": "Host Nation Approval",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "HNC",
+   "definition": "Host Nation Coordination",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "HRO",
+   "definition": "High Reliability Organization",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "HSI",
+   "definition": "Human Systems Integration",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "HST",
+   "definition": "Hubble Space Telescope",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "HWCI",
+   "definition": "Hardware Configuration Item",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "HWIL",
+   "definition": "Hardware in the Loop",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "IBD",
+   "definition": "Internal Block Diagram",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "IBM",
+   "definition": "International Business Machines",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "ICM",
+   "definition": "Incremental Commitment Model",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "ICSM",
+   "definition": "Incremental Commitment Spiral Model",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "ICT",
+   "definition": "Information and Communications Technology",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "IDEF0",
+   "definition": "Integration Definition for Functional Modeling",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "IE",
+   "definition": "Industrial Engineering",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "IEC",
+   "definition": "International Electrotechnical Commission",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "IEEE",
+   "definition": "Institute of Electrical and Electronics Engineers",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "IETF",
+   "definition": "Internet Engineering Task Force",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "IFSR",
+   "definition": "International Federation for Systems Research",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "IID",
+   "definition": "Incremental and Iterative Development",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "ILS",
+   "definition": "Integrated Logistics Support",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "IM",
+   "definition": "Information Management",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "IMS",
+   "definition": "Integrated Master Schedule",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "INCOSE",
+   "definition": "International Council on Systems Engineering",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "IOC",
+   "definition": "Initial Operating Capability",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "IP",
+   "definition": "Internet Protocol",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "IP",
+   "definition": "Intellectual Property",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "IPDP",
+   "definition": "Integrated Product Development Process",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "IPDT",
+   "definition": "Integrated Product Development Team",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "IPR",
+   "definition": "In-Progress Review",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "IPS",
+   "definition": "Integrated Product Support",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "IPT",
+   "definition": "Integrated Product Team",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "IPV6",
+   "definition": "Internet Protocol Version 6",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "IRAC",
+   "definition": "Interdepartment Radio Advisory Committee",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "IRL",
+   "definition": "Integration Readiness Level",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "ISDT",
+   "definition": "Integrated Service Development Team",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "ISO",
+   "definition": "International Organization for Standardization",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "ISOC",
+   "definition": "Internet Society",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "ISP",
+   "definition": "Internet Service Provider",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "ISSS",
+   "definition": "International System Safety Society",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "ISSS",
+   "definition": "International Society for the Systems Sciences",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "ISSS",
+   "definition": "Initial Sector Suit System",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "IT",
+   "definition": "Information Technology",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "ITIL",
+   "definition": "Information Technology Infrastructure Library",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "ITS",
+   "definition": "Intelligent Transportation System",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "ITS-ETO",
+   "definition": "Intelligent Transport System-Emergency Transportation Operation",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "ITSM",
+   "definition": "Information Technology Services Management",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "ITU",
+   "definition": "International Telecommunications Union",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "KA",
+   "definition": "Knowledge Area",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "KPI",
+   "definition": "Key Performance Indicator",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "KPP",
+   "definition": "Key Performance Parameter",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "KSAA",
+   "definition": "Knowledge, Skills, Abilities, and Attitudes",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "LCC",
+   "definition": "Life Cycle Cost",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "LCM",
+   "definition": "Life Cycle Management",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "LEfSE",
+   "definition": "Lean Enablers for Systems Engineering",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "LORA",
+   "definition": "Level of Repair Analysis",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "LRU",
+   "definition": "Line Replaceable Unit",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "LSE",
+   "definition": "Lean Systems Engineering",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "LSE",
+   "definition": "Lead Systems Engineer",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "LSE WG",
+   "definition": "Lean Systems Engineering Working Group (INCOSE)",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "MA",
+   "definition": "Mission Analysis",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "MARTE",
+   "definition": "Modeling and Analysis for Real-Time and Embedded Systems",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "MBE",
+   "definition": "Model-Based Engineering",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "MBRA",
+   "definition": "Model-Based Risk Analysis",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "MBSE",
+   "definition": "Model-Based Systems Engineering",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "MCDA",
+   "definition": "Multi-Criteria Decision Analysis",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "MDA�",
+   "definition": "Model-Driven Architecture",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "MIT",
+   "definition": "Massachusetts Institute of Technology",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "MOD",
+   "definition": "Ministry of Defence",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "MODAF",
+   "definition": "Ministry of Defence Architecture Framework (UK)",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "MOE",
+   "definition": "Measure of Effectiveness",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "MOP",
+   "definition": "Measure of Performance",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "MOS",
+   "definition": "Mean Opinion Score",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "MOSES",
+   "definition": "Model Oriented Systems Engineering",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "MPT",
+   "definition": "Methods, Processes, and Tools",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "MPT",
+   "definition": "Methodologies, Processes, and Technologies",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "MRAR",
+   "definition": "Mishap Risk Assessment Report",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "MRL",
+   "definition": "Manufacturing Readiness Level",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "MRM",
+   "definition": "Manufacturing Resource Management",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "MS",
+   "definition": "Meta-System",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "MSA",
+   "definition": "Measurement System Analysis",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "MSRB",
+   "definition": "Management Safety Review Board",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "MSTI",
+   "definition": "Miniature Seeker Technology Integration",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "MTBF",
+   "definition": "Mean Time Between Failures",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "MTTR",
+   "definition": "Mean Time to Repair",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "NAHB",
+   "definition": "National Association of Home Builders",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "NAO",
+   "definition": "National Audit Office (UK)",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "NASA",
+   "definition": "National Aeronautics and Space Administration (USA)",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "NATO",
+   "definition": "North Atlantic Treaty Organization",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "NDI",
+   "definition": "Non-Developmental Item",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "NDIA",
+   "definition": "National Defense Industrial Association (NDIA)",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "NEPA",
+   "definition": "National Environmental Policy Act",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "NERC",
+   "definition": "North American Electric Reliability Corporation",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "NETMA",
+   "definition": "NATO Eurofighter and Tornado Management Agency",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "NIST",
+   "definition": "National Institute of Standards and Technology (USA)",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "NLP",
+   "definition": "Neuro-Linguistic Programming",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "NOAA",
+   "definition": "National Oceanographic and Atmospheric Agency",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "NPD",
+   "definition": "New Product Development",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "NPDP",
+   "definition": "New Product Development Process",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "NSA",
+   "definition": "National Security Agency",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "NSD",
+   "definition": "New service Development",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "NSOI",
+   "definition": "Narrower System-of-Interest",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "NSPE",
+   "definition": "National Society of Professional Engineers",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "NSTISSI",
+   "definition": "National Security Telecommunications Information Systems Security Issuance",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "NTIA",
+   "definition": "National Telecommunications and Information Administration (USA)",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "O&S",
+   "definition": "Operations and Support",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "OAM&P",
+   "definition": "Operations, Administration, Management, and provisioning",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "OCR",
+   "definition": "Operations Commitment Review",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "OECD",
+   "definition": "Organization for Economic Co-Operative Development",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "OEM",
+   "definition": "Original Equipment Manufacturer",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "OGC",
+   "definition": "Office of Government Commerce (UK)",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "OITL",
+   "definition": "Operator in the Loop",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "OMC",
+   "definition": "Operation/Maintenance/Closeout",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "OMG",
+   "definition": "Object Management Group",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "OODA",
+   "definition": "Observe, Orient, Decide, and Act",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "OPD",
+   "definition": "Object Process Diagram",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "OPL",
+   "definition": "Object Process Language",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "OPM",
+   "definition": "Object Process Methodology",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "OR",
+   "definition": "Operations Research",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "ORMS",
+   "definition": "Operations Research and Management Science",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "OSAT",
+   "definition": "On-site Acceptance Test",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "OSD",
+   "definition": "Office of the Secretary of Defense (USA)",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "OSHA",
+   "definition": "Occupational Safety and Health Administration (USA)",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "OSM",
+   "definition": "Office of Spectrum Management",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "OSS",
+   "definition": "Operations Support Systems",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "OT&E",
+   "definition": "Operational Test and Evaluation",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "OTP",
+   "definition": "Operations Technical Plan",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "OWL",
+   "definition": "Web Ontology Language",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "P&L",
+   "definition": "Profit and Loss",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "P3I",
+   "definition": "Pre-Planned Production Improvement",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "PaaS",
+   "definition": "Platform as a System",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "PAPL",
+   "definition": "Program/Project Approved Parts List",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "PBD",
+   "definition": "Physical Block Diagram",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "PBSE",
+   "definition": "Pattern-Based Systems Engineering",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "P-CMM",
+   "definition": "People Capability Maturity Mode",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "PD",
+   "definition": "Product Development",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "PDCA",
+   "definition": "Plan, Do, Check, Act",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "PDF",
+   "definition": "Portable Document Format",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "PDR",
+   "definition": "Preliminary Design Review",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "PERA",
+   "definition": "Purdue Enterprise Reference Architecture",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "PESTEL",
+   "definition": "Political, Economic, Social, Technological, Environmental, and Legal",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "PEVQ",
+   "definition": "Perceptual Evaluation of Video Quality",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "PfM",
+   "definition": "Portfolio Management",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "PFR",
+   "definition": "Problem Failure Report",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "PHS&T",
+   "definition": "Packaging, Handling, Storage, and Transportation",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "PM",
+   "definition": "Project Management",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "PM",
+   "definition": "Project Manager",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "PMBOK?",
+   "definition": "Project Management Body of Knowledge",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "PM/FI",
+   "definition": "Performance Monitoring/Fault Location",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "PMI",
+   "definition": "Project Management Institute",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "PMP",
+   "definition": "Project Management Professionals",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "PMP",
+   "definition": "Project Management Plan",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "PMO",
+   "definition": "Project Management Office",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "PMP",
+   "definition": "Parts, Materials, and Processes",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "PMPCB",
+   "definition": "PMP Control Board",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "POET",
+   "definition": "Political, Operational, Economic, and Technical",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "POM",
+   "definition": "Proof of Manufacture",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "PQMI",
+   "definition": "Process Quality Management and Improvement",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "PQT",
+   "definition": "Production Qualification Testing",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "PRR",
+   "definition": "Production Readiness Review",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "PSE",
+   "definition": "Product Systems Engineering",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "PSM",
+   "definition": "Practical Software and Systems Measurement",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "PSQM",
+   "definition": "Perceptual Speech Quality Measure",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "PSS",
+   "definition": "Product-Service System",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "",
+   "definition": "Problem Solution System",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "PT",
+   "definition": "Product Team",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "PUB",
+   "definition": "Public Utilities Board (Singapore)",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "QAS",
+   "definition": "Quality Assurance System",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "QFD",
+   "definition": "Quality Function Deployment",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "QoE",
+   "definition": "Quality of Experience",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "QoS",
+   "definition": "Quality of Service",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "QVT",
+   "definition": "Query View Transformations",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "R&D",
+   "definition": "Research and Development",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "R&M",
+   "definition": "Reliability and Maintainability",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "RAA",
+   "definition": "Responsibility, Authority, and Accountability",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "RACI",
+   "definition": "Responsible, Accountable, Consulted, Informed",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "RAM",
+   "definition": "Reliability, Availability, and Maintainability",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "RAMS",
+   "definition": "Reliability, Availability, Maintainability, and Safety",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "RAMSS",
+   "definition": "Reliability, Availability, Maintainability, Safety, and Security",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "RARA",
+   "definition": "Roles, Authorities, Responsibilities, and Accountabilities",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "RB",
+   "definition": "Radio-communication Bureau",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "RBD",
+   "definition": "Reliability Block Diagram",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "RCM",
+   "definition": "Reliability Centered Maintenance",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "RCRA",
+   "definition": "Resource Conservation and Recovery Act (USA)",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "RDF",
+   "definition": "Resource Description Framework",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "REA",
+   "definition": "Responsible Engineering Authority",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "REACH",
+   "definition": "Registration, Evaluation, Authorization, and Restriction of Chemicals",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "REP",
+   "definition": "Risk Element Plan",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "ReqIF",
+   "definition": "Requirements Interchange Format",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "RF",
+   "definition": "Radio Frequency",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "RFP",
+   "definition": "Request For Proposal",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "RHP",
+   "definition": "Risk Handling Plan",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "RMP",
+   "definition": "Risk Management Plan",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "RMT",
+   "definition": "Reliability, Maintenance, and Testability",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "RoHS",
+   "definition": "Restriction on Hazardous Substances (USA)",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "ROI",
+   "definition": "Return on Investment",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "ROSE",
+   "definition": "Risk-Oriented Systems Engineering",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "RR",
+   "definition": "Radio Regulations",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "RRB",
+   "definition": "Radio Regulations Board",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "RSG",
+   "definition": "Radio-communication Study Groups",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "RUP",
+   "definition": "Rational Unified Process",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "SaaS",
+   "definition": "Software as a Service",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "SADT",
+   "definition": "Structured Analysis Design Technique",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "SAE",
+   "definition": "Society of Automotive Engineers",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "SAE",
+   "definition": "Society of Automotive Engineers",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "SART",
+   "definition": "System Analysis & Real Time",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "SBA",
+   "definition": "Service-Based Application",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "SBS",
+   "definition": "System Breakdown Structure",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "SCM",
+   "definition": "Software Configuration Management",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "ScSE",
+   "definition": "Service-Centric Systems Engineering",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "SD",
+   "definition": "Systems Dynamics",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "SDO",
+   "definition": "Standards Development Organization",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "SDLC",
+   "definition": "Service Development Life Cycle",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "SDP",
+   "definition": "Service Design Process",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "SE",
+   "definition": "Systems Engineering",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "SEAC",
+   "definition": "Systems Engineering Assessment and Control",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "SEBoK",
+   "definition": "Systems Engineering Body of Knowledge",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "SeCSE",
+   "definition": "Service Centric Systems Engineering",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "SEI",
+   "definition": "Software Engineering Institute",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "SEIT",
+   "definition": "Systems Engineering and Integration Team",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "SEM",
+   "definition": "Systems Engineering Management",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "SEMP",
+   "definition": "Systems Engineering Management Plan",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "SEP",
+   "definition": "Systems Engineering Plan",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "SFR",
+   "definition": "System Functional Review",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "SGIP",
+   "definition": "Smart Grid Interoperability Panel",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "SIS",
+   "definition": "Software-Intensive System",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "SKLTS",
+   "definition": "Standard Korean Light Transit System",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "SLA",
+   "definition": "Service Level Agreement",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "SLDC",
+   "definition": "Services Development Life Cycle",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "SLE",
+   "definition": "Service Life Extension",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "SLEP",
+   "definition": "Service Life Extension Program",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "SLM",
+   "definition": "Service Level Management",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "SLOC",
+   "definition": "Source Lines of Code",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "SLR",
+   "definition": "Service Level Requirement",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "SMC",
+   "definition": "Systems, Man, and Cybernetics",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "SOA",
+   "definition": "Service Oriented Architecture",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "SOAD",
+   "definition": "Service Oriented Analysis and Design/Decision Modeling",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "SoI",
+   "definition": "System-of-Interest",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "SOMA",
+   "definition": "Service Oriented Modeling and Architectures",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "SOLE",
+   "definition": "Society of Logistics Engineers",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "SOMA",
+   "definition": "Service Oriented Modeling and Architecture",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "SOO",
+   "definition": "Statement of Objectives",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "SOP",
+   "definition": "Service Operations Plan",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "SoS",
+   "definition": "System of Systems",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "SoSE",
+   "definition": "System of Systems Engineering",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "SOSM",
+   "definition": "Systems of Systems Methodology",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "SOW",
+   "definition": "Statement of Work",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "SPAC",
+   "definition": "Spectrum Planning and Policy Advisory Committee",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "SPC",
+   "definition": "Statistical Process Control",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "SPM",
+   "definition": "Service Performance Measure",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "SRA",
+   "definition": "Strategic Rail Authority (UK)",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "SRD",
+   "definition": "Service Requirements Document",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "SRL",
+   "definition": "System Readiness Level",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "SRR",
+   "definition": "System Requirements Review",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "SSDP",
+   "definition": "Service Systems Development Process",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "SSE",
+   "definition": "Service Systems Engineering",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "SSE",
+   "definition": "Security Systems Engineering",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "SSEMP",
+   "definition": "System Security Engineering Management Plan",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "SSM",
+   "definition": "Soft Systems Methodology",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "SSME",
+   "definition": "Service System Management and Engineering",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "SSP",
+   "definition": "Source Selection Plan",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "SSP",
+   "definition": "System Security Plan",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "SSPP",
+   "definition": "System Safety Program Plan",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "SSS",
+   "definition": "Service Support Systems",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "STAMP",
+   "definition": "System-Theoretic Accident Model and Processes",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "STEEPLED",
+   "definition": "Social, Technical, Economic, Environmental, Political, Legal, Ethical and Demographic",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "STI",
+   "definition": "Science, Technology, and Industry Forum",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "STP",
+   "definition": "Strategic Technical Planning",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "SVR",
+   "definition": "System Verification Review",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "SWCI",
+   "definition": "Software Configuration Item",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "SwE",
+   "definition": "Software Engineering",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "SWEBOK",
+   "definition": "Software Engineering Body of Knowledge",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "SWG",
+   "definition": "Safety Working Group",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "SWIL",
+   "definition": "Software in the Loop",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "SWOT",
+   "definition": "Strengths, Weaknesses, Opportunities, and Threats Analysis",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "SwSE",
+   "definition": "Software Systems Engineering",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "SysML",
+   "definition": "Systems Modeling Language",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "TCSE",
+   "definition": "Telecommunication Systems Engineering",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "TM",
+   "definition": "Technical Management",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "TOC",
+   "definition": "Total Ownership Cost",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "TOGAF",
+   "definition": "The Open Group Architecture Framework",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "TOVE",
+   "definition": "Toronto Virtual Enterprise (Canada)",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "TPM",
+   "definition": "Technical Performance Measure",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "TPS",
+   "definition": "Toyota Production System",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "TQM",
+   "definition": "Total Quality Management",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "TRL",
+   "definition": "Technology Readiness Level",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "TRR",
+   "definition": "Technical Readiness Review",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "TSE",
+   "definition": "Traditional Systems Engineering",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "TSI",
+   "definition": "Total Systems Intervention",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "TSP",
+   "definition": "Technology and Standards Planning",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "UC",
+   "definition": "Use Case",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "UL",
+   "definition": "Underwriters Laboratory",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "UML",
+   "definition": "Unified Modeling Language",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "UN",
+   "definition": "United Nations",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "UPDM",
+   "definition": "Unified Profile for DoDAF and MODAF",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "USAF",
+   "definition": "United States Air Force",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "USB",
+   "definition": "Universal Serial Bus",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "V&V",
+   "definition": "Verification and Validation",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "VCF",
+   "definition": "Virtual Case File",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "VERAM",
+   "definition": "Virtual Enterprise Reference Architecture and Methodology",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "VHDL",
+   "definition": "VHSIC Hardware Description Language",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "VHSIC",
+   "definition": "Very-High-Speed Integration Circuit",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "VIN",
+   "definition": "Vehicle Identification Number",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "WBS",
+   "definition": "Work Breakdown Structure",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "WCML",
+   "definition": "West Coast Main Line (UK)",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "WCRM",
+   "definition": "West Coast Route Modernisation (UK)",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "WIP",
+   "definition": "Work in Progress",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "WRC",
+   "definition": "World Radio-communication Conference",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "WS",
+   "definition": "Web Services 2.0",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "WSOI",
+   "definition": "Wider System-of-Interest",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "WS-PBEL",
+   "definition": "Web Services Business Process Execution Language",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "WWII",
+   "definition": "World War II",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "WWW",
+   "definition": "World Wide Web",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "XMI",
+   "definition": "XML Metadata Interchange",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "XML",
+   "definition": "Extensible Markup Language",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "AA3 ",
+   "definition": "Agate Aux 3 (HESOP Controller)",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_Us"
+ },
+ {
+   "term": "AC ",
+   "definition": "Alternating Current",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_Us"
+ },
+ {
+   "term": "ACE ",
+   "definition": "Auxiliary Control Electronics",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "ACID ",
+   "definition": "Access Control & Intrusion Detection",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_Us"
+ },
+ {
+   "term": "ADA ",
+   "definition": "Arriyadh Development Authority",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "AFC ",
+   "definition": "Automatic Fare Collection",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_Us"
+ },
+ {
+   "term": "AFMC ",
+   "definition": "Automated Fare Management Center",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "AG ",
+   "definition": "Automatic Gate",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_Us"
+ },
+ {
+   "term": "AL ",
+   "definition": "Axle Lathe",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "ARM ",
+   "definition": "Advanced RISC Machines",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_Us"
+ },
+ {
+   "term": "ATC ",
+   "definition": "Automatic Train Control",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "ATP ",
+   "definition": "Automatic Train Protection",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_Us"
+ },
+ {
+   "term": "ATR ",
+   "definition": "Auxiliary Transformer",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "ATS ",
+   "definition": "Automatic Train Supervision",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_Us"
+ },
+ {
+   "term": "AxCO ",
+   "definition": "Axle Counter",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "BAT ",
+   "definition": "Battery",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_Us"
+ },
+ {
+   "term": "BCE ",
+   "definition": "Braking Control Electronic",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "BDCS ",
+   "definition": "Bogie Dimension Check Stand",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_Us"
+ },
+ {
+   "term": "BLS ",
+   "definition": "Blue Light Station (facility)",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "BRE ",
+   "definition": "Bearing Removal Equipment",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_Us"
+ },
+ {
+   "term": "BRIO ",
+   "definition": "Basir Remote Input Output Module",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "BTN ",
+   "definition": "Backbone Telecommunication Network",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_Us"
+ },
+ {
+   "term": "BTS ",
+   "definition": "Bay Transceiver Station",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "BTT ",
+   "definition": "Bogie Turntable",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_Us"
+ },
+ {
+   "term": "CB ",
+   "definition": "Medium Voltage Circuit Breaker ? Incoming",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "CBI ",
+   "definition": "Computer Based Interlocking",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_Us"
+ },
+ {
+   "term": "CBTC ",
+   "definition": "Communication Based Train Control",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "CC ",
+   "definition": "Carborne Controller",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_Us"
+ },
+ {
+   "term": "CCR ",
+   "definition": "Central Control Room (within the OCC)",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "CCTV ",
+   "definition": "Closed Circuit Television",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_Us"
+ },
+ {
+   "term": "CER ",
+   "definition": "Central Equipment Room",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "CER ",
+   "definition": "Communication Equipment Room",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_Us"
+ },
+ {
+   "term": "CHR ",
+   "definition": "Change Request",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "CIXL ",
+   "definition": "Central Interlocking",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_Us"
+ },
+ {
+   "term": "CIXL ",
+   "definition": "Interlocking Calculators",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "CJV ",
+   "definition": "Civil Work Joint venture within FAST consortium",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_Us"
+ },
+ {
+   "term": "CJV ",
+   "definition": "Construction Joint Venture",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "CN ",
+   "definition": "Change Notice",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_Us"
+ },
+ {
+   "term": "CNC ",
+   "definition": "Control Numerical Computer",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "COG ",
+   "definition": "Converter Group",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_Us"
+ },
+ {
+   "term": "CRS ",
+   "definition": "Comment Review Sheet",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "CRS ",
+   "definition": "Consist Ring Switch",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_Us"
+ },
+ {
+   "term": "CTN ",
+   "definition": "Cable transmission Network / Backbone transmission Network",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "CVS ",
+   "definition": "Static Converter",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_Us"
+ },
+ {
+   "term": "DaTS ",
+   "definition": "Damper Test Stand",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "DC ",
+   "definition": "Direct Current",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_Us"
+ },
+ {
+   "term": "DC ",
+   "definition": "Direct Current",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "DCS ",
+   "definition": "Data Communication System",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_Us"
+ },
+ {
+   "term": "DCU ",
+   "definition": "Door Control Unit",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "DDU ",
+   "definition": "Driver Display Unit",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_Us"
+ },
+ {
+   "term": "DEQ ",
+   "definition": "Depot Equipment SBS (Entity within TSY)",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "DGES ",
+   "definition": "Depot General Emergency Shutdown",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_Us"
+ },
+ {
+   "term": "DGES ",
+   "definition": "Depot General Emergency Shutdown (former name of ESD)",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "DJV ",
+   "definition": "Design Joint Venture within FAST",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_Us"
+ },
+ {
+   "term": "DMZ ",
+   "definition": "Dematerialized zone",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "DTS ",
+   "definition": "Detailed Technical Specification",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_Us"
+ },
+ {
+   "term": "DWG ",
+   "definition": "Drawing",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "E&L ",
+   "definition": "Escalators & Lifts",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_Us"
+ },
+ {
+   "term": "E&M ",
+   "definition": "Electrical Mechanical",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "ECO ",
+   "definition": "Emergency Cut-Off",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_Us"
+ },
+ {
+   "term": "ECO ",
+   "definition": "Emergency Cut-off (in UTO/ATPM mode area of Depot)",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "ECOL ",
+   "definition": "Emergency Cut-Off for Line",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_Us"
+ },
+ {
+   "term": "Ed ",
+   "definition": "Edition",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "EDPP ",
+   "definition": "Emergency Disruptor Passenger Platform",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_Us"
+ },
+ {
+   "term": "EDWP ",
+   "definition": "Emergency Disruptor Washing Plant",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "EEP ",
+   "definition": "Emergency Escape Point (at grade)",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_Us"
+ },
+ {
+   "term": "EES ",
+   "definition": "Emergency Exit Shaft",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "EMC ",
+   "definition": "Electro-Magnetic Compatibility",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_Us"
+ },
+ {
+   "term": "ENG ",
+   "definition": "The Engineer RAMPED",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "EP ",
+   "definition": "Electro-pneumatic",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_Us"
+ },
+ {
+   "term": "EPB ",
+   "definition": "Emergency Push Button",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "EPBBLS ",
+   "definition": "Emergency Push Button for the Blue Light Station",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_Us"
+ },
+ {
+   "term": "EPCO ",
+   "definition": "Emergency Power Cut-off (in Non UTO/ATPM mode area of Depot)",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "EQT ",
+   "definition": "Equipment",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_Us"
+ },
+ {
+   "term": "ESA ",
+   "definition": "Emergency Stopping Area",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "ESD ",
+   "definition": "Emergency Shutdown Depot",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_Us"
+ },
+ {
+   "term": "ESG ",
+   "definition": "Emergency Shutdown General",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "ESL ",
+   "definition": "Emergency Shutdown Line",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_Us"
+ },
+ {
+   "term": "ESP ",
+   "definition": "Emergency Stop Plunger (former name of TES, OTES and TESD)",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "ESZ + [N] ",
+   "definition": "Electrical Section Zone + [Number of the zone]",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_Us"
+ },
+ {
+   "term": "etc ",
+   "definition": "et cetera",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "ETS ",
+   "definition": "Emergency Tripping System",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_Us"
+ },
+ {
+   "term": "ETS ",
+   "definition": "Emergency Tripping System",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "EVAC ",
+   "definition": "Evacuation",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_Us"
+ },
+ {
+   "term": "EVR ",
+   "definition": "Event Recorder",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "FAST ",
+   "definition": "FCC, FREYSSINET Saudi, ALSTOM SAMSUNG, STRUKTON. FAST\nConsortium: It is the contractor of Riyadh Metro Package 3 Project.",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_Us"
+ },
+ {
+   "term": "FAST ",
+   "definition": "FAST Consortium which is a contactor of Riyadh Metro project Package 3 Line 4, 5 & 6",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "FAST ",
+   "definition": "Contractor of Package 3 (lines 4&6 and 5)",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_Us"
+ },
+ {
+   "term": "FAT ",
+   "definition": "Factory Acceptance Test",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "FEP ",
+   "definition": "Front-End-Processor",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_Us"
+ },
+ {
+   "term": "FPS ",
+   "definition": "Fire Protection System",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "GES ",
+   "definition": "General Emergency Shutdown (former name of ESG)",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_Us"
+ },
+ {
+   "term": "GPS ",
+   "definition": "Global Positioning System",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "GS ",
+   "definition": "Grid Station",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_Us"
+ },
+ {
+   "term": "GSM ",
+   "definition": "Global System for Mobile communication",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "HD-TVM ",
+   "definition": "Heavy Duty Ticket Vending Machine",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_Us"
+ },
+ {
+   "term": "HESOP ",
+   "definition": "Harmonic and Energy Saving Optimizer",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "HMI ",
+   "definition": "Human Machine Interface",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_Us"
+ },
+ {
+   "term": "HSCB ",
+   "definition": "High Speed Circuit Breaker",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "HSCB ",
+   "definition": "High Speed Circuit Breaker",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_Us"
+ },
+ {
+   "term": "HTTP ",
+   "definition": "Hypertext Transfer Protocol",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "HTTPS ",
+   "definition": "Hypertext Transfer Protocol Secure",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_Us"
+ },
+ {
+   "term": "HV ",
+   "definition": "High Voltage",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "HVAC ",
+   "definition": "Heating, Ventilation And Air Conditioning.",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_Us"
+ },
+ {
+   "term": "HWL ",
+   "definition": "Horizontal Wheel Lathe",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "Hz ",
+   "definition": "Hertz",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_Us"
+ },
+ {
+   "term": "I/O ",
+   "definition": "Input/Output",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "I/O ",
+   "definition": "Input/Output",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_Us"
+ },
+ {
+   "term": "IBP ",
+   "definition": "Integrated Back-up Panel",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "ICD ",
+   "definition": "Interface Control Document",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_Us"
+ },
+ {
+   "term": "ICE ",
+   "definition": "Independent Checking Engineer",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "ID ",
+   "definition": "Identification",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_Us"
+ },
+ {
+   "term": "IES ",
+   "definition": "Isolation Earthing Switch",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "IGBT ",
+   "definition": "Insulated Gate Bipolar Transistor",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_Us"
+ },
+ {
+   "term": "IHA ",
+   "definition": "System Interface Hazard Analysis",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "IP ",
+   "definition": "Internet Protocol",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_Us"
+ },
+ {
+   "term": "IS ",
+   "definition": "Isolating Switch",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "ISM ",
+   "definition": "Integrated Security Manager",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_Us"
+ },
+ {
+   "term": "ITB ",
+   "definition": "Interface Terminal Block",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "ITPS ",
+   "definition": "Intermediate TPS",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_Us"
+ },
+ {
+   "term": "ITT ",
+   "definition": "Invitation to Tender",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "IXL ",
+   "definition": "Interlocking",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_Us"
+ },
+ {
+   "term": "JV ",
+   "definition": "Joint Venture",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "KML ",
+   "definition": "Coupling Contactor",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_Us"
+ },
+ {
+   "term": "kV ",
+   "definition": "Kilo-Volt",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "KVM ",
+   "definition": "Keyboard Video Mouse",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_Us"
+ },
+ {
+   "term": "L4&6 ",
+   "definition": "Line 4 and Line 6 of Riyadh Metro Project",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "L5 ",
+   "definition": "Line 5 of Riyadh Metro Project",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_Us"
+ },
+ {
+   "term": "LAN ",
+   "definition": "Local Area Network",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "LC ",
+   "definition": "Line Controller",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_Us"
+ },
+ {
+   "term": "LCD ",
+   "definition": "Liquid Crystal Display",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "LCP ",
+   "definition": "Local Control Panel",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_Us"
+ },
+ {
+   "term": "LED ",
+   "definition": "Light-Emitting Diode",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "LHMB ",
+   "definition": "Left Hand Mouse Button",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_Us"
+ },
+ {
+   "term": "LMVS ",
+   "definition": "Loop Medium Voltage Switchboard",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "LPS ",
+   "definition": "Lighting Power Station",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_Us"
+ },
+ {
+   "term": "LPS ",
+   "definition": "Lighting Power Station",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "LSMR ",
+   "definition": "Local Station Master Room",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_Us"
+ },
+ {
+   "term": "LT ",
+   "definition": "Lighting",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "LV ",
+   "definition": "Low Voltage",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_Us"
+ },
+ {
+   "term": "LVE ",
+   "definition": "Low Voltage Equipment",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "m ",
+   "definition": "Metric unity",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_Us"
+ },
+ {
+   "term": "MC ",
+   "definition": "Metro Contractors",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "MC+#",
+   "definition": "Motor Car + # (N� 1), Motor Car + # (N� 2)",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_Us"
+ },
+ {
+   "term": "MGES ",
+   "definition": "Mainline General Emergency Shutdown (former name of ESL)",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "MJS ",
+   "definition": "Movable Jacking Systems",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_Us"
+ },
+ {
+   "term": "MLVDB ",
+   "definition": "Main Low Voltage Distribution Board",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "MM ",
+   "definition": "Multimedia",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_Us"
+ },
+ {
+   "term": "mm ",
+   "definition": "Millimetre",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "MMS ",
+   "definition": "Maintenance Management System",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_Us"
+ },
+ {
+   "term": "MoM ",
+   "definition": "Minutes of Meeting",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "MPC ",
+   "definition": "Mobile Painting Cabin",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_Us"
+ },
+ {
+   "term": "MPLS ",
+   "definition": "Multi-protocol Label Switching",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "MPU ",
+   "definition": "Master Processing Unit",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_Us"
+ },
+ {
+   "term": "MSC ",
+   "definition": "Metro Station Computers",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "MSS ",
+   "definition": "Maintenance Support System",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_Us"
+ },
+ {
+   "term": "MV ",
+   "definition": "Medium Voltage",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "MVFS ",
+   "definition": "Station Monitoring of Medium Voltage Fuse Switch",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_Us"
+ },
+ {
+   "term": "N/A ",
+   "definition": "Not Applicable",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "NA ",
+   "definition": "Not applicable",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_Us"
+ },
+ {
+   "term": "NCO ",
+   "definition": "Network Controller",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "NFPA ",
+   "definition": "National Fire Protection Association",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_Us"
+ },
+ {
+   "term": "NMS ",
+   "definition": "Network Management System",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "NS1",
+   "definition": "NS1 relays are SIL4 relays compliant with standard EN 50129\napplicable for ?Railway applications - Communication, signalling and processing?. They are used for Power Supply Emergency Tripping System.",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_Us"
+ },
+ {
+   "term": "NTP ",
+   "definition": "Network Time Protocol",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "number+m, ",
+   "definition": "Number + meters",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_Us"
+ },
+ {
+   "term": "number+s ",
+   "definition": "Number + seconds",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "NVR ",
+   "definition": "Network Video Recorder",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_Us"
+ },
+ {
+   "term": "O&M ",
+   "definition": "Operation and Maintenance",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "OCC ",
+   "definition": "Operation Control Centre",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_Us"
+ },
+ {
+   "term": "ODF ",
+   "definition": "Optical Distribution Frame",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "OF ",
+   "definition": "Optical Fibre",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_Us"
+ },
+ {
+   "term": "OPC ",
+   "definition": "Open Platform Communication",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "OPC ",
+   "definition": "OLE for Process Control",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_Us"
+ },
+ {
+   "term": "OPC-UA ",
+   "definition": "OPC Unified Architecture",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "OSI ",
+   "definition": "Open System Interconnection",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_Us"
+ },
+ {
+   "term": "OTES ",
+   "definition": "Operator Train Emergency Stop",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "P&R ",
+   "definition": "Park & Ride",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_Us"
+ },
+ {
+   "term": "PA ",
+   "definition": "Passenger Announcement/ Public Address",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "PA ",
+   "definition": "Public Address",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_Us"
+ },
+ {
+   "term": "PABX ",
+   "definition": "Private Automatic Branch eXchange",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "PAPIS ",
+   "definition": "Public Address and Passenger Information System",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_Us"
+ },
+ {
+   "term": "PBS ",
+   "definition": "Product Breakdown Structure",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "PC ",
+   "definition": "Passenger Counting",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_Us"
+ },
+ {
+   "term": "PC ",
+   "definition": "Painting Cabin",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "PCE ",
+   "definition": "Propulsion Control Electronic",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_Us"
+ },
+ {
+   "term": "PDG ",
+   "definition": "Project Design coordination Group",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "PECD ",
+   "definition": "Portable Emergency Control Desk",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_Us"
+ },
+ {
+   "term": "PED ",
+   "definition": "Platform End Doors",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "PEI ",
+   "definition": "Passenger Emergency Intercom",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_Us"
+ },
+ {
+   "term": "PID ",
+   "definition": "Passenger Information Display",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "PIS ",
+   "definition": "Passenger Information System",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_Us"
+ },
+ {
+   "term": "PLC ",
+   "definition": "Programmable Logic Controller",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "PLTF ",
+   "definition": "Platform",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_Us"
+ },
+ {
+   "term": "PM ",
+   "definition": "Point Machine",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "POS ",
+   "definition": "Power Supply",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_Us"
+ },
+ {
+   "term": "POS ",
+   "definition": "Power Supply (Subsystem within TSY entity)",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Global",
+   "locale": "en_US"
+ },
+ {
+   "term": "PP ",
+   "definition": "Passage Post",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Project",
+   "locale": "en_Us"
+ },
+ {
+   "term": "PRCS ",
+   "definition": "Power Remote Control System",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Project",
+   "locale": "en_US"
+ },
+ {
+   "term": "PR-R ",
+   "definition": "Park And Ride Riders",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Project",
+   "locale": "en_Us"
+ },
+ {
+   "term": "PSD ",
+   "definition": "Platform Screen Doors",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Project",
+   "locale": "en_US"
+ },
+ {
+   "term": "PSI ",
+   "definition": "Platform Status Indicator",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Project",
+   "locale": "en_Us"
+ },
+ {
+   "term": "PSS ",
+   "definition": "Package Substation",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Project",
+   "locale": "en_US"
+ },
+ {
+   "term": "PSU ",
+   "definition": "Power System Unit",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Project",
+   "locale": "en_Us"
+ },
+ {
+   "term": "PTO ",
+   "definition": "Public Transport Operator",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Project",
+   "locale": "en_US"
+ },
+ {
+   "term": "PTS ",
+   "definition": "Preliminary Technical Specification",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Project",
+   "locale": "en_Us"
+ },
+ {
+   "term": "PTZ ",
+   "definition": "Pan Tilt Zoom",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Project",
+   "locale": "en_US"
+ },
+ {
+   "term": "PUM ",
+   "definition": "Pumping & Drainage",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Project",
+   "locale": "en_Us"
+ },
+ {
+   "term": "RAMPED ",
+   "definition": "Riyadh Advanced Metro Project Execution and Delivery (The Employer?s representative)",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Project",
+   "locale": "en_US"
+ },
+ {
+   "term": "RAP ",
+   "definition": "Radio Access Point",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Project",
+   "locale": "en_Us"
+ },
+ {
+   "term": "REQ ",
+   "definition": "Requirements",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Project",
+   "locale": "en_US"
+ },
+ {
+   "term": "REV ",
+   "definition": "Revision",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Project",
+   "locale": "en_Us"
+ },
+ {
+   "term": "RHMB ",
+   "definition": "Passenger Information Display",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Project",
+   "locale": "en_US"
+ },
+ {
+   "term": "RIM-3 ",
+   "definition": "Riyadh Metro Project Package 3",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Project",
+   "locale": "en_Us"
+ },
+ {
+   "term": "RIO ",
+   "definition": "Remote Input/Output",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Project",
+   "locale": "en_US"
+ },
+ {
+   "term": "RLC ",
+   "definition": "Remote Lock-out control Cubicle",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Project",
+   "locale": "en_Us"
+ },
+ {
+   "term": "RM3 ",
+   "definition": "Riyadh Metro Project Package 3",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Project",
+   "locale": "en_US"
+ },
+ {
+   "term": "RRE ",
+   "definition": "Re-Railing Equipment",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Project",
+   "locale": "en_Us"
+ },
+ {
+   "term": "RRRV ",
+   "definition": "Rescue Rail-Road Vehicle",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Project",
+   "locale": "en_US"
+ },
+ {
+   "term": "RSFB ",
+   "definition": "Rotating Stand For Bogie",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Project",
+   "locale": "en_Us"
+ },
+ {
+   "term": "RST ",
+   "definition": "Rolling Stock SBS (Entity within TSY)",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Project",
+   "locale": "en_US"
+ },
+ {
+   "term": "RTU ",
+   "definition": "Remote Terminal Unit",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Project",
+   "locale": "en_Us"
+ },
+ {
+   "term": "SAN ",
+   "definition": "Storage Area Network",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Project",
+   "locale": "en_US"
+ },
+ {
+   "term": "SAT ",
+   "definition": "Site Acceptance Tests",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Project",
+   "locale": "en_Us"
+ },
+ {
+   "term": "SBS ",
+   "definition": "Subsystem",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Project",
+   "locale": "en_US"
+ },
+ {
+   "term": "SCN ",
+   "definition": "System Central Node",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Project",
+   "locale": "en_Us"
+ },
+ {
+   "term": "SEC ",
+   "definition": "Saudi Electricity Company",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Project",
+   "locale": "en_US"
+ },
+ {
+   "term": "SER ",
+   "definition": "Signaling Equipment Room",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Project",
+   "locale": "en_Us"
+ },
+ {
+   "term": "SFE ",
+   "definition": "Sandbox Filling Equipment",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Project",
+   "locale": "en_US"
+ },
+ {
+   "term": "SIG ",
+   "definition": "Signaling (subsystem within TSY entity)",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Project",
+   "locale": "en_Us"
+ },
+ {
+   "term": "SLV ",
+   "definition": "Signaling and Low Voltage",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Project",
+   "locale": "en_US"
+ },
+ {
+   "term": "Smart IO ",
+   "definition": "Smart Input/Output",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Project",
+   "locale": "en_Us"
+ },
+ {
+   "term": "S-MC ",
+   "definition": "Switch Metering cubicle (Medium Voltage)",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Project",
+   "locale": "en_US"
+ },
+ {
+   "term": "SMIO ",
+   "definition": "Smart Module Input Output",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Project",
+   "locale": "en_Us"
+ },
+ {
+   "term": "SMR ",
+   "definition": "Station Master Room",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Project",
+   "locale": "en_US"
+ },
+ {
+   "term": "SNTP ",
+   "definition": "Simple Network Time Protocol",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Project",
+   "locale": "en_Us"
+ },
+ {
+   "term": "SOAP ",
+   "definition": "Simple Object Access Protocol",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Project",
+   "locale": "en_US"
+ },
+ {
+   "term": "SPEC ",
+   "definition": "Specification",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Project",
+   "locale": "en_Us"
+ },
+ {
+   "term": "SPKS ",
+   "definition": "Staff Protection Key Switch",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Project",
+   "locale": "en_US"
+ },
+ {
+   "term": "SRA ",
+   "definition": "Section Running Authorization",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Project",
+   "locale": "en_Us"
+ },
+ {
+   "term": "SSL ",
+   "definition": "Secure Socket Layer",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Project",
+   "locale": "en_US"
+ },
+ {
+   "term": "SST ",
+   "definition": "Traction Substation",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Project",
+   "locale": "en_Us"
+ },
+ {
+   "term": "STA ",
+   "definition": "Section Traction Authorization",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Project",
+   "locale": "en_US"
+ },
+ {
+   "term": "STS ",
+   "definition": "Spring Test Stand",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Project",
+   "locale": "en_Us"
+ },
+ {
+   "term": "SV ",
+   "definition": "Shunting Vehicle For UWL",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Project",
+   "locale": "en_US"
+ },
+ {
+   "term": "SYS ",
+   "definition": "System Engineering Entity within TSY",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Project",
+   "locale": "en_Us"
+ },
+ {
+   "term": "T&C ",
+   "definition": "Testing and Commissioning",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Project",
+   "locale": "en_US"
+ },
+ {
+   "term": "TAPD ",
+   "definition": "Track Access Protection Device",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Project",
+   "locale": "en_Us"
+ },
+ {
+   "term": "TBD ",
+   "definition": "To Be Defined",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Project",
+   "locale": "en_US"
+ },
+ {
+   "term": "TCC ",
+   "definition": "Transportation Control Centre",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Project",
+   "locale": "en_Us"
+ },
+ {
+   "term": "TCMS ",
+   "definition": "Train Control and Monitoring System",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Project",
+   "locale": "en_US"
+ },
+ {
+   "term": "TCP ",
+   "definition": "Transmission Control Protocol",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Project",
+   "locale": "en_Us"
+ },
+ {
+   "term": "TES ",
+   "definition": "Train Emergency Stop",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Project",
+   "locale": "en_Us"
+ },
+ {
+   "term": "TESD ",
+   "definition": "Train Emergency Stop Depot",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Project",
+   "locale": "en_US"
+ },
+ {
+   "term": "TETRA ",
+   "definition": "Terrestrial Trunked Radio",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Project",
+   "locale": "en_Us"
+ },
+ {
+   "term": "TFT LCD ",
+   "definition": "Thin-film-transistor liquid-crystal display",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Project",
+   "locale": "en_US"
+ },
+ {
+   "term": "THR ",
+   "definition": "Tolerable Hazard Rate",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Project",
+   "locale": "en_Us"
+ },
+ {
+   "term": "TJV ",
+   "definition": "Track Work Joint venture within FAST consortium",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Project",
+   "locale": "en_US"
+ },
+ {
+   "term": "TPB ",
+   "definition": "Traction Protection Board",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Project",
+   "locale": "en_Us"
+ },
+ {
+   "term": "TPS ",
+   "definition": "Traction Power Substation",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Project",
+   "locale": "en_US"
+ },
+ {
+   "term": "TR ",
+   "definition": "Transformer",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Project",
+   "locale": "en_US"
+ },
+ {
+   "term": "TRCB ",
+   "definition": "Medium Voltage Circuit Breaker ? Traction Transformer",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Project",
+   "locale": "en_US"
+ },
+ {
+   "term": "TRS ",
+   "definition": "Train Router Switch",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Project",
+   "locale": "en_Us"
+ },
+ {
+   "term": "TRT ",
+   "definition": "Traction Transformer",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Project",
+   "locale": "en_US"
+ },
+ {
+   "term": "TSY ",
+   "definition": "Main Transit System within FAST Contractor",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Project",
+   "locale": "en_US"
+ },
+ {
+   "term": "TSY ",
+   "definition": "Main Transit System",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Project",
+   "locale": "en_US"
+ },
+ {
+   "term": "TSY-SYS ",
+   "definition": "System Engineering of TSY entity",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Project",
+   "locale": "en_Us"
+ },
+ {
+   "term": "TVM ",
+   "definition": "Ticket Vending Machine",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Project",
+   "locale": "en_US"
+ },
+ {
+   "term": "TVS ",
+   "definition": "Tunnel Ventilation system",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Project",
+   "locale": "en_US"
+ },
+ {
+   "term": "TWU ",
+   "definition": "Train Wakeup Unit",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Project",
+   "locale": "en_US"
+ },
+ {
+   "term": "UA ",
+   "definition": "User Authorization",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Project",
+   "locale": "en_Us"
+ },
+ {
+   "term": "UPS ",
+   "definition": "Uninterruptible Power Supply",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Project",
+   "locale": "en_US"
+ },
+ {
+   "term": "UTC ",
+   "definition": "Universal Time Coordinated",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Project",
+   "locale": "en_US"
+ },
+ {
+   "term": "UWL ",
+   "definition": "Underfloor Wheel Lathe",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Project",
+   "locale": "en_US"
+ },
+ {
+   "term": "V ",
+   "definition": "Volt",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Project",
+   "locale": "en_Us"
+ },
+ {
+   "term": "VDC ",
+   "definition": "Volt Direct Current",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Project",
+   "locale": "en_US"
+ },
+ {
+   "term": "VFDS ",
+   "definition": "Vehicle Fall Detection System",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Project",
+   "locale": "en_US"
+ },
+ {
+   "term": "VLL ",
+   "definition": "Vehicle Lifting Lane",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Project",
+   "locale": "en_US"
+ },
+ {
+   "term": "VS ",
+   "definition": "Ventilation Shaft",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Project",
+   "locale": "en_Us"
+ },
+ {
+   "term": "VWM ",
+   "definition": "Vehicle Washing Machine",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Project",
+   "locale": "en_US"
+ },
+ {
+   "term": "W04 ",
+   "definition": "Common Depot Workshop for Lines 4& 6",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Project",
+   "locale": "en_US"
+ },
+ {
+   "term": "W05 ",
+   "definition": "Depot Workshop for Line 5",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Project",
+   "locale": "en_US"
+ },
+ {
+   "term": "WP ",
+   "definition": "Working Position",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Project",
+   "locale": "en_Us"
+ },
+ {
+   "term": "WPES ",
+   "definition": "Washing Plant Emergency Stop",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Project",
+   "locale": "en_US"
+ },
+ {
+   "term": "WSP ",
+   "definition": "Wheel Slide Protection",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Project",
+   "locale": "en_US"
+ },
+ {
+   "term": "WSS ",
+   "definition": "Workshop Socket",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Project",
+   "locale": "en_US"
+ },
+ {
+   "term": "XML ",
+   "definition": "Extensible Mark-up Language",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Project",
+   "locale": "en_Us"
+ },
+ {
+   "term": "ZC ",
+   "definition": "Zone Controller",
+   "domain": "Systems",
+   "type": "Abbreviation",
+   "scope": "Project",
+   "locale": "en_US"
+ }
+]

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4"
+      layout:decorator="pixeladmin/layouts/main-default">
+
+    <head>
+        <title>System Integration</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="UTF-8" />
+    </head>
+
+    <body>
+
+        <!-- Content -->
+        <div layout:fragment="content" class="px-content">
+
+            <!-- Modal Boxes Control -->
+            <input type="hidden" id="modalBusyControl" th:value="OFF" />
+            <input type="hidden" id="isIntegrationView" value="isIntegrationView" />
+            <input type="hidden" id="sbsTreeValid" th:value="${validtree}" />
+            <input type="hidden" id="sbsNodeId" th:value="2" />
+            <input type="hidden" id="elementId" th:value="1" />
+
+            <div class="page-header">
+                <h1 id="pagetitle" th:text="'Systems Integration - ' + ${project.projectName}">Systems Integration</h1>
+                <div class="pull-right">
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-expanded="true" style="border-radius: 2px;">
+                            Integration
+                        </button>
+                        <div class="dropdown-backdrop"></div>
+                        <ul class="dropdown-menu pull-left" style="right: 0; left: auto; border-radius: 2px;">
+                            <li th:if="${usersession.hasOpenProject}">
+                                <a href="/app/integration/interfaces/download">
+                                    <i class="fa fa-plus m-r-1"></i>Add New Entity
+                                </a>
+                            </li>
+                            <li th:if="${usersession.hasOpenProject}">
+                                <a href="javascript:void(0);" th:onclick="'javascript:IntegrationElementCreate();'">
+                                    <i class="fa fa-plus m-r-1"></i>Add System Element
+                                </a>
+                            </li>
+                            <li th:if="${usersession.hasOpenProject}">
+                                <a href="/app/integration/interfaces/download">
+                                    <i class="fa fa-file-excel-o m-r-1 text-success"></i>Download Spreadsheet
+                                </a>
+                            </li>
+                            <li th:if="${usersession.hasOpenProject}">
+                                <a href="/app/integration/system/download/pdf">
+                                    <i class="fa fa-file-pdf-o m-r-1 text-warning"></i>Download PDF Report
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+
+                <div class="col-md-4">
+                    <div class="panel panel-info panel-dark">
+                        <div class="panel-heading">
+                            <span class="panel-title"><i class="panel-title-icon fa fa-sitemap"></i>System Breakdown Structure</span>
+                            <div class="panel-heading-controls">
+                                <div class="btn-group btn-group-xs">
+                                    <button class="btn btn-info dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false" style="border-radius: 2px;">
+                                        <i class="fa fa-cog"></i>
+                                    </button>
+                                    <ul class="dropdown-menu dropdown-menu-right">
+                                        <li th:if="${usersession.hasOpenProject}">
+                                            <a href="javascript:void(0);" th:onclick="'javascript:IntegrationAddEntity(\'' + ${project.Id} + '\');'">
+                                                <i class="fa fa-plus m-r-1"></i>Add System Entity
+                                            </a>
+                                        </li>
+                                        <li th:if="${usersession.hasOpenProject}">
+                                            <a href="javascript:void(0);" th:onclick="'javascript:IntegrationElementCreate();'">
+                                                <i class="fa fa-plus m-r-1"></i>Add System Element
+                                            </a>
+                                        </li>
+                                        <li><a href="#"><i class="fa fa-download m-r-1"></i>Import System Elements</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel-body">
+                            <div style="height:calc(100vh - 290px); overflow: auto;">
+                                <ul id="sbsElementsTree" class="ztree"></ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="systemIntegrationPageContent" class="col-md-8">
+                </div>
+
+            </div>
+
+        </div>
+
+    </body>
+
+</html>

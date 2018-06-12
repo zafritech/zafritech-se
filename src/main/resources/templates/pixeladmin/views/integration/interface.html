@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+
+    <body>
+
+        <div layout:fragment="content">
+            
+            <div class="panel panel-info panel-dark">
+                <div class="panel-heading">
+                    
+                    <span class="panel-title">
+                        <i class="panel-title-icon fa fa-link"></i>
+                        <span th:text="${interface.systemId + ' - ' + interface.interfaceTitle}">System Interface Title</span>
+                    </span>
+                    <div class="panel-heading-controls">
+                        <div class="btn-group btn-group-xs">
+                            <button class="btn btn-info dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false" style="border-radius: 2px;">
+                                <i class="fa fa-cog"></i>
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-right">
+                                <li>
+                                    <a href="javascript:void(0);" th:onclick="'javascript:IntegrationInterfaceEdit(\'' + ${interface.id} + '\');'">
+                                        <i class="fa fa-pencil m-r-1"></i>Edit Interface
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);" th:onclick="'javascript:IntegrationInterfaceIssueCreate(\'' + ${interface.id} + '\');'">
+                                        <i class="fa fa-exclamation-triangle m-r-1"></i>Create Interface Issue
+                                    </a>
+                                </li>
+                                <li>
+                                    <a th:href="'/app/integration/interface/pdf/' + ${interface.id}">
+                                        <i class="fa fa-print m-r-1"></i>Print Interface
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="panel-body">
+                    <div style="height:calc(100vh - 290px); overflow-x: hidden; overflow-y: auto; padding-right: 10px;">
+                        
+                        <div class="table-light">
+                            <div class="table-header">
+                                <div class="table-caption">Interface Details</div>
+                                <div style="float: right; margin-top: -25px; margin-bottom: -100px;">
+                                    <a href="javascript:void(0);" th:onclick="'javascript:loadElementInterfaces(0);'" class="btn btn-sm btn-warning btn-outline-colorless" style="border-radius: 2px;">
+                                        <i class="fa fa-reply m-r-1"></i> Back to List
+                                    </a>
+                                </div>
+                            </div>
+                        
+                            <table class="table table-bordered table-hover">
+                                <tr th:if="${!#strings.isEmpty(interface.interfaceDescription)}">
+                                    <th style="width: 180px; font-weight: bold; background: #ebebeb;">Interface Description:</th>
+                                    <td colspan="3"><span th:text="${interface.interfaceDescription}"></span></td>
+                                </tr>
+                                <tr th:if="${!#strings.isEmpty(interface.interfaceNotes)}">
+                                    <th style="width: 180px; font-weight: bold; background: #ebebeb;">Interface Notes:</th>
+                                    <td colspan="3">
+                                        <span th:text="${interface.interfaceNotes}"></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th style="width: 180px; font-weight: bold; background: #ebebeb;">Primary Entity:</th>
+                                    <td><span th:text="${interface.primaryEntityName} + ' (' + ${interface.primaryEntityCode} + ')'"></span></td>
+                                    <th style="width: 180px; font-weight: bold; background: #ebebeb;">Secondary Entity:</th>
+                                    <td><span th:text="${interface.secondaryEntityName} + ' (' + ${interface.secondaryEntityCode} + ')'"></span></td>
+                                </tr>
+                                <tr>
+                                    <th style="width: 180px; font-weight: bold; background: #ebebeb;">Primary Element:</th>
+                                    <td><span th:text="${interface.primaryElementSbs} + ' ' + ${interface.primaryElementName}"></span></td>
+                                    <th style="width: 180px; font-weight: bold; background: #ebebeb;">Secondary Element:</th>
+                                    <td><span th:text="${interface.secondaryElementSbs} + ' ' + ${interface.secondaryElementName}"></span></td>
+                                </tr>
+                                <tr>
+                                    <th style="width: 180px; font-weight: bold; background: #ebebeb;">Interface Level:</th>
+                                    <td><span th:text="'Level ' + ${interface.interfaceLevel}"></span></td>
+                                    <td style="width: 180px; font-weight: bold; background: #ebebeb;">Status:</td>
+                                    <td><span th:text="${#strings.replace(interface.status, 'INTERFACE_STATUS_', '')}"></span></td>
+                                </tr>
+<!--                                <tr>
+                                    <th style="width: 180px; font-weight: bold; background: #ebebeb;">Interface Type(s):</th>
+                                    <td>
+                                        <div th:each="type : ${interface.interfaceTypes}" >
+                                            <span th:text="${type.typeName}"></span>
+                                        </div>
+                                    </td>
+                                    <th style="width: 180px; font-weight: bold; background: #ebebeb;">References:</th>
+                                    <td>
+                                        <div th:each="reference : ${interface.references}" >
+                                            <span th:text="${reference.number}"></span>
+                                        </div>
+                                    </td>
+                                </tr>-->
+                            </table>
+                            
+                        </div>
+                        
+                        <div class="table-light">
+                            <div class="table-header">
+                                <div class="table-caption">Interface Issues</div>
+                            </div>
+                            
+                            <table th:if="${!issues.isEmpty()}" class="table table-bordered table-hover">
+                                <thead>
+                                    <tr>
+                                        <!--<th style="width: 120px; border-bottom: 0;">Issue ID</th>-->
+                                        <th style="border-bottom: 0;">Issue Title and Description</th>
+                                        <th style="width: 100px; border-bottom: 0;">Created</th>
+                                        <th style="width: 100px; border-bottom: 0;">Updated</th>
+                                        <th style="width: 100px; border-bottom: 0;">Status</th>
+                                        <th style="width: 20px;">&nbsp;</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr th:each="issue : ${issues}">
+                                        <td style="text-align: left; vertical-align: top;">
+                                            <div style="margin-bottom: 5px;">
+                                                <a href="javascript:void(0);" th:onclick="'javascript:loadInterfaceIssue(\'' + ${issue.Id} + '\');'">
+                                                    <span th:text="${issue.systemId} + ' ' +${issue.issueTitle}"></span>
+                                                </a>
+                                            </div>
+                                            <span th:utext="${issue.issueDescription}"></span>
+                                        </td>
+                                        <td style="text-align: left; vertical-align: top;">
+                                            <span th:utext="${#dates.format(issue.creationDate, 'yyyy-MM-dd')}"></span>
+                                        </td>
+                                        <td style="text-align: left; vertical-align: top;">
+                                            <span th:utext="${#dates.format(issue.modifiedDate, 'yyyy-MM-dd')}"></span>
+                                        </td>
+                                        <td style="text-align: left; vertical-align: top;">
+                                            <div th:if="${#strings.equals(issue.status, 'INTERFACE_STATUS_CLOSED')}" style="color: #2ECC71;">
+                                                <i class="fa fa-comments" style="padding-right: 4px;"></i>
+                                                <i class="fa fa-check-circle" style="padding-right: 4px;"></i>
+                                                <span th:text="${#strings.replace(issue.status, 'INTERFACE_STATUS_', '')}"></span>
+                                            </div>
+                                            <div th:if="${#strings.equals(issue.status, 'INTERFACE_STATUS_OPEN')}" style="color: #f33123; font-weight: bold;">
+                                                <i class="fa fa-comments" style="padding-right: 4px;"></i>
+                                                <i class="fa fa-clock-o" style="color: #f33123; padding-right: 4px;"></i>
+                                                <span th:text="${#strings.replace(issue.status, 'INTERFACE_STATUS_', '')}"></span>
+                                            </div>
+                                            <div th:if="${issue.status == null}" style="color: #038dcc;">
+                                                <i class="fa fa-comments" style="padding-right: 4px;"></i>
+                                                <i class="fa fa-question-circle" style="color: #038dcc; padding-right: 4px;"></i>
+                                                <span th:text="${#strings.replace(issue.status, 'INTERFACE_STATUS_', '')}"></span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="btn-group btn-group-xs">
+                                                <button class="btn btn-info dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false" style="border-radius: 2px;">
+                                                    <i class="fa fa-cog"></i>
+                                                </button>
+                                                <ul class="dropdown-menu dropdown-menu-right">
+                                                    <li>
+                                                        <a href="javascript:void(0);" th:onclick="'javascript:notYetImplemented();'">
+                                                            <i class="fa fa-pencil m-r-1"></i> Edit Issue
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="javascript:void(0);" th:onclick="'javascript:notYetImplemented();'">
+                                                            <i class="fa fa-ban m-r-1"></i> Close Issue
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="javascript:void(0);" th:onclick="'javascript:notYetImplemented();'">
+                                                            <i class="fa fa-close m-r-1"></i> Delete Issue
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            
+                            <table th:if="${#lists.size(interface.issues) == 0}" class="table table-bordered table-hover">
+                                <tr>
+                                    <td>
+                                        <div class="text-primary" style="padding: 10px;">No issues have been identified for this interface.</div>
+                                    </td>
+                                </tr>
+                            </table>
+                            
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+        </div>
+
+    </body>
+</html>

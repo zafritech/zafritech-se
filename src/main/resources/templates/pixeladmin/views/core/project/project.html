@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4"
+      layout:decorator="pixeladmin/layouts/main-default">
+
+    <head>
+        <title>Zafritech SE - Project</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="UTF-8" />
+
+        <style type="text/css">
+            .zalinks-title {
+                color: #333333; 
+                font-weight: 600; 
+                font-size: 26px; 
+                margin-top: 0; 
+                margin-bottom: 0;
+            }
+            .zalink-box {
+                display: inline-block; 
+                width: 200px; 
+                height: 180px;  
+                margin: 10px; 
+                border: 2px solid #dddddd;
+            }
+            .zalink-url {
+                display: block; 
+                width:100%; 
+                height: 100%; 
+                margin: 0;
+            }
+            .zalink-image {
+                display: block; 
+                height: 100px; 
+                margin: 10px auto 0px auto;
+            }
+            .zalink-caption {
+                display: block; 
+                height: 20px; 
+                margin: 0px auto 10px auto;
+                padding-top: 2px;
+                text-align: center;
+                font-weight: bold;
+            }
+            .zalink-box:hover {
+                background: #dddddd;
+                border: 4px solid #73AD21;
+                margin-top: 5px;
+            }
+        </style>
+
+    </head>
+
+    <body>
+
+        <!-- Content -->
+        <div layout:fragment="content" class="px-content">
+            
+            <div style="height:calc(100vh - 145px); overflow-x: hidden;; overflow-y: auto; padding-right: 15px;"> <!-- Scrolling area -->
+                
+                <div class="page-header">
+                    <h1 id="pagetitle" th:text="'Zafritech SE - ' + ${project.projectName}">Zafritech SE - Project</h1>
+                    <div class="pull-right">
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-expanded="true" style="border-radius: 2px;">
+                                Project
+                            </button>
+                            <div class="dropdown-backdrop"></div>
+                            <ul class="dropdown-menu pull-left" style="right: 0; left: auto; border-radius: 2px;">
+                                <li th:if="${usersession.hasOpenProject}">
+                                    <a href="javascript:void(0);" th:onclick="'javascript:addOrganisation(\'' + ${project.Id} + '\');'">
+                                        <i class="fa fa-plus m-r-1"></i>Add Organisation
+                                    </a>
+                                </li>
+                                <li th:if="${usersession.hasOpenProject}">
+                                    <a href="javascript:void(0);" th:onclick="'javascript:ProjectManageMembers(\'' + ${project.uuId} + '\');'">
+                                        <i class="fa fa-group m-r-1"></i>Manage Members
+                                    </a>
+                                </li>
+                                <li sec:authorize="hasRole('ROLE_ADMIN')">
+                                    <a href="javascript:void(0);" th:onclick="'javascript:ProjectManageApplications(\'' + ${project.uuId} + '\');'">
+                                        <i class="fa fa-window-restore m-r-1"></i>Manage Applications
+                                    </a>
+                                </li>
+                                <li class="divider"></li>
+                                <li th:if="${usersession.hasOpenProject}">
+                                    <a th:href="'/projects/close/' + ${usersession.projectUuId}">
+                                        <i class="fa fa-close m-r-1"></i>Close Project
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="row">
+
+                    <div class="col-md-8">
+
+                        <!-- Project's Organisations -->
+                        <div class="panel panel-info panel-dark">
+                            <div class="panel-heading">
+                                <span class="panel-title"><i class="panel-title-icon fa fa-institution"></i>Organisations</span>
+                                <div class="panel-heading-controls">
+                                    <div class="btn-group btn-group-xs">
+                                        <button class="btn btn-info dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false" style="border-radius: 2px;">
+                                            <i class="fa fa-cog"></i>
+                                        </button>
+                                        <ul class="dropdown-menu dropdown-menu-right">
+                                            <li th:if="${usersession.hasOpenProject}">
+                                                <a href="javascript:void(0);" th:onclick="'javascript:addOrganisation(\'' + ${project.Id} + '\');'">
+                                                    <i class="fa fa-plus m-r-1"></i>Add Organisation
+                                                </a>
+                                            </li>
+                                            <li th:if="${usersession.hasOpenProject}">
+                                                <a href="javascript:void(0);" th:onclick="'javascript:CompanyCreateNew();'">
+                                                    <i class="fa fa-plus m-r-1"></i>Create New Organisation
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="panel-body">
+                                <div class="table-light">
+                                    <div class="table-header">
+                                        <div class="table-caption" th:text="${project.projectName} + ' Participating Organisations'">Participating Organisations</div>
+                                    </div>
+                                    <table th:if="${!companies.isEmpty()}" class="table table-bordered" style="margin-bottom: 0;">
+                                        <thead>
+                                            <tr>
+                                                <th style="width: 15%;">Name</th>
+                                                <th style="width: 65%;">Organisation Full Name</th>
+                                                <th style="width: 20%;">Role</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr th:each="role : ${companies}">
+                                                <td>
+                                                    <a th:href="'/companies/' + ${role.company.UuId}">
+                                                        <span th:text="${role.company.companyCode}">Name</span>
+                                                    </a>
+                                                </td>
+                                                <td>
+                                                    <a th:href="'/companies/' + ${role.company.UuId}">
+                                                        <span th:text="${role.company.companyName}">Name</span>
+                                                    </a>
+                                                </td>
+                                                <td>
+                                                    <a th:href="'/companies/' + ${role.company.UuId}">
+                                                        <span th:text="${#strings.replace(role.companyRole, '_ORGANISATION', '')}">Role</span>
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div th:if="${companies.isEmpty()}">
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!-- Project's Member Users -->
+                        <div class="panel panel-info panel-dark">
+                            <div class="panel-heading">
+                                <span class="panel-title"><i class="panel-title-icon fa fa-group"></i>Project Members</span>
+                                <div class="panel-heading-controls">
+                                    <div class="btn-group btn-group-xs">
+                                        <button class="btn btn-info dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false" style="border-radius: 2px;">
+                                            <i class="fa fa-cog"></i>
+                                        </button>
+                                        <ul class="dropdown-menu dropdown-menu-right">
+                                            <li th:if="${usersession.hasOpenProject}">
+                                                <a href="javascript:void(0);" th:onclick="'javascript:ProjectManageMembers(\'' + ${project.uuId} + '\');'">
+                                                    <i class="fa fa-group m-r-1"></i>Manage Members
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="panel-body">
+                                <div class="table-light">
+                                    <div class="table-header">
+                                        <div class="table-caption" th:text="${project.projectName} + ' Project Members'">Participating Organisations</div>
+                                    </div>
+                                    <table th:if="${!members.isEmpty()}" class="table table-bordered" style="margin-bottom: 0;">
+                                        <thead>
+                                            <tr>
+                                                <th style="width: 70%;">Project Member</th>
+                                                <th style="width: 30%;">Member Email</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr th:each="user : ${members}">
+                                                <td>
+                                                    <a th:href="'/admin/user/profile/' + ${user.uuId}">
+                                                        <span th:text="${user.firstName} + ' ' + ${user.lastName}">Name</span>
+                                                    </a>
+                                                </td>
+                                                <td>
+                                                    <a th:href="'/admin/user/profile/' + ${user.uuId}">
+                                                        <span th:text="${user.email}">Email</span>
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                
+                                <table th:if="${members.isEmpty()}" class="table table-bordered" style="margin-bottom: 0;">
+                                    <tr>
+                                        <td>
+                                            <div style="padding: 10px;">
+                                                <a href="javascript:void(0);" th:onclick="'javascript:ProjectManageMembers(\'' + ${project.uuId} + '\');'">
+                                                    This project has no members. Please add members.
+                                                </a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </table>
+
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="col-md-4">
+
+                        <!-- Project's Applications -->
+                        <div class="panel panel-info panel-dark">
+                            <div class="panel-heading">
+                                <span class="panel-title"><i class="panel-title-icon fa fa-window-restore"></i>Project Applications</span>
+                                <div sec:authorize="hasRole('ROLE_ADMIN')" class="panel-heading-controls">
+                                    <div class="btn-group btn-group-xs">
+                                        <button class="btn btn-info dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false" style="border-radius: 2px;">
+                                            <i class="fa fa-cog"></i>
+                                        </button>
+                                        <ul class="dropdown-menu dropdown-menu-right">
+                                            <li>
+                                                <a href="javascript:void(0);" th:onclick="'javascript:ProjectManageApplications(\'' + ${project.uuId} + '\');'">
+                                                    <i class="fa fa-window-restore m-r-1"></i>Manage Applications
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="panel-body">
+
+                                <div th:if="${!project.applications.isEmpty()}">
+                                    <div th:each="application : ${project.applications}" class="zalink-box">
+                                        <a class="zalink-url" th:href="'/app/' + ${application.applicationName}">
+                                            <img class="zalink-image" th:attr="src='/images/' + ${application.applicationName} + '_image.png', alt=${application.applicationTitle}" />					
+                                            <div class="zalink-caption" th:text="${application.applicationTitle}">Application</div>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div th:if="${companies.isEmpty()}">
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            
+            </div> <!-- /Scrolling area -->
+            
+        </div>
+        
+    </body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+
+    <body>
+
+        <div th:fragment="side-nav">
+            <!-- sidebar-->
+            <aside class="sidebar-master-container-wide">
+                <div class="sidebar-content">
+
+                    <div class="panel panel-default">
+                        <div class="panel-body"> 
+                            <div class="col-sm-12" style="padding: 0 5px; border-bottom: 1px solid #ddd;">
+                                <div class="pull-right dropdown" style="padding-top: 5px;">
+                                    <button type="button" data-toggle="dropdown" class="btn btn-default btn-flat btn-flat-icon">
+                                        <em class="ion-android-more-vertical"></em>
+                                    </button>
+
+                                    <ul role="menu" class="dropdown-menu md-dropdown-menu dropdown-menu-right">
+                                        <li sec:authorize="hasRole('ROLE_ADMIN')" style="border-bottom: 1px solid #ddd;"><a href="javascript:void(0);" th:onclick="'javascript:ProjectCreateNew();'"><em class="ion-plus icon-fw"></em>New System Element</a></li>
+                                        <li style="border-bottom: 1px solid #ddd;"><a href="/projects"><em class="fa fa-link fa-fw"></em>System Interfaces</a></li>
+                                        <li style="border-bottom: 1px solid #ddd;"><a href="/app/integration/interfaces/download"><em class="fa fa-file-excel-o fa-fw"></em>Export to Spreadsheet</a></li>
+                                    </ul>
+
+                                </div>
+                                <div style="padding: 8px 0;"><em class="ion-filing icon-fw"></em> System Elements</div>
+                            </div> 
+                            <div style="margin-top: 42px;">
+                                <ul id="sbsElementsTree" class="ztree"></ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </aside>
+
+            <div class="sidebar-layout-obfuscator"></div>
+        </div>
+
+    </body>
+
+</html>

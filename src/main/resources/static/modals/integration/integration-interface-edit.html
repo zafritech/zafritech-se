@@ -1,0 +1,70 @@
+<style>
+    .btn-fixed-width-100 {
+        width: 100px !important;
+        border-radius: 2px;
+    }    
+</style>
+   
+<form id="createItem" action="/api/integration/interface/edit" method="post">
+
+    <div class="row">
+        <div class="col-sm-3">
+            <div class="form-group">
+                <label for="primaryEntityId">Primary Entity:</label>
+                <select class="form-control" type="text" id="primaryEntityId" name="primaryEntityId" onchange="onPrimaryEntityChange();"></select>
+            </div>
+        </div>
+        <div class="col-sm-9">
+            <div class="form-group">
+                <label for="primaryElementId">Primary SBS Element:</label>
+                <select class="form-control" type="text" id="primaryElementId" name="primaryElementId" onchange="onPrimaryElementChange();"></select>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-3">
+            <div class="form-group">
+                <label for="secondaryEntityId">Secondary Entity:</label>
+                <select class="form-control" id="secondaryEntityId" name="secondaryEntityId" onchange="onSecondaryEntityChange();"></select>
+            </div>
+        </div>
+        <div class="col-sm-9">
+            <div class="form-group">
+                <label for="secondaryElementId">Secondary SBS Element:</label>
+                <select class="form-control" id="secondaryElementId" name="secondaryElementId" onchange="onSecondaryElementChange();"></select>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-9">
+            <div class="form-group">
+                <label for="interfaceTitle">Interface Title:</label>
+                <input class="form-control" type="text" id="interfaceTitle" name="interfaceTitle" />
+            </div>
+        </div>
+        <div class="col-sm-3">
+            <div class="form-group">
+                <label for="interfaceLevel">Interface Level:</label>
+                <select class="form-control" id="interfaceLevel" name="interfaceLevel"></select>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-9">
+            <div class="form-group">
+                <label for="interfaceDescription">Interface Description:</label>
+                <textarea class="form-control" id="interfaceDescription" name="interfaceDescription" rows="4"></textarea>
+            </div>
+        </div>
+        <div class="col-sm-3">
+            <div class="form-group">
+                <label for="interfaceStatus">Status:</label>
+                <select class="form-control" id="interfaceStatus" name="interfaceStatus"></select>
+            </div>
+        </div>
+    </div>
+
+</form>

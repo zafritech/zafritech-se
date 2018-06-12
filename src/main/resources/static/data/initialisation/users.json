@@ -1,0 +1,342 @@
+[
+  {
+    "id": 4,
+    "firstName": "Dumisani",
+    "lastName": "Khumalo",
+    "email": "dumisanik@zafritech.net",
+    "mainRole": "Application User",
+    "contact": {
+      "email": "dumisanik@zafritech.net",
+      "firstName": "Dumisani",
+      "lastName": "Khumalo",
+      "address": "No. 1 Jan Smuts Avenue, Braamfontein",
+      "city": "Johannesburg",
+      "state": "Gauteng",
+      "country": "ZAF",
+      "postCode": "2000",
+      "phone": "+27 53 546 1298",
+      "mobile": "+27 52 454 8044",
+      "website": "www.zafritech.net"
+    }
+  },
+  {
+    "id": 5,
+    "firstName": "Emeka",
+    "lastName": "Adeyemi",
+    "email": "emekaa@zafritech.net",
+    "mainRole": "Application User",
+    "contact": {
+      "email": "emekaa@zafritech.net",
+      "firstName": "Emeka",
+      "lastName": "Adeyemi",
+      "address": "No. 1 Jan Smuts Avenue, Braamfontein",
+      "city": "Abuja",
+      "state": "Gauteng",
+      "country": "NGA",
+      "postCode": "2000",
+      "phone": "+27 53 546 1298",
+      "mobile": "+27 52 454 8044",
+      "website": "www.zafritech.net"
+    }
+  },
+  {
+    "id": 6,
+    "firstName": "Hakan",
+    "lastName": "Karlsson",
+    "email": "hakank@zafritech.net",
+    "mainRole": "Application User",
+    "contact": {
+      "email": "hakank@zafritech.net",
+      "firstName": "Hakan",
+      "lastName": "Karlsson",
+      "address": "No. 1 Jan Smuts Avenue, Braamfontein",
+      "city": "Linkoping",
+      "state": "Gauteng",
+      "country": "SWE",
+      "postCode": "2000",
+      "phone": "+27 53 546 1298",
+      "mobile": "+27 52 454 8044",
+      "website": "www.zafritech.net"
+    }
+  },
+  {
+    "id": 7,
+    "firstName": "Jaco",
+    "lastName": "Viljoen",
+    "email": "jacov@zafritech.net",
+    "mainRole": "Application User",
+    "contact": {
+      "email": "jacov@zafritech.net",
+      "firstName": "Jaco",
+      "lastName": "Viljoen",
+      "address": "No. 1 Jan Smuts Avenue, Braamfontein",
+      "city": "Bloemfontein",
+      "state": "Free State",
+      "country": "ZAF",
+      "postCode": "2000",
+      "phone": "+27 53 546 1298",
+      "mobile": "+27 52 454 8044",
+      "website": "www.zafritech.net"
+    }
+  },
+  {
+    "id": 8,
+    "firstName": "Kelvin",
+    "lastName": "Banda",
+    "email": "kelvinb@zafritech.net",
+    "mainRole": "Application User",
+    "contact": {
+      "email": "kelvinb@zafritech.net",
+      "firstName": "Kelvin",
+      "lastName": "Banda",
+      "address": "No. 1 Jan Smuts Avenue, Braamfontein",
+      "city": "Lilingwe",
+      "state": "Lilogwe",
+      "country": "MWI",
+      "postCode": "2000",
+      "phone": "+27 53 546 1298",
+      "mobile": "+27 52 454 8044",
+      "website": "www.zafritech.net"
+    }
+  },
+  {
+    "id": 9,
+    "firstName": "Leonid",
+    "lastName": "Peshkov",
+    "email": "leonidp@zafritech.net",
+    "mainRole": "Application User",
+    "contact": {
+      "email": "leonidp@zafritech.net",
+      "firstName": "Leonid",
+      "lastName": "Peshkov",
+      "address": "No. 1 Jan Smuts Avenue, Braamfontein",
+      "city": "Moscow",
+      "state": "Moscow",
+      "country": "RUS",
+      "postCode": "2000",
+      "phone": "+27 53 546 1298",
+      "mobile": "+27 52 454 8044",
+      "website": "www.zafritech.net"
+    }
+  },
+  {
+    "id": 10,
+    "firstName": "Lufuno",
+    "lastName": "Mukwevho",
+    "email": "lufonom@zafritech.net",
+    "mainRole": "Application User",
+    "contact": {
+      "email": "lufonom@zafritech.net",
+      "firstName": "Lufuno",
+      "lastName": "Mukwevho",
+      "address": "No. 1 Jan Smuts Avenue, Braamfontein",
+      "city": "Louis Trichardt",
+      "state": "Limpopo",
+      "country": "ZAF",
+      "postCode": "2000",
+      "phone": "+27 53 546 1298",
+      "mobile": "+27 52 454 8044",
+      "website": "www.zafritech.net"
+    }
+  },
+  {
+    "id": 11,
+    "firstName": "Michael",
+    "lastName": "Robinson",
+    "email": "michaelr@zafritech.net",
+    "mainRole": "Application User",
+    "contact": {
+      "email": "michaelr@zafritech.net",
+      "firstName": "Michael",
+      "lastName": "Robinson",
+      "address": "No. 1 Jan Smuts Avenue, Braamfontein",
+      "city": "London",
+      "state": "London",
+      "country": "GBR",
+      "postCode": "2000",
+      "phone": "+27 53 546 1298",
+      "mobile": "+27 52 454 8044",
+      "website": "www.zafritech.net"
+    }
+  },
+  {
+    "id": 12,
+    "firstName": "Nobahle",
+    "lastName": "Veleko",
+    "email": "nobahlev@zafritech.net",
+    "mainRole": "Application User",
+    "contact": {
+      "email": "nobahlev@zafritech.net",
+      "firstName": "Nobahle",
+      "lastName": "Veleko",
+      "address": "No. 1 Jan Smuts Avenue, Braamfontein",
+      "city": "East London",
+      "state": "Eastern London",
+      "country": "ZAF",
+      "postCode": "2000",
+      "phone": "+27 53 546 1298",
+      "mobile": "+27 52 454 8044",
+      "website": "www.zafritech.net"
+    }
+  },
+  {
+    "id": 13,
+    "firstName": "Paul",
+    "lastName": "Caningham",
+    "email": "paulc@zafritech.net",
+    "mainRole": "Application User",
+    "contact": {
+      "email": "paulc@zafritech.net",
+      "firstName": "Paul",
+      "lastName": "Caningham",
+      "address": "No. 1 Jan Smuts Avenue, Braamfontein",
+      "city": "Hull",
+      "state": "Hull",
+      "country": "GBR",
+      "postCode": "2000",
+      "phone": "+27 53 546 1298",
+      "mobile": "+27 52 454 8044",
+      "website": "www.zafritech.net"
+    }
+  },
+  {
+    "id": 14,
+    "firstName": "Rodrigo",
+    "lastName": "Fernández",
+    "email": "rodrigof@zafritech.net",
+    "mainRole": "Application User",
+    "contact": {
+      "email": "rodrigof@zafritech.net",
+      "firstName": "Rodrigo",
+      "lastName": "Fernández",
+      "address": "No. 1 Jan Smuts Avenue, Braamfontein",
+      "city": "Manila",
+      "state": "Manila",
+      "country": "PHL",
+      "postCode": "2000",
+      "phone": "+27 53 546 1298",
+      "mobile": "+27 52 454 8044",
+      "website": "www.zafritech.net"
+    }
+  },
+  {
+    "id": 15,
+    "firstName": "Chipo",
+    "lastName": "Chihera",
+    "email": "chipoc@zafritech.net",
+    "mainRole": "Application User",
+    "contact": {
+      "email": "chipoc@zafritech.net",
+      "firstName": "Chipo",
+      "lastName": "Chihera",
+      "address": "No. 1 Jan Smuts Avenue, Braamfontein",
+      "city": "Harare",
+      "state": "Harare",
+      "country": "ZWE",
+      "postCode": "2000",
+      "phone": "+27 53 546 1298",
+      "mobile": "+27 52 454 8044",
+      "website": "www.zafritech.net"
+    }
+  },
+  {
+    "id": 16,
+    "firstName": "Sipho",
+    "lastName": "Sibanda",
+    "email": "siphos@zafritech.net",
+    "mainRole": "Application User",
+    "contact": {
+      "email": "siphos@zafritech.net",
+      "firstName": "Sipho",
+      "lastName": "Sibanda",
+      "address": "No. 1 Jan Smuts Avenue, Braamfontein",
+      "city": "Bulawayo",
+      "state": "Bulawayo",
+      "country": "ZWE",
+      "postCode": "2000",
+      "phone": "+27 53 546 1298",
+      "mobile": "+27 52 454 8044",
+      "website": "www.zafritech.net"
+    }
+  },
+  {
+    "id": 17,
+    "firstName": "Tebogo",
+    "lastName": "Mahumapelo",
+    "email": "tebogom@zafritech.net",
+    "mainRole": "Application User",
+    "contact": {
+      "email": "tebogom@zafritech.net",
+      "firstName": "Tebogo",
+      "lastName": "Mahumapelo",
+      "address": "No. 1 Jan Smuts Avenue, Braamfontein",
+      "city": "Mafikeng",
+      "state": "North West",
+      "country": "ZAF",
+      "postCode": "2000",
+      "phone": "+27 53 546 1298",
+      "mobile": "+27 52 454 8044",
+      "website": "www.zafritech.net"
+    }
+  },
+  {
+    "id": 18,
+    "firstName": "Vish",
+    "lastName": "Pillay",
+    "email": "vishp@zafritech.net",
+    "mainRole": "Application User",
+    "contact": {
+      "email": "vishp@zafritech.net",
+      "firstName": "Vish",
+      "lastName": "Pillay",
+      "address": "No. 1 Jan Smuts Avenue, Braamfontein",
+      "city": "Durban",
+      "state": "KwaZulu-Natal",
+      "country": "ZAF",
+      "postCode": "2000",
+      "phone": "+27 53 546 1298",
+      "mobile": "+27 52 454 8044",
+      "website": "www.zafritech.net"
+    }
+  },
+  {
+    "id": 19,
+    "firstName": "Mohamed",
+    "lastName": "El Masery",
+    "email": "mohamede@zafritech.net",
+    "mainRole": "Application User",
+    "contact": {
+      "email": "mohammede@zafritech.net",
+      "firstName": "Mohammed",
+      "lastName": "El Masery",
+      "address": "No. 1 Jan Smuts Avenue, Braamfontein",
+      "city": "Cairo",
+      "state": "Cairo",
+      "country": "EGY",
+      "postCode": "2000",
+      "phone": "+27 53 546 1298",
+      "mobile": "+27 52 454 8044",
+      "website": "www.zafritech.net"
+    }
+  },
+  {
+    "id": 20,
+    "firstName": "Chen",
+    "lastName": "Leong",
+    "email": "chenl@zafritech.net",
+    "mainRole": "Application User",
+    "contact": {
+      "email": "chenl@zafritech.net",
+      "firstName": "Chen",
+      "lastName": "Lee",
+      "address": "No. 1 Jan Smuts Avenue, Braamfontein",
+      "city": "Beijing",
+      "state": "Beijing",
+      "country": "CHN",
+      "postCode": "2000",
+      "phone": "+27 53 546 1298",
+      "mobile": "+27 52 454 8044",
+      "website": "www.zafritech.net"
+    }
+  }
+]

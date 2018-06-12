@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4"
+      layout:decorator="pixeladmin/layouts/main-default">
+
+    <head>
+        <title>Zafritech SE - Profile</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="UTF-8" />
+    </head>
+
+    <body>
+
+        <!-- Content -->
+        <div layout:fragment="content" class="px-content">
+
+            <div style="height:calc(100vh - 145px); overflow-x: hidden;; overflow-y: auto; padding-right: 15px;"> <!-- Scrolling area -->
+
+                <div class="page-header">
+                    <h1 id="pagetitle">Zafritech SE - User Profile</h1>
+                    <div class="pull-lg-right">
+                        <a href="/admin/users" type="button" class="btn btn-info btn-outline btn-sm" style="border-radius: 2px;">
+                            <span class="btn-label-icon left fa fa-chevron-left" style="border: 0;"></span>Back to List
+                        </a>
+                    </div>
+                </div>
+
+                <div class="row">
+
+                    <div class="col-md-6">
+
+                        <!-- User Basic Profile Information -->
+                        <div class="panel panel-info panel-dark">
+                            <div class="panel-heading">
+                                <span class="panel-title"><i class="panel-title-icon fa fa-user-circle-o"></i>
+                                    <span th:text="${user.firstName} + '\'s' + ' Basic Profile'">User Profile</span>
+                                </span>
+                                <div class="panel-heading-controls">
+                                    <div class="btn-group btn-group-xs">
+                                        <button class="btn btn-info dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false" style="border-radius: 2px;">
+                                            <i class="fa fa-cog"></i>
+                                        </button>
+                                        <ul class="dropdown-menu dropdown-menu-right">
+                                            <li>
+                                                <a href="javascript:void(0);" th:onclick="'javascript:UserBasicProfileUpdate(\'' + ${user.uuId} + '\');'">
+                                                    <i class="fa fa-pencil m-r-1"></i>Edit Profile
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:void(0);" th:onclick="'javascript:notYetImplemented();'">
+                                                    <i class="fa fa-photo m-r-1"></i>Change Photo
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:void(0);" th:onclick="'javascript:UserPwdChange(\'' + ${user.uuId} + '\');'">
+                                                    <i class="fa fa-key m-r-1"></i>Change Password
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel-body">
+
+                                <div class="row">
+                                    <div class="col-md-3" align="center">
+                                        <img src="/images/profile.png" class="img-circle img-responsive" />
+                                    </div>
+                                    <div class=" col-md-9">
+                                        <table class="table table-bordered" style="margin-bottom: 0;">
+                                            <tbody>
+                                                <tr th:if="${user.lastName != null}">
+                                                    <td><strong>Full name:</strong></td>
+                                                    <td th:text="${user.firstName} + ' ' + ${user.lastName}">Full Name</td>
+                                                </tr>
+                                                <tr th:if="${user.lastName == null}">
+                                                    <td><strong>Full name:</strong></td>
+                                                    <td th:text="${user.firstName}">Full Name</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>Title:</strong></td>
+                                                    <td th:text="${user.mainRole}">Systems Engineer</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>Email:</strong></td>
+                                                    <td th:text="${user.email}">email@example.com</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>Login ID:</strong></td>
+                                                    <td th:text="${user.userName}">email@example.com</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /User Basic Profile Information -->
+
+                        <!-- User Roles Information -->
+                        <div class="panel panel-info panel-dark">
+                            <div class="panel-heading">
+                                <span class="panel-title"><i class="panel-title-icon fa fa-drivers-license"></i>
+                                    <span th:text="${user.firstName} + '\'s' + ' Roles'">User Roles</span>
+                                </span>
+                                <div class="panel-heading-controls">
+                                    <div class="btn-group btn-group-xs">
+                                        <button class="btn btn-info dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false" style="border-radius: 2px;">
+                                            <i class="fa fa-cog"></i>
+                                        </button>
+                                        <ul class="dropdown-menu dropdown-menu-right">
+                                            <li>
+                                                <a href="javascript:void(0);" th:onclick="'javascript:UserAdminManageRoles(\'' + ${user.uuId} + '\');'">
+                                                    <i class="fa fa-drivers-license-o m-r-1"></i>Manage Roles
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel-body">
+
+                                <div class="row" style="padding: 0 14px;">
+                                    <table th:if="${user.userRoles != null}" class="table table-bordered" style="margin-bottom: 0;">
+                                        <tbody>
+                                            <tr th:each="role,iter : ${user.userRoles}">
+                                                <td style="width: 50px; text-align: center;" th:text="${iter.count}"></td>
+                                                <td th:text="${role.roleDisplayName}">Role Name</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+
+                                    <div th:if="${user.userRoles == null}">
+                                        <div style="color: #E91E63; padding: 20px 10px;">This user has not been assigned any roles.</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /User Roles Information -->
+
+                    </div>
+
+                    <div class="col-md-6">
+
+                        <!-- User Projects Information -->
+                        <div class="panel panel-info panel-dark">
+                            <div class="panel-heading">
+                                <span class="panel-title">
+                                    <i class="panel-title-icon fa fa-bar-chart"></i>
+                                    <span th:text="${user.firstName} + '\'s' + ' Projects'">User Projects</span>
+                                </span>
+                                <div class="panel-heading-controls">
+                                    <div class="btn-group btn-group-xs">
+                                        <button class="btn btn-info dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false" style="border-radius: 2px;">
+                                            <i class="fa fa-cog"></i>
+                                        </button>
+                                        <ul class="dropdown-menu dropdown-menu-right">
+                                            <li>
+                                                <a href="javascript:void(0);" th:onclick="'javascript:UserAdminAssignProjects(\'' + ${user.uuId} + '\');'">
+                                                    <i class="fa fa-line-chart m-r-1"></i>Assign Projects
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel-body">
+
+                                <div class="row" style="padding: 0 14px;">
+
+                                    <table th:if="${!projects.isEmpty()}" class="table table-bordered" style="margin-bottom: 0;">
+                                        <tbody>
+                                            <tr th:each="project, iter : ${projects}">
+                                                <td style="width: 50px; text-align: center;" th:text="${iter.count}"></td>
+                                                <td style="width: 200px;"  th:text="${project.projectNumber}">Number</td>
+                                                <td th:text="${project.projectName}">Name</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /User Projects Information -->
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </body>
+</html>

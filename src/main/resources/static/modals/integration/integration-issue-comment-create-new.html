@@ -1,0 +1,51 @@
+<style>
+    .btn-fixed-width-100 {
+        width: 100px !important;
+        border-radius: 2px;
+    }    
+</style>
+   
+<form id="createItem" action="/api/integration/interface/issue/comment/create" method="post">
+
+    <input type="hidden" name="issueId" id="issueId" value="" />
+
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="form-group">
+                <label for="issueComment">Comment:</label>
+                <textarea class="form-control" id="issueComment" name="issueComment" rows="4"></textarea>
+            </div>
+        </div>
+    </div>
+    <!-- Comment Actions -->
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="form-group">
+                <label for="commentAction">Action:</label>
+                <textarea class="form-control" id="commentAction" name="commentAction" rows="4"></textarea>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-4">
+            <div class="form-group">
+                <label for="commentById">Comment By:</label>
+                <select class="form-control" id="commentById" name="commentById"></select>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="form-group">
+                <label for="issueStatus">Issue Status:</label>
+                <select class="form-control" id="issueStatus" name="issueStatus"></select>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="form-group">
+                <label for="actionBy">Action By:</label>
+                <select class="form-control" id="actionBy" name="actionBy"></select>
+            </div>
+        </div>
+
+    </div>
+</form>

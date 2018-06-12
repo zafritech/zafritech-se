@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+
+    <body>
+        
+        <div th:fragment="side-nav">
+            
+            <!-- sidebar-->
+            <aside class="sidebar-master-container-wide">
+                <div class="sidebar-content">
+
+                    <!-- Left Columns - SBS 33% -->
+                    <div class="col-md-4" style="min-height:calc(100vh - 180px);">
+                        <div class="card" id="sbstree">
+
+                            <!-- START card header -->
+                            <div class="card-heading bg-light-blue-800">
+
+                                <!-- START dropdown-->
+                                <div class="pull-right dropdown">
+                                    <button type="button" data-toggle="dropdown" class="btn btn-default btn-flat btn-flat-icon"><em class="ion-android-more-vertical"></em></button>
+                                    <ul role="menu" class="dropdown-menu md-dropdown-menu dropdown-menu-right">
+                                        <li style="border-bottom: 1px solid #ddd;"><a href="#"><em class="fa fa-plus fa-fw"></em>Add New Entity</a></li>
+                                        <li style="border-bottom: 1px solid #ddd;"><a href="/app/integration/interfaces/download"><em class="fa fa-file-excel-o fa-fw"></em>Download Spreadsheet</a></li>
+                                        <li><a href="javascript:void(0);" th:onclick="'javascript:CloseAllProject();'"><em class="fa fa-file-pdf-o fa-fw"></em>Download PDF Report</a></li>
+                                    </ul>
+                                </div>
+
+                                <!-- END dropdown-->
+                                <div class="card-title">System Breakdown Structure</div>
+
+                            </div>
+
+                            <!-- START card body-->
+                            <div class="card-body" style="min-height:calc(100vh - 190px); overflow-y:auto;">
+
+                                <div style="margin-top: 0;">
+                                    <ul id="sbsElementsTree" class="ztree"></ul>
+                                </div>
+
+                            </div>  
+
+                        </div>		                 
+                    </div>
+                </div>
+            </aside>
+            <div class="sidebar-layout-obfuscator"></div>
+            
+        </div>
+       
+    </body>
+    
+</html>

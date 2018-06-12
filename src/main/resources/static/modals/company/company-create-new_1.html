@@ -1,0 +1,92 @@
+<style>
+    .btn-fixed-width-100 {
+        width: 100px !important;
+        border-radius: 2px;
+    }    
+</style>
+    
+<div>
+
+    <div class="row">
+        <div class="col-md-12">
+        <form method="post" action="/admin/companies/company/save" class="form-horizontal">
+            <fieldset>
+                <div class="form-group">
+                    <label for="input-id-1" class="col-sm-2 control-label">Name</label>
+                    <div class="col-sm-4">
+                        <input id="input-id-1" type="text" name="companyName" id="companyName" class="form-control" />
+                    </div>
+                    <label for="input-id-1" class="col-sm-2 control-label">Role</label>
+                    <div class="col-sm-3">
+                        <select id="input-id-1" name="companyRole" id="companyRole" class="form-control"></select>
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset>
+                <div class="form-group">
+                    <label for="input-id-1" class="col-sm-2 control-label">Address</label>
+                    <div class="col-sm-10">
+                        <input id="input-id-1" type="text" name="companyAddress" id="companyAddress" class="form-control" />
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset>
+                <div class="form-group">
+                    <label for="input-id-1" class="col-sm-2 control-label">City</label>
+                    <div class="col-sm-4">
+                        <input id="input-id-1" type="text" name="companyCity" id="companyCity" class="form-control" />
+                    </div>
+                    <label for="input-id-1" class="col-sm-2 control-label">State</label>
+                    <div class="col-sm-4">
+                        <input id="input-id-1" type="text" name="companyState" id="companyState" class="form-control" />
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset>
+                <div class="form-group">
+                    <label for="input-id-1" class="col-sm-2 control-label">Country</label>
+                    <div class="col-sm-4">
+                        <select id="input-id-1" name="companyCountryId" id="companyCountryId" class="form-control"></select>
+                    </div>
+                    <label for="input-id-1" class="col-sm-2 control-label">Postcode</label>
+                    <div class="col-sm-2">
+                        <input id="input-id-1" type="text" name="companyPostcode" id="companyPostcode" class="form-control" />
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset>
+                <div class="form-group">
+                    <label for="input-id-1" class="col-sm-2 control-label">Telephone</label>
+                    <div class="col-sm-3">
+                        <input id="input-id-1" type="text" name="companyTelephone" id="companyTelephone" class="form-control" />
+                    </div>
+                    <label for="input-id-1" class="col-sm-3 control-label">Mobile</label>
+                    <div class="col-sm-3">
+                        <input id="input-id-1" type="text" name="companyMobile" id="companyMobile" class="form-control" />
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset>
+                <div class="form-group">
+                    <label for="input-id-1" class="col-sm-2 control-label">Notes</label>
+                    <div class="col-sm-10">
+                        <textarea class="form-control" name="companyNotes" id="companyNotes" cols="115" rows="3"></textarea>
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset>
+                <div class="form-group">
+                    <label for="input-id-1" class="col-sm-2 control-label">Logo</label>
+                    <div class="col-sm-10">
+                        <label class="custom-file m-b-2">
+                            <input type="file" name="companyLogo" id="companyLogo" class="custom-file-input" />
+                            <span class="custom-file-control form-control">Choose file...</span>
+                        </label>
+                    </div>
+                </div>
+            </fieldset>
+        </div>
+        </form>
+    </div>
+
+</div>

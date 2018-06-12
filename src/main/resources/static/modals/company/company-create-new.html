@@ -1,0 +1,56 @@
+<style>
+    .btn-fixed-width-100 {
+        width: 100px !important;
+        border-radius: 2px;
+    }    
+</style>
+    
+<div>
+
+    <div class="row">
+        <div class="col-md-12">
+        <form id="companyCreateForm" enctype="multipart/form-data" method="POST" class="form-horizontal">
+            <fieldset>
+                <div class="form-group">
+                    <label for="input-id-1" class="col-sm-2 control-label">Name</label>
+                    <div class="col-sm-10">
+                        <input id="input-id-1" type="text" name="companyName" id="companyName" class="form-control" />
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset>
+                <div class="form-group">
+                    <label for="input-id-1" class="col-sm-2 control-label">Short Name</label>
+                    <div class="col-sm-4">
+                        <input id="input-id-1" name="companyShortName" id="companyShortName" class="form-control" />
+                    </div>
+                    <label for="input-id-1" class="col-sm-2 control-label">Name Code</label>
+                    <div class="col-sm-2">
+                        <input id="input-id-1" type="text" name="companyCode" id="companyCode" class="form-control" />
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset>
+                <div class="form-group">
+                    <label for="input-id-1" class="col-sm-2 control-label">Company Description</label>
+                    <div class="col-sm-10">
+                        <textarea class="form-control" name="companyDescription" id="companyDescription" cols="115" rows="3"></textarea>
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset>
+                <div class="form-group">
+                    <label for="input-id-1" class="col-sm-2 control-label">Logo</label>
+                    <div class="col-sm-10">
+                        <label id="pxFileControl" class="custom-file m-b-2">
+                            <input type="file" name="companyLogo" id="companyLogo" class="custom-file-input" />
+                            <span id="companyLogoTipText" class="custom-file-control form-control">Choose file...</span>
+                        </label>
+                    </div>
+                </div>
+            </fieldset>
+        </div>
+        </form>
+    </div>
+
+</div>

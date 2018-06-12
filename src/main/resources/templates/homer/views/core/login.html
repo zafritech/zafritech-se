@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+        <meta name="description" content="Bootstrap Admin Template" />
+        <meta name="keywords" content="app, responsive, jquery, bootstrap, dashboard, admin" />
+        <title>Login - Zafritech SE</title>
+
+        <!-- build:css(../app) css/vendor-user.css-->
+        <!-- Animate.CSS-->
+        <link rel="stylesheet" href="/assets/vendor/animate.css/animate.css" type="text/css" />
+        <!-- Bootstrap-->
+        <link rel="stylesheet" href="/assets/vendor/bootstrap/dist/css/bootstrap.min.css" type="text/css" />
+        <!-- Ionicons-->
+        <link rel="stylesheet" href="/assets/vendor/ionicons/css/ionicons.css" type="text/css" />
+        <!-- Material Colors-->
+        <link rel="stylesheet" href="/assets/vendor/material-colors/dist/colors.css" type="text/css" />
+        <!-- endbuild-->
+        <!-- Application styles-->
+        <link rel="stylesheet" href="/assets/zafritech/styles/zafritech.css" type="text/css" />
+        
+    </head>
+    <body>
+        <div class="layout-container">
+            <div class="page-container zid-blue-bgd">
+                <div class="container-full">
+                    <div class="container container-xs">
+                        <img src="images/logo_se.png" class="mv-lg block-center img-responsive thumb64" />
+                        <form id="user-login" action="/login" method="post" name="loginForm" novalidate="" class="card b0 form-validate">
+                            <div class="card-heading">
+                                <div class="card-title text-center" style="font-size: 32px;">Zafritech SE Login</div>
+                            </div>
+                            <div class="card-body">
+                                <div class="mda-form-group float-label mda-input-group">
+                                    <div class="mda-form-control">
+                                        <input type="email"  id="username" name="username" required="" class="form-control" />
+                                        <div class="mda-form-control-line"></div>
+                                        <label>Email address</label>
+                                    </div><span class="mda-input-group-addon"><em class="ion-ios-email-outline icon-lg"></em></span>
+                                </div>
+                                <div class="mda-form-group float-label mda-input-group">
+                                    <div class="mda-form-control">
+                                        <input type="password" id="password" name="password" required="" class="form-control" />
+                                        <div class="mda-form-control-line"></div>
+                                        <label>Password</label>
+                                    </div>
+                                    <span class="mda-input-group-addon"><em class="ion-ios-locked-outline icon-lg"></em></span>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-flat">Login</button>
+                        </form>
+                        <div class="text-center text-sm" style="color: #fff;">
+                            <a href="recover.html" class="text-inherit">Forgot password?</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- build:js(../app) js/vendor-user.js-->
+        <!-- Modernizr-->
+        <script src="/assets/vendor/modernizr/modernizr.custom.js"></script>
+        <!-- jQuery-->
+        <script src="/assets/vendor/jquery/dist/jquery.js"></script>
+        <!-- Bootstrap-->
+        <script src="/assets/vendor/bootstrap/dist/js/bootstrap.js"></script>
+        <!-- jQuery Browser-->
+        <script src="/assets/vendor/jquery.browser/dist/jquery.browser.js"></script>
+        <!-- Material Colors-->
+        <script src="/assets/vendor/material-colors/dist/colors.js"></script>
+        <!-- jQuery Form Validation-->
+        <script src="/assets/vendor/jquery-validation/dist/jquery.validate.js"></script>
+        <script src="/assets/vendor/jquery-validation/dist/additional-methods.js"></script>
+        <!-- endbuild-->
+        <!-- App script-->
+        <!--<script src="js/app.js"></script>-->
+    </body>
+</html>

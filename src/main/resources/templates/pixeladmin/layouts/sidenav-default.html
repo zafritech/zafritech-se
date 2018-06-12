@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+
+    <body>
+
+        <nav th:fragment="side-nav" id="side-nav" class="px-nav px-nav-left px-nav-animate px-nav-collapse">
+            
+            <button type="button" class="px-nav-toggle" data-toggle="px-nav">
+                <span class="px-nav-toggle-arrow"></span>
+                <span class="navbar-toggle-icon"></span>
+                <span class="px-nav-toggle-label font-size-11">HIDE MENU</span>
+            </button>
+
+            <div class="px-nav-scrollable-area">
+                <ul class="px-nav-content">
+                    <li class="px-nav-item">
+                        <a href="/">
+                            <i class="px-nav-icon ion-home"></i>
+                            <span class="px-nav-label">Home</span>
+                        </a>
+                    </li>
+                    <li class="px-nav-item px-nav-dropdown">
+                        <a href="#">
+                            <i class="px-nav-icon ion-ios-albums"></i>
+                            <span class="px-nav-label">Projects</span>
+                        </a>
+                        <ul class="px-nav-dropdown-menu">
+                            <li class="px-nav-item">
+                                <a href="javascript:void(0);" th:onclick="'javascript:ProjectCreateNew();'">
+                                    <span class="px-nav-label">New Project</span>
+                                </a>
+                            </li>
+                            <li class="px-nav-item">
+                                <a href="javascript:void(0);" th:onclick="'javascript:OpenProject();'">
+                                    <span class="px-nav-label">Open Project</span>
+                                </a>
+                            </li>
+                            <li class="px-nav-item">
+                                <a href="/projects">
+                                    <span class="px-nav-label">List Project</span>
+                                </a>
+                            </li>
+                            <li class="px-nav-item" th:if="${usersession.hasOpenProject}">
+                                <a th:href="'/projects/close/' + ${usersession.projectUuId}">
+                                    <span class="px-nav-label">Close Project</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="px-nav-item px-nav-dropdown">
+                        <a href="#">
+                            <i class="px-nav-icon ion-ios-keypad"></i>
+                            <span class="px-nav-label">Applications</span>
+                        </a>
+                        <ul class="px-nav-dropdown-menu">
+                            <li class="px-nav-item">
+                                <a href="/app/requirements">
+                                    <span class="px-nav-label">Requirements</span>
+                                </a>
+                            </li>
+                            <li class="px-nav-item">
+                                <a href="/app/integration">
+                                    <span class="px-nav-label">Integration</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            
+        </nav>
+
+    </body>
+
+</html>

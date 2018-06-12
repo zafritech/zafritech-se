@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+
+    <body>
+
+        <div layout:fragment="content">
+            
+            <!--<div class="container container-lg">-->
+
+                <div class="card" id="details">
+                    
+                    <div class="card-heading  bg-light-blue-800">
+                        <!-- START dropdown-->
+                        <div class="pull-right dropdown">
+                            <button type="button" data-toggle="dropdown" class="btn btn-default btn-flat btn-flat-icon"><em class="ion-android-more-vertical"></em></button>
+                            <ul role="menu" class="dropdown-menu md-dropdown-menu dropdown-menu-right">
+                                <li><a href="javascript:void(0);" th:onclick="'javascript:IntegrationElementCreate(\'' + ${elementId} + '\');'"><em class="ion-plus icon-fw"></em>Add Sub Element</a></li>
+                                <li><a href="javascript:void(0);" th:onclick="'javascript:IntegrationInterfaceCreate(\'' + ${elementId} + '\');'"><em class="ion-plus icon-fw"></em>Add Interface</a></li>
+                            </ul>
+                        </div>
+                        <!-- END dropdown-->
+                        <div class="card-title" th:text="${detailsTitle}">System Element Interfaces</div>
+                    </div>
+                    
+                    <div class="card-body">
+                        
+                        <table th:if="${!interfaces.isEmpty()}" class="table table-striped table-bordered table-hover">
+                            <thead>
+                                <tr>
+                                    <th style="width: 160px;">Interface ID</th>
+                                    <th>Interface Name</th>
+                                    <th style="width: 100px">Entities</th>
+                                    <th style="width: 100px;">Level</th>
+                                    <th style="width: 140px;">Status</th>
+                                    <th style="width: 100px; text-align: center;">Issues</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr th:each="interface : ${interfaces}">
+                                    <td style="text-align: left;">
+                                        <!--<a th:href="'/integration/interfaces/' + ${interface.uuId}">-->
+                                        <a href="javascript:void(0);" th:onclick="'javascript:loadInterfaceDetails(\'' + ${interface.Id} + '\');'">
+                                            <span th:text="${interface.systemId}"></span>
+                                        </a>
+                                    </td>
+                                    <td style="text-align: left;">
+                                        <!--<a th:href="'/integration/interfaces/' + ${interface.uuId}">-->
+                                        <a href="javascript:void(0);" th:onclick="'javascript:loadInterfaceDetails(\'' + ${interface.Id} + '\');'">
+                                            <span th:text="${interface.interfaceTitle}"></span>
+                                        </a>
+                                    </td>
+                                    <td th:text="${interface.primaryEntity.code} + ' - ' + ${interface.secondaryEntity.code}" style="text-align: left;"></td>
+                                    <td th:text="'Level ' + ${interface.interfaceLevel}" style="text-align: left;"></td>
+                                    <td style="text-align: left;">
+                                        <div th:if="${#strings.equals(interface.status, 'INTERFACE_STATUS_CLOSED')}" style="color: #2ECC71;">
+                                            <i class="fa fa-check-circle" style="padding-right: 8px;"></i>
+                                            <span th:text="${#strings.replace(interface.status, 'INTERFACE_STATUS_', '')}"></span>
+                                        </div>
+                                        <div th:if="${#strings.equals(interface.status, 'INTERFACE_STATUS_OPEN')}" style="color: #ff6707;">
+                                            <i class="fa fa-clock-o" style="color: #ff6707; padding-right: 8px;"></i>
+                                            <span th:text="${#strings.replace(interface.status, 'INTERFACE_STATUS_', '')}"></span>
+                                        </div>
+                                        <div th:if="${interface.status == null}" style="color: #038dcc;">
+                                            <i class="fa fa-question-circle" style="color: #038dcc; padding-right: 8px;"></i>
+                                            <span th:text="${#strings.replace(interface.status, 'INTERFACE_STATUS_', '')}"></span>
+                                        </div>
+                                    </td>
+                                    <td style="text-align: center;">
+                                        <a th:if="${#lists.size(interface.issues) > 0}" href="javascript:void(0);" th:onclick="'javascript:loadInterfaceDetails(\'' + ${interface.Id} + '\');'">
+                                            <i class="fa fa-exclamation-triangle" style="color: #FFB300; padding-right: 8px;"></i>
+                                            <span th:text="${#lists.size(interface.issues)}"></span>
+                                        </a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <div th:if="${interfaces.isEmpty()}">
+                            <div th:text="${message}" style="padding: 20px; color: #e12b31;"></div>
+                        </div>
+
+                    </div>
+                    
+                </div>
+
+            <!--</div>-->        
+
+        </div>
+
+    </body>
+</html>

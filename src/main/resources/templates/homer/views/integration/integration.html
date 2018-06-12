@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4"
+      layout:decorator="homer/layouts/main-wide">
+
+    <head>
+        <title>System Integration</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="UTF-8" />
+    </head>
+
+    <body>
+
+        <div layout:fragment="content">
+
+            <!-- Modal Boxes Control -->
+            <input type="hidden" id="modalBusyControl" th:value="OFF" />
+            <input type="hidden" id="isIntegrationView" value="isIntegrationView" />
+            <input type="hidden" id="sbsTreeValid" value="sbsTreeValid" />
+            <input type="hidden" id="sbsNodeId" th:value="3" />
+
+            <div class="container container-lg">
+
+                <div id="systemIntegrationPageContent"></div>
+
+            </div>
+
+        </div>
+
+    </body>
+
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+
+    <body>
+
+        <div layout:fragment="content">
+            
+            <!--<div class="container container-lg">-->
+
+                <div class="card" id="details">
+                 
+                    <div class="card-heading bg-light-blue-800">
+                        <!-- START dropdown-->
+                        <div class="pull-right dropdown">
+                            <button type="button" data-toggle="dropdown" class="btn btn-default btn-flat btn-flat-icon"><em class="ion-android-more-vertical"></em></button>
+                            <ul role="menu" class="dropdown-menu md-dropdown-menu dropdown-menu-right">
+                                <li th:if="${element == null}">
+                                    <a href="javascript:void(0);" th:onclick="'javascript:IntegrationRootElementCreate(\'' + ${entity.Id} + '\');'"><em class="ion-plus icon-fw"></em>Add Sub Element</a>
+                                </li>
+                                <li th:if="${element != null}">
+                                    <a href="javascript:void(0);" th:onclick="'javascript:IntegrationElementCreate(\'' + ${element.Id} + '\');'"><em class="ion-plus icon-fw"></em>Add Sub Element</a>
+                                </li>
+                                <li th:if="${element != null}">
+                                    <a href="javascript:void(0);" th:onclick="'javascript:IntegrationInterfaceCreate(\'' + ${element.Id} + '\');'"><em class="ion-plus icon-fw"></em>Add Interface</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- END dropdown-->
+                        <div class="card-title" th:text="${title}">Entity Name</div>
+                    </div>
+                       
+                    <div class="card-body" style="min-height:calc(100vh - 190px);">
+                        
+                        <div th:if="${!tree.isEmpty()}">
+                            <div th:each="dao : ${tree}" class="row" style="padding: 8px 0; border-bottom: 1px solid #ddd;">
+                                <div class="col-md-10">
+                                    <a href="javascript:void(0);" th:onclick="'javascript:loadElementInterfaces(\'' + ${dao.element.Id} + '\');'">
+                                        <span th:text="${dao.element.sbs + ' ' + dao.element.name}"></span>
+                                    </a>
+                                </div>
+                                <div class="col-md-2">
+                                    <div class="pull-right">
+                                        <span th:text="${dao.element.entity.code}"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                
+<!--                <div th:if="${!tree.isEmpty()}" id="accordion" class="panel-group">
+
+                    <div th:each="dao : ${tree}" class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion" th:attr="href=${'#collapse' + dao.element.id}" th:onclick="'javascript:loadElementInterfaces(\'' + ${dao.element.id} + '\');'">
+                                    <span th:text="${dao.element.sbs + ' ' + dao.element.name}" style="font-weight: bold;"></span>
+                                </a>
+                                <div class="pull-right">
+                                    <span th:text="${dao.element.entity.code}" style="font-weight: bold;"></span>
+                                </div>
+                            </h4>
+                        </div>
+                        <div th:attr="id=${'collapse' + dao.element.id}" class="panel-collapse collapse">
+                            <div th:if="${!dao.children.isEmpty()}" th:attr="id=${'elementDetails' + dao.element.id}" style="padding: 0px;">
+                                <div th:each="element : ${dao.children}" class="row sub-element">
+                                    <a th:href="'/integration/interfaces/list/' + ${element.uuId}" class="sub-element-link">
+                                        <div class="col-md-10">
+                                            <span th:text="${element.sbs + ' ' + element.name}"></span>
+                                        </div>
+                                        <div class="col-md-2">
+                                            <div th:text="${element.entity.code}" class="pull-right"></div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>-->
+            <!--</div>-->
+            
+<!--            <div class="col-md-6">
+                <div style="padding: 10px;">
+                    <form id="createItem" action="/api/items/save" method="post">
+                        <div class="form-group" id="levels">
+                            <label>Interface Levels: &nbsp;</label>
+                            <label class="checkbox-inline">
+                                <input type="checkbox" name="level1" id="level1" value="1" checked="checked" />1
+                            </label>
+                            <label class="checkbox-inline">
+                                <input type="checkbox" name="level2" id="level2" value="2" checked="checked" />2
+                            </label>
+                            <label class="checkbox-inline">
+                                <input type="checkbox" name="level3" id="level3" value="4" checked="checked" />3
+                            </label>
+                            <label class="checkbox-inline">
+                                <input type="checkbox" name="level4" id="level4" value="8" checked="checked" />4
+                            </label>
+                        </div>
+                    </form>
+                </div>
+                <div id="elementInterfaces"></div>
+            </div>-->
+            
+        </div>
+
+        <th:block layout:fragment="scripts"></th:block>
+
+    </body>
+
+</html>

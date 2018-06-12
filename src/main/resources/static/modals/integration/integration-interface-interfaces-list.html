@@ -1,0 +1,52 @@
+<style>
+    .btn-fixed-width-100 {
+        width: 100px !important;
+        border-radius: 2px;
+    }    
+</style>
+   
+<form id="createItem" action="/api/integration/interface/create" method="post">
+
+    <input type="hidden" name="primaryEntityId" id="primaryEntityId" value="" />
+    <input type="hidden" name="primaryElementId" id="primaryElementId" value="" />
+
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h4 id="detailsTitle" class="panel-title" style="font-weight: bold;" th:text="${detailsTitle}">System Element Interfaces</h4>
+        </div>
+        <div class="panel-body">
+
+            <div style="margin-bottom: 10px; padding-bottom: 5px; border-bottom: 1px solid #ddd;">
+                <i class="fa fa-plus" style="margin-right: 4px;"></i>
+                <a href="javascript:void(0);" th:onclick="'javascript:IntegrationInterfaceCreate(\'' + ${elementId} + '\');'">Add New Interface</a>
+            </div>
+
+            <div th:if="${!interfaces.isEmpty()}">
+                <div style="height: calc(100vh - 280px); overflow-x:hidden; overflow-y:auto;">
+                <div th:each="interface : ${interfaces}" class="row" style="padding: 5px 0; border-bottom: 1px solid #ddd;">
+                    <div class="col-md-8">
+                        <a th:href="'/integration/interfaces/' + ${interface.uuId}">
+                            <i th:if="${#strings.equals(interface.status, 'INTERFACE_STATUS_CLOSED')}" class="fa fa-check-circle" style="color: #2ECC71; padding-right: 8px;"></i>
+                            <i th:if="${#strings.equals(interface.status, 'INTERFACE_STATUS_OPEN')}" class="fa fa-clock-o" style="color: #ff6707; padding-right: 8px;"></i>
+                            <i th:if="${interface.status == null}" class="fa fa-question-circle" style="color: #038dcc; padding-right: 8px;"></i>
+                            <span th:text="${interface.interfaceTitle}"></span>
+                        </a>
+                    </div>
+                    <div class="col-md-2" style="padding-right: 25px;">
+                        <span th:text="'Level ' + ${interface.interfaceLevel}" style="font-weight: bold;" class="pull-right"></span>
+                    </div>
+                    <div class="col-md-2" style="padding-right: 25px;">
+                        <span th:text="${interface.primaryEntity.code} + ' - ' + ${interface.secondaryEntity.code}" style="font-weight: bold;" class="pull-right"></span>
+                    </div>
+                </div>
+                </div>
+            </div>
+
+            <div th:if="${interfaces.isEmpty()}">
+                <div th:text="${message}" style="padding: 20px; color: #e12b31;"></div>
+            </div>
+
+        </div>
+    </div>
+
+</form>
