@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4"
+      layout:decorator="pixeladmin/layouts/main-default">
+
+    <head>
+        <title>Zafritech SE - Home</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="UTF-8" />
+    </head>
+
+    <body>
+
+        <!-- Content -->
+        <div layout:fragment="content" class="px-content">
+
+            <div style="height:calc(100vh - 145px); overflow-x: hidden;; overflow-y: auto; padding-right: 15px;"> <!-- Scrolling area -->
+
+                <div class="page-header">
+                    <h1 id="pagetitle">Zafritech SE - Projects</h1>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-10 col-md-offset-1 font-size-14">
+
+                        <div class="panel panel-info panel-dark">
+                            <div class="panel-heading">
+                                <span class="panel-title"><i class="panel-title-icon fa fa-bar-chart"></i>Registered Projects</span>
+                            </div>
+                            <div class="panel-body">
+
+                                <div th:if="${!projects.isEmpty()}" class="row">
+
+                                    <div th:each="project : ${projects}" class="widget-products-item col-md-3">
+                                        <a class="widget-products-title" th:href="'/projects/' + ${project.UuId}">
+                                            <span th:text="${project.projectName}"></span>
+                                        </a>
+                                        <a class="widget-products-image" th:href="'/projects/' + ${project.UuId}">
+                                            <img src="/images/projects/project-placeholder.png" class="img-responsive" />
+                                            <span class="widget-products-overlay inverted"></span>
+                                            <span class="label label-ribbon right label-danger font-size-13"><strong>NEW</strong></span>
+                                        </a>
+                                        <div class="widget-products-footer text-muted">
+                                            <i class="fa fa-institution p-l-1"></i> 6
+                                            <i class="fa fa-users p-l-1"></i> 23
+                                            <i class="fa fa-window-maximize p-l-1"></i> 0
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </body>
+    
+</html>

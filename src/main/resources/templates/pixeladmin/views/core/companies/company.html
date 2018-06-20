@@ -15,36 +15,146 @@
         <!-- Content -->
         <div layout:fragment="content" class="px-content">
 
-            <div class="page-header">
-                <h1 id="pagetitle">Zafritech SE - Company</h1>
-            </div>
+            <div style="height:calc(100vh - 145px); overflow-x: hidden;; overflow-y: auto; padding-right: 15px;"> <!-- Scrolling area -->
 
-            <div class="row" style="margin-top:100px;">
-                <div class="col-md-8 col-md-offset-2 font-size-14">
-                   
-                    <div class="panel panel-info panel-dark">
-                        <div class="panel-heading">
-                            <span class="panel-title"><i class="panel-title-icon fa fa-bar-chart"></i>Company</span>
-                        </div>
-                        <div class="panel-body">
-                            
-                            <div th:if="${!projects.isEmpty()}">
-                                <div th:each="project : ${projects}" class="row" style="margin-bottom: 10px;">
-                                    <div class="col-md-6">
-                                        <a th:href="'/projects/' + ${project.UuId}"><span th:text="${project.projectName}"></span></a>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <a th:href="'/projects/' + ${project.UuId}"><span th:text="${project.projectCode}"></span></a>
-                                    </div>
-                                    <div class="col-md-2">
-                                        <span class="pull-right"><i class="panel-title-icon fa fa-unlock-alt text-primary"></i></span>
+                <div class="page-header">
+                    <h1 id="pagetitle">Zafritech SE - Company Details</h1>
+                    <div class="pull-lg-right">
+                        <a href="/companies" type="button" class="btn btn-info btn-outline btn-sm" style="border-radius: 2px;">
+                            <span class="btn-label-icon left fa fa-chevron-left" style="border: 0;"></span>Back to List
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="panel panel-info panel-dark">
+                            <div class="panel-heading">
+                                <span class="panel-title">
+                                    <i class="panel-title-icon fa fa-institution"></i>
+                                    Company Profile
+                                </span>
+                                <div class="panel-heading-controls">
+                                    <div class="btn-group btn-group-xs pull-right">
+                                        <button class="btn btn-info dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false" style="border-radius: 2px;">
+                                            <i class="fa fa-cog"></i>
+                                        </button>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="javascript:void(0);" th:onclick="'javascript:CompanyBasicProfileUpdate(\'' + ${company.Id} + '\');'"><i class="fa fa-pencil m-r-1"></i>Edit Profile</a></li>
+                                            <li><a href="javascript:void(0);" th:onclick="'javascript:companyChangeLogoImage(\'' + ${company.Id} + '\');'"><i class="fa fa-picture-o m-r-1"></i>Update Logo</a></li>
+                                        </ul>
                                     </div>
                                 </div>
+                            </div>
+                            <div class="panel-body">
+                                <div class="row">
+                                    <div class="col-md-3" align="center">
+                                        <img th:if="${company.logoPath != null}" th:attr="src=@{'/images/' + ${company.logoPath}}" class="img-responsive" />
+                                        <img th:if="${company.logoPath == null}" src="/images/companies/logo-placeholder.png" class="img-responsive" />
+                                    </div>
+                                    <div class=" col-md-9">
+                                        <table class="table table-bordered">
+                                            <tbody>
+                                                <tr th:if="${company.companyName != null}">
+                                                    <td><strong>Company name:</strong></td>
+                                                    <td th:text="${company.companyName}">Company Name</td>
+                                                </tr>
+                                                <tr th:if="${company.companyShortName != null}">
+                                                    <td><strong>Short name:</strong></td>
+                                                    <td th:text="${company.companyShortName}">Short Name</td>
+                                                </tr>
+                                                <tr th:if="${company.companyCode != null}">
+                                                    <td><strong>Company code:</strong></td>
+                                                    <td th:text="${company.companyCode}">Company Role</td>
+                                                </tr>
+                                                <tr th:if="${company.companyRole != null}">
+                                                    <td><strong>Company role:</strong></td>
+                                                    <td th:text="${#strings.capitalize(#strings.substringBefore(company.companyRole, '_').toLowerCase())}">Company Role</td>
+                                                </tr>
+                                                <tr th:if="${company.companyRole != null}">
+                                                    <td><strong>Role description:</strong></td>
+                                                    <td th:text="${company.companyRoleDescription}">Company Role</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                               
                             </div>
                         </div>
                     </div>
                     
+                    <div class="col-md-4">
+                        <div class="panel panel-info panel-dark">
+                            <div class="panel-heading">
+                                <span class="panel-title">
+                                    <i class="panel-title-icon fa fa-drivers-license"></i>
+                                    Contact Details
+                                </span>
+                                <div class="panel-heading-controls">
+                                    <div class="btn-group btn-group-xs pull-right">
+                                        <button class="btn btn-info dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false" style="border-radius: 2px;">
+                                            <i class="fa fa-cog"></i>
+                                        </button>
+                                        <ul class="dropdown-menu">
+                                            <li>
+                                                <a href="javascript:void(0);" th:onclick="'javascript:CompanyContactDetailsUpdate(\'' + ${company.Id} + '\');'">
+                                                    <i class="fa fa-pencil m-r-1"></i>Update Details
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel-body">
+                                
+                                <table class="table table-hover">
+                                    <tr>
+                                        <td style="width: 40%"><i class="fa fa-envelope"></i>&nbsp;&nbsp;Email</td>
+                                        <td><span th:text="${company.contact?.email}"></span></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 40%"><i class="fa fa-globe"></i>&nbsp;&nbsp;Website</td>
+                                        <td><span th:text="${company.contact?.website}"></span></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 40%"><i class="fa fa-phone"></i>&nbsp;&nbsp;Telephone</td>
+                                        <td><span th:text="${company.contact?.phone}"></span></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 40%"><i class="fa fa-mobile"></i>&nbsp;&nbsp;&nbsp;Mobile</td>
+                                        <td><span th:text="${company.contact?.mobile}"></span></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 40%"><i class="fa fa-id-card-o"></i>&nbsp;&nbsp;Postal Address</td>
+                                        <td><span th:text="${company.contact?.address}"></span></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 40%"><i class="fa fa-flag"></i>&nbsp;&nbsp;Country</td>
+                                        <td>
+                                            <span th:text="${company.contact?.country?.countryName}"></span>&nbsp;&nbsp;
+                                            <img th:attr="src=${company.contact?.country?.flag}" width="25" height="16" />
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 40%"><i class="fa fa-map"></i>&nbsp;&nbsp;Region</td>
+                                        <td><span th:text="${company.contact?.state}"></span></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 40%"><i class="fa fa-bus"></i>&nbsp;&nbsp;City/Town</td>
+                                        <td><span th:text="${company.contact?.city}"></span></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 40%"><i class="fa fa-hashtag"></i>&nbsp;&nbsp;Post Code</td>
+                                        <td><span th:text="${company.contact?.postCode}"></span></td>
+                                    </tr>
+                                </table>
+                                
+                            </div>
+                        </div>
+                    </div>
                 </div>
+                
             </div>
             
         </div>
