@@ -10,8 +10,11 @@
     <div class="row">
         <div class="col-md-12">
             <form id="companyCreateForm" enctype="multipart/form-data" method="POST" class="form-horizontal">
+                
+                <input type="hidden" name="companyId" id="companyId" value="" />
+                
                 <fieldset>
-                    <div class="form-group">
+                    <div class="form-group row">
                         <label for="companyName" class="col-sm-2 control-label">Name</label>
                         <div class="col-sm-10">
                             <input type="text" name="companyName" id="companyName" class="form-control" />
@@ -19,30 +22,22 @@
                     </div>
                 </fieldset>
                 <fieldset>
-                    <div class="form-group">
+                    <div class="form-group row">
                         <label for="companyShortName" class="col-sm-2 control-label">Short Name</label>
-                        <div class="col-sm-4">
+                        <div class="col-sm-5">
                             <input name="companyShortName" id="companyShortName" class="form-control" />
                         </div>
-                        <label for="companyCode" class="col-sm-2 control-label">Name Code</label>
+                        <label for="companyCode" class="col-sm-3 control-label">Name Code</label>
                         <div class="col-sm-2">
                             <input type="text" name="companyCode" id="companyCode" class="form-control" />
                         </div>
                     </div>
                 </fieldset>
                 <fieldset>
-                    <div class="form-group">
-                        <label for="companyDescription" class="col-sm-2 control-label">Company Description</label>
+                    <div class="form-group row">
+                        <label for="companyRoleDescription" class="col-sm-2 control-label">Role Description</label>
                         <div class="col-sm-10">
-                            <textarea class="form-control" name="companyDescription" id="companyDescription" cols="115" rows="3"></textarea>
-                        </div>
-                    </div>
-                </fieldset>
-                <fieldset>
-                    <div class="form-group">
-                        <label for="companyLogo" class="col-sm-2 control-label">Logo</label>
-                        <div class="col-sm-10">
-                           <input type="file" class="form-control" id="companyLogo" name="companyLogo" />
+                            <textarea class="form-control" name="companyRoleDescription" id="companyRoleDescription" cols="115" rows="3"></textarea>
                         </div>
                     </div>
                 </fieldset>

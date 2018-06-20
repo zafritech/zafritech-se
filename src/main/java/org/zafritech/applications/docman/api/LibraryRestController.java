@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package org.zafritech.core.api;
+package org.zafritech.applications.docman.api;
 
 import java.io.IOException;
 import java.text.ParseException;
@@ -21,15 +21,15 @@ import static org.springframework.web.bind.annotation.RequestMethod.GET;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 import org.zafritech.core.data.dao.FolderTreeDao;
-import org.zafritech.core.data.dao.LibraryItemDao;
+import org.zafritech.applications.docman.data.dao.LibraryItemDao;
 import org.zafritech.core.data.dao.generic.ValuePairDao;
 import org.zafritech.core.data.domain.Folder;
-import org.zafritech.core.data.domain.LibraryItem;
+import org.zafritech.applications.docman.data.domain.LibraryItem;
 import org.zafritech.core.data.repositories.EntityTypeRepository;
 import org.zafritech.core.data.repositories.FolderRepository;
-import org.zafritech.core.data.repositories.LibraryItemRepository;
+import org.zafritech.applications.docman.data.repositories.LibraryItemRepository;
 import org.zafritech.core.services.FolderService;
-import org.zafritech.core.services.LibraryService;
+import org.zafritech.applications.docman.services.LibraryService;
 
 /**
  *

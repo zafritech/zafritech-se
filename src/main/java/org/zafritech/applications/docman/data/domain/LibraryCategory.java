@@ -1,4 +1,4 @@
-package org.zafritech.core.data.domain;
+package org.zafritech.applications.docman.data.domain;
 
 import java.io.Serializable;
 import java.sql.Timestamp;

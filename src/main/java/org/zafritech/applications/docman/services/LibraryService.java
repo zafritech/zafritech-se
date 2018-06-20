@@ -3,12 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package org.zafritech.core.services;
+package org.zafritech.applications.docman.services;
 
 import java.io.IOException;
 import java.text.ParseException;
-import org.zafritech.core.data.dao.LibraryItemDao;
-import org.zafritech.core.data.domain.LibraryItem;
+import org.zafritech.applications.docman.data.dao.LibraryItemDao;
+import org.zafritech.applications.docman.data.domain.LibraryItem;
 
 /**
  *

@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package org.zafritech.core.data.dao;
+package org.zafritech.applications.docman.data.dao;
 
 import org.springframework.web.multipart.MultipartFile;
 

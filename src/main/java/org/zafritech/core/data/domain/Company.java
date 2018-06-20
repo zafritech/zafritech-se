@@ -40,10 +40,8 @@ public class Company implements Serializable {
 
     @Column(columnDefinition = "TEXT")
     private String companyRoleDescription;
-
-    @Lob
-    @Column(nullable=true, columnDefinition="mediumblob")
-    private byte[] companyLogo;
+    
+    private String logoPath;
 
     @ManyToOne
     @JoinColumn(name = "contactId")
@@ -173,12 +171,12 @@ public class Company implements Serializable {
         this.companyRoleDescription = companyRoleDescription;
     }
 
-    public byte[] getCompanyLogo() {
-        return companyLogo;
+    public String getLogoPath() {
+        return logoPath;
     }
 
-    public void setCompanyLogo(byte[] companyLogo) {
-        this.companyLogo = companyLogo;
+    public void setLogoPath(String logoPath) {
+        this.logoPath = logoPath;
     }
 
     public Contact getContact() {

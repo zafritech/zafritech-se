@@ -182,6 +182,102 @@ function CompanyCreateNew() {
 //    });
 //}
 
+function CompanyBasicProfileUpdate(companyId) {
+      
+    $.ajax({
+        
+        global: false,
+        type: "GET",
+        url: '/modals/company/company-update-profile.html',
+        success: function (data) {
+
+            var box = bootbox.confirm({
+
+                closeButton: false,
+                title: 'Update Company Profile',
+                message: data,
+                buttons: {
+                    cancel: {
+                        label: "Cancel",
+                        className: "btn-danger btn-fixed-width-100"
+                    },
+                    confirm: {
+                        label: "Save",
+                        className: "btn-success btn-fixed-width-100"
+                    }
+                },
+                callback: function (result) {
+                    
+                    if (result) {
+                        
+                        var form = $('#companyCreateForm')[0];
+                        var data = new FormData(form);
+                        
+                        $.ajax({
+                            type: "POST",
+                            enctype: 'multipart/form-data',
+                            url: "/api/admin/companies/update/profile",
+                            data: data,
+                            processData: false,
+                            contentType: false,
+                            cache: false,
+                            timeout: 600000,
+                            success: function () {
+                                
+                                 swal({
+
+                                    title: "Success!",
+                                    text: "Company successfully created.",
+                                    type: "success"
+                                },
+                                function () {
+
+                                    window.location.reload();
+                                });
+                            },
+                            error: function (e) {
+
+                                swal({
+
+                                    title: "Error uploading file!",
+                                    text: e.responseText,
+                                    type: "error"
+                                });
+                            }
+                        });
+                    }
+                }
+            });
+            
+            box.on("shown.bs.modal", function(e) {
+                
+                 $.ajax({
+
+                    global: false,
+                    type: "GET",
+                    contentType: "application/json",
+                    url: "/api/admin/companies/" + companyId,
+                    dataType: "json",
+                    cache: false
+                })
+                .done(function (data) {
+                    
+                    var company = data;
+                    console.log(company);
+            
+                    $(e.currentTarget).find('input[name="companyId"]').prop('value', companyId);
+                    $(e.currentTarget).find('input[name="companyName"]').prop('value', company.companyName);
+                    $(e.currentTarget).find('input[name="companyShortName"]').prop('value', company.companyShortName);
+                    $(e.currentTarget).find('input[name="companyCode"]').prop('value', company.companyCode);
+                    $(e.currentTarget).find('input[name="companyRoleDescription"]').prop('value', company.companyRoleDescription);
+                });
+            });
+            
+            box.modal('show');
+        }
+    });
+}
+
 function CompanyContactsView(uuId, orgName) {
 
     $.ajax({
@@ -248,6 +344,200 @@ function CompanyContactsView(uuId, orgName) {
             box.modal('show');
         }
     });
+}
+
+function companyChangeLogoImage(companyId) {
+    
+    $.ajax({
+            
+        global: false,
+        type: "GET",
+        url: '/modals/company/company-upload-logo.html',
+        success: function (data) {
+            
+           var box = bootbox.confirm({
+
+                closeButton: false,
+                message: data,
+                title: "Upload Company Logo",
+                buttons: {
+                    cancel: {
+                        label: "Cancel",
+                        className: "btn-danger btn-fixed-width-100"
+                    },
+                    confirm: {
+                        label: "Save",
+                        className: "btn-success btn-fixed-width-100"
+                    }
+                },
+                callback: function (result) {
+                    
+                    if (result) {
+                        
+                        var form = $('#logoUploadForm')[0];
+                        var data = new FormData(form);
+                        
+                        $.ajax({
+                            type: "POST",
+                            enctype: 'multipart/form-data',
+                            url: "/api/admin/companies/logo/update",
+                            data: data,
+                            processData: false,
+                            contentType: false,
+                            cache: false,
+                            timeout: 600000,
+                            success: function (data) {
+                                
+                                 swal({
+
+                                    title: "Success!",
+                                    text: "Company logo has been successfully created.",
+                                    type: "success"
+                                });
+                                
+                                setTimeout(function() { window.location.reload(); }, 2000);
+                            },
+                            error: function (e) {
+
+                                swal({
+
+                                    title: "Error updating company logo!",
+                                    text: e.responseText,
+                                    type: "error"
+                                });
+                            }
+                        });
+                    }
+                }
+            });
+            
+            box.on("shown.bs.modal", function(e) {
+                
+                $(e.currentTarget).find('input[name="itemId"]').prop('value', companyId);
+            });
+            
+            box.modal('show');
+        }
+    });
+}
+
+function CompanyContactDetailsUpdate(companyId) {
+    
+    $.ajax({
+        
+        global: false,
+        type: "GET",
+        url: '/modals/company/company-contacts-update.html',
+        success: function (data) {
+            
+            var box = bootbox.confirm({
+
+                closeButton: false,
+                title: 'Update Company Contact Details',
+                message: data,
+                buttons: {
+                    cancel: {
+                        label: "Cancel",
+                        className: "btn-danger btn-fixed-width-100"
+                    },
+                    confirm: {
+                        label: "Save",
+                        className: "btn-success btn-fixed-width-100"
+                    }
+                },
+                callback: function (result) {
+                    
+                    if (result) {
+                        
+                        var data = {};
+                        
+                        data['companyId'] = document.getElementById('companyId').value;
+                        data['phone'] = document.getElementById('phone').value;
+                        data['mobile'] = document.getElementById('mobile').value;
+                        data['email'] = document.getElementById('email').value;
+                        data['website'] = document.getElementById('website').value;
+                        data['address'] = document.getElementById('address').value;
+                        data['country'] = document.getElementById('country').value;
+                        data['state'] = document.getElementById('state').value;
+                        data['city'] = document.getElementById('city').value;
+                        data['postCode'] = document.getElementById('postCode').value;
+                        
+                        $.ajax({
+                            
+                            global: false,
+                            type: "POST",
+                            contentType: "application/json",
+                            url: "/api/admin/companies/contact/save/" + companyId,
+                            data: JSON.stringify(data),
+                            dataType: "json",
+                            timeout: 60000,
+                            success: function () {
+
+                                swal({
+                                    title: "Contact updated!",
+                                    text: "Contact details have been successfully updated.",
+                                    type: "success"
+                                },
+                                function() {
+                                   
+                                    window.location.reload();
+                                });
+                            }
+                        });
+                    }
+                }
+            });
+            
+            box.on("shown.bs.modal", function() {
+                
+                $.ajax({
+
+                    global: false,
+                    type: "GET",
+                    contentType: "application/json",
+                    url: "/api/contacts/countries/list",
+                    dataType: "json",
+                    cache: false
+                })
+                .done(function (data) {
+                   
+                    var selectCountryOptions = '';
+                    
+                    $.each(data, function (key, index) {
+
+                        selectCountryOptions = selectCountryOptions + '<option value="' + index.iso3 + '">' + index.countryName+ '</option>';
+                    });
+                    
+                    $('#country').empty();
+                    $('#country').append(selectCountryOptions);
+                
+//                    GetUserContactDetails(companyId);
+
+                    $.ajax({
+
+                        global: false,
+                        type: "GET",
+                        contentType: "application/json",
+                        url: "/api/admin/company/contact/" + companyId,
+                        dataType: "json",
+                        cache: false
+                    })
+                    .done(function (data) {
+
+                        if (data.phone !== null) { $('#phone').prop('value', data.phone); }
+                        if (data.mobile !== null) { $('#mobile').prop('value', data.mobile); }
+                        if (data.address !== null) { $('#address').prop('value', data.address); }
+                        if (data.email !== null) { $('#email').prop('value', data.email); }
+                        if (data.website !== null) { $('#website').prop('value', data.website); }
+                        if (data.country !== null) { $('#country').prop('value', data.country.iso3); }
+                        if (data.state !== null) { $('#state').prop('value', data.state); }
+                        if (data.city !== null) { $('#city').prop('value', data.city); }
+                        if (data.city !== null) { $('#postCode').prop('value', data.postCode); }
+                    });
+                });
+            });
+        }
+    }); 
 }
 
 function onLogoFileSelect() {

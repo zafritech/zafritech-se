@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package org.zafritech.core.contollers;
+package org.zafritech.applications.docman.controllers;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -19,8 +19,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.zafritech.core.data.domain.LibraryItem;
-import org.zafritech.core.data.repositories.LibraryItemRepository;
+import org.zafritech.applications.docman.data.domain.LibraryItem;
+import org.zafritech.applications.docman.data.repositories.LibraryItemRepository;
 import org.zafritech.core.services.ApplicationService;
 
 /**

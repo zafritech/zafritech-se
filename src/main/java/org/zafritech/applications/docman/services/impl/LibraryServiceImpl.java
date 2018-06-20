@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package org.zafritech.core.services.impl;
+package org.zafritech.applications.docman.services.impl;
 
 import java.io.IOException;
 import java.text.ParseException;
@@ -16,14 +16,14 @@ import org.apache.commons.io.FilenameUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
-import org.zafritech.core.data.dao.LibraryItemDao;
+import org.zafritech.applications.docman.data.dao.LibraryItemDao;
 import org.zafritech.core.data.domain.Folder;
-import org.zafritech.core.data.domain.LibraryItem;
+import org.zafritech.applications.docman.data.domain.LibraryItem;
 import org.zafritech.core.data.repositories.FolderRepository;
-import org.zafritech.core.data.repositories.LibraryItemRepository;
+import org.zafritech.applications.docman.data.repositories.LibraryItemRepository;
 import org.zafritech.core.enums.LibraryItemTypes;
 import org.zafritech.core.services.FileIOService;
-import org.zafritech.core.services.LibraryService;
+import org.zafritech.applications.docman.services.LibraryService;
 
 /**
  *

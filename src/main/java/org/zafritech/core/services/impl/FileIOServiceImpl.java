@@ -5,13 +5,17 @@
  */
 package org.zafritech.core.services.impl;
 
+import java.awt.image.BufferedImage;
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
+import javax.imageio.ImageIO;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 import org.zafritech.core.services.FileIOService;
@@ -64,5 +68,20 @@ public class FileIOServiceImpl implements FileIOService {
         }
         
         return filePaths;
+    }
+
+    @Override
+    public boolean convertImageFormat(String inputImagePath, String outputImagePath, String formatName) throws IOException {
+        
+        FileInputStream inputStream = new FileInputStream(inputImagePath);
+        FileOutputStream outputStream = new FileOutputStream(outputImagePath);
+        
+        BufferedImage inputImage = ImageIO.read(inputStream);
+        boolean result = ImageIO.write(inputImage, formatName, outputStream);
+        
+        outputStream.close();
+        inputStream.close();
+         
+        return result;
     }
 }

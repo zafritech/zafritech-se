@@ -1,4 +1,4 @@
-package org.zafritech.core.data.domain;
+package org.zafritech.applications.docman.data.domain;
 
 import java.io.Serializable;
 import java.sql.Timestamp;
@@ -14,6 +14,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import org.zafritech.core.data.domain.Folder;
 import org.zafritech.core.enums.LibraryItemTypes;
 
 @Entity(name = "CORE_LIBRARY_ITEMS")

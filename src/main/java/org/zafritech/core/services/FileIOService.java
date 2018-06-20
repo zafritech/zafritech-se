@@ -17,5 +17,7 @@ public interface FileIOService {
     
     String getUploadDirectory();
     
-    List<String> saveUploadedFiles(List<MultipartFile> files)  throws IOException;
+    List<String> saveUploadedFiles(List<MultipartFile> files) throws IOException;
+    
+    boolean convertImageFormat(String inputImagePath, String outputImagePath, String formatName) throws IOException;
 }

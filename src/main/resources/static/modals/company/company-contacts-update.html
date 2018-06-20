@@ -5,24 +5,33 @@
     }    
 </style>
   
-<form action="/api/user/update" method="POST">
+<form action="/api/company/update" method="POST">
     
-    <input type="hidden" name="uuId" id="uuId" value="" />
+    <input type="hidden" name="companyId" id="companyId" value="" />
     
     <div class="row">
-        <div class="col-sm-4">
+        <div class="col-sm-6">
             <div class="form-group">
                 <label for="phoner">Phone number</label>
                 <input type="text" class="form-control" id="phone" name="phone"  placeholder="Phone number"/>
             </div>
         </div>
-        <div class="col-sm-4">
+        <div class="col-sm-6">
             <div class="form-group">
                 <label for="mobileNumber">Mobile number</label>
                 <input type="text" class="form-control" id="mobile" name="mobile" placeholder="Mobile number" />
             </div>
         </div>
-        <div class="col-sm-4">
+    </div>
+    
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="form-group">
+                <label for="email">Email address</label>
+                <input type="text" class="form-control" id="email" name="email" placeholder="Email address" />
+            </div>
+        </div>
+        <div class="col-sm-6">
             <div class="form-group">
                 <label for="website">Website address</label>
                 <input type="text" class="form-control" id="website" name="website" placeholder="Website address" />

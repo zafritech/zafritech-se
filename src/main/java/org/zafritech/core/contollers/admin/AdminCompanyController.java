@@ -44,7 +44,7 @@ public class AdminCompanyController {
     private CompanyService companyService;
     
     @RequestMapping(value = {"/admin/companies", "/admin/companies/list"})
-    public String createMessageTemplate(@RequestParam(name = "s", defaultValue = "15") int pageSize,
+    public String createMessageTemplate(@RequestParam(name = "s", defaultValue = "10") int pageSize,
                                         @RequestParam(name = "p", defaultValue = "1") int pageNumber,
                                         Model model) {
         

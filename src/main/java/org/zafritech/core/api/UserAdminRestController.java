@@ -119,8 +119,8 @@ public class UserAdminRestController {
     }
     
     @RequestMapping(value = "/api/admin/users/contact/save/{uuid}", method = POST)
-    public ResponseEntity<Contact> updateCountriesData(@PathVariable(value = "uuid") String uuid,
-                                                       @RequestBody ContactDao dao) {
+    public ResponseEntity<Contact> updateUserContactData(@PathVariable(value = "uuid") String uuid,
+                                                         @RequestBody ContactDao dao) {
 
         User user = userService.findByUuId(uuid);
         Contact contact = contactService.getUserContactFromDao(user, dao);

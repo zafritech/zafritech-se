@@ -3,12 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package org.zafritech.core.data.repositories;
+package org.zafritech.applications.docman.data.repositories;
 
 import java.util.List;
 import org.springframework.data.repository.CrudRepository;
 import org.zafritech.core.data.domain.Folder;
-import org.zafritech.core.data.domain.LibraryItem;
+import org.zafritech.applications.docman.data.domain.LibraryItem;
 
 /**
  *

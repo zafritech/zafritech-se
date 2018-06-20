@@ -15,38 +15,41 @@
         <!-- Content -->
         <div layout:fragment="content" class="px-content">
 
-            <div class="page-header">
-                <h1 id="pagetitle">Zafritech SE - Companies</h1>
-            </div>
+            <div style="height:calc(100vh - 145px); overflow-x: hidden;; overflow-y: auto; padding-right: 15px;"> <!-- Scrolling area -->
 
-            <div class="row" style="margin-top:20px;">
-                <div class="col-md-12 font-size-14">
-                   
-                    <div class="panel panel-info panel-dark">
-                        <div class="panel-heading">
-                            <span class="panel-title"><i class="panel-title-icon fa fa-bar-chart"></i>Registered Companies</span>
-                        </div>
-                        <div class="panel-body">
-                            
-                            <div th:if="${!companies.isEmpty()}">
-                                <div th:each="company : ${companies}" class="row" style="margin-bottom: 10px;">
-                                    <div class="col-md-8">
-                                        <a th:href="'/companies/' + ${company.UuId}"><span th:text="${company.companyName}"></span></a>
-                                    </div>
-                                    <div class="col-md-2">
-                                        <a th:href="'/companies/' + ${company.UuId}"><span th:text="${company.companyCode}"></span></a>
-                                    </div>
-                                    <div class="col-md-2">
-                                        <span class="pull-right"><i class="panel-title-icon fa fa-unlock-alt text-primary"></i></span>
+                <div class="page-header">
+                    <h1 id="pagetitle">Zafritech SE - Companies</h1>
+                </div>
+
+                <div class="row" style="margin-top:20px;">
+                    <div class="col-md-12 font-size-14">
+
+                        <div class="panel panel-info panel-dark">
+                            <div class="panel-heading">
+                                <span class="panel-title"><i class="panel-title-icon fa fa-bar-chart"></i>Registered Companies</span>
+                            </div>
+                            <div class="panel-body">
+
+                                <div th:if="${!companies.isEmpty()}">
+                                    <div th:each="company : ${companies}" class="row" style="margin-bottom: 10px;">
+                                        <div class="col-md-8">
+                                            <a th:href="'/companies/' + ${company.UuId}"><span th:text="${company.companyName}"></span></a>
+                                        </div>
+                                        <div class="col-md-2">
+                                            <a th:href="'/companies/' + ${company.UuId}"><span th:text="${company.companyCode}"></span></a>
+                                        </div>
+                                        <div class="col-md-2">
+                                            <span class="pull-right"><i class="panel-title-icon fa fa-unlock-alt text-primary"></i></span>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
+
                     </div>
-                    
                 </div>
+
             </div>
-            
         </div>
 
     </body>

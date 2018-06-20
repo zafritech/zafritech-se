@@ -29,7 +29,7 @@ import org.zafritech.core.data.initializr.DocumentTemplatesInit;
 import org.zafritech.core.data.initializr.EntityTypesInit;
 import org.zafritech.core.data.initializr.FolderInit;
 import org.zafritech.core.data.initializr.InfoClassesInit;
-import org.zafritech.core.data.initializr.LibraryInit;
+import org.zafritech.applications.docman.data.initializr.LibraryInit;
 import org.zafritech.core.data.initializr.LocalesDataInit;
 import org.zafritech.core.data.initializr.ProjectCompanyRolesInit;
 import org.zafritech.core.data.initializr.ProjectsInit;

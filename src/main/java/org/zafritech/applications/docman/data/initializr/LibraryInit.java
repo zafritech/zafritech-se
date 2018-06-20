@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package org.zafritech.core.data.initializr;
+package org.zafritech.applications.docman.data.initializr;
 
 import javax.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
