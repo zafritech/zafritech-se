@@ -5,6 +5,7 @@
  */
 package org.zafritech.core.contollers.admin;
 
+import java.util.ArrayList;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -17,6 +18,7 @@ import org.zafritech.core.data.domain.User;
 import org.zafritech.core.data.repositories.EntityTypeRepository;
 import org.zafritech.core.data.repositories.FolderRepository;
 import org.zafritech.core.data.repositories.ProjectRepository;
+import org.zafritech.core.services.ApplicationService;
 import org.zafritech.core.services.ClaimService;
 
 /**
@@ -26,6 +28,9 @@ import org.zafritech.core.services.ClaimService;
 @Controller
 public class AdminProjectController {
   
+    @Autowired
+    private ApplicationService applicationService;
+	
     @Autowired
     private ProjectRepository projectRepository;
     
@@ -42,10 +47,10 @@ public class AdminProjectController {
     public String getProjectsList(Model model) {
         
         List<Project> projects = projectRepository.findAllByOrderByProjectName();
-        
+       
         model.addAttribute("projects", projects);
         
-        return "views/project/index";
+        return applicationService.getApplicationTemplateName() + "/views/core/admin/project/index";
     }
     
     @RequestMapping("/admin/projects/{uuid}")
