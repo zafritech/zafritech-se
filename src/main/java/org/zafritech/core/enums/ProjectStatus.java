@@ -11,6 +11,7 @@ package org.zafritech.core.enums;
  */
 public enum ProjectStatus {
     
+    STATUS_NEW,
     STATUS_ACTIVE,
     STATUS_CANCELLED,
     STATUS_COMPLETED,

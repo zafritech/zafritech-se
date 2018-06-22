@@ -5,7 +5,7 @@
       layout:decorator="pixeladmin/layouts/main-default">
 
     <head>
-        <title>Zafritech SE - Home</title>
+        <title>Zafritech SE - Projects List</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta charset="UTF-8" />
     </head>
@@ -32,19 +32,22 @@
 
                                 <div th:if="${!projects.isEmpty()}" class="row">
 
-                                    <div th:each="project : ${projects}" class="widget-products-item col-md-3">
-                                        <a class="widget-products-title" th:href="'/projects/' + ${project.UuId}">
-                                            <span th:text="${project.projectName}"></span>
-                                        </a>
-                                        <a class="widget-products-image" th:href="'/projects/' + ${project.UuId}">
-                                            <img src="/images/projects/project-placeholder.png" class="img-responsive" />
-                                            <span class="widget-products-overlay inverted"></span>
-                                            <span class="label label-ribbon right label-danger font-size-13"><strong>NEW</strong></span>
-                                        </a>
-                                        <div class="widget-products-footer text-muted">
-                                            <i class="fa fa-institution p-l-1"></i> 6
-                                            <i class="fa fa-users p-l-1"></i> 23
-                                            <i class="fa fa-window-maximize p-l-1"></i> 0
+                                    <div th:each="project : ${projects}" class="zaf-imagewidget-item col-md-3">
+                                        <div class="project">
+                                            <figure class="img-responsive">
+                                                <img src="/images/projects/project-placeholder.png" />
+                                                <figcaption>
+                                                    <span class="project-details">
+                                                        <a class="zaf-imagewidget-title" th:href="'/projects/' + ${project.UuId}">
+                                                            <span th:text="${project.projectShortName}"></span>
+                                                        </a>
+                                                    </span>
+                                                    <span class="project-creator" th:text="${project.projectType.entityTypeName}">creator name</span>
+                                                </figcaption>
+                                                <span class="actions">
+                                                    <a th:href="'/projects/' + ${project.UuId}" class="btn btn-success bnt-action">Open Project</a>
+                                                </span>
+                                            </figure>
                                         </div>
                                     </div>
 

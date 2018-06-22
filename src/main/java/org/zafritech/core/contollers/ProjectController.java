@@ -91,6 +91,7 @@ public class ProjectController {
             model.addAttribute("folder", folder);   
             model.addAttribute("members", members);
 
+            stateService.closeAllProjects(); 
             stateService.updateOpenProject(project); 
 
             return applicationService.getApplicationTemplateName() + "/views/core/project/project";

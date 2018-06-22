@@ -8,48 +8,6 @@
         <title>Zafritech SE - Project</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta charset="UTF-8" />
-
-        <style type="text/css">
-            .zalinks-title {
-                color: #333333; 
-                font-weight: 600; 
-                font-size: 26px; 
-                margin-top: 0; 
-                margin-bottom: 0;
-            }
-            .zalink-box {
-                display: inline-block; 
-                width: 200px; 
-                height: 180px;  
-                margin: 10px; 
-                border: 2px solid #dddddd;
-            }
-            .zalink-url {
-                display: block; 
-                width:100%; 
-                height: 100%; 
-                margin: 0;
-            }
-            .zalink-image {
-                display: block; 
-                height: 100px; 
-                margin: 10px auto 0px auto;
-            }
-            .zalink-caption {
-                display: block; 
-                height: 20px; 
-                margin: 0px auto 10px auto;
-                padding-top: 2px;
-                text-align: center;
-                font-weight: bold;
-            }
-            .zalink-box:hover {
-                background: #dddddd;
-                border: 4px solid #73AD21;
-                margin-top: 5px;
-            }
-        </style>
-
     </head>
 
     <body>
@@ -255,19 +213,19 @@
                             </div>
 
                             <div class="panel-body">
-
-                                <div th:if="${!project.applications.isEmpty()}">
-                                    <div th:each="application : ${project.applications}" class="zalink-box">
-                                        <a class="zalink-url" th:href="'/app/' + ${application.applicationName}">
-                                            <img class="zalink-image" th:attr="src='/images/' + ${application.applicationName} + '_image.png', alt=${application.applicationTitle}" />					
-                                            <div class="zalink-caption" th:text="${application.applicationTitle}">Application</div>
+                                
+                                <ul class="widget-applications" th:if="${!project.applications.isEmpty()}">
+                                    <li th:each="application : ${project.applications}">
+                                        <a th:href="'/app/' + ${application.applicationName}">
+                                            <span class="img">
+                                                <img class="img-thumbnail widget-applications-thumb" th:attr="src='/images/' + ${application.applicationName} + '_image.png', alt=${application.applicationTitle}" />
+                                            </span>
+                                            <span class="application clearfix">
+                                                <span class="name" th:text="${application.applicationTitle}">Application Name</span>
+                                            </span>
                                         </a>
-                                    </div>
-                                </div>
-
-                                <div th:if="${companies.isEmpty()}">
-
-                                </div>
+                                    </li>
+                                </ul>
 
                             </div>
                         </div>

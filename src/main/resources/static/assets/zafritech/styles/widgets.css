@@ -1,0 +1,177 @@
+@charset "UTF-8";
+.project {
+    margin-bottom: 30px;
+    vertical-align: top;
+    margin-right: 30px;
+    float: left;
+    cursor: pointer;
+    width:100%;
+}
+
+.project figure {
+    position: relative;
+    display: inline-block;
+    width: 283px;
+    -moz-box-shadow: 0 3px 0 #e2e2e2,transparent 0 0 0;
+    -webkit-box-shadow: 0 3px 0 #e2e2e2,transparent 0 0 0;
+    box-shadow: 0 3px 0 #e2e2e2,transparent 0 0 0;
+    -webkit-box-shadow: 0 3px 0 #e2e2e2;
+    -moz-box-shadow: 0 3px 0 #e2e2e2;
+    box-shadow: 0 3px 0 #e2e2e2;
+}
+
+.project figure figcaption {
+    position: relative;
+    z-index: 10;
+    padding: 8px 18px 11px;
+    background: #fff;
+    -ms-transition: all .2s ease-out;
+    -webkit-transition: all .2s ease-out;
+    -moz-transition: all .2s ease-out;
+    -o-transition: all .2s ease-out;
+    transition: all .2s ease-out;
+    text-align: left;
+    color: #555;
+}
+
+.project figure:hover .actions {
+    opacity: 1;
+}
+
+.project figure .actions {
+    display: block;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    background-color: rgba(29,29,29,.7);
+    -ms-transition: all .2s ease-out;
+    -webkit-transition: all .2s ease-out;
+    -moz-transition: all .2s ease-out;
+    -o-transition: all .2s ease-out;
+    transition: all .2s ease-out;
+}
+
+.project figure img {
+    border: 0;
+    width: 100%;
+}
+.btn-success bnt-action{
+    margin: 0% 0% auto;    
+}
+
+figcaption .project-details {
+    display: block;
+    font-size: 14px;
+    line-height: 33px;
+    color: #0093d0;
+    height: 27px;
+    width: 100%;
+    margin-bottom: 5px;
+    overflow: hidden;
+}
+
+figcaption .project-price {
+    position: absolute;
+    right: 15px;
+    top: 12px;
+    font-size: 22px;
+    text-align: right;
+    margin-top: 8px;
+    letter-spacing: -1px;
+    -webkit-font-smoothing: antialiased;
+}
+
+figcaption .project-creator {
+    font-size: 13px;
+    color: #545454;
+    display: block;
+}
+
+figcaption .project-creator {
+    font-size: 13px;
+    color: #545454;
+    display: block;
+}
+
+.project figure .actions a {
+    padding: 13px 20px;
+    font-size: 16px;
+    top: 32%;
+    position: absolute;
+    left: 50%;
+    width: 90%;
+    margin-left: -45%;
+    line-height: 18px;
+    letter-spacing: 1px;
+}   
+
+/* Application List CSS */
+.widget-applications li>a:after {
+    content: "\f138";
+    font-family: FontAwesome;
+    font-size: 0.875em;
+    font-style: normal;
+    font-weight: normal;
+    margin-top: 32px;
+    position: absolute;
+    right: 10px;
+    text-decoration: inherit;
+    top: 0;
+    color: #cccccc;
+    font-size: 1.3em;
+}
+
+.widget-applications li .application>.name {
+    display: block;
+    font-weight: 600;
+}
+
+.widget-applications li .application {
+    display: block;
+    margin-left: 90px;
+    margin-top: 32px;
+}
+
+.widget-applications li:hover {
+    background: #dddddd;
+    border: 2px solid #1ED80C;
+    margin-top: 5px;
+}
+
+.widget-applications li .img {
+    display: block;
+    float: left;
+    text-align: center;
+    width: 70px;
+    height: 70px;
+    overflow: hidden;
+    margin-top: 7px;
+}
+
+.widget-applications li>a {
+    height: 88px;
+    display: block;
+    width: 100%;
+    color: #0398db;
+    padding: 3px 10px;
+    position: relative;
+    -webkit-transition: border-color 0.1s ease-in-out 0s,background-color 0.1s ease-in-out 0s;
+    transition: border-color 0.1s ease-in-out 0s,background-color 0.1s ease-in-out 0s;
+}
+
+.widget-applications li {
+    padding-bottom: 4px;
+    border-bottom: 1px solid #ebebeb;
+}
+.widget-applications {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.widget-applications-thumb {
+    width:80px;
+}
