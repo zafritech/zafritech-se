@@ -49,7 +49,7 @@ public class AdminProjectController {
         List<Project> projects = projectRepository.findAllByOrderByProjectName();
        
         model.addAttribute("projects", projects);
-        
+         
         return applicationService.getApplicationTemplateName() + "/views/core/admin/project/index";
     }
     
