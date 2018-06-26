@@ -190,7 +190,7 @@ public class ItemRestController {
     }
 
     @SuppressWarnings({ "unchecked", "rawtypes" })
-	@RequestMapping(value = "/api/requirements/document/items/image/add", method = RequestMethod.POST)
+    @RequestMapping(value = "/api/requirements/document/items/image/add", method = RequestMethod.POST)
     public ResponseEntity<?> addImageItem(@RequestParam("imageFile") MultipartFile upLoadFile,
                                           @RequestParam("documentId") Long documentId,
                                           @RequestParam("parentId") Long parentId,

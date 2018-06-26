@@ -16,21 +16,21 @@ import org.apache.commons.io.FilenameUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
-import org.zafritech.applications.docman.data.dao.LibraryItemDao;
+import org.zafritech.applications.docman.data.dao.DocmanItemDao;
 import org.zafritech.core.data.domain.Folder;
-import org.zafritech.applications.docman.data.domain.LibraryItem;
+import org.zafritech.applications.docman.data.domain.DocmanItem;
 import org.zafritech.core.data.repositories.FolderRepository;
-import org.zafritech.applications.docman.data.repositories.LibraryItemRepository;
-import org.zafritech.core.enums.LibraryItemTypes;
+import org.zafritech.applications.docman.enums.DocmanItemTypes;
 import org.zafritech.core.services.FileIOService;
-import org.zafritech.applications.docman.services.LibraryService;
+import org.zafritech.applications.docman.services.DocmanService;
+import org.zafritech.applications.docman.data.repositories.DocmanItemRepository;
 
 /**
  *
  * @author LukeS
  */
 @Service
-public class LibraryServiceImpl implements LibraryService {
+public class DocmanServiceImpl implements DocmanService {
 
     @Value("${zafritech.paths.data-dir}")
     private String data_dir;
@@ -42,13 +42,13 @@ public class LibraryServiceImpl implements LibraryService {
     private FolderRepository folderRepository;
    
     @Autowired
-    private LibraryItemRepository libraryItemRepository;
+    private DocmanItemRepository docmanItemRepository;
     
     @Autowired
     private FileIOService fileIOService;
     
     @Override
-    public LibraryItem createLibraryItem(LibraryItemDao dao) throws IOException, ParseException {
+    public DocmanItem createDocmanItem(DocmanItemDao dao) throws IOException, ParseException {
 
         SimpleDateFormat dateFormatter = new SimpleDateFormat("yyyy-MM-dd");
         String identifier = cleanUniqueIdentString(dao.getUniqueID());
@@ -63,13 +63,13 @@ public class LibraryServiceImpl implements LibraryService {
         
         // Upload and move Reference Image file
         String imageFileExtension = FilenameUtils.getExtension(dao.getImageFile().getOriginalFilename());
-        String imageRelPath = "library/img_" + identifier + "." + imageFileExtension;
+        String imageRelPath = "docman/img_" + identifier + "." + imageFileExtension;
         String imageFullPath = images_dir + imageRelPath;
         List<String> imageFiles = fileIOService.saveUploadedFiles(Arrays.asList(dao.getImageFile()));
         FileUtils.moveFile(FileUtils.getFile(imageFiles.get(0)), FileUtils.getFile(imageFullPath)); 
         
-        LibraryItem libraryItem = new LibraryItem(folderRepository.findOne(dao.getFolderId()),  
-                                                  LibraryItemTypes.valueOf(dao.getReferenceType()),  
+        DocmanItem libraryItem = new DocmanItem(folderRepository.findOne(dao.getFolderId()),  
+                                                  DocmanItemTypes.valueOf(dao.getReferenceType()),  
                                                   dao.getUniqueID(), 
                                                   dao.getAuthors(), 
                                                   dao.getPublisher(), 
@@ -82,7 +82,7 @@ public class LibraryServiceImpl implements LibraryService {
                                                   dao.getRevision(), 
                                                   "");              // Keywords - empty for now
         
-        libraryItem = libraryItemRepository.save(libraryItem);
+        libraryItem = docmanItemRepository.save(libraryItem);
         
         return libraryItem;
     }

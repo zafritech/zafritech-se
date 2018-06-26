@@ -3,13 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package org.zafritech.core.enums;
+package org.zafritech.applications.docman.enums;
 
 /**
  *
  * @author LukeS
  */
-public enum LibraryItemTypes {
+public enum DocmanItemTypes {
     
     ARTICLE,
     BOOK,

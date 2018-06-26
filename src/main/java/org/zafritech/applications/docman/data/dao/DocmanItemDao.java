@@ -11,7 +11,7 @@ import org.springframework.web.multipart.MultipartFile;
  *
  * @author LukeS
  */
-public class LibraryItemDao {
+public class DocmanItemDao {
     
     private Long folderId;
     private MultipartFile itemFile;
@@ -25,7 +25,7 @@ public class LibraryItemDao {
     private String itemTitle;
     private String itemSummary;
 
-    public LibraryItemDao() {
+    public DocmanItemDao() {
         
     }
 

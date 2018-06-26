@@ -29,7 +29,8 @@ import org.zafritech.core.data.initializr.DocumentTemplatesInit;
 import org.zafritech.core.data.initializr.EntityTypesInit;
 import org.zafritech.core.data.initializr.FolderInit;
 import org.zafritech.core.data.initializr.InfoClassesInit;
-import org.zafritech.applications.docman.data.initializr.LibraryInit;
+import org.zafritech.applications.docman.data.initializr.DocmanInit;
+import org.zafritech.applications.risksman.data.initializr.RiskmanInit;
 import org.zafritech.core.data.initializr.LocalesDataInit;
 import org.zafritech.core.data.initializr.ProjectCompanyRolesInit;
 import org.zafritech.core.data.initializr.ProjectsInit;
@@ -103,14 +104,20 @@ public class InitServiceImpl implements InitService {
     @Autowired
     private ContentDescriptorsInit contentDescriptorsInit;
     
-    @Autowired
-    private LibraryInit libraryInit;
+//    @Autowired
+//    private DocmanInit libraryInit;
 
     @Autowired
     private RequirementsInit requirementsInit;
 
     @Autowired
     private IntegrationInit integrationInit;
+
+    @Autowired
+    private RiskmanInit riskmanInit;
+
+    @Autowired
+    private DocmanInit docmanInit;
     
     @Autowired
     private InterfaceTypesInit interfaceTypesInit;
@@ -318,18 +325,6 @@ public class InitServiceImpl implements InitService {
     }
 
     @Override
-    public RunOnceTask initLibrary() {
-        
-        if (!isInitComplete("LIBRARY_INIT")) {
-
-            libraryInit.init();
-            return completeTask("LIBRARY_INIT");
-        }
-        
-        return null;
-    }
-    
-    @Override
     public RunOnceTask initDocuments() {
         
         if (!isInitComplete("DOCUMENTS_INIT")) {
@@ -360,13 +355,14 @@ public class InitServiceImpl implements InitService {
             
             integrationInit.init();
             requirementsInit.init();
+            riskmanInit.init();
+            docmanInit.init();
             
             return completeTask("APPLICATIONS_INIT");
         }
         
         return null;
     }
-    
 
     @Override
     public RunOnceTask initInterfaceTypes() {

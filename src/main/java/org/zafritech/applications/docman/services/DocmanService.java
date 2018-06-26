@@ -7,14 +7,14 @@ package org.zafritech.applications.docman.services;
 
 import java.io.IOException;
 import java.text.ParseException;
-import org.zafritech.applications.docman.data.dao.LibraryItemDao;
-import org.zafritech.applications.docman.data.domain.LibraryItem;
+import org.zafritech.applications.docman.data.dao.DocmanItemDao;
+import org.zafritech.applications.docman.data.domain.DocmanItem;
 
 /**
  *
  * @author LukeS
  */
-public interface LibraryService {
+public interface DocmanService {
     
-    LibraryItem createLibraryItem(LibraryItemDao dao) throws IOException, ParseException;
+    DocmanItem createDocmanItem(DocmanItemDao dao) throws IOException, ParseException;
 }

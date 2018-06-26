@@ -52,6 +52,11 @@
                                     </div>
 
                                 </div>
+                                
+                                <div th:if="${projects.isEmpty()}" class="text-center">
+                                    <p class="text-danger">Your are not registered for any projects in this application. Please contact your system administrator.</p>
+                                </div>
+
                             </div>
                         </div>
 

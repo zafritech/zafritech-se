@@ -21,22 +21,22 @@ import static org.springframework.web.bind.annotation.RequestMethod.GET;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 import org.zafritech.core.data.dao.FolderTreeDao;
-import org.zafritech.applications.docman.data.dao.LibraryItemDao;
+import org.zafritech.applications.docman.data.dao.DocmanItemDao;
 import org.zafritech.core.data.dao.generic.ValuePairDao;
 import org.zafritech.core.data.domain.Folder;
-import org.zafritech.applications.docman.data.domain.LibraryItem;
+import org.zafritech.applications.docman.data.domain.DocmanItem;
 import org.zafritech.core.data.repositories.EntityTypeRepository;
 import org.zafritech.core.data.repositories.FolderRepository;
-import org.zafritech.applications.docman.data.repositories.LibraryItemRepository;
 import org.zafritech.core.services.FolderService;
-import org.zafritech.applications.docman.services.LibraryService;
+import org.zafritech.applications.docman.services.DocmanService;
+import org.zafritech.applications.docman.data.repositories.DocmanItemRepository;
 
 /**
  *
  * @author LukeS
  */
 @RestController
-public class LibraryRestController {
+public class DocmanRestController {
 
     @Autowired
     private FolderRepository folderRepository;
@@ -45,13 +45,13 @@ public class LibraryRestController {
     private EntityTypeRepository entityTypeRepository;
 
     @Autowired
-    private LibraryItemRepository libraryItemRepository;
+    private DocmanItemRepository libraryItemRepository;
 
     @Autowired
     private FolderService folderService;
 
     @Autowired
-    private LibraryService libraryService;
+    private DocmanService libraryService;
 
     @RequestMapping(value = "/api/library/folders/tree/list", method = GET)
     public List<FolderTreeDao> getLibraryFolderTree() {
@@ -66,9 +66,9 @@ public class LibraryRestController {
     }
 
     @RequestMapping(value = "/api/library/folder/items/get/{id}", method = GET)
-    public ResponseEntity<List<LibraryItem>> getLibraryFolderItems(@PathVariable Long id) {
+    public ResponseEntity<List<DocmanItem>> getLibraryFolderItems(@PathVariable Long id) {
 
-        List<LibraryItem> items = libraryItemRepository.findByFolderOrderByItemTitleAsc(folderRepository.findOne(id));
+        List<DocmanItem> items = libraryItemRepository.findByFolderOrderByItemTitleAsc(folderRepository.findOne(id));
 
         return new ResponseEntity<>(items, HttpStatus.OK);
     }
@@ -77,7 +77,7 @@ public class LibraryRestController {
     public ModelAndView getLibraryFolderModel(@PathVariable Long id) {
 
         List<Folder> folders = folderRepository.findByParentOrderByFolderNameAsc(folderRepository.findOne(id));
-        List<LibraryItem> libraryItems = libraryItemRepository.findByFolderOrderByItemTitleAsc(folderRepository.findOne(id));
+        List<DocmanItem> libraryItems = libraryItemRepository.findByFolderOrderByItemTitleAsc(folderRepository.findOne(id));
 
         ModelAndView modelView = new ModelAndView("views/library/library-items-list");
         modelView.addObject("folders", folders);
@@ -88,7 +88,7 @@ public class LibraryRestController {
 
     @SuppressWarnings({"rawtypes", "unchecked"})
     @RequestMapping(value = "/api/library/reference/items/add", method = RequestMethod.POST)
-    public ResponseEntity<?> addReferenceItem(LibraryItemDao libDao) throws IOException, ParseException {
+    public ResponseEntity<?> addReferenceItem(DocmanItemDao libDao) throws IOException, ParseException {
 
         if (libDao.getItemFile().isEmpty()) {
 
@@ -100,7 +100,7 @@ public class LibraryRestController {
             return new ResponseEntity("Please select a image file!", HttpStatus.OK);
         }
 
-        LibraryItem libraryItem = libraryService.createLibraryItem(libDao);
+        DocmanItem libraryItem = libraryService.createDocmanItem(libDao);
 
         return new ResponseEntity("Successfully created reference item: " + libraryItem.getItemTitle(), new HttpHeaders(), HttpStatus.OK);
     }

@@ -5,6 +5,7 @@
  */
 package org.zafritech.applications.risksman.data.repositories;
 
+import java.util.List;
 import org.springframework.data.repository.CrudRepository;
 import org.zafritech.applications.risksman.data.domain.RiskItem;
 
@@ -14,4 +15,5 @@ import org.zafritech.applications.risksman.data.domain.RiskItem;
  */
 public interface RiskItemRepository extends CrudRepository<RiskItem, Long> {
     
+    RiskItem findByUuId(String uuid);
 }

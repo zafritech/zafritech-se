@@ -12,8 +12,8 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
-@Entity(name = "CORE_LIBRARY_CATEGORIES")
-public class LibraryCategory implements Serializable {
+@Entity(name = "DOCMAN_CATEGORIES")
+public class DocmanCategory implements Serializable {
     
     @Id
     @GeneratedValue
@@ -27,18 +27,18 @@ public class LibraryCategory implements Serializable {
     
     @ManyToOne
     @JoinColumn(name = "parentId")
-    private LibraryCategory parent;
+    private DocmanCategory parent;
     
     private Integer sortIndex;
     
     @Temporal(TemporalType.TIMESTAMP)
     private Date creationDate;
 
-    public LibraryCategory() {
+    public DocmanCategory() {
         
     }
 
-    public LibraryCategory(String categoryName, LibraryCategory parent) {
+    public DocmanCategory(String categoryName, DocmanCategory parent) {
         
         this.uuId = UUID.randomUUID().toString();
         this.categoryName = categoryName;
@@ -46,7 +46,7 @@ public class LibraryCategory implements Serializable {
         this.creationDate = new Timestamp(System.currentTimeMillis());
     }
 
-    public LibraryCategory(String categoryName, String categoryPath, LibraryCategory parent) {
+    public DocmanCategory(String categoryName, String categoryPath, DocmanCategory parent) {
         
         this.uuId = UUID.randomUUID().toString();
         this.categoryName = categoryName;
@@ -55,7 +55,7 @@ public class LibraryCategory implements Serializable {
         this.creationDate = new Timestamp(System.currentTimeMillis());
     }
 
-    public LibraryCategory(String categoryName, String categoryPath, LibraryCategory parent, Integer sortIndex) {
+    public DocmanCategory(String categoryName, String categoryPath, DocmanCategory parent, Integer sortIndex) {
         
         this.uuId = UUID.randomUUID().toString();
         this.categoryName = categoryName;
@@ -101,11 +101,11 @@ public class LibraryCategory implements Serializable {
         this.categoryPath = categoryPath;
     }
 
-    public LibraryCategory getParent() {
+    public DocmanCategory getParent() {
         return parent;
     }
 
-    public void setParent(LibraryCategory parent) {
+    public void setParent(DocmanCategory parent) {
         this.parent = parent;
     }
 

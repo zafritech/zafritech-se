@@ -48,8 +48,7 @@ public class DocumentController {
     }
 
     @RequestMapping("/documents/document/{uuid}")
-    public String readMessage(@PathVariable(value = "uuid") String uuid,
-            Model model) {
+    public String readMessage(@PathVariable(value = "uuid") String uuid, Model model) {
 
         Document document = documentRepository.findByUuId(uuid);
 

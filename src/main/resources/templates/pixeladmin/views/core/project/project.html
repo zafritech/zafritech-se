@@ -218,7 +218,7 @@
                                     <li th:each="application : ${project.applications}">
                                         <a th:href="'/app/' + ${application.applicationName}">
                                             <span class="img">
-                                                <img class="img-thumbnail widget-applications-thumb" th:attr="src='/images/' + ${application.applicationName} + '_image.png', alt=${application.applicationTitle}" />
+                                                <img class="img-thumbnail widget-applications-thumb" th:attr="src='/images/applications/' + ${application.applicationName} + '_image.png', alt=${application.applicationTitle}" />
                                             </span>
                                             <span class="application clearfix">
                                                 <span class="name" th:text="${application.applicationTitle}">Application Name</span>

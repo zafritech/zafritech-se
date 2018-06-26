@@ -5,7 +5,6 @@
  */
 package org.zafritech.core.contollers.admin;
 
-import java.util.ArrayList;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -64,6 +63,6 @@ public class AdminProjectController {
         model.addAttribute("folder", folder);   
         model.addAttribute("members", members);   
         
-        return "views/admin/project/project";
+        return "views/core/admin/project/project";
     }
 }

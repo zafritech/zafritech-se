@@ -19,16 +19,16 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.zafritech.applications.docman.data.domain.LibraryItem;
-import org.zafritech.applications.docman.data.repositories.LibraryItemRepository;
+import org.zafritech.applications.docman.data.domain.DocmanItem;
 import org.zafritech.core.services.ApplicationService;
+import org.zafritech.applications.docman.data.repositories.DocmanItemRepository;
 
 /**
  *
  * @author LukeS
  */
 @Controller
-public class LibraryController {
+public class DocmanController {
 
     @Value("${zafritech.paths.data-dir}")
     private String data_dir;
@@ -37,27 +37,27 @@ public class LibraryController {
     private ApplicationService applicationService;
 
     @Autowired
-    private LibraryItemRepository libraryItemRepository;
+    private DocmanItemRepository docmanItemRepository;
 
-    @RequestMapping(value = {"/library", "/library/list"})
+    @RequestMapping(value = {"/docman", "/docman/list"})
     public String LibraryReferenceItemsList(Model model) {
 
         model.addAttribute("titles", "titles");
 
-        return applicationService.getApplicationTemplateName() + "/views/library/index";
+        return applicationService.getApplicationTemplateName() + "/views/docman/index";
     }
 
-    @RequestMapping(value = "/library/items/open/{uuid}", method = RequestMethod.GET)
-    public void openLibraryReferenceItem(HttpServletResponse response,
-            @PathVariable(value = "uuid") String uuid) throws IOException {
+    @RequestMapping(value = "/docman/items/open/{uuid}", method = RequestMethod.GET)
+    public void openDocmanItem(HttpServletResponse response,
+                               @PathVariable(value = "uuid") String uuid) throws IOException {
 
-        LibraryItem libraryItem = libraryItemRepository.findByUuId(uuid);
+        DocmanItem docmanItem = docmanItemRepository.findByUuId(uuid);
 
-        String referencePath = data_dir + libraryItem.getItemPath();
+        String referencePath = data_dir + docmanItem.getItemPath();
         File file = new File(referencePath);
         String fileExtension = FilenameUtils.getExtension(referencePath);
 
-        response.addHeader("content-disposition", "attachment;filename=" + libraryItem.getIdentifier() + "." + fileExtension);
+        response.addHeader("content-disposition", "attachment;filename=" + docmanItem.getIdentifier() + "." + fileExtension);
         response.setContentType("application/octet-stream");
 
         InputStream inputStream = new FileInputStream(file);

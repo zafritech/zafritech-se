@@ -47,8 +47,6 @@ public interface InitService {
     
     RunOnceTask initDocuments();
     
-    RunOnceTask initLibrary();
-    
     RunOnceTask initSnaphots();
 
     RunOnceTask initApplications();

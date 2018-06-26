@@ -44,8 +44,6 @@ public class HomeController {
     @RequestMapping(value={"/", "/index"})
     public String homePage(Model model) {
         
-        User user = userService.loggedInUser();
-        boolean isAdmin = userService.hasRole("ROLE_ADMIN");
         Project openProject = userSessionService.getLastOpenProject();
         
         if (openProject != null) {
@@ -54,16 +52,7 @@ public class HomeController {
             
         } else {
         
-            List<Project> allProjects = projectRepository.findAllByOrderByProjectName();
-            List<Project> projects = new ArrayList<>();
-
-            allProjects.stream().filter((project) -> (isAdmin || claimService.isProjectMember(user, project))).forEachOrdered((project) -> {
-
-                projects.add(project);
-            });
-
-            model.addAttribute("projects", projects);
-            return applicationService.getApplicationTemplateName() + "/views/core/index";
+            return "redirect:/projects/list";
         }
     }
     

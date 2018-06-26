@@ -5,7 +5,7 @@
 
     <groupId>org.zafritech</groupId>
     <artifactId>zafritech</artifactId>
-    <version>1.2.1</version>
+    <version>1.3.1</version>
     <packaging>jar</packaging>
 
     <name>zafritech-se</name>

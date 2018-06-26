@@ -1,5 +1,6 @@
 package org.zafritech.applications.docman.data.domain;
 
+import org.zafritech.applications.docman.enums.DocmanItemTypes;
 import java.io.Serializable;
 import java.sql.Timestamp;
 import java.util.Date;
@@ -15,10 +16,9 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import org.zafritech.core.data.domain.Folder;
-import org.zafritech.core.enums.LibraryItemTypes;
 
-@Entity(name = "CORE_LIBRARY_ITEMS")
-public class LibraryItem implements Serializable {
+@Entity(name = "DOCMAN_ITEMS")
+public class DocmanItem implements Serializable {
     
     @Id
     @GeneratedValue
@@ -31,7 +31,7 @@ public class LibraryItem implements Serializable {
     private Folder folder;
     
     @Enumerated(EnumType.STRING)
-    private LibraryItemTypes itemType;
+    private DocmanItemTypes itemType;
 
     private String identifier;          // ISBN, Ref #, etc
     
@@ -60,23 +60,23 @@ public class LibraryItem implements Serializable {
     @Temporal(TemporalType.TIMESTAMP)
     private Date creationDate;
 
-    public LibraryItem() {
+    public DocmanItem() {
         
     }
 
-    public LibraryItem(Folder folder, 
-                       LibraryItemTypes itemType, 
-                       String idendifier, 
-                       String authors, 
-                       String publishers, 
-                       String itemTitle, 
-                       String description, 
-                       String itemPath, 
-                       String imagePath, 
-                       String format, 
-                       Date publicationDate, 
-                       String version, 
-                       String keywords) {
+    public DocmanItem(Folder folder, 
+                      DocmanItemTypes itemType, 
+                      String idendifier, 
+                      String authors, 
+                      String publishers, 
+                      String itemTitle, 
+                      String description, 
+                      String itemPath, 
+                      String imagePath, 
+                      String format, 
+                      Date publicationDate, 
+                      String version, 
+                      String keywords) {
         
         this.uuId = UUID.randomUUID().toString();
         this.folder = folder;
@@ -115,11 +115,11 @@ public class LibraryItem implements Serializable {
         this.folder = folder;
     }
 
-    public LibraryItemTypes getItemType() {
+    public DocmanItemTypes getItemType() {
         return itemType;
     }
 
-    public void setItemType(LibraryItemTypes itemType) {
+    public void setItemType(DocmanItemTypes itemType) {
         this.itemType = itemType;
     }
 

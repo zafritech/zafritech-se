@@ -10,17 +10,17 @@ import org.springframework.stereotype.Service;
 import org.zafritech.core.data.dao.ReferenceDao;
 import org.zafritech.core.data.domain.Document;
 import org.zafritech.core.data.domain.DocumentReference;
-import org.zafritech.applications.docman.data.domain.LibraryItem;
+import org.zafritech.applications.docman.data.domain.DocmanItem;
 import org.zafritech.core.data.domain.Reference;
 import org.zafritech.core.data.domain.UrlLink;
 import org.zafritech.core.data.repositories.DocumentReferenceRepository;
 import org.zafritech.core.data.repositories.DocumentRepository;
-import org.zafritech.applications.docman.data.repositories.LibraryItemRepository;
 import org.zafritech.core.data.repositories.ReferenceRepository;
 import org.zafritech.core.data.repositories.UrlLinkRepository;
 import org.zafritech.core.enums.ReferenceSources;
 import org.zafritech.core.enums.ReferenceTypes;
 import org.zafritech.core.services.ReferenceService;
+import org.zafritech.applications.docman.data.repositories.DocmanItemRepository;
 
 /**
  *
@@ -42,7 +42,7 @@ public class ReferenceServiceImpl implements ReferenceService {
     private UrlLinkRepository urlLinkRepository;
     
     @Autowired
-    private LibraryItemRepository libRepository;
+    private DocmanItemRepository libRepository;
     
     @Override
     public Reference addDocumentReference(ReferenceDao refDao) {
@@ -80,7 +80,7 @@ public class ReferenceServiceImpl implements ReferenceService {
                 
                 if (reference == null) {
                     
-                    LibraryItem libItem = libRepository.findOne(refDao.getLibraryRefId());
+                    DocmanItem libItem = libRepository.findOne(refDao.getLibraryRefId());
                     
                     reference = new Reference(ReferenceSources.valueOf(refDao.getSource()), 
                                               refDao.getLibraryRefId(),
