@@ -51,6 +51,7 @@ public class GlobalControllerAttributes {
                 userSession.setFirstName(user.getFirstName());
                 userSession.setLastName(user.getLastName());
                 userSession.setEmail(user.getEmail());
+                userSession.setProjectsCount(userSessionService.getUserProjects().size()); 
 
                 Project openProject = userSessionService.getLastOpenProject();
                 if (openProject != null) {

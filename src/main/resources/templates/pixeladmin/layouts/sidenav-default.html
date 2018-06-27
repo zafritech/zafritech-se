@@ -22,7 +22,7 @@
                             <span class="px-nav-label">Home</span>
                         </a>
                     </li>
-                    <li class="px-nav-item px-nav-dropdown">
+                    <li th:if="${usersession.projectsCount > 0}" class="px-nav-item px-nav-dropdown">
                         <a href="#">
                             <i class="px-nav-icon ion-ios-albums"></i>
                             <span class="px-nav-label">Projects</span>
@@ -50,7 +50,7 @@
                             </li>
                         </ul>
                     </li>
-                    <li class="px-nav-item px-nav-dropdown">
+                    <li th:if="${usersession.projectsCount > 0}" class="px-nav-item px-nav-dropdown">
                         <a href="#">
                             <i class="px-nav-icon ion-ios-keypad"></i>
                             <span class="px-nav-label">Applications</span>

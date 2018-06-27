@@ -26,6 +26,8 @@ public class RiskmanInit {
     	
     	Application appRisks = new Application("riskman", "Risk Management");
         appRisks.setApplicationDescription("The Risk management application enables the management of enginering risks for a system.");
+        appRisks.setPublished(false);
+        appRisks.setFaIcon("fa-exclamation-triangle");
         
     	applicationRepository.save(appRisks);
     }   

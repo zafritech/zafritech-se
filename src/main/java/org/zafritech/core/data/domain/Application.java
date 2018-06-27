@@ -34,12 +34,14 @@ public class Application implements Serializable {
     @Column(columnDefinition = "TEXT")
     private String applicationDescription;
 
+    private String faIcon;
+
     private boolean published;
 
     @CreatedDate
     @Temporal(TemporalType.TIMESTAMP)
     private Date createdDate;
-
+    
     public Application() {
         
     }
@@ -50,6 +52,7 @@ public class Application implements Serializable {
         this.uuId = UUID.randomUUID().toString();
         this.applicationName = applicationName;
         this.applicationTitle = applicationTitle;
+        this.faIcon = "fa-window-maximize";
         this.published = true;
         this.createdDate = new Timestamp(System.currentTimeMillis());
     }
@@ -61,6 +64,7 @@ public class Application implements Serializable {
         this.applicationName = applicationName;
         this.applicationTitle = applicationTitle;
         this.applicationDescription = applicationDescription;
+        this.faIcon = "fa-window-maximize";
         this.published = true;
         this.createdDate = new Timestamp(System.currentTimeMillis());
     }
@@ -95,6 +99,14 @@ public class Application implements Serializable {
 
     public void setApplicationDescription(String applicationDescription) {
         this.applicationDescription = applicationDescription;
+    }
+
+    public String getFaIcon() {
+        return faIcon;
+    }
+
+    public void setFaIcon(String faIcon) {
+        this.faIcon = faIcon;
     }
 
     public boolean isPublished() {

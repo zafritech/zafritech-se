@@ -5,6 +5,7 @@
  */
 package org.zafritech.core.api;
 
+import java.util.ArrayList;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -13,7 +14,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.zafritech.core.data.domain.Application;
-import org.zafritech.core.data.repositories.ApplicationRepository;
+import org.zafritech.core.data.domain.Project;
+import org.zafritech.core.services.UserSessionService;
 
 /**
  *
@@ -23,12 +25,22 @@ import org.zafritech.core.data.repositories.ApplicationRepository;
 public class ApplicationRestController {
 
     @Autowired
-    private ApplicationRepository applicationRepository;
- 
+    private UserSessionService stateService;
+    
     @RequestMapping("/api/admin/applications/list")
     public ResponseEntity<List<Application>> getApplicationsList(Model model) {
         
-        return new ResponseEntity<>(applicationRepository.findAllByOrderByApplicationTitleAsc(), HttpStatus.OK);
+        List<Application> applications = new ArrayList<>();
+        Project project = stateService.getLastOpenProject();
+        
+        if (project != null) {
+            
+            project.getApplications().forEach(applications::add);
+            return new ResponseEntity<>(applications, HttpStatus.OK);
+            
+        } else {
+            
+            return new ResponseEntity<>(applications, HttpStatus.BAD_REQUEST);
+        }
     }
-           
 }

@@ -251,7 +251,7 @@ function CompanyBasicProfileUpdate(companyId) {
             
             box.on("shown.bs.modal", function(e) {
                 
-                 $.ajax({
+                $.ajax({
 
                     global: false,
                     type: "GET",

@@ -1,3 +1,5 @@
+/* global define */
+
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     define([], factory);
@@ -88,7 +90,7 @@
       'darklight-orange',
       'darklight-green',
       'darklight-purple',
-      'darklight-cyan',
+      'darklight-cyan'
     ];
 
     var demoSettings = (function loadDemoSettings() {
@@ -99,7 +101,7 @@
         offcanvas_nav: '0',
         rtl:           '0',
         footer:        'bottom',
-        theme:         THEMES[8],
+        theme:         THEMES[8]
       };
 
       var cookie = ';' + document.cookie + ';';

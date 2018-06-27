@@ -81,7 +81,7 @@ public class UsersInit {
     @Transactional
     public void init() {
         
-        String file = data_dir + "initialisation/users.json";
+        String file = data_dir + "initialisation/users-ramped.json";
   
         ObjectMapper mapper = new ObjectMapper();
         
@@ -145,19 +145,19 @@ public class UsersInit {
                 
                 switch(jsonUser.getEmail()) {
 
-                    case "admin@zidingo.org":
+                    case "admin@zafritech.net ":
 
                         user.setUserRoles(adminRoles);
                         user.setPassword(new BCryptPasswordEncoder().encode("admin"));
                         break;
                         
-                    case "superuser@zidingo.org":
+                    case "superuser@zafritech.net ":
 
                         user.setUserRoles(superRoles);
                         user.setPassword(new BCryptPasswordEncoder().encode("super"));
                         break;
 
-                    case "guest@zidingo.org":
+                    case "guest@zafritech.net ":
 
                         user.setUserRoles(guestRoles);
                         user.setPassword(new BCryptPasswordEncoder().encode("guest"));

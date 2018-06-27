@@ -13,6 +13,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.zafritech.core.data.domain.Document;
 import org.zafritech.core.data.domain.Project;
+import org.zafritech.core.data.domain.User;
 import org.zafritech.core.data.domain.UserSessionEntity;
 import org.zafritech.core.data.domain.UserSessionEntityKey;
 import org.zafritech.core.data.repositories.DocumentRepository;
@@ -20,6 +21,7 @@ import org.zafritech.core.data.repositories.ProjectRepository;
 import org.zafritech.core.enums.UserSessionEntityTypes;
 import org.zafritech.core.services.UserService;
 import org.zafritech.core.data.repositories.UserSessionEntityRepository;
+import org.zafritech.core.services.ClaimService;
 import org.zafritech.core.services.UserSessionService;
 
 /**
@@ -29,6 +31,9 @@ import org.zafritech.core.services.UserSessionService;
 @Service
 public class UserSessionServiceImpl implements UserSessionService {
 
+    @Autowired
+    private ClaimService claimService;
+    
     @Autowired
     private ProjectRepository projectRepository;
     
@@ -41,6 +46,23 @@ public class UserSessionServiceImpl implements UserSessionService {
     @Autowired
     private UserSessionEntityRepository stateRepository;
             
+    @Override
+    public List<Project> getUserProjects() {
+        
+        User user = userService.loggedInUser();
+        boolean isAdmin = userService.hasRole("ROLE_ADMIN");
+        List<Project> allProjects = projectRepository.findAllByOrderByProjectName();
+        
+        List<Project> projects = new ArrayList<>();
+        
+        allProjects.stream().filter((project) -> (isAdmin || claimService.isProjectMember(user, project))).forEachOrdered((project) -> {
+            
+            projects.add(project);
+        });
+        
+        return projects;
+    }
+    
     @Override
     public void updateOpenProject(Project project) {
 

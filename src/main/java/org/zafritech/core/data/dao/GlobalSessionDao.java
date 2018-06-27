@@ -17,6 +17,8 @@ public class GlobalSessionDao {
     
     private String email;
     
+    private Integer projectsCount;
+    
     private boolean hasOpenProject;
     
     private String projectUuId;
@@ -47,6 +49,14 @@ public class GlobalSessionDao {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public Integer getProjectsCount() {
+        return projectsCount;
+    }
+
+    public void setProjectsCount(Integer projectsCount) {
+        this.projectsCount = projectsCount;
     }
 
     public boolean isHasOpenProject() {

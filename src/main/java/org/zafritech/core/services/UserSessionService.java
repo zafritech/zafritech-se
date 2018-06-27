@@ -27,6 +27,8 @@ public interface UserSessionService {
     
     void updateRecentDocument(Document document);
     
+    List<Project> getUserProjects();
+    
     List<Project> getOpenProjects();
     
     List<Document> getOpenDocuments();

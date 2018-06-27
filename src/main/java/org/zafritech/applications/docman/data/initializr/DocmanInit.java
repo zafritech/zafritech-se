@@ -35,7 +35,10 @@ public class DocmanInit {
      
     	Application appDocman = new Application("docman", "Docment Management");
         appDocman.setApplicationDescription("The Document management application enables the management of enginering document for system development.");
-    	applicationRepository.save(appDocman);   
+    	appDocman.setPublished(false);
+    	appDocman.setFaIcon("fa-book");
+        
+        applicationRepository.save(appDocman);   
         
         Folder library = folderRepository.save(new Folder("Library", entityTypeRepository.findByEntityTypeKeyAndEntityTypeCode("FOLDER_TYPE_ENTITY", "FOLDER_LIBRARY"), null, null, 0)); 
         

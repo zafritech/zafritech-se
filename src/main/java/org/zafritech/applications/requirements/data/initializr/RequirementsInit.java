@@ -18,6 +18,8 @@ public class RequirementsInit {
     	
     	Application appRequirements = new Application("requirements", "Requirements Management");
         appRequirements.setApplicationDescription("The Requirements management application enables the management of requirements for a system inline with the V-Model.");
+        appRequirements.setPublished(false);
+        appRequirements.setFaIcon("fa-crosshairs");
         
     	applicationRepository.save(appRequirements);
     }

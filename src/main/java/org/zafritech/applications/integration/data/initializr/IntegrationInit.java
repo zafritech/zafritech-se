@@ -18,6 +18,7 @@ public class IntegrationInit {
     	
     	Application appIntegration = new Application("integration", "Systems Integration");
         appIntegration.setApplicationDescription("Systems Integration application enables the management of interfaces between different interfacing entities of a system."); 
+        appIntegration.setFaIcon("fa-gears");
         
     	applicationRepository.save(appIntegration);
     }
