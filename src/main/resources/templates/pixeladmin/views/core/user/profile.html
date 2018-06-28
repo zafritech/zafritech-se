@@ -27,7 +27,7 @@
                                         </button>
                                         <ul class="dropdown-menu">
                                             <li><a href="javascript:void(0);" th:onclick="'javascript:UserBasicProfileUpdate(\'' + ${user.uuId} + '\');'"><i class="fa fa-pencil m-r-1"></i>Edit Profile</a></li>
-                                            <li><a href="javascript:void(0);" th:onclick="'javascript:notYetImplemented();'"><i class="fa fa-picture-o m-r-1"></i>Change Photo</a></li>
+                                            <li><a href="javascript:void(0);" th:onclick="'javascript:userChangeProfilePhoto(\'' + ${user.Id} + '\');'"><i class="fa fa-picture-o m-r-1"></i>Change Photo</a></li>
                                             <li><a href="javascript:void(0);" th:onclick="'javascript:UserPwdChange(\'' + ${user.uuId} + '\');'"><i class="fa fa-key m-r-1"></i>Change Password</a></li>
                                         </ul>
                                     </div>
@@ -37,7 +37,8 @@
                             <div class="panel-body">
                                 <div class="row">
                                     <div class="col-md-3" align="center">
-                                        <img src="/images/profile.png" class="img-circle img-responsive" />
+                                        <img th:if="${user.photoPath == null}" src="/images/profile.png" class="img-circle img-responsive" />
+                                        <img th:if="${user.photoPath != null}"  th:attr="src=@{'/images/' + ${user.photoPath}}" class="img-circle img-responsive" />
                                     </div>
                                     <div class=" col-md-9">
                                         <table class="table table-bordered">

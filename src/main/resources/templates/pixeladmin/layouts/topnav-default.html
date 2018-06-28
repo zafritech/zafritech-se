@@ -98,7 +98,7 @@
                 </ul>
 
                 <ul class="nav navbar-nav navbar-right">
-                    <li class="dropdown">
+                    <li sec:authorize="hasRole('ROLE_ADMIN')" class="dropdown">
                         <a href="https://stackoverflow.com" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                             <i class="px-navbar-icon fa fa-bullhorn font-size-14"></i>
                             <span class="px-navbar-icon-label">Notifications</span>
@@ -146,7 +146,7 @@
                         </div>
                     </li>
 
-                    <li class="dropdown">
+                    <li sec:authorize="hasRole('ROLE_ADMIN')" class="dropdown">
                         <a href="https://google.com" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                             <i class="px-navbar-icon fa fa-envelope font-size-14"></i>
                             <span class="px-navbar-icon-label">Income messages</span>
@@ -225,7 +225,8 @@
 
                     <li sec:authorize="isAuthenticated()" class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                            <img src="/images/user/avatars/04.jpg" alt="" class="px-navbar-image" />
+                            <img th:if="${usersession.photoPath == null}" src="/images/user/avatars/profile.png" alt="" class="px-navbar-image" />
+                            <img th:if="${usersession.photoPath != null}" th:attr="src=@{'/images/' + ${usersession.photoPath}}" alt="" class="px-navbar-image" />
                             <span th:if="${usersession != null}" th:text="${usersession.firstName}" class="hidden-md">Joe Soap</span>
                         </a>
                         <ul class="dropdown-menu">

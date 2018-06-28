@@ -33,9 +33,9 @@ public class PDFConstants {
     public void setImagePaths(String imagespath) {
         
         IMAGES_DIR = imagespath;
-        DEFUALT_APPLICATION_LOGO_IMAGE = imagespath + "zidingo-rms-logo.png";
-        DEFUALT_PROJECT_IMAGE = imagespath + "projects//project3_logo.jpg";
-        PROJECT_LOGO_IMAGE_PREFIX = imagespath + "projects//logo_";
+        DEFUALT_APPLICATION_LOGO_IMAGE = imagespath + "zafritech_se_logo.png";
+        DEFUALT_PROJECT_IMAGE = imagespath + "projects//project-placeholder.png";
+        PROJECT_LOGO_IMAGE_PREFIX = imagespath + "projects/";
         DEFUALT_PMCM_IMAGE = imagespath + "ramped_logo.png";
         DEFUALT_CONTRACTOR_IMAGE = imagespath + "fast_logo.png";
         

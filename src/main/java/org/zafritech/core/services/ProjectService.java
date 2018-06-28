@@ -5,9 +5,12 @@
  */
 package org.zafritech.core.services;
 
+import java.io.IOException;
+import java.text.ParseException;
 import java.util.List;
 import org.zafritech.core.data.dao.generic.FiveValueDao;
 import org.zafritech.core.data.dao.ProjectDao;
+import org.zafritech.core.data.dao.generic.ImageItemDao;
 import org.zafritech.core.data.domain.Application;
 import org.zafritech.core.data.domain.EntityType;
 import org.zafritech.core.data.domain.Project;
@@ -21,6 +24,8 @@ import org.zafritech.core.data.domain.User;
 public interface ProjectService {
     
     Project saveDao(ProjectDao dao);
+    
+    Project updateProjectLogo(ImageItemDao imageDao) throws IOException, ParseException;
     
     User addMemberToProject(Project project, User user);
     

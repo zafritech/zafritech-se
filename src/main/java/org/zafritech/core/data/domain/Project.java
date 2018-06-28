@@ -57,6 +57,8 @@ public class Project implements Serializable {
     @Column(columnDefinition = "TEXT")
     private String projectDescription;
 
+    private String projectLogo;
+    
     @ManyToOne
     @JoinColumn(name = "sponsorId")
     private Company projectSponsor;
@@ -290,6 +292,14 @@ public class Project implements Serializable {
 
     public void setProjectDescription(String projectDescription) {
         this.projectDescription = projectDescription;
+    }
+
+    public String getProjectLogo() {
+        return projectLogo;
+    }
+
+    public void setProjectLogo(String projectLogo) {
+        this.projectLogo = projectLogo;
     }
 
     public Company getProjectSponsor() {

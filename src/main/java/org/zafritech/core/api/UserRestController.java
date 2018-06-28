@@ -5,9 +5,12 @@
  */
 package org.zafritech.core.api;
 
+import java.io.IOException;
+import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Objects;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -24,6 +27,7 @@ import org.zafritech.core.data.dao.PwdDao;
 import org.zafritech.core.data.dao.RoleDao;
 import org.zafritech.core.data.dao.UserDao;
 import org.zafritech.core.data.dao.UserEditDao;
+import org.zafritech.core.data.dao.generic.ImageItemDao;
 import org.zafritech.core.data.domain.Role;
 import org.zafritech.core.data.domain.User;
 import org.zafritech.core.data.repositories.CountryRepository;
@@ -106,6 +110,31 @@ public class UserRestController {
         }
         
         return new ResponseEntity<>(user, HttpStatus.OK);
+    }
+    
+    @SuppressWarnings({"rawtypes", "unchecked"})
+    @RequestMapping(value = {"/api/user/profile/photo/update"})
+    public ResponseEntity<?> getUpdateUserProfilePhoto(ImageItemDao imageDao) throws IOException, ParseException {
+      
+        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+        String userName = auth.getName();
+        
+        User loggedUser = userRepository.findByUserName(userName);
+        boolean isAdmin = userService.hasRole("ROLE_ADMIN");
+
+        if (!Objects.equals(loggedUser.getId(), imageDao.getItemId()) && !isAdmin) {
+            
+            return new ResponseEntity("Account security error!", HttpStatus.OK);
+        }
+        
+        if (imageDao.getImageFile().isEmpty()) {
+
+            return new ResponseEntity("Please select a image file!", HttpStatus.OK);
+        }
+        
+        User user = userService.updateUserProfilePhoto(imageDao);
+        
+        return new ResponseEntity("Error updating profile photo!", HttpStatus.OK);
     }
     
     @RequestMapping(value = "/api/user/byuuid/{uuid}", method = GET)

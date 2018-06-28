@@ -79,7 +79,7 @@ public class SystemPDFReportServiceImpl implements SystemPDFReportService {
         projectLogoTable.setLockedWidth(true);
         projectLogoTable.getDefaultCell().setBorder(Rectangle.NO_BORDER);
         
-        Image projectLogoImage = Image.getInstance(PDFConstants.PROJECT_LOGO_IMAGE_PREFIX + project.getUuId() + ".jpg");
+        Image projectLogoImage = Image.getInstance(PDFConstants.PROJECT_LOGO_IMAGE_PREFIX + project.getProjectLogo());
         projectLogoImage.setAlignment(Image.ALIGN_CENTER);
         projectLogoImage.scaleToFit(360f, 240f);
         cell = new PdfPCell(projectLogoImage);

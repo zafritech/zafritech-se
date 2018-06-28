@@ -17,6 +17,8 @@ public class GlobalSessionDao {
     
     private String email;
     
+    private String photoPath;
+    
     private Integer projectsCount;
     
     private boolean hasOpenProject;
@@ -49,6 +51,14 @@ public class GlobalSessionDao {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public String getPhotoPath() {
+        return photoPath;
+    }
+
+    public void setPhotoPath(String photoPath) {
+        this.photoPath = photoPath;
     }
 
     public Integer getProjectsCount() {

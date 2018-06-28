@@ -26,12 +26,12 @@
                             </button>
                             <div class="dropdown-backdrop"></div>
                             <ul class="dropdown-menu pull-left" style="right: 0; left: auto; border-radius: 2px;">
-                                <li sec:authorize="hasRole('ROLE_ADMIN')" th:if="${usersession.hasOpenProject}">
+                                <li th:if="${usersession.hasOpenProject}">
                                     <a href="javascript:void(0);" th:onclick="'javascript:addOrganisation(\'' + ${project.Id} + '\');'">
                                         <i class="fa fa-plus m-r-1"></i>Add Organisation
                                     </a>
                                 </li>
-                                <li sec:authorize="hasRole('ROLE_ADMIN')" th:if="${usersession.hasOpenProject}">
+                                <li th:if="${usersession.hasOpenProject}">
                                     <a href="javascript:void(0);" th:onclick="'javascript:ProjectManageMembers(\'' + ${project.uuId} + '\');'">
                                         <i class="fa fa-group m-r-1"></i>Manage Members
                                     </a>
@@ -41,7 +41,7 @@
                                         <i class="fa fa-window-restore m-r-1"></i>Manage Applications
                                     </a>
                                 </li>
-                                <li sec:authorize="hasRole('ROLE_ADMIN')" class="divider"></li>
+                                <li class="divider"></li>
                                 <li th:if="${usersession.hasOpenProject}">
                                     <a th:href="'/projects/close/' + ${usersession.projectUuId}">
                                         <i class="fa fa-close m-r-1"></i>Close Project
@@ -153,7 +153,7 @@
                         <div class="panel panel-info panel-dark">
                             <div class="panel-heading">
                                 <span class="panel-title"><i class="panel-title-icon fa fa-institution"></i>Organisations</span>
-                                <div sec:authorize="hasRole('ROLE_ADMIN')" class="panel-heading-controls">
+                                <div class="panel-heading-controls">
                                     <div class="btn-group btn-group-xs">
                                         <button class="btn btn-info dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false" style="border-radius: 2px;">
                                             <i class="fa fa-cog"></i>
@@ -219,7 +219,7 @@
                         <div class="panel panel-info panel-dark">
                             <div class="panel-heading">
                                 <span class="panel-title"><i class="panel-title-icon fa fa-group"></i>Project Members</span>
-                                <div sec:authorize="hasRole('ROLE_ADMIN')" class="panel-heading-controls">
+                                <div class="panel-heading-controls">
                                     <div class="btn-group btn-group-xs">
                                         <button class="btn btn-info dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false" style="border-radius: 2px;">
                                             <i class="fa fa-cog"></i>

@@ -35,7 +35,8 @@
                                     <div th:each="project : ${projects}" class="zaf-imagewidget-item col-md-3">
                                         <div class="project">
                                             <figure class="img-responsive">
-                                                <img src="/images/projects/project-placeholder.png" />
+                                                <img th:if="${project.projectLogo == null}" src="/images/projects/project-placeholder.png" />
+                                                <img th:if="${project.projectLogo != null}" th:attr="src=@{'/images/' + ${project.projectLogo}}" />
                                                 <figcaption>
                                                     <span class="project-details">
                                                         <a class="zaf-imagewidget-title" th:href="'/projects/' + ${project.UuId}">

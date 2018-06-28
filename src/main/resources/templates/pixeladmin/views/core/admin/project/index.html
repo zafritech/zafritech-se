@@ -30,12 +30,13 @@
                             </div>
                             <div class="panel-body">
 
-                                <div th:if="${!projects.isEmpty()}" class="row">
+                                <div th:if="${!projects.isEmpty()}" class="row" style="display: flex; display: -webkit-flex; flex-wrap: wrap;">
 
                                     <div th:each="project : ${projects}" class="zaf-imagewidget-item col-md-3">
                                         <div class="project">
                                             <figure class="img-responsive">
-                                                <img src="/images/projects/project-placeholder.png" />
+                                                <img th:if="${project.projectLogo == null}" src="/images/projects/project-placeholder.png" />
+                                                <img th:if="${project.projectLogo != null}" th:attr="src=@{'/images/' + ${project.projectLogo}}" />
                                                 <figcaption>
                                                     <span class="project-details">
                                                         <a class="zaf-imagewidget-title" th:href="'/admin/projects/' + ${project.UuId}">

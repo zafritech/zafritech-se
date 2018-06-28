@@ -5,10 +5,17 @@
  */
 package org.zafritech.core.services.impl;
 
+import java.io.File;
+import java.io.IOException;
+import java.text.ParseException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashSet;
 import java.util.List;
+import org.apache.commons.io.FileUtils;
+import org.apache.commons.io.FilenameUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
 import org.springframework.security.core.Authentication;
@@ -25,11 +32,13 @@ import org.zafritech.core.data.domain.Role;
 import org.zafritech.core.data.domain.User;
 import org.zafritech.core.data.dao.ClaimDao;
 import org.zafritech.core.data.dao.UserDao;
+import org.zafritech.core.data.dao.generic.ImageItemDao;
 import org.zafritech.core.data.domain.UserClaim;
 import org.zafritech.core.data.repositories.ClaimTypeRepository;
 import org.zafritech.core.data.repositories.UserClaimRepository;
 import org.zafritech.core.data.repositories.UserRepository;
 import org.zafritech.core.services.ClaimService;
+import org.zafritech.core.services.FileIOService;
 import org.zafritech.core.services.UserService;
 
 /**
@@ -38,12 +47,18 @@ import org.zafritech.core.services.UserService;
  */
 @Service
 public class UserServiceImpl implements UserService, UserDetailsService {
-    
+  
+    @Value("${zafritech.paths.images-dir}")
+    private String images_dir;
+      
     @Autowired
     private UserRepository userRepository;
 
     @Autowired
     private DaoToUserConverter daoToUser;
+    
+    @Autowired
+    private FileIOService fileIOService;
     
     @Autowired
     private UserClaimRepository userClaimRepository;
@@ -241,6 +256,50 @@ public class UserServiceImpl implements UserService, UserDetailsService {
         userRepository.save(user);
         
         return user;
+    }
+    
+    @Override
+    public User updateUserProfilePhoto(ImageItemDao dao) throws IOException, ParseException {
+        
+        if (!dao.getImageFile().isEmpty()) {
+            
+            User user = userRepository.findOne(dao.getItemId());
+            
+            // Already has a logo set
+            if (user.getPhotoPath() != null) {
+                
+                // Remove uploaded file
+                File file = new File(images_dir + user.getPhotoPath());
+                if (file.exists()) {
+
+                    file.delete();
+                }
+            }
+            
+            // Upload and move Reference Image file
+            String imageFileExtension = FilenameUtils.getExtension(dao.getImageFile().getOriginalFilename());
+            String imageRelPath = "user/avatars/profile_" + user.getUuId() + "." + imageFileExtension;
+            String imageFullPath = images_dir + imageRelPath;
+            List<String> imageFiles = fileIOService.saveUploadedFiles(Arrays.asList(dao.getImageFile()));
+            FileUtils.moveFile(FileUtils.getFile(imageFiles.get(0)), FileUtils.getFile(imageFullPath)); 
+            
+            user.setPhotoPath(imageRelPath);
+            
+            // Remove uploaded file
+            File file = new File(imageFiles.get(0));
+            if (file.exists()) {
+                
+                file.delete();
+            }
+            
+            userRepository.save(user);
+            
+            return user;
+            
+        } else {
+        
+            return null;
+        }
     }
     
     @Override

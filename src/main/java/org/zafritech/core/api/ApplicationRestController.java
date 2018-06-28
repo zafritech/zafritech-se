@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.zafritech.core.data.domain.Application;
 import org.zafritech.core.data.domain.Project;
+import org.zafritech.core.data.repositories.ApplicationRepository;
 import org.zafritech.core.services.UserSessionService;
 
 /**
@@ -25,7 +26,25 @@ import org.zafritech.core.services.UserSessionService;
 public class ApplicationRestController {
 
     @Autowired
+    private ApplicationRepository applicationRepository;
+
+    @Autowired
     private UserSessionService stateService;
+    
+    @RequestMapping("/api/admin/applications/list/all")
+    public ResponseEntity<List<Application>> getAllApplicationsList(Model model) {
+        
+        List<Application> applications = applicationRepository.findAllByOrderByApplicationTitleAsc();
+        
+        if (applications != null) {
+            
+            return new ResponseEntity<>(applications, HttpStatus.OK);
+            
+        } else {
+            
+            return new ResponseEntity<>(applications, HttpStatus.BAD_REQUEST);
+        }
+    }
     
     @RequestMapping("/api/admin/applications/list")
     public ResponseEntity<List<Application>> getApplicationsList(Model model) {

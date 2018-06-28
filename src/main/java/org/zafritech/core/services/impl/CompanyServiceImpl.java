@@ -75,7 +75,7 @@ public class CompanyServiceImpl implements CompanyService {
     }
     
     @Override
-    public Company createNewCompany(CompanyCreateDao dao) throws IOException, ParseException  {
+    public Company createNewCompany(CompanyCreateDao dao) throws IOException, ParseException {
                 
         Company company = new Company(dao.getCompanyName(), dao.getCompanyShortName());
         

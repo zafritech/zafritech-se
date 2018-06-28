@@ -5,19 +5,27 @@
  */
 package org.zafritech.core.services.impl;
 
+import java.io.File;
+import java.io.IOException;
 import java.sql.Date;
 import java.sql.Timestamp;
+import java.text.ParseException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import org.apache.commons.io.FileUtils;
+import org.apache.commons.io.FilenameUtils;
 import org.apache.commons.text.StrSubstitutor;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.zafritech.core.data.dao.generic.FiveValueDao;
 import org.zafritech.core.data.dao.ProjectDao;
+import org.zafritech.core.data.dao.generic.ImageItemDao;
 import org.zafritech.core.data.domain.Application;
 import org.zafritech.core.data.domain.Claim;
 import org.zafritech.core.data.domain.ClaimType;
@@ -50,6 +58,7 @@ import org.zafritech.core.services.UserService;
 import org.zafritech.core.data.repositories.TemplateVariableRepository;
 import org.zafritech.core.enums.CompanyRole;
 import org.zafritech.core.services.DocumentService;
+import org.zafritech.core.services.FileIOService;
 
 /**
  *
@@ -58,6 +67,9 @@ import org.zafritech.core.services.DocumentService;
 @Service
 public class ProjectServiceImpl implements ProjectService {
  
+    @Value("${zafritech.paths.images-dir}")
+    private String images_dir;
+    
     @Autowired
     private CompanyRepository companyRepository;
    
@@ -93,6 +105,9 @@ public class ProjectServiceImpl implements ProjectService {
  
     @Autowired
     private UserRepository userRepository;
+    
+    @Autowired
+    private FileIOService fileIOService;
     
     @Autowired
     private UserService userService;
@@ -184,6 +199,42 @@ public class ProjectServiceImpl implements ProjectService {
         return project;
     }
 
+    @Override
+    public Project updateProjectLogo(ImageItemDao dao) throws IOException, ParseException {
+        
+        if (!dao.getImageFile().isEmpty()) {
+            
+            Project project = projectRepository.findOne(dao.getItemId());
+            
+            // Already has a logo set
+            if (project.getProjectLogo() != null) {
+                
+                // Remove uploaded file
+                File file = new File(images_dir + project.getProjectLogo());
+                if (file.exists()) {
+
+                    file.delete();
+                }
+            }
+            
+            // Upload and move logo image file
+            String imageFileExtension = FilenameUtils.getExtension(dao.getImageFile().getOriginalFilename());
+            String imageRelPath = "projects/logo_" + project.getUuId() + "." + imageFileExtension;
+            String imageFullPath = images_dir + imageRelPath;
+            List<String> imageFiles = fileIOService.saveUploadedFiles(Arrays.asList(dao.getImageFile()));
+            FileUtils.moveFile(FileUtils.getFile(imageFiles.get(0)), FileUtils.getFile(imageFullPath)); 
+            
+            project.setProjectLogo(imageRelPath); 
+            projectRepository.save(project);
+            
+            return project;
+            
+        } else {
+        
+            return null;
+        }
+    }
+    
     @Override
     public User addMemberToProject(Project project, User user) {
         

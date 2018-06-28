@@ -28,7 +28,7 @@
                             <span class="px-nav-label">Projects</span>
                         </a>
                         <ul class="px-nav-dropdown-menu">
-                            <li class="px-nav-item">
+                            <li sec:authorize="hasRole('ROLE_ADMIN')" class="px-nav-item">
                                 <a href="javascript:void(0);" th:onclick="'javascript:ProjectCreateNew();'">
                                     <span class="px-nav-label">New Project</span>
                                 </a>

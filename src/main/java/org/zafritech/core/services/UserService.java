@@ -5,10 +5,13 @@
  */
 package org.zafritech.core.services;
 
+import java.io.IOException;
+import java.text.ParseException;
 import java.util.List;
 import org.zafritech.core.data.domain.User;
 import org.zafritech.core.data.dao.ClaimDao;
 import org.zafritech.core.data.dao.UserDao;
+import org.zafritech.core.data.dao.generic.ImageItemDao;
 import org.zafritech.core.data.domain.UserClaim;
 
 /**
@@ -52,6 +55,8 @@ public interface UserService {
     boolean passwordMatches(String rawPassword, String encodedPassword);
     
     User changePasswordTo(User user, String password);
+    
+    User updateUserProfilePhoto(ImageItemDao imageDao) throws IOException, ParseException;
     
     UserClaim createClaim(ClaimDao claimDao);
     

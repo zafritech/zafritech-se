@@ -47,6 +47,8 @@ public class User implements Serializable {
     private String lastName;
     
     private String mainRole;
+    
+    private String photoPath;
 
     @ManyToMany(cascade = CascadeType.MERGE, fetch = FetchType.EAGER)
     @JoinTable(name = "CORE_USER_ROLES",
@@ -210,6 +212,14 @@ public class User implements Serializable {
 
     public void setMainRole(String mainRole) {
         this.mainRole = mainRole;
+    }
+
+    public String getPhotoPath() {
+        return photoPath;
+    }
+
+    public void setPhotoPath(String photoPath) {
+        this.photoPath = photoPath;
     }
 
     public Set<Role> getUserRoles() {

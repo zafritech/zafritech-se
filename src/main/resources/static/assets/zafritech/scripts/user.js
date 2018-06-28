@@ -180,6 +180,81 @@ function UserBasicProfileUpdate(uuId) {
     });
 }
 
+function userChangeProfilePhoto(userId) {
+    
+    $.ajax({
+            
+        global: false,
+        type: "GET",
+        url: '/modals/user/user-upload-photo.html',
+        success: function (data) {
+            
+           var box = bootbox.confirm({
+
+                closeButton: false,
+                message: data,
+                title: "Update Profile Photo",
+                buttons: {
+                    cancel: {
+                        label: "Cancel",
+                        className: "btn-danger btn-fixed-width-100"
+                    },
+                    confirm: {
+                        label: "Save",
+                        className: "btn-success btn-fixed-width-100"
+                    }
+                },
+                callback: function (result) {
+                    
+                    if (result) {
+                        
+                        var form = $('#photoUploadForm')[0];
+                        var data = new FormData(form);
+                        
+                        $.ajax({
+                            type: "POST",
+                            enctype: 'multipart/form-data',
+                            url: "/api/user/profile/photo/update",
+                            data: data,
+                            processData: false,
+                            contentType: false,
+                            cache: false,
+                            timeout: 600000,
+                            success: function (data) {
+                                
+                                 swal({
+
+                                    title: "Success!",
+                                    text: "Profile photo successfully updated.",
+                                    type: "success"
+                                });
+                                
+                                setTimeout(function() { window.location.reload(); }, 2000);
+                            },
+                            error: function (e) {
+
+                                swal({
+
+                                    title: "Error updating profile photo!",
+                                    text: e.responseText,
+                                    type: "error"
+                                });
+                            }
+                        });
+                    }
+                }
+            });
+            
+            box.on("shown.bs.modal", function(e) {
+                
+                $(e.currentTarget).find('input[name="itemId"]').prop('value', userId);
+            });
+            
+            box.modal('show');
+        }
+    });
+}
+
 function UserContactDetailsUpdate(uuId) {
     
     $.ajax({

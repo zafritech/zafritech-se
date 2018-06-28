@@ -5,24 +5,29 @@
  */
 package org.zafritech.core.api;
 
+import java.io.IOException;
+import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import static org.springframework.web.bind.annotation.RequestMethod.GET;
 import static org.springframework.web.bind.annotation.RequestMethod.POST;
 import org.springframework.web.bind.annotation.RestController;
 import org.zafritech.core.data.dao.generic.FiveValueDao;
 import org.zafritech.core.data.dao.ProjectDao;
-import org.zafritech.core.data.dao.generic.FourValueDao;
+import org.zafritech.core.data.dao.generic.ImageItemDao;
 import org.zafritech.core.data.dao.generic.ValuePairDao;
 import org.zafritech.core.data.domain.Application;
 import org.zafritech.core.data.domain.ClaimType;
+import org.zafritech.core.data.domain.Company;
 import org.zafritech.core.data.domain.InformationClass;
 import org.zafritech.core.data.domain.Project;
 import org.zafritech.core.data.domain.ProjectCompanyRole;
@@ -193,6 +198,25 @@ public class ProjectRestController {
         Project project = projectRepository.getByUuId(uuid);
                 
         return new ResponseEntity<>(project, HttpStatus.OK);
+    }
+    
+    @SuppressWarnings({"rawtypes", "unchecked"})
+    @RequestMapping(value = "/api/admin/project/logo/update", method = RequestMethod.POST)
+    public ResponseEntity<?> addUpdateProjectLogo(ImageItemDao imageDao) throws IOException, ParseException {
+        
+        if (imageDao.getImageFile().isEmpty()) {
+
+            return new ResponseEntity("Please select a image file!", HttpStatus.OK);
+        }
+        
+        Project project = projectService.updateProjectLogo(imageDao);
+        
+        if (project != null) {
+        
+            return new ResponseEntity("Successfully updated logo for " + project.getProjectName(), new HttpHeaders(), HttpStatus.OK);
+        }
+        
+        return new ResponseEntity("Error updating company logo!", HttpStatus.OK);
     }
     
     @RequestMapping(value = "/api/admin/projects/status/list", method = GET)

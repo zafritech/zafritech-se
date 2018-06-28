@@ -48,7 +48,7 @@
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="javascript:void(0);" th:onclick="'javascript:notYetImplemented();'">
+                                                <a href="javascript:void(0);" th:onclick="'javascript:userChangeProfilePhoto(\'' + ${user.Id} + '\');'">
                                                     <i class="fa fa-photo m-r-1"></i>Change Photo
                                                 </a>
                                             </li>
@@ -65,7 +65,8 @@
 
                                 <div class="row">
                                     <div class="col-md-3" align="center">
-                                        <img src="/images/profile.png" class="img-circle img-responsive" />
+                                        <img th:if="${user.photoPath == null}" src="/images/profile.png" class="img-circle img-responsive" />
+                                        <img th:if="${user.photoPath != null}" th:attr="src=@{'/images/' + ${user.photoPath}}" class="img-circle img-responsive" />
                                     </div>
                                     <div class=" col-md-9">
                                         <table class="table table-bordered" style="margin-bottom: 0;">
