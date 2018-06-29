@@ -18,7 +18,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.zafritech.applications.integration.data.dao.TreeElementDao;
 import org.zafritech.applications.integration.data.domain.IntegrationEntity;
-import org.zafritech.applications.integration.data.domain.InterfaceIssue;
 import org.zafritech.applications.integration.data.repositories.IntegrationEntityRepository;
 import org.zafritech.applications.integration.services.IntegrationService;
 import org.zafritech.applications.integration.services.ReportsPDFService;

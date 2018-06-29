@@ -44,9 +44,10 @@ public class RequirementController {
     private UserService userService;
 
     @RequestMapping("/app/requirements")
-    public String page(Model model) {
+    public String getRequirementsHomePage(Model model) {
 
         if (hasNoValidateProject()) {
+            
             return "redirect:/";
         }
 
