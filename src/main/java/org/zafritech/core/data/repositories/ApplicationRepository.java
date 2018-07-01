@@ -7,6 +7,8 @@ import org.zafritech.core.data.domain.Application;
 public interface ApplicationRepository extends PagingAndSortingRepository<Application, Long>{
 
 	Application findByUuId(String uuid);
+
+	Application findFirstByApplicationName(String name);
         
         List<Application> findAllByOrderByApplicationTitleAsc();
 }

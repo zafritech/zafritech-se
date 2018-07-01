@@ -11,11 +11,13 @@ import java.util.List;
 import java.util.Objects;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.zafritech.core.data.domain.Application;
 import org.zafritech.core.data.domain.Document;
 import org.zafritech.core.data.domain.Project;
 import org.zafritech.core.data.domain.User;
 import org.zafritech.core.data.domain.UserSessionEntity;
 import org.zafritech.core.data.domain.UserSessionEntityKey;
+import org.zafritech.core.data.repositories.ApplicationRepository;
 import org.zafritech.core.data.repositories.DocumentRepository;
 import org.zafritech.core.data.repositories.ProjectRepository;
 import org.zafritech.core.enums.UserSessionEntityTypes;
@@ -30,6 +32,9 @@ import org.zafritech.core.services.UserSessionService;
  */
 @Service
 public class UserSessionServiceImpl implements UserSessionService {
+
+    @Autowired
+    private ApplicationRepository applicationRepository;
 
     @Autowired
     private ClaimService claimService;
@@ -110,6 +115,30 @@ public class UserSessionServiceImpl implements UserSessionService {
             
             stateRepository.delete(state); 
         }
+    }
+    
+    @Override
+    public void updateActiveApplication(Application application) {
+       
+        UserSessionEntityKey pk = new UserSessionEntityKey(userService.loggedInUser().getId(), 
+                                                           UserSessionEntityTypes.ENTITY_ACTIVE_APPLICATION, 
+                                                           application.getId());
+        
+        UserSessionEntity newApplication = new UserSessionEntity(pk);
+          
+        List<UserSessionEntity> applications = stateRepository
+                                               .findBySessionKeyUserIdAndSessionKeyEntityType(
+                                               userService.loggedInUser().getId(), 
+                                               UserSessionEntityTypes.ENTITY_ACTIVE_APPLICATION
+                                            );
+        
+        if (applications.size() > 0) {
+            
+            applications.forEach((state) -> { stateRepository.delete(state); });
+            
+        }
+            
+        stateRepository.save(newApplication);
     }
     
     @Override
@@ -231,6 +260,24 @@ public class UserSessionServiceImpl implements UserSessionService {
         return documents;
     }
 
+    @Override
+    public Application getActiveApplication() {
+        
+        UserSessionEntity activeApp = stateRepository.findFirstBySessionKeyUserIdAndSessionKeyEntityTypeOrderByUpdateDateDesc(
+                                                        userService.loggedInUser().getId(),
+                                                        UserSessionEntityTypes.ENTITY_ACTIVE_APPLICATION
+                                                   );
+        
+        Application application = null;
+        
+        if (activeApp != null) {
+            
+            application = applicationRepository.findOne(activeApp.getSessionKey().getEntityId()); 
+        }
+        
+        return application;
+    }
+    
     @Override
     public boolean isProjectOpen(Project project) {
         

@@ -16,7 +16,7 @@
         <div layout:fragment="content" class="px-content">
 
             <div class="page-header">
-                <h1 id="pagetitle" th:text="'Risk Management - ' + ${project.projectName}">Risk Management</h1>
+                <h1 id="pagetitle" th:text="${project.projectName} + ' - Risk Management'">Risk Management</h1>
                 <div class="pull-right">
                     <div class="btn-group">
                         <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-expanded="true" style="border-radius: 2px;">

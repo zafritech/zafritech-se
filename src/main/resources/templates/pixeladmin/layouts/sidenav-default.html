@@ -55,7 +55,7 @@
                             <i class="px-nav-icon ion-ios-keypad"></i>
                             <span class="px-nav-label">Applications</span>
                         </a>
-                        <ul class="px-nav-dropdown-menu">
+                        <ul id="apps-dropdon-menu-side" class="px-nav-dropdown-menu">
                             <li class="px-nav-item">
                                 <a href="/app/requirements">
                                     <span class="px-nav-label">Requirements</span>
@@ -67,6 +67,25 @@
                                 </a>
                             </li>
                         </ul>
+                    </li>
+                    <!--Application Side Navigation Modules-->
+                    <li id="applicationSideNav1" class="px-nav-item">
+                        <a class="accordion-toggle collapsed" data-toggle="collapse" href="#collapse-applicationSideNav1">
+                            <i class="px-nav-icon ion-ios-browsers"></i>
+                            <span id="applicationSideNavTitle1" class="px-nav-label">Side NAV Title 1</span>
+                        </a>
+                        <div id="collapse-applicationSideNav1" class="panel-collapse collapse">
+                            <ul id="applicationSideNavTree1" class="ztree"></ul>
+                        </div>
+                    </li>
+                    <li id="applicationSideNav2" class="px-nav-item">
+                        <a class="accordion-toggle collapsed" data-toggle="collapse" href="#collapse-applicationSideNav2">
+                            <i class="px-nav-icon ion-ios-list"></i>
+                            <span id="applicationSideNavTitle2" class="px-nav-label">Side NAV Title 2</span>
+                        </a>
+                        <div id="collapse-applicationSideNav2" class="panel-collapse collapse">
+                            <ul id="applicationSideNavTree2" class="ztree"></ul>
+                        </div>
                     </li>
                 </ul>
             </div>

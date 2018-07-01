@@ -16,7 +16,7 @@ public class IntegrationInit {
     @Transactional
     public void init() {
     	
-    	Application appIntegration = new Application("integration", "Systems Integration");
+    	Application appIntegration = new Application("integration", "Systems Integration", "Integration");
         appIntegration.setApplicationDescription("Systems Integration application enables the management of interfaces between different interfacing entities of a system."); 
         appIntegration.setFaIcon("fa-gears");
         

@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package org.zafritech.core.components;
+package org.zafritech.core.contollers.global;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
@@ -24,7 +24,7 @@ import org.zafritech.core.services.UserSessionService;
  * @author Luke Sibisi
  */
 @ControllerAdvice(annotations = Controller.class)
-public class GlobalControllerAttributes {
+public class GlobalController {
 
     @Autowired
     private UserRepository userRepository;

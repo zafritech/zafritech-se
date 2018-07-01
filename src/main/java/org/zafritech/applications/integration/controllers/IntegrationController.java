@@ -22,6 +22,7 @@ import org.zafritech.applications.integration.data.repositories.IntegrationEntit
 import org.zafritech.applications.integration.services.IntegrationService;
 import org.zafritech.applications.integration.services.ReportsPDFService;
 import org.zafritech.core.data.domain.Project;
+import org.zafritech.core.data.repositories.ApplicationRepository;
 import org.zafritech.core.services.ApplicationService;
 import org.zafritech.core.services.UserSessionService;
 
@@ -35,6 +36,9 @@ public class IntegrationController {
     @Autowired
     private UserSessionService userSessionService;
 	
+    @Autowired
+    private ApplicationRepository applicationRepository;
+
     @Autowired
     private ApplicationService applicationService;
 	
@@ -51,7 +55,9 @@ public class IntegrationController {
     public String IntegrationMainPage(Model model) {
         
         if (hasNoValidateProject()) { return "redirect:/"; }
-        
+    
+        userSessionService.updateActiveApplication(applicationRepository.findFirstByApplicationName("integration"));
+            
         Project project = userSessionService.getLastOpenProject();
         List<IntegrationEntity> entities = entityRepository.findByHasElements(true);
         

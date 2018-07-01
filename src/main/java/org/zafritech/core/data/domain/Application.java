@@ -31,12 +31,17 @@ public class Application implements Serializable {
     @Column(unique = true, nullable = false)
     private String applicationTitle;
 
+    @Column(unique = true, nullable = false)
+    private String applicationShortTitle;
+
     @Column(columnDefinition = "TEXT")
     private String applicationDescription;
 
     private String faIcon;
 
     private boolean published;
+    
+    private boolean docCentric;
 
     @CreatedDate
     @Temporal(TemporalType.TIMESTAMP)
@@ -46,26 +51,30 @@ public class Application implements Serializable {
         
     }
 
-    public Application(String applicationName, String applicationTitle) {
+    public Application(String applicationName, String applicationTitle, String applicationShortTitle) {
 
         super();
         this.uuId = UUID.randomUUID().toString();
         this.applicationName = applicationName;
         this.applicationTitle = applicationTitle;
+        this.applicationShortTitle = applicationShortTitle;
         this.faIcon = "fa-window-maximize";
         this.published = true;
+        this.docCentric = false;
         this.createdDate = new Timestamp(System.currentTimeMillis());
     }
 
-    public Application(String applicationName, String applicationTitle, String applicationDescription) {
+    public Application(String applicationName, String applicationTitle, String applicationShortTitle, String applicationDescription) {
 
         super();
         this.uuId = UUID.randomUUID().toString();
         this.applicationName = applicationName;
         this.applicationTitle = applicationTitle;
+        this.applicationShortTitle = applicationShortTitle;
         this.applicationDescription = applicationDescription;
         this.faIcon = "fa-window-maximize";
         this.published = true;
+        this.docCentric = false;
         this.createdDate = new Timestamp(System.currentTimeMillis());
     }
 
@@ -93,6 +102,14 @@ public class Application implements Serializable {
         this.applicationTitle = applicationTitle;
     }
 
+    public String getApplicationShortTitle() {
+        return applicationShortTitle;
+    }
+
+    public void setApplicationShortTitle(String applicationShortTitle) {
+        this.applicationShortTitle = applicationShortTitle;
+    }
+
     public String getApplicationDescription() {
         return applicationDescription;
     }
@@ -115,6 +132,14 @@ public class Application implements Serializable {
 
     public void setPublished(boolean published) {
         this.published = published;
+    }
+
+    public boolean isDocCentric() {
+        return docCentric;
+    }
+
+    public void setDocCentric(boolean docCentric) {
+        this.docCentric = docCentric;
     }
 
     public Date getCreatedDate() {

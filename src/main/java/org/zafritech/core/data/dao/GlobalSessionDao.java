@@ -5,6 +5,8 @@
  */
 package org.zafritech.core.data.dao;
 
+import org.zafritech.core.data.domain.Application;
+
 /**
  *
  * @author Luke Sibisi
@@ -24,6 +26,8 @@ public class GlobalSessionDao {
     private boolean hasOpenProject;
     
     private String projectUuId;
+    
+    private Application application;
 
     public GlobalSessionDao() {
         
@@ -85,11 +89,25 @@ public class GlobalSessionDao {
         this.projectUuId = projectUuId;
     }
 
+    public Application getApplication() {
+        return application;
+    }
+
+    public void setApplication(Application application) {
+        this.application = application;
+    }
+
     @Override
     public String toString() {
         
-        return "GlobalSessionDao{" + "firstName=" + firstName + ", lastName=" + 
-                lastName + ", email=" + email + ", hasOpenProject=" + 
-                hasOpenProject + ", projectUuId=" + projectUuId + '}';
+        return "GlobalSessionDao{" + "firstName=" + firstName + 
+                                    ", lastName=" + lastName + 
+                                    ", email=" + email + 
+                                    ", photoPath=" + photoPath + 
+                                    ", projectsCount=" + projectsCount + 
+                                    ", hasOpenProject=" + hasOpenProject + 
+                                    ", projectUuId=" + projectUuId + 
+                                    ", application=" + application + '}';
     }
+
 }

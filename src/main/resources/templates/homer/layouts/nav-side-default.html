@@ -5,13 +5,13 @@
       xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
 
     <body>
-        
+
         <div th:fragment="side-nav">
-            
+
             <!-- sidebar-->
             <aside class="sidebar-master-container">
                 <div class="sidebar-content">
-                    
+
                     <!-- START Accordion -->
                     <div class="panel-group" id="accordion">
                         <div class="panel panel-default">
@@ -110,7 +110,7 @@
                             </div>
                             <div id="collapseProjects" class="panel-collapse collapse">
                                 <div class="panel-body">
-                                    
+
                                     <div>
                                         <ul id="mainProjectTree" class="ztree"></ul>
                                         <div id="noOpenProjects" style="padding: 0 0 6px 0; text-align: center; color: red;">No open projects</div>
@@ -130,7 +130,7 @@
                             </div>
                             <div id="collapseDocument" class="panel-collapse collapse">
                                 <div class="panel-body">
-                                    
+
                                     <div>
                                         <ul id="mainDocumentTree" class="ztree"></ul>
                                     </div>
@@ -138,7 +138,7 @@
                                         <ul id="openDocumentsTree" class="ztree"></ul>
                                         <div id="noOpenDocuments" style="padding: 0 0 6px 0; text-align: center; color: red;">No open documents</div>
                                     </div>
-                                    
+
                                 </div>
                             </div>
                         </div>
@@ -158,15 +158,15 @@
                                             <button type="button" data-toggle="dropdown" class="btn btn-default btn-flat btn-flat-icon">
                                                 <em class="ion-android-more-vertical"></em>
                                             </button>
-                                             
+
                                             <ul role="menu" class="dropdown-menu md-dropdown-menu dropdown-menu-right">
                                                 <li sec:authorize="hasRole('ROLE_ADMIN')" style="border-bottom: 1px solid #ddd;"><a href="javascript:void(0);" th:onclick="'javascript:ProjectCreateNew();'"><em class="ion-plus icon-fw"></em>New System Element</a></li>
                                                 <li style="border-bottom: 1px solid #ddd;"><a href="/projects"><em class="fa fa-link fa-fw"></em>System Interfaces</a></li>
                                                 <li style="border-bottom: 1px solid #ddd;"><a href="/app/integration/interfaces/download"><em class="fa fa-file-excel-o fa-fw"></em>Export to Spreadsheet</a></li>
-                                                
-                                                
+
+
                                             </ul>
-                                            
+
                                         </div>
                                         <div style="padding: 8px 0;"><em class="ion-filing icon-fw"></em> System Elements</div>
                                     </div>                                   
@@ -238,13 +238,13 @@
                         </div>
                     </div>
                     <!-- END Accordion -->
-                    
+
                 </div>
             </aside>
             <div class="sidebar-layout-obfuscator"></div>
-            
+
         </div>
-       
+
     </body>
-    
+
 </html>

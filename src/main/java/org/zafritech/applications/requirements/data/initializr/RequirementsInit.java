@@ -16,9 +16,10 @@ public class RequirementsInit {
     @Transactional
     public void init() {
     	
-    	Application appRequirements = new Application("requirements", "Requirements Management");
+    	Application appRequirements = new Application("requirements", "Requirements Management", "Requirements");
         appRequirements.setApplicationDescription("The Requirements management application enables the management of requirements for a system inline with the V-Model.");
         appRequirements.setPublished(false);
+        appRequirements.setDocCentric(true); 
         appRequirements.setFaIcon("fa-crosshairs");
         
     	applicationRepository.save(appRequirements);

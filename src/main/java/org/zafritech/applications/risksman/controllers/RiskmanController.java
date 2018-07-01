@@ -17,7 +17,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.zafritech.applications.risksman.data.domain.RiskItem;
 import org.zafritech.applications.risksman.data.repositories.RiskItemRepository;
+import org.zafritech.core.data.domain.Application;
 import org.zafritech.core.data.domain.Project;
+import org.zafritech.core.data.repositories.ApplicationRepository;
 import org.zafritech.core.services.ApplicationService;
 import org.zafritech.core.services.UserSessionService;
 
@@ -30,6 +32,9 @@ public class RiskmanController {
   
     @Value("${zafritech.paths.data-dir}")
     private String data_dir;
+
+    @Autowired
+    private ApplicationRepository applicationRepository;
 
     @Autowired
     private ApplicationService applicationService;
@@ -45,6 +50,8 @@ public class RiskmanController {
 
         if (hasNoValidateProject()) { return "redirect:/"; }
         
+        userSessionService.updateActiveApplication(applicationRepository.findFirstByApplicationName("riskman"));
+        
         Project project = userSessionService.getLastOpenProject();
         
         List<RiskItem> risks = new ArrayList<>();
@@ -57,7 +64,7 @@ public class RiskmanController {
         return applicationService.getApplicationTemplateName() + "/views/riskman/index";
     }
 
-    @RequestMapping(value = "/riskman/items/open/{uuid}", method = RequestMethod.GET)
+    @RequestMapping(value = "/app/riskman/items/open/{uuid}", method = RequestMethod.GET)
     public String openRiskItem(@PathVariable(value = "uuid") String uuid, Model model) throws IOException {
         
         RiskItem riskItem = riskItemRepository.findByUuId(uuid);

@@ -177,7 +177,7 @@
                                 </tbody>
                             </table>
                             
-                            <table th:if="${#lists.size(interface.issues) == 0}" class="table table-bordered table-hover">
+                            <table th:if="${issues.isEmpty()}" class="table table-bordered table-hover">
                                 <tr>
                                     <td>
                                         <div class="text-primary" style="padding: 10px;">No issues have been identified for this interface.</div>

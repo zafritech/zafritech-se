@@ -24,7 +24,7 @@ public class RiskmanInit {
     @Transactional
     public void init() {
     	
-    	Application appRisks = new Application("riskman", "Risk Management");
+    	Application appRisks = new Application("riskman", "Risk Management", "Riskman");
         appRisks.setApplicationDescription("The Risk management application enables the management of enginering risks for a system.");
         appRisks.setPublished(false);
         appRisks.setFaIcon("fa-exclamation-triangle");

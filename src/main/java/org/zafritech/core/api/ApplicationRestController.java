@@ -62,4 +62,19 @@ public class ApplicationRestController {
             return new ResponseEntity<>(applications, HttpStatus.BAD_REQUEST);
         }
     }
+    
+    @RequestMapping("/api/application/active")
+    public ResponseEntity<Application> getActiveApplication(Model model) {
+        
+        Application application = stateService.getActiveApplication();
+        
+        if (application != null) {
+            
+            return new ResponseEntity<>(application, HttpStatus.OK);
+            
+        } else {
+            
+            return new ResponseEntity<>(application, HttpStatus.BAD_REQUEST);
+        }
+    }
 }

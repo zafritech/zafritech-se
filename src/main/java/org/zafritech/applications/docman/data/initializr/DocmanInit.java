@@ -33,7 +33,7 @@ public class DocmanInit {
     @Transactional
     public void init() {
      
-    	Application appDocman = new Application("docman", "Docment Management");
+    	Application appDocman = new Application("docman", "Docment Management", "Docman");
         appDocman.setApplicationDescription("The Document management application enables the management of enginering document for system development.");
     	appDocman.setPublished(false);
     	appDocman.setFaIcon("fa-book");

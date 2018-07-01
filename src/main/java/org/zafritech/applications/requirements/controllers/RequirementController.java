@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.zafritech.core.data.domain.Document;
 import org.zafritech.core.data.domain.Project;
 import org.zafritech.core.data.projections.DocumentView;
+import org.zafritech.core.data.repositories.ApplicationRepository;
 import org.zafritech.core.data.repositories.DocumentRepository;
 import org.zafritech.core.services.ApplicationService;
 import org.zafritech.core.services.UserService;
@@ -30,6 +31,9 @@ public class RequirementController {
 
     @Autowired
     private UserSessionService userSessionService;
+
+    @Autowired
+    private ApplicationRepository applicationRepository;
 
     @Autowired
     private ApplicationService applicationService;
@@ -51,6 +55,8 @@ public class RequirementController {
             return "redirect:/";
         }
 
+        userSessionService.updateActiveApplication(applicationRepository.findFirstByApplicationName("requirements"));
+        
         Project project = userSessionService.getLastOpenProject();
         List<DocumentView> documents = documentRepository.findDocumentViewByOwnerOrderByModifiedDateDesc(userService.loggedInUser());
 

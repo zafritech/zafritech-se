@@ -26,6 +26,7 @@ import org.zafritech.applications.docman.data.repositories.DocmanItemRepository;
 import org.zafritech.core.data.domain.EntityType;
 import org.zafritech.core.data.domain.Folder;
 import org.zafritech.core.data.domain.Project;
+import org.zafritech.core.data.repositories.ApplicationRepository;
 import org.zafritech.core.data.repositories.EntityTypeRepository;
 import org.zafritech.core.data.repositories.FolderRepository;
 import org.zafritech.core.services.UserSessionService;
@@ -39,6 +40,9 @@ public class DocmanController {
 
     @Value("${zafritech.paths.data-dir}")
     private String data_dir;
+
+    @Autowired
+    private ApplicationRepository applicationRepository;
 
     @Autowired
     private ApplicationService applicationService;
@@ -59,7 +63,9 @@ public class DocmanController {
     public String LibraryReferenceItemsList(Model model) {
 
         if (hasNoValidateProject()) { return "redirect:/"; }
-        
+      
+        userSessionService.updateActiveApplication(applicationRepository.findFirstByApplicationName("docman"));
+             
         Project project = userSessionService.getLastOpenProject();
         
         EntityType EntityType = entityTypeRepository.findByEntityTypeKeyAndEntityTypeCode("FOLDER_TYPE_ENTITY", "FOLDER_LIBRARY");

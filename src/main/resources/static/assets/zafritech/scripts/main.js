@@ -19,19 +19,51 @@ $(document).ready(function () {
 
         var applications = data;
         var menus  =  '';
+        var menusSide  =  '';
         
         $.each(applications, function (key, index) {
             
+            /* Top Nav Menu */
             menus = menus + '<li><a href="/app/' + 
                             index.applicationName + 
                             '"><i class="fa ' + 
                             index.faIcon + 
                             ' m-r-1"></i>' + 
-                            index.applicationTitle + 
+                            index.applicationShortTitle + 
                             '</a></li>';
+                 
+            /* Side Nav Menu */
+            menusSide = menusSide + '<li class="px-nav-item">' +
+                                    '<a href="/app/' + index.applicationName + '">' +
+                                    '<span class="px-nav-label">' + index.applicationShortTitle + '</span>' + 
+                                    '</a></li>';
         });
         
         $('#apps-dropdon-menu').html(menus);
+        $('#apps-dropdon-menu-side').html(menusSide);
+    });
+});
+
+$(document).ready(function () {
+    
+    $.ajax({
+
+        global: false,
+        type: "GET",
+        contentType: "application/json",
+        url: "/api/application/active",
+        dataType: "json",
+        cache: false
+    })
+    .done(function (data) {
+        
+        var application = data;
+
+        if (application.docCentric === true) {
+          
+            $('#applicationSideNavTitle1').text("Documents");
+            $('#applicationSideNav1').show();
+        }
     });
 });
 
