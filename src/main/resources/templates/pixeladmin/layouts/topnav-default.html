@@ -226,7 +226,7 @@
                     <li sec:authorize="isAuthenticated()" class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                             <img th:if="${usersession.photoPath == null}" src="/images/user/avatars/profile.png" alt="" class="px-navbar-image" />
-                            <img th:if="${usersession.photoPath != null}" th:attr="src=@{'/images/' + ${usersession.photoPath}}" alt="" class="px-navbar-image" />
+                            <img th:if="${usersession.photoPath != null}" th:attr="src=@{'/resources/images/' + ${usersession.photoPath}}" alt="" class="px-navbar-image" />
                             <span th:if="${usersession != null}" th:text="${usersession.firstName}" class="hidden-md">Joe Soap</span>
                         </a>
                         <ul class="dropdown-menu">

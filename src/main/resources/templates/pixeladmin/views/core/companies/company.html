@@ -49,7 +49,7 @@
                             <div class="panel-body">
                                 <div class="row">
                                     <div class="col-md-3" align="center">
-                                        <img th:if="${company.logoPath != null}" th:attr="src=@{'/images/' + ${company.logoPath}}" class="img-responsive" />
+                                        <img th:if="${company.logoPath != null}" th:attr="src=@{'/resources/images/' + ${company.logoPath}}" class="img-responsive" />
                                         <img th:if="${company.logoPath == null}" src="/images/companies/logo-placeholder.png" class="img-responsive" />
                                     </div>
                                     <div class=" col-md-9">

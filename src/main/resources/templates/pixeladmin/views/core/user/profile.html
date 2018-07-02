@@ -38,7 +38,7 @@
                                 <div class="row">
                                     <div class="col-md-3" align="center">
                                         <img th:if="${user.photoPath == null}" src="/images/profile.png" class="img-circle img-responsive" />
-                                        <img th:if="${user.photoPath != null}"  th:attr="src=@{'/images/' + ${user.photoPath}}" class="img-circle img-responsive" />
+                                        <img th:if="${user.photoPath != null}"  th:attr="src=@{'/resources/images/' + ${user.photoPath}}" class="img-circle img-responsive" />
                                     </div>
                                     <div class=" col-md-9">
                                         <table class="table table-bordered">

@@ -37,9 +37,9 @@ import org.zafritech.core.services.FileIOService;
 @Service
 public class CompanyServiceImpl implements CompanyService {
 
-    @Value("${zafritech.paths.images-dir}")
-    private String images_dir;
-    
+    @Value("${zafritech.paths.static-resources}")
+    private String static_resources;
+
     @Autowired
     private CompanyRepository companyRepository;
     
@@ -77,6 +77,8 @@ public class CompanyServiceImpl implements CompanyService {
     @Override
     public Company createNewCompany(CompanyCreateDao dao) throws IOException, ParseException {
                 
+        String images_dir = static_resources + "images/";
+        
         Company company = new Company(dao.getCompanyName(), dao.getCompanyShortName());
         
         if (!dao.getCompanyLogo().isEmpty()) {
@@ -123,7 +125,9 @@ public class CompanyServiceImpl implements CompanyService {
     
     @Override
     public Company updateCompanyLogo(ImageItemDao dao) throws IOException, ParseException {
-   
+          
+        String images_dir = static_resources + "images/";
+        
         if (!dao.getImageFile().isEmpty()) {
         
             Company company = companyRepository.findOne(dao.getItemId());

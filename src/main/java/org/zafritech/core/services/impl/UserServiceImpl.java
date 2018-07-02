@@ -48,9 +48,9 @@ import org.zafritech.core.services.UserService;
 @Service
 public class UserServiceImpl implements UserService, UserDetailsService {
   
-    @Value("${zafritech.paths.images-dir}")
-    private String images_dir;
-      
+    @Value("${zafritech.paths.static-resources}")
+    private String static_resources;
+
     @Autowired
     private UserRepository userRepository;
 
@@ -261,6 +261,8 @@ public class UserServiceImpl implements UserService, UserDetailsService {
     @Override
     public User updateUserProfilePhoto(ImageItemDao dao) throws IOException, ParseException {
         
+        String images_dir = static_resources + "images/";
+                
         if (!dao.getImageFile().isEmpty()) {
             
             User user = userRepository.findOne(dao.getItemId());

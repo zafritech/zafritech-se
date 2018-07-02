@@ -165,6 +165,8 @@ public class ZafritechConfig {
         private String imagesDir;
 
         private String uploadDir;
+        
+        private String staticResources;
 
         public String getDataDir() {
             return dataDir;
@@ -188,6 +190,14 @@ public class ZafritechConfig {
 
         public void setUploadDir(String uploadDir) {
             this.uploadDir = uploadDir;
+        }
+
+        public String getStaticResources() {
+            return staticResources;
+        }
+
+        public void setStaticResources(String staticResources) {
+            this.staticResources = staticResources;
         }
     }
 

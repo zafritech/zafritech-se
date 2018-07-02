@@ -86,7 +86,7 @@
                                 <div class="row">
                                     <div class="col-md-4" align="center">
                                         <img th:if="${project.projectLogo == null}" src="/images/projects/project-placeholder.png" class="img-responsive" />
-                                        <img th:if="${project.projectLogo != null}" th:attr="src=@{'/images/' + ${project.projectLogo}}" class="img-responsive" />
+                                        <img th:if="${project.projectLogo != null}" th:attr="src=@{'/resources/images/' + ${project.projectLogo}}" class="img-responsive" />
                                     </div>
                                     <div class="col-md-8">
                                         <table class="table table-condensed">

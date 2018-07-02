@@ -7,11 +7,13 @@ package org.zafritech.core.config;
 
 import java.util.Locale;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.Ordered;
 import org.springframework.web.servlet.LocaleResolver;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
+import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 import org.springframework.web.servlet.i18n.LocaleChangeInterceptor;
@@ -25,9 +27,21 @@ import org.zafritech.core.services.ApplicationService;
 @Configuration
 public class WebMvcConfig extends WebMvcConfigurerAdapter {
 
+    @Value("${zafritech.paths.static-resources}")
+    private String static_resources;
+
     @Autowired
     private ApplicationService applicationService;
 
+    @Override
+    public void addResourceHandlers(ResourceHandlerRegistry registry) {
+  
+        if(static_resources != null) {
+            
+            registry.addResourceHandler("/resources/**").addResourceLocations("file:" + static_resources);
+        }
+    }
+    
     @Override
     public void addViewControllers(ViewControllerRegistry registry) {
 
