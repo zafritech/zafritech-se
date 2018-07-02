@@ -46,25 +46,10 @@ function zTreeProjectLoad() {
         dataType: "json",
         success: function (data) {
 
-            zTreeObj = $.fn.zTree.init($("#mainProjectTree"), setting, data);
+            zTreeObj = $.fn.zTree.init($("#applicationSideNavTree1"), setting, data);
 
-            $('#noOpenProjects').hide();
-            $('#mainTreeHeaderLabel').text("Projects");
-            
-            // Expand current zTree node
-            if (($('#nodeId').length > 0 && $('#nodeId').val().length !== 0) &&
-                (($('#documentNodeId').length === 0) || $('#documentNodeId').val().length === 0)) {
-
-                var nodeId =  document.getElementById('nodeId').value;
-                var currentNode = zTreeObj.getNodeByParam("id", nodeId, null);
-
-                zTreeObj.expandAll(false);
-                zTreeObj.expandNode(currentNode, true, false, true);
-                
-            } else {
-                
-               zTreeObj.expandAll(false);
-            }
+            $('#applicationSideNavTitle1').text("Documents");
+            $('#collapse-applicationSideNav1').addClass("in");
         }
     });
 }

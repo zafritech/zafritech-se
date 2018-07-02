@@ -2,3 +2,9 @@
 #applicationSideNav1, #applicationSideNav2 {
     display: none;
 }
+
+#collapse-applicationSideNav1, collapse-applicationSideNav2 {
+    background-color: #fff; 
+    border-right: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+}

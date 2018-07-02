@@ -61,8 +61,13 @@ $(document).ready(function () {
 
         if (application.docCentric === true) {
           
+            /* Hide Menu Items */
+            $('#projects-dropdon-menu-side-parent').hide();
+            $('#apps-dropdon-menu-side-parent').hide();
+            
             $('#applicationSideNavTitle1').text("Documents");
             $('#applicationSideNav1').show();
+            $('#side-nav').removeClass("px-nav-collapse");
         }
     });
 });

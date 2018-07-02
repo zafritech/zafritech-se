@@ -86,27 +86,27 @@ public class FolderServiceImpl implements FolderService {
             if (folder.getFolderType().equals(entityTypeRepository.findByEntityTypeKeyAndEntityTypeCode("FOLDER_TYPE_ENTITY", "FOLDER_PROJECT"))) { 
                 
                 folderTree.add(new FolderTreeDao(
-                
-                        folder.getId(),
-                        (folder.getParent() != null) ? folder.getParent().getId() : 0L,
-                        project.getProjectNumber() + " " + folder.getFolderName(),
-                        (folder.getParent() == null),
-                        true,
-                        true,
-                        "/images/icons/db-icon.png",
-                        project.getId()
+
+                    folder.getId(),
+                    (folder.getParent() != null) ? folder.getParent().getId() : 0L,
+                    folder.getFolderName(),
+                    (folder.getParent() == null),
+                    true,
+                    true,
+                    "/images/icons/db-icon.png",
+                    project.getId()
                 ));
                 
             } else {
                 
                 folderTree.add(new FolderTreeDao(
                 
-                        folder.getId(),
-                        (folder.getParent() != null) ? folder.getParent().getId() : 0L,
-                        folder.getFolderName(),
-                        (folder.getParent() == null),
-                        true,
-                        true
+                    folder.getId(),
+                    (folder.getParent() != null) ? folder.getParent().getId() : 0L,
+                    folder.getFolderName(),
+                    (folder.getParent() == null),
+                    true,
+                    true
                 ));
             }
         }
@@ -121,6 +121,7 @@ public class FolderServiceImpl implements FolderService {
         List<FolderTreeDao> projectDocs = new ArrayList<>();
         
         docs.forEach((doc) -> {
+            
             projectDocs.add(new FolderTreeDao(
                     
                     doc.getId() + 5000,             // Prevent TreeNodes id classes with folders
@@ -176,11 +177,13 @@ public class FolderServiceImpl implements FolderService {
     
     @Override
     public List<FolderTreeDao> getOpenProjectFoldersTree() {
+        
       List<FolderTreeDao> foldersTree = new ArrayList<>();
         
         List<Project> openProjects = stateService.getOpenProjects();
         
         openProjects.forEach((project) -> {
+            
             List<FolderTreeDao> folders = getProjectFolders(project);
             List<FolderTreeDao> docs = getProjectDocuments(project);
 
