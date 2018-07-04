@@ -1695,6 +1695,199 @@ function ProjectUpdateLogo(projectId) {
     }); 
 }
 
+function ProjectSettingNewImage(projectId) {
+    
+    $.ajax({
+        
+        global: false,
+        type: "GET",
+        url: '/modals/project/project-admin-setting-add-image.html',
+        success: function (data) {
+           
+            var box = bootbox.confirm({
+                
+                closeButton: false,
+                title: 'Create Project Setting',
+                message: data,
+                buttons: {
+                    cancel: {
+                        label: "Cancel",
+                        className: "btn-danger btn-fixed-width-100"
+                    },
+                    confirm: {
+                        label: "Save",
+                        className: "btn-success btn-fixed-width-100"
+                    }
+                },
+                callback: function (result) {
+                    
+                    if (result) {
+                      
+                        var form = $('#imageSettingForm')[0];
+                        var data = new FormData(form);
+                     
+                        $.ajax({
+                            type: "POST",
+                            enctype: 'multipart/form-data',
+                            url: "/api/projects/settings/image/create",
+                            data: data,
+                            processData: false,
+                            contentType: false,
+                            cache: false,
+                            timeout: 600000,
+                            success: function (data) {
+                                
+                                 swal({
+
+                                    title: "Success!",
+                                    text: "Project image has been successfully created.",
+                                    type: "success"
+                                });
+                                
+                                setTimeout(function() { window.location.reload(); }, 2000);
+                            },
+                            error: function (e) {
+
+                                swal({
+
+                                    title: "Error creating project setting!",
+                                    text: e.responseText,
+                                    type: "error"
+                                });
+                            }
+                        });   
+                    }
+                }
+            });
+            
+            box.on("shown.bs.modal", function(e) {
+                
+                $.ajax({
+
+                    global: false,
+                    type: "GET",
+                    contentType: "application/json",
+                    url: "/api/projects/settings/types/list",
+                    dataType: "json",
+                    cache: false
+                }).done(function (data) {
+                    
+                    var selectOptions = '';
+                    
+                    $.each(data, function (key, index) {
+
+                        selectOptions = selectOptions + '<option value="' + index + '">' + index + '</option>';
+                    });
+
+                    $('#itemTitle').empty();
+                    $('#itemTitle').append(selectOptions);
+                });
+                
+                $(e.currentTarget).find('input[name="itemId"]').prop('value', projectId);
+            });
+            
+            box.modal('show');
+        }
+    });
+}
+
+function ProjectSettingNewString(projectId) {
+    
+    $.ajax({
+        
+        global: false,
+        type: "GET",
+        url: '/modals/project/project-admin-setting-add-string.html',
+        success: function (data) {
+            
+               
+            var box = bootbox.confirm({
+                
+                closeButton: false,
+                title: 'Create Project Setting',
+                message: data,
+                buttons: {
+                    cancel: {
+                        label: "Cancel",
+                        className: "btn-danger btn-fixed-width-100"
+                    },
+                    confirm: {
+                        label: "Save",
+                        className: "btn-success btn-fixed-width-100"
+                    }
+                },
+                callback: function (result) {
+                    
+                    if (result) {
+                    
+                        var form = $('#stringSettingForm')[0];
+                        var data = new FormData(form);
+                     
+                        $.ajax({
+                            type: "POST",
+                            enctype: 'multipart/form-data',
+                            url: "/api/projects/settings/string/create",
+                            data: data,
+                            processData: false,
+                            contentType: false,
+                            cache: false,
+                            timeout: 600000,
+                            success: function (data) {
+                                
+                                 swal({
+
+                                    title: "Success!",
+                                    text: "Project string has been successfully created.",
+                                    type: "success"
+                                });
+                                
+                                setTimeout(function() { window.location.reload(); }, 2000);
+                            },
+                            error: function (e) {
+
+                                swal({
+
+                                    title: "Error creating project setting!",
+                                    text: e.responseText,
+                                    type: "error"
+                                });
+                            }
+                        });    
+                    }
+                }
+            });
+            
+            box.on("shown.bs.modal", function(e) {
+                             
+                $.ajax({
+
+                    global: false,
+                    type: "GET",
+                    contentType: "application/json",
+                    url: "/api/projects/settings/types/list",
+                    dataType: "json",
+                    cache: false
+                }).done(function (data) {
+                    
+                    var selectOptions = '';
+                    
+                    $.each(data, function (key, index) {
+
+                        selectOptions = selectOptions + '<option value="' + index + '">' + index + '</option>';
+                    });
+
+                    $('#itemName').empty();
+                    $('#itemName').append(selectOptions);
+                });
+                
+                $(e.currentTarget).find('input[name="Id"]').prop('value', projectId);    
+            });
+            
+            box.modal('show');
+        }
+    });
+}
+
 function OpenProject() {
     
     $.ajax({

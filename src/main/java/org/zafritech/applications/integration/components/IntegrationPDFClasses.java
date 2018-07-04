@@ -30,12 +30,14 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.zafritech.applications.integration.constants.PDFConstants;
 import org.zafritech.applications.integration.data.domain.Interface;
 import org.zafritech.applications.integration.data.domain.InterfaceIssue;
 import org.zafritech.applications.integration.services.impl.ReportsPDFServiceImpl;
 import org.zafritech.core.data.domain.Project;
+import org.zafritech.core.data.repositories.ProjectSettingRepository;
 
 /**
  *
@@ -44,6 +46,9 @@ import org.zafritech.core.data.domain.Project;
 @Component
 public class IntegrationPDFClasses {
 
+    @Autowired
+    ProjectSettingRepository projectSettingRepository;
+
     public class HeaderTableIssue extends PdfPageEventHelper {
       
         PdfTemplate numberOfPages;
@@ -51,10 +56,16 @@ public class IntegrationPDFClasses {
         protected PdfPTable header;
         protected float tableHeight;
         protected InterfaceIssue issue;
+        protected String imageFolder;
+        protected String firstImage;
+        protected String secondImage;
 
         public HeaderTableIssue(InterfaceIssue issue) {
 
             this.issue = issue;
+            this.imageFolder = "project_" + issue.getIssueInterface().getProject().getUuId();
+            this.firstImage = PDFConstants.PROJECT_IMAGES_PREFIX + imageFolder + "/header_image_first.png";
+            this.secondImage = PDFConstants.PROJECT_IMAGES_PREFIX + imageFolder + "/header_image_second.png";
         }
      
         @Override
@@ -118,11 +129,11 @@ public class IntegrationPDFClasses {
             PdfPCell cell;
             Phrase phrase;
             
-            // PMCM Logo cell
-            Image pmcmLogo = Image.getInstance(PDFConstants.DEFUALT_PMCM_IMAGE);
-            pmcmLogo.setAlignment(Image.ALIGN_LEFT);
-            pmcmLogo.scaleToFit(140f, 28f);
-            cell = new PdfPCell(pmcmLogo);
+            // First Logo cell image
+            Image firstLogo = Image.getInstance(firstImage);
+            firstLogo.setAlignment(Image.ALIGN_LEFT);
+            firstLogo.scaleToFit(140f, 28f);
+            cell = new PdfPCell(firstLogo);
             cell.setBorder(Rectangle.NO_BORDER);
             header.addCell(cell);
 
@@ -136,11 +147,11 @@ public class IntegrationPDFClasses {
             cell.setFixedHeight(24);
             header.addCell(cell);
 
-            // Contractor Logo cell
-            Image contractorLogo = Image.getInstance(PDFConstants.DEFUALT_CONTRACTOR_IMAGE);
-            contractorLogo.setAlignment(Image.ALIGN_RIGHT);
-            contractorLogo.scaleToFit(100f, 28f);
-            cell = new PdfPCell(contractorLogo);
+            // Second Logo cell image
+            Image secondLogo = Image.getInstance(PDFConstants.PROJECT_IMAGES_PREFIX + imageFolder + "/header_image_second.png");
+            secondLogo.setAlignment(Image.ALIGN_RIGHT);
+            secondLogo.scaleToFit(100f, 28f);
+            cell = new PdfPCell(secondLogo);
             cell.setHorizontalAlignment(Element.ALIGN_RIGHT);
             cell.setBorder(Rectangle.NO_BORDER);
             header.addCell(cell);
@@ -184,10 +195,10 @@ public class IntegrationPDFClasses {
             Phrase phrase;
 
             // PMCM Logo cell
-            Image pmcmLogo = Image.getInstance(PDFConstants.DEFUALT_PMCM_IMAGE);
-            pmcmLogo.setAlignment(Image.ALIGN_LEFT);
-            pmcmLogo.scaleToFit(140f, 28f);
-            cell = new PdfPCell(pmcmLogo);
+            Image firstLogo = Image.getInstance(firstImage);
+            firstLogo.setAlignment(Image.ALIGN_LEFT);
+            firstLogo.scaleToFit(140f, 28f);
+            cell = new PdfPCell(firstLogo);
             cell.setPaddingBottom(6f);
             cell.setBorder(Rectangle.BOTTOM);
             cell.setBorderColor(BaseColor.GRAY);
@@ -208,10 +219,10 @@ public class IntegrationPDFClasses {
             header.addCell(cell);
 
             // Contractor Logo cell
-            Image contractorLogo = Image.getInstance(PDFConstants.DEFUALT_CONTRACTOR_IMAGE);
-            contractorLogo.setAlignment(Image.ALIGN_RIGHT);
-            contractorLogo.scaleToFit(100f, 28f);
-            cell = new PdfPCell(contractorLogo);
+            Image secondLogo = Image.getInstance(secondImage);
+            secondLogo.setAlignment(Image.ALIGN_RIGHT);
+            secondLogo.scaleToFit(100f, 28f);
+            cell = new PdfPCell(secondLogo);
             cell.setHorizontalAlignment(Element.ALIGN_RIGHT);
             cell.setPaddingBottom(6f);
             cell.setBorder(Rectangle.BOTTOM);
@@ -245,7 +256,7 @@ public class IntegrationPDFClasses {
             PdfPCell cell;
             Phrase phrase;
 
-            DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+            DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 
             String projectName = issue.getIssueInterface().getProject().getProjectName();
 
@@ -322,10 +333,16 @@ public class IntegrationPDFClasses {
         protected PdfPTable header;
         protected float tableHeight;
         protected Interface iface;
+        protected String imageFolder;
+        protected String firstImage;
+        protected String secondImage;
 
         public HeaderTableInterface(Interface iface) {
 
             this.iface = iface;
+            this.imageFolder = "project_" + iface.getProject().getUuId();
+            this.firstImage = PDFConstants.PROJECT_IMAGES_PREFIX + imageFolder + "/header_image_first.png";
+            this.secondImage = PDFConstants.PROJECT_IMAGES_PREFIX + imageFolder + "/header_image_second.png";
         }
         
         @Override
@@ -390,10 +407,10 @@ public class IntegrationPDFClasses {
             Phrase phrase;
 
             // PMCM Logo cell
-            Image pmcmLogo = Image.getInstance(PDFConstants.DEFUALT_PMCM_IMAGE);
-            pmcmLogo.setAlignment(Image.ALIGN_LEFT);
-            pmcmLogo.scaleToFit(140f, 28f);
-            cell = new PdfPCell(pmcmLogo);
+            Image firstLogo = Image.getInstance(firstImage);
+            firstLogo.setAlignment(Image.ALIGN_LEFT);
+            firstLogo.scaleToFit(140f, 28f);
+            cell = new PdfPCell(firstLogo);
             cell.setBorder(Rectangle.NO_BORDER);
             header.addCell(cell);
 
@@ -408,10 +425,10 @@ public class IntegrationPDFClasses {
             header.addCell(cell);
 
             // Contractor Logo cell
-            Image contractorLogo = Image.getInstance(PDFConstants.DEFUALT_CONTRACTOR_IMAGE);
-            contractorLogo.setAlignment(Image.ALIGN_RIGHT);
-            contractorLogo.scaleToFit(100f, 28f);
-            cell = new PdfPCell(contractorLogo);
+            Image secondLogo = Image.getInstance(secondImage);
+            secondLogo.setAlignment(Image.ALIGN_RIGHT);
+            secondLogo.scaleToFit(100f, 28f);
+            cell = new PdfPCell(secondLogo);
             cell.setHorizontalAlignment(Element.ALIGN_RIGHT);
             cell.setBorder(Rectangle.NO_BORDER);
             header.addCell(cell);
@@ -455,10 +472,10 @@ public class IntegrationPDFClasses {
             Phrase phrase;
 
             // PMCM Logo cell
-            Image pmcmLogo = Image.getInstance(PDFConstants.DEFUALT_PMCM_IMAGE);
-            pmcmLogo.setAlignment(Image.ALIGN_LEFT);
-            pmcmLogo.scaleToFit(140f, 28f);
-            cell = new PdfPCell(pmcmLogo);
+            Image firstLogo = Image.getInstance(firstImage);
+            firstLogo.setAlignment(Image.ALIGN_LEFT);
+            firstLogo.scaleToFit(140f, 28f);
+            cell = new PdfPCell(firstLogo);
             cell.setPaddingBottom(6f);
             cell.setBorder(Rectangle.BOTTOM);
             cell.setBorderColor(BaseColor.GRAY);
@@ -479,10 +496,10 @@ public class IntegrationPDFClasses {
             header.addCell(cell);
 
             // Contractor Logo cell
-            Image contractorLogo = Image.getInstance(PDFConstants.DEFUALT_CONTRACTOR_IMAGE);
-            contractorLogo.setAlignment(Image.ALIGN_RIGHT);
-            contractorLogo.scaleToFit(100f, 28f);
-            cell = new PdfPCell(contractorLogo);
+            Image secondLogo = Image.getInstance(secondImage);
+            secondLogo.setAlignment(Image.ALIGN_RIGHT);
+            secondLogo.scaleToFit(100f, 28f);
+            cell = new PdfPCell(secondLogo);
             cell.setHorizontalAlignment(Element.ALIGN_RIGHT);
             cell.setPaddingBottom(6f);
             cell.setBorder(Rectangle.BOTTOM);
@@ -502,7 +519,7 @@ public class IntegrationPDFClasses {
     //        canvas.stroke();
         }    
     }
-    
+   
     public class FooterTableInterface extends PdfPageEventHelper {
          
         protected PdfPTable footer;
@@ -600,10 +617,14 @@ public class IntegrationPDFClasses {
         protected PdfPTable header;
         protected float tableHeight;
         protected Project project; 
+        protected String firstImage; 
+        protected String secondImage; 
         
         public HeaderTableSystem(Project project) {
 
             this.project = project;
+            this.firstImage = PDFConstants.PROJECT_IMAGES_PREFIX + "project_" + project.getUuId() + "/header_image_first.png";
+            this.secondImage = PDFConstants.PROJECT_IMAGES_PREFIX + "project_" + project.getUuId() + "/header_image_second.png";
         }
      
         @Override
@@ -659,10 +680,10 @@ public class IntegrationPDFClasses {
             Phrase phrase;
 
             // PMCM Logo cell
-            Image pmcmLogo = Image.getInstance(PDFConstants.DEFUALT_PMCM_IMAGE);
-            pmcmLogo.setAlignment(Image.ALIGN_LEFT);
-            pmcmLogo.scaleToFit(140f, 28f);
-            cell = new PdfPCell(pmcmLogo);
+            Image firstLogo = Image.getInstance(firstImage);
+            firstLogo.setAlignment(Image.ALIGN_LEFT);
+            firstLogo.scaleToFit(140f, 28f);
+            cell = new PdfPCell(firstLogo);
             cell.setBorder(Rectangle.NO_BORDER);
             header.addCell(cell);
 
@@ -677,10 +698,10 @@ public class IntegrationPDFClasses {
             header.addCell(cell);
 
             // Contractor Logo cell
-            Image contractorLogo = Image.getInstance(PDFConstants.DEFUALT_CONTRACTOR_IMAGE);
-            contractorLogo.setAlignment(Image.ALIGN_RIGHT);
-            contractorLogo.scaleToFit(100f, 28f);
-            cell = new PdfPCell(contractorLogo);
+            Image secondLogo = Image.getInstance(secondImage);
+            secondLogo.setAlignment(Image.ALIGN_RIGHT);
+            secondLogo.scaleToFit(100f, 28f);
+            cell = new PdfPCell(secondLogo);
             cell.setHorizontalAlignment(Element.ALIGN_RIGHT);
             cell.setBorder(Rectangle.NO_BORDER);
             header.addCell(cell);
@@ -742,10 +763,10 @@ public class IntegrationPDFClasses {
             Phrase phrase;
 
             // PMCM Logo cell
-            Image pmcmLogo = Image.getInstance(PDFConstants.DEFUALT_PMCM_IMAGE);
-            pmcmLogo.setAlignment(Image.ALIGN_LEFT);
-            pmcmLogo.scaleToFit(140f, 28f);
-            cell = new PdfPCell(pmcmLogo);
+            Image firstLogo = Image.getInstance(firstImage);
+            firstLogo.setAlignment(Image.ALIGN_LEFT);
+            firstLogo.scaleToFit(140f, 28f);
+            cell = new PdfPCell(firstLogo);
             cell.setPaddingBottom(6f);
             cell.setBorder(Rectangle.BOTTOM);
             cell.setBorderColor(BaseColor.GRAY);
@@ -766,10 +787,10 @@ public class IntegrationPDFClasses {
             header.addCell(cell);
 
             // Contractor Logo cell
-            Image contractorLogo = Image.getInstance(PDFConstants.DEFUALT_CONTRACTOR_IMAGE);
-            contractorLogo.setAlignment(Image.ALIGN_RIGHT);
-            contractorLogo.scaleToFit(100f, 28f);
-            cell = new PdfPCell(contractorLogo);
+            Image secondLogo = Image.getInstance(secondImage);
+            secondLogo.setAlignment(Image.ALIGN_RIGHT);
+            secondLogo.scaleToFit(100f, 28f);
+            cell = new PdfPCell(secondLogo);
             cell.setHorizontalAlignment(Element.ALIGN_RIGHT);
             cell.setPaddingBottom(6f);
             cell.setBorder(Rectangle.BOTTOM);
@@ -782,7 +803,7 @@ public class IntegrationPDFClasses {
             header.writeSelectedRows(0, -1, 20, document.top() + ((document.topMargin() + tableHeight) / 2), writer.getDirectContent());
         }    
     }
-   
+ 
     public class FooterTableSystem extends PdfPageEventHelper {
          
         protected PdfPTable footer;
@@ -886,7 +907,7 @@ public class IntegrationPDFClasses {
                                        totalWidth, 6, 0);
         }
     }
- 
+
     public class TableOfContents extends PdfPageEventHelper {
 
         protected List<AbstractMap.SimpleEntry<String, Integer>> toc = new ArrayList<>();

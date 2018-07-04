@@ -32,7 +32,7 @@
                         <div class="dropdown-backdrop"></div>
                         <ul class="dropdown-menu pull-left" style="right: 0; left: auto; border-radius: 2px;">
                             <li th:if="${usersession.hasOpenProject}">
-                                <a href="/app/integration/interfaces/download">
+                                <a href="javascript:void(0);" th:onclick="'javascript:IntegrationAddEntity(\'' + ${project.Id} + '\');'">
                                     <i class="fa fa-plus m-r-1"></i>Add New Entity
                                 </a>
                             </li>

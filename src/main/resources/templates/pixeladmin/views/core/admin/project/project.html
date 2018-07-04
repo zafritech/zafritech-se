@@ -86,7 +86,7 @@
                                 <div class="row">
                                     <div class="col-md-4" align="center">
                                         <img th:if="${project.projectLogo == null}" src="/images/projects/project-placeholder.png" class="img-responsive" />
-                                        <img th:if="${project.projectLogo != null}" th:attr="src=@{'/images/' + ${project.projectLogo}}" class="img-responsive" />
+                                        <img th:if="${project.projectLogo != null}" th:attr="src=@{'/resources/images/projects/project_' + ${project.uuId} + '/' + ${project.projectLogo}}" class="img-responsive" />
                                     </div>
                                     <div class="col-md-8">
                                         <table class="table table-condensed">
@@ -145,6 +145,35 @@
                             </div>
                         </div>
 
+                        <!-- Project's Settings -->
+                        <div class="panel panel-info panel-dark">
+                            <div class="panel-heading">
+                                <span class="panel-title"><i class="panel-title-icon fa fa-tasks"></i>Project Settings</span>
+                                <div sec:authorize="hasRole('ROLE_ADMIN')" class="panel-heading-controls">
+                                    <div class="btn-group btn-group-xs">
+                                        <button class="btn btn-info dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false" style="border-radius: 2px;">
+                                            <i class="fa fa-cog"></i>
+                                        </button>
+                                        <ul class="dropdown-menu dropdown-menu-right">
+                                            <li>
+                                                <a href="javascript:void(0);" th:onclick="'javascript:ProjectSettingNewString(\'' + ${project.Id} + '\');'">
+                                                    <i class="fa fa-file-text-o m-r-1"></i>Add String Setting
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:void(0);" th:onclick="'javascript:ProjectSettingNewImage(\'' + ${project.Id} + '\');'">
+                                                    <i class="fa fa-file-image-o m-r-1"></i>Add Image Setting
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="panel-body">
+                                
+                            </div>
+                        </div>
                     </div>
                     
                     <div class="col-md-8">

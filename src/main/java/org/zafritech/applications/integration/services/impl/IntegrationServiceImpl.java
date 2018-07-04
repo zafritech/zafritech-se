@@ -240,8 +240,12 @@ public class IntegrationServiceImpl implements IntegrationService {
         element.setEntity(integrationEntityRepository.findOne(dao.getEntityId()));
         element.setSbs(dao.getSbs());
         element.setName(dao.getName());
-        element.setDescription(dao.getElementDescription());
-
+        
+        if(dao.getElementDescription() != null && !dao.getElementDescription().isEmpty()) {
+            
+            element.setDescription(dao.getElementDescription());
+        }
+        
         element = elementRepository.save(element);
         
         return element;

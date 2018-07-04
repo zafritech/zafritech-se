@@ -20,8 +20,8 @@ public class PDFConstants {
     public static String IMAGES_DIR;
     public static String DEFUALT_APPLICATION_LOGO_IMAGE;
     public static String DEFUALT_PROJECT_IMAGE;
-    public static String DEFUALT_PMCM_IMAGE;
-    public static String DEFUALT_CONTRACTOR_IMAGE;
+    public static String PROJECT_IMAGES_PREFIX;
+    public static String PROJECT_IMAGE_PREFIX_PLACEHOLDER;
     public static String PROJECT_LOGO_IMAGE_PREFIX;
     public static String APPLICATION_TEMPLATE_NAME;
     
@@ -34,13 +34,18 @@ public class PDFConstants {
         
         IMAGES_DIR = imagespath;
         DEFUALT_APPLICATION_LOGO_IMAGE = imagespath + "zafritech_se_logo.png";
-        DEFUALT_PROJECT_IMAGE = imagespath + "projects//project-placeholder.png";
+        DEFUALT_PROJECT_IMAGE = imagespath + "projects/project-placeholder.png";
         PROJECT_LOGO_IMAGE_PREFIX = imagespath + "projects/";
-        DEFUALT_PMCM_IMAGE = imagespath + "ramped_logo.png";
-        DEFUALT_CONTRACTOR_IMAGE = imagespath + "fast_logo.png";
-        
     }
     
+    
+    @Value("${zafritech.paths.static-resources}")
+    public void staticResources(String staticresources) {
+        
+        PROJECT_IMAGES_PREFIX = staticresources + "images/projects/";
+        PROJECT_IMAGE_PREFIX_PLACEHOLDER = staticresources + "projects/project-placeholder.png";
+    }
+
     @Value("${zafritech.template.template-name}")
     public void setApplicationTemplateName(String appname) {
      

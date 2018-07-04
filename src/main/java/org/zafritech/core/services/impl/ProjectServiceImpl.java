@@ -17,6 +17,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.UUID;
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.FilenameUtils;
 import org.apache.commons.text.StrSubstitutor;
@@ -26,6 +27,8 @@ import org.springframework.stereotype.Service;
 import org.zafritech.core.data.dao.generic.FiveValueDao;
 import org.zafritech.core.data.dao.ProjectDao;
 import org.zafritech.core.data.dao.generic.ImageItemDao;
+import org.zafritech.core.data.dao.generic.ImageItemTitleDao;
+import org.zafritech.core.data.dao.generic.TriValueDao;
 import org.zafritech.core.data.domain.Application;
 import org.zafritech.core.data.domain.Claim;
 import org.zafritech.core.data.domain.ClaimType;
@@ -35,6 +38,7 @@ import org.zafritech.core.data.domain.EntityType;
 import org.zafritech.core.data.domain.Folder;
 import org.zafritech.core.data.domain.Project;
 import org.zafritech.core.data.domain.ProjectCompanyRole;
+import org.zafritech.core.data.domain.ProjectSetting;
 import org.zafritech.core.data.domain.ProjectWbsPackage;
 import org.zafritech.core.data.domain.User;
 import org.zafritech.core.data.domain.UserClaim;
@@ -47,6 +51,7 @@ import org.zafritech.core.data.repositories.FolderRepository;
 import org.zafritech.core.data.repositories.InformationClassRepository;
 import org.zafritech.core.data.repositories.ProjectCompanyRoleRepository;
 import org.zafritech.core.data.repositories.ProjectRepository;
+import org.zafritech.core.data.repositories.ProjectSettingRepository;
 import org.zafritech.core.data.repositories.ProjectWbsPackageRepository;
 import org.zafritech.core.data.repositories.UserClaimRepository;
 import org.zafritech.core.data.repositories.UserRepository;
@@ -57,6 +62,7 @@ import org.zafritech.core.services.ProjectService;
 import org.zafritech.core.services.UserService;
 import org.zafritech.core.data.repositories.TemplateVariableRepository;
 import org.zafritech.core.enums.CompanyRole;
+import org.zafritech.core.enums.ProjectSettingType;
 import org.zafritech.core.services.DocumentService;
 import org.zafritech.core.services.FileIOService;
 
@@ -120,6 +126,9 @@ public class ProjectServiceImpl implements ProjectService {
     
     @Autowired
     private DocumentService documentService;
+    
+    @Autowired
+    private ProjectSettingRepository projectSettingRepository;
     
     @Override
     public Project saveDao(ProjectDao dao) {
@@ -200,19 +209,95 @@ public class ProjectServiceImpl implements ProjectService {
     }
 
     @Override
+    public Project createProjectImageSetting(ImageItemTitleDao dao) throws IOException, ParseException {
+       
+        Project project = projectRepository.findOne(dao.getItemId());
+        String images_dir = static_resources + "images/projects/project_" + project.getUuId();
+         
+        if (!dao.getImageFile().isEmpty()) {
+            
+            ProjectSettingType settingType = ProjectSettingType.valueOf(dao.getItemTitle());
+            ProjectSetting setting = projectSettingRepository.findFirstByProjectAndSettingType(project, settingType);
+            String imageFileExtension = FilenameUtils.getExtension(dao.getImageFile().getOriginalFilename());
+            String imageFullPath = images_dir;
+            String imageRelPath = "";
+            
+            if (settingType == ProjectSettingType.SETTING_REPORT_HEADER_IMAGE_FIRST) {
+                
+                imageRelPath =  "header_image_first." + imageFileExtension;
+                
+            } else if (settingType == ProjectSettingType.SETTING_REPORT_HEADER_IMAGE_SECOND) {
+                
+                imageRelPath = "header_image_second." + imageFileExtension;
+            }
+                
+            imageFullPath = imageFullPath + "/" + imageRelPath;
+
+            // Image already exists (Remove image file)
+            File file = new File(imageFullPath);
+            if (file.exists()) {
+
+                file.delete();
+            }
+            
+            // Setting already exists (Update)
+            if (setting != null) {
+                
+                setting.setValue(imageRelPath); 
+                
+            } else {
+                
+                setting = new ProjectSetting(project, settingType, imageRelPath);
+            }
+            
+            List<String> imageFiles = fileIOService.saveUploadedFiles(Arrays.asList(dao.getImageFile()));
+            FileUtils.moveFile(FileUtils.getFile(imageFiles.get(0)), FileUtils.getFile(imageFullPath));
+            
+            projectSettingRepository.save(setting);
+        }
+        
+        return project;
+    }
+    
+    @Override
+    public Project createProjectStringSetting(TriValueDao dao) {
+        
+        Project project = projectRepository.findOne(dao.getId());
+        ProjectSettingType settingType = ProjectSettingType.valueOf(dao.getItemName());
+        ProjectSetting setting = projectSettingRepository.findFirstByProjectAndSettingType(project, settingType);
+        
+        // Already has this setting 
+        if (setting != null) {
+
+            setting.setValue(dao.getItemDescription());
+            
+        } else {
+            
+            setting = new ProjectSetting(project, settingType, dao.getItemDescription());
+        }
+        
+        projectSettingRepository.save(setting);
+        
+        return project;
+    }
+    
+    @Override
     public Project updateProjectLogo(ImageItemDao dao) throws IOException, ParseException {
          
-        String images_dir = static_resources + "images/";
+        String images_dir = static_resources + "images/projects/";
         
         if (!dao.getImageFile().isEmpty()) {
             
             Project project = projectRepository.findOne(dao.getItemId());
-            
-            // Already has a logo set
+            String imageFileExtension = FilenameUtils.getExtension(dao.getImageFile().getOriginalFilename());
+            String imageFileName = "project_logo" + "." + imageFileExtension;
+            String imageFullPath = images_dir + "project_" + project.getUuId() + "/" + imageFileName;
+                    
+            // Already has a logo set (Remove)
             if (project.getProjectLogo() != null) {
                 
                 // Remove uploaded file
-                File file = new File(images_dir + project.getProjectLogo());
+                File file = new File(imageFullPath);
                 if (file.exists()) {
 
                     file.delete();
@@ -220,13 +305,10 @@ public class ProjectServiceImpl implements ProjectService {
             }
             
             // Upload and move logo image file
-            String imageFileExtension = FilenameUtils.getExtension(dao.getImageFile().getOriginalFilename());
-            String imageRelPath = "projects/logo_" + project.getUuId() + "." + imageFileExtension;
-            String imageFullPath = images_dir + imageRelPath;
             List<String> imageFiles = fileIOService.saveUploadedFiles(Arrays.asList(dao.getImageFile()));
             FileUtils.moveFile(FileUtils.getFile(imageFiles.get(0)), FileUtils.getFile(imageFullPath)); 
             
-            project.setProjectLogo(imageRelPath); 
+            project.setProjectLogo(imageFileName); 
             projectRepository.save(project);
             
             return project;

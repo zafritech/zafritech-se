@@ -318,7 +318,9 @@ function IntegrationRootElementCreate(entityId) {
     });
 }
 
-function IntegrationElementCreate(elementId) {
+function IntegrationElementCreate() {
+    
+    var elementId = $('#elementId').val();
     
     $.ajax({
         

@@ -24,10 +24,11 @@ import org.springframework.web.bind.annotation.RestController;
 import org.zafritech.core.data.dao.generic.FiveValueDao;
 import org.zafritech.core.data.dao.ProjectDao;
 import org.zafritech.core.data.dao.generic.ImageItemDao;
+import org.zafritech.core.data.dao.generic.ImageItemTitleDao;
+import org.zafritech.core.data.dao.generic.TriValueDao;
 import org.zafritech.core.data.dao.generic.ValuePairDao;
 import org.zafritech.core.data.domain.Application;
 import org.zafritech.core.data.domain.ClaimType;
-import org.zafritech.core.data.domain.Company;
 import org.zafritech.core.data.domain.InformationClass;
 import org.zafritech.core.data.domain.Project;
 import org.zafritech.core.data.domain.ProjectCompanyRole;
@@ -43,6 +44,7 @@ import org.zafritech.core.data.repositories.ProjectCompanyRoleRepository;
 import org.zafritech.core.data.repositories.ProjectRepository;
 import org.zafritech.core.data.repositories.ProjectWbsPackageRepository;
 import org.zafritech.core.data.repositories.UserRepository;
+import org.zafritech.core.enums.ProjectSettingType;
 import org.zafritech.core.enums.ProjectStatus;
 import org.zafritech.core.services.ClaimService;
 import org.zafritech.core.services.ProjectService;
@@ -223,6 +225,47 @@ public class ProjectRestController {
     public List<ProjectStatus> getProjectStatusList() {
         
         return Arrays.asList(ProjectStatus.values());
+    }
+    
+    @RequestMapping(value = "/api/projects/settings/types/list", method = GET)
+    public List<ProjectSettingType> getProjectSettingsTypeList() {
+        
+        return Arrays.asList(ProjectSettingType.values());
+    }
+    
+    @SuppressWarnings({"rawtypes", "unchecked"})
+    @RequestMapping(value = "/api/projects/settings/image/create", method = RequestMethod.POST)
+    public ResponseEntity<?> addCreateProjectImageSetting(ImageItemTitleDao imageDao) throws IOException, ParseException {
+        
+        if (imageDao.getImageFile().isEmpty()) {
+
+            return new ResponseEntity("Please select a image file!", HttpStatus.OK);
+        }
+        
+        Project project = projectService.createProjectImageSetting(imageDao);
+        
+        if (project != null) {
+        
+            return new ResponseEntity("Successfully created image setting for " + project.getProjectName(), new HttpHeaders(), HttpStatus.OK);
+        }
+        
+        return new ResponseEntity("Error creating project image setting!", HttpStatus.OK);
+    }
+    
+    @SuppressWarnings({"rawtypes", "unchecked"})
+    @RequestMapping(value = "/api/projects/settings/string/create", method = RequestMethod.POST)
+    public ResponseEntity<?> addCreateProjectStringSetting(TriValueDao stringsDao) {
+        
+        System.out.println(stringsDao);
+        
+        Project project = projectService.createProjectStringSetting(stringsDao);
+        
+        if (project != null) {
+        
+            return new ResponseEntity("Successfully created string setting for " + project.getProjectName(), new HttpHeaders(), HttpStatus.OK);
+        }
+        
+        return new ResponseEntity("Error creating project string setting!", HttpStatus.OK);
     }
     
     @RequestMapping(value = "/api/admin/projects/project/members/list/{uuid}", method = GET)

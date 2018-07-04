@@ -23,14 +23,18 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.zafritech.applications.integration.constants.PDFConstants;
 import org.zafritech.applications.integration.data.converters.InterfaceListToInterfaceViewListConverter;
+import org.zafritech.applications.integration.data.converters.VerificationListToVerificationVewDaoListConverter;
 import org.zafritech.applications.integration.data.dao.InterfaceViewDao;
+import org.zafritech.applications.integration.data.dao.VerificationViewDao;
 import org.zafritech.applications.integration.data.domain.IntegrationEntity;
 import org.zafritech.applications.integration.data.repositories.ElementRepository;
 import org.zafritech.applications.integration.data.repositories.IntegrationEntityRepository;
+import org.zafritech.applications.integration.data.repositories.IntegrationVerificationRepository;
 import org.zafritech.applications.integration.data.repositories.InterfaceRepository;
 import org.zafritech.applications.integration.services.SystemPDFReportService;
 import org.zafritech.core.constants.CoreConstants;
 import org.zafritech.core.data.domain.Project;
+import org.zafritech.core.data.repositories.ProjectSettingRepository;
 
 /**
  *
@@ -40,6 +44,9 @@ import org.zafritech.core.data.domain.Project;
 public class SystemPDFReportServiceImpl implements SystemPDFReportService {
 
     @Autowired
+    ProjectSettingRepository projectSettingRepository;
+
+    @Autowired
     IntegrationEntityRepository entityRepository;
 
     @Autowired
@@ -47,9 +54,15 @@ public class SystemPDFReportServiceImpl implements SystemPDFReportService {
 
     @Autowired
     InterfaceRepository interfaceRepository;
+
+    @Autowired
+    IntegrationVerificationRepository verificationRepository;
     
     @Autowired
     private InterfaceListToInterfaceViewListConverter interfaceListConverter;
+    
+    @Autowired
+    private VerificationListToVerificationVewDaoListConverter verificationListConverter;
     
     @Override
     public void pdfAddFrontPage(Document document, Project project) throws Exception {
@@ -79,7 +92,9 @@ public class SystemPDFReportServiceImpl implements SystemPDFReportService {
         projectLogoTable.setLockedWidth(true);
         projectLogoTable.getDefaultCell().setBorder(Rectangle.NO_BORDER);
         
-        Image projectLogoImage = Image.getInstance(PDFConstants.PROJECT_LOGO_IMAGE_PREFIX + project.getProjectLogo());
+        String logoPath = project.getProjectLogo() != null ? PDFConstants.PROJECT_IMAGES_PREFIX + "project_" + project.getUuId() + "/" + project.getProjectLogo() 
+                                                           : PDFConstants.PROJECT_IMAGE_PREFIX_PLACEHOLDER;
+        Image projectLogoImage = Image.getInstance(logoPath); 
         projectLogoImage.setAlignment(Image.ALIGN_CENTER);
         projectLogoImage.scaleToFit(360f, 240f);
         cell = new PdfPCell(projectLogoImage);
@@ -124,6 +139,7 @@ public class SystemPDFReportServiceImpl implements SystemPDFReportService {
             para.add(String.valueOf(entry.getValue()));
             document.add(para);
         }
+        
         // ===================================================
         // END Table of Contents
         // ===================================================
@@ -373,7 +389,7 @@ public class SystemPDFReportServiceImpl implements SystemPDFReportService {
             table.addCell(setTableCellProperties(cell));
 
             phrase = new Phrase();
-            phrase.add(new Chunk(iface.getSecondaryElementSbs() + " "+ iface.getPrimaryElementName(), PDFConstants.TABLE_CELL_SMALL));
+            phrase.add(new Chunk(iface.getPrimaryElementSbs() + " "+ iface.getPrimaryElementName(), PDFConstants.TABLE_CELL_SMALL));
             cell = new PdfPCell(phrase);
             table.addCell(setTableCellProperties(cell));
 
@@ -429,6 +445,153 @@ public class SystemPDFReportServiceImpl implements SystemPDFReportService {
         table.setComplete(true);
     }
  
+    @Override
+    public void pdfIntegrationVerification(Document document, Project project)  throws Exception {
+
+        document.newPage();
+
+        PdfPCell cell;
+        Phrase phrase;
+        Font statusFont;
+        
+        Paragraph verificationTitle = new Paragraph();
+        verificationTitle.add(new Chunk("System Integration Verification Matrix", CoreConstants.HEADER1)); 
+        addEmptyLine(verificationTitle, 1);
+        document.add(verificationTitle);
+        
+        // [#] [SysID] [Title] [Descr] [Method] [Refs] [Status] [Interfaces]
+        float[] colWidths = {1, 3, 8, 12, 4, 4, 2, 2};
+        PdfPTable table = new PdfPTable(colWidths);
+        table.setTotalWidth(1130);
+        table.setLockedWidth(true);
+        table.setHeaderRows(1); 
+        table.getDefaultCell().setBorder(Rectangle.NO_BORDER);
+        table.setComplete(false);
+        
+        phrase = new Phrase();
+        phrase.add(new Chunk("#", new Font(Font.FontFamily.HELVETICA, 9, Font.BOLD, BaseColor.WHITE)));
+        cell = new PdfPCell(phrase);
+        cell.setHorizontalAlignment(Element.ALIGN_CENTER);
+        table.addCell(setTableHeaderCellProperties(cell));
+        
+        phrase = new Phrase();
+        phrase.add(new Chunk("Identifier", new Font(Font.FontFamily.HELVETICA, 9, Font.BOLD, BaseColor.WHITE)));
+        cell = new PdfPCell(phrase);
+        table.addCell(setTableHeaderCellProperties(cell));
+        
+        phrase = new Phrase();
+        phrase.add(new Chunk("Verification Title", new Font(Font.FontFamily.HELVETICA, 9, Font.BOLD, BaseColor.WHITE)));
+        cell = new PdfPCell(phrase);
+        table.addCell(setTableHeaderCellProperties(cell));
+        
+        phrase = new Phrase();
+        phrase.add(new Chunk("Description", new Font(Font.FontFamily.HELVETICA, 9, Font.BOLD, BaseColor.WHITE)));
+        cell = new PdfPCell(phrase);
+        table.addCell(setTableHeaderCellProperties(cell));
+        
+        phrase = new Phrase();
+        phrase.add(new Chunk("Method", new Font(Font.FontFamily.HELVETICA, 9, Font.BOLD, BaseColor.WHITE)));
+        cell = new PdfPCell(phrase);
+        table.addCell(setTableHeaderCellProperties(cell));
+        
+        phrase = new Phrase();
+        phrase.add(new Chunk("References", new Font(Font.FontFamily.HELVETICA, 9, Font.BOLD, BaseColor.WHITE)));
+        cell = new PdfPCell(phrase);
+        table.addCell(setTableHeaderCellProperties(cell));
+        
+        phrase = new Phrase();
+        phrase.add(new Chunk("Status", new Font(Font.FontFamily.HELVETICA, 9, Font.BOLD, BaseColor.WHITE)));
+        cell = new PdfPCell(phrase);
+        table.addCell(setTableHeaderCellProperties(cell));
+        
+        phrase = new Phrase();
+        phrase.add(new Chunk("Interfaces", new Font(Font.FontFamily.HELVETICA, 9, Font.BOLD, BaseColor.WHITE)));
+        cell = new PdfPCell(phrase);
+        table.addCell(setTableHeaderCellProperties(cell));
+        
+        document.add(table);
+        
+        List<VerificationViewDao> verifications = verificationListConverter.convert(verificationRepository.findAll());
+        
+        Integer count = 1;
+        
+        for (VerificationViewDao verification: verifications) {
+           
+            if (null == verification.getStatus()) {
+
+                statusFont = PDFConstants.TABLE_CELL_SMALL;
+
+            } else switch (verification.getStatus()) {
+
+                case "INTERFACE_STATUS_OPEN":
+
+                    statusFont = PDFConstants.TABLE_CELL_SMALL_RED;
+                    break;
+
+                case "INTERFACE_STATUS_CLOSED":
+
+                    statusFont = PDFConstants.TABLE_CELL_SMALL_GREEN;
+                    break;
+
+                default:
+                    statusFont = PDFConstants.TABLE_CELL_SMALL;
+                    break;
+            }
+
+            phrase = new Phrase();
+            phrase.add(new Chunk(String.valueOf(count), PDFConstants.TABLE_CELL_SMALL)); 
+            cell = new PdfPCell(phrase);
+            cell.setHorizontalAlignment(Element.ALIGN_CENTER);
+            table.addCell(setTableCellProperties(cell));
+ 
+            phrase = new Phrase();
+            phrase.add(new Chunk(verification.getSystemId(), PDFConstants.TABLE_CELL_SMALL));
+            cell = new PdfPCell(phrase);
+            table.addCell(setTableCellProperties(cell));
+ 
+            phrase = new Phrase();
+            phrase.add(new Chunk(verification.getTitle(), PDFConstants.TABLE_CELL_SMALL));
+            cell = new PdfPCell(phrase);
+            table.addCell(setTableCellProperties(cell));
+            
+            phrase = new Phrase();
+            phrase.add(new Chunk(verification.getDescription() != null ? verification.getDescription() : "", PDFConstants.TABLE_CELL_SMALL));
+            cell = new PdfPCell(phrase);
+            table.addCell(setTableCellProperties(cell));
+            
+            phrase = new Phrase();
+            phrase.add(new Chunk(verification.getMethod() != null ? verification.getMethod() : "", PDFConstants.TABLE_CELL_SMALL));
+            cell = new PdfPCell(phrase);
+            table.addCell(setTableCellProperties(cell));
+            
+            phrase = new Phrase();
+            phrase.add(new Chunk(verification.getReference() != null ? verification.getReference() : "", PDFConstants.TABLE_CELL_SMALL));
+            cell = new PdfPCell(phrase);
+            table.addCell(setTableCellProperties(cell));
+
+            phrase = new Phrase();
+            phrase.add(new Chunk(verification.getStatus().replace("INTERFACE_STATUS_", ""), statusFont));
+            cell = new PdfPCell(phrase);
+            table.addCell(setTableCellProperties(cell));
+            
+            phrase = new Phrase();
+            phrase.add(new Chunk(String.valueOf(verification.getInterfaceCount()), verification.getInterfaceCount() > 0 ? PDFConstants.TABLE_CELL_SMALL : PDFConstants.TABLE_CELL_SMALL_RED));
+            cell = new PdfPCell(phrase);
+            cell.setHorizontalAlignment(Element.ALIGN_CENTER);
+            table.addCell(setTableCellProperties(cell));
+
+            if (count % 10 == 0) {
+                
+                document.add(table);
+            }
+            
+            count++;
+        }
+        
+        document.add(table);
+        table.setComplete(true);
+    }
+    
     private PdfPCell setTableHeaderCellProperties(PdfPCell cell) {
         
         cell.setBorder(Rectangle.BOX);

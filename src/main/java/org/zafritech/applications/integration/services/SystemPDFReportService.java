@@ -25,4 +25,6 @@ public interface SystemPDFReportService {
     public void pdfAddInterfacesStatus(Document document, Project project) throws Exception;
     
     public void pdfAddInterfaceMatrix(Document document, Project project) throws Exception;
+    
+    public void pdfIntegrationVerification(Document document, Project project)  throws Exception;
 }

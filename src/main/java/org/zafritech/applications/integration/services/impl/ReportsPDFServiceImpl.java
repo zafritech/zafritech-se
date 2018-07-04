@@ -181,6 +181,9 @@ public class ReportsPDFServiceImpl implements ReportsPDFService {
         // Interface Matrix 
         systemPDFService.pdfAddInterfaceMatrix(document, project);
         
+        // System Integration Verification Matrix 
+        systemPDFService.pdfIntegrationVerification(document, project);
+        
         // Close PDF document
         document.close();
  
