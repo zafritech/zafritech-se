@@ -18,6 +18,8 @@ public class EntityViewDao {
     private String companyCode;    
 
     private boolean hasElements;    
+    
+    private Integer interfaceCount;
 
     public EntityViewDao() {
         
@@ -29,6 +31,7 @@ public class EntityViewDao {
         this.projectId = projectId;
         this.companyCode = companyCode;
         this.hasElements = hasElements;
+        this.interfaceCount = 0;
     }
 
     public Long getId() {
@@ -63,11 +66,19 @@ public class EntityViewDao {
         this.hasElements = hasElements;
     }
 
+    public Integer getInterfaceCount() {
+        return interfaceCount;
+    }
+
+    public void setInterfaceCount(Integer interfaceCount) {
+        this.interfaceCount = interfaceCount;
+    }
+
     @Override
     public String toString() {
         
-        return "EntityToEntityViewDao{" + "Id=" + Id + ", projectId=" 
-                + projectId + ", companyCode=" + companyCode 
-                + ", hasElements=" + hasElements + '}';
+        return "EntityViewDao{" + "Id=" + Id + ", projectId=" + projectId + ", companyCode=" + companyCode + 
+                              ", hasElements=" + hasElements + ", interfaceCount=" + interfaceCount + '}';
     }
+
 }

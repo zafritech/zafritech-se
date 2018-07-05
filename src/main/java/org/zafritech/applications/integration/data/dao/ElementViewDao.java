@@ -25,6 +25,8 @@ public class ElementViewDao {
     
     private String description;  
 
+    private Integer interfaceCount;
+
     public ElementViewDao() {
         
     }
@@ -44,6 +46,7 @@ public class ElementViewDao {
         this.sbs = sbs;
         this.name = name;
         this.description = description;
+        this.interfaceCount = 0;
     }
 
     public Long getId() {
@@ -102,12 +105,20 @@ public class ElementViewDao {
         this.description = description;
     }
 
+    public Integer getInterfaceCount() {
+        return interfaceCount;
+    }
+
+    public void setInterfaceCount(Integer interfaceCount) {
+        this.interfaceCount = interfaceCount;
+    }
+
     @Override
     public String toString() {
         
-        return "ElementToElementViewDao{" + "Id=" + Id + ", projectId=" 
-                + projectId + ", entityId=" + entityId + ", parentId=" 
-                + parentId + ", sbs=" + sbs + ", name=" + name 
-                + ", description=" + description + '}';
+        return "ElementViewDao{" + "Id=" + Id + ", projectId=" + projectId + ", entityId=" + entityId + 
+                               ", parentId=" + parentId + ", sbs=" + sbs + ", name=" + name + 
+                               ", description=" + description + ", interfaceCount=" + interfaceCount + '}';
     }
+
 }

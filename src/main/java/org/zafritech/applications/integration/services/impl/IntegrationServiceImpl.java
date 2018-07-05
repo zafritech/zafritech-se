@@ -77,7 +77,7 @@ public class IntegrationServiceImpl implements IntegrationService {
         List<IntegrationEntity> entities = integrationEntityRepository.findByProjectAndHasElementsOrderBySortOrderAsc(project, true);
      
         // Root Element (Project)
-        SBSTreeDao rootItem = new SBSTreeDao(1L, 0L, project.getProjectName(), true, true, false, "/images/icons/system-time-icon.png", project.getId());
+        SBSTreeDao rootItem = new SBSTreeDao(1L, 0L, project.getProjectName(), true, true, false, "/images/icons/db-icon.png", project.getId());
         sbsTree.add(rootItem);
         
         if (entities.size() > 0) {

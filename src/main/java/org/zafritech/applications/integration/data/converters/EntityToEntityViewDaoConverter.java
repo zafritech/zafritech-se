@@ -5,10 +5,15 @@
  */
 package org.zafritech.applications.integration.data.converters;
 
+import java.util.List;
+import javax.persistence.Entity;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.convert.converter.Converter;
 import org.springframework.stereotype.Component;
 import org.zafritech.applications.integration.data.dao.EntityViewDao;
 import org.zafritech.applications.integration.data.domain.IntegrationEntity;
+import org.zafritech.applications.integration.data.domain.Interface;
+import org.zafritech.applications.integration.data.repositories.InterfaceRepository;
 
 /**
  *
@@ -17,8 +22,15 @@ import org.zafritech.applications.integration.data.domain.IntegrationEntity;
 @Component
 public class EntityToEntityViewDaoConverter implements Converter<IntegrationEntity, EntityViewDao> {
 
+    @Autowired
+    InterfaceRepository interfaceRepository;
+
     @Override
     public EntityViewDao convert(IntegrationEntity entity) {
+        
+        Integer ifaceCount = interfaceRepository.findByPrimaryEntityAndSecondaryEntity(entity, entity).size();
+        ifaceCount += interfaceRepository.findByPrimaryEntityAndSecondaryEntityNot(entity, entity).size();
+        ifaceCount += interfaceRepository.findByPrimaryEntityNotAndSecondaryEntity(entity, entity).size();
         
         EntityViewDao entityDao = new EntityViewDao();
         
@@ -26,6 +38,7 @@ public class EntityToEntityViewDaoConverter implements Converter<IntegrationEnti
         entityDao.setProjectId(entity.getProject().getId());
         entityDao.setCompanyCode(entity.getCompanyCode()); 
         entityDao.setHasElements(entity.isHasElements()); 
+        entityDao.setInterfaceCount(ifaceCount); 
         
         return entityDao;
     }

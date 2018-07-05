@@ -7,10 +7,14 @@ package org.zafritech.applications.integration.data.converters;
 
 import java.util.ArrayList;
 import java.util.List;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.convert.converter.Converter;
 import org.springframework.stereotype.Component;
 import org.zafritech.applications.integration.data.dao.ElementViewDao;
 import org.zafritech.applications.integration.data.domain.Element;
+import org.zafritech.applications.integration.data.domain.Interface;
+import org.zafritech.applications.integration.data.repositories.ElementRepository;
+import org.zafritech.applications.integration.data.repositories.InterfaceRepository;
 
 /**
  *
@@ -19,12 +23,20 @@ import org.zafritech.applications.integration.data.domain.Element;
 @Component
 public class ElementListToElementViewDaoListConverter implements Converter<List<Element>, List<ElementViewDao>>{
 
+    @Autowired
+    InterfaceRepository interfaceRepository;
+
+    @Autowired
+    ElementRepository elementRepository;
+
     @Override
     public List<ElementViewDao> convert(List<Element> elements) {
         
         List<ElementViewDao> elementViews = new ArrayList();
         
         elements.stream().map((element) -> {
+
+            Integer ifaceCount = 0;
             
             ElementViewDao elemmentDao = new ElementViewDao();
             elemmentDao.setId(element.getId());
@@ -34,6 +46,7 @@ public class ElementListToElementViewDaoListConverter implements Converter<List<
             elemmentDao.setSbs(element.getSbs());
             elemmentDao.setName(element.getName());
             elemmentDao.setDescription(element.getDescription());
+            elemmentDao.setInterfaceCount(countInterfaces(element, ifaceCount));
             
             return elemmentDao;     
             
@@ -43,5 +56,23 @@ public class ElementListToElementViewDaoListConverter implements Converter<List<
         });
         
         return elementViews;
+    }
+    
+    private Integer countInterfaces(Element element, Integer ifaceCount) {
+         
+        ifaceCount += interfaceRepository.findByPrimaryElement(element).size();
+        ifaceCount += interfaceRepository.findBySecondaryElement(element).size();
+        
+        List<Element> children = elementRepository.findByParentOrderBySortOrder(element);
+
+        if (!children.isEmpty()) {
+            
+            for (Element child : children) {
+            
+                ifaceCount = countInterfaces(child, ifaceCount);
+            }
+        }
+        
+        return ifaceCount;
     }
 }

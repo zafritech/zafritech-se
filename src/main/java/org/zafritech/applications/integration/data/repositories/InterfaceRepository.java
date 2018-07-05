@@ -8,6 +8,7 @@ package org.zafritech.applications.integration.data.repositories;
 import java.util.List;
 import org.springframework.data.repository.CrudRepository;
 import org.zafritech.applications.integration.data.domain.Element;
+import org.zafritech.applications.integration.data.domain.IntegrationEntity;
 import org.zafritech.applications.integration.data.domain.Interface;
 
 /**
@@ -22,6 +23,20 @@ public interface InterfaceRepository extends CrudRepository<Interface, Long> {
     Interface findByUuId(String uuid);
     
     Interface findFirstByOrderByIdDesc();
+    
+    List<Interface> findByPrimaryEntity(IntegrationEntity entity);
+    
+    List<Interface> findBySecondaryEntity(IntegrationEntity entity);
+    
+    List<Interface> findByPrimaryEntityAndInterfaceLevel(IntegrationEntity entity, Integer level);
+    
+    List<Interface> findByPrimaryEntityAndSecondaryEntity(IntegrationEntity pEntity, IntegrationEntity sEntity);
+    
+    List<Interface> findByPrimaryEntityAndSecondaryEntityNot(IntegrationEntity pEntity, IntegrationEntity sEntity);
+    
+    List<Interface> findByPrimaryEntityNotAndSecondaryEntity(IntegrationEntity pEntity, IntegrationEntity sEntity);
+    
+    List<Interface> findBySecondaryEntityAndInterfaceLevel(IntegrationEntity entity, Integer level);
     
     List<Interface> findByPrimaryElement(Element element);
     

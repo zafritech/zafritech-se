@@ -5,10 +5,15 @@
  */
 package org.zafritech.applications.integration.data.converters;
 
+import java.util.List;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.convert.converter.Converter;
 import org.springframework.stereotype.Component;
 import org.zafritech.applications.integration.data.dao.ElementViewDao;
 import org.zafritech.applications.integration.data.domain.Element;
+import org.zafritech.applications.integration.data.domain.Interface;
+import org.zafritech.applications.integration.data.repositories.ElementRepository;
+import org.zafritech.applications.integration.data.repositories.InterfaceRepository;
 
 /**
  *
@@ -17,9 +22,16 @@ import org.zafritech.applications.integration.data.domain.Element;
 @Component
 public class ElementToElementViewDaoConverter implements Converter<Element, ElementViewDao> {
 
+    @Autowired
+    InterfaceRepository interfaceRepository;
+
+    @Autowired
+    ElementRepository elementRepository;
+
     @Override
     public ElementViewDao convert(Element element) {
-        
+       
+        Integer ifaceCount = 0;
         ElementViewDao elemmentDao = new ElementViewDao();
         
         elemmentDao.setId(element.getId());
@@ -29,7 +41,26 @@ public class ElementToElementViewDaoConverter implements Converter<Element, Elem
         elemmentDao.setSbs(element.getSbs());
         elemmentDao.setName(element.getName());
         elemmentDao.setDescription(element.getDescription());
+        elemmentDao.setInterfaceCount(countInterfaces(element, ifaceCount));
         
         return elemmentDao;
+    }
+    
+    private Integer countInterfaces(Element element, Integer ifaceCount) {
+         
+        ifaceCount += interfaceRepository.findByPrimaryElement(element).size();
+        ifaceCount += interfaceRepository.findBySecondaryElement(element).size();
+
+        List<Element> children = elementRepository.findByParentOrderBySortOrder(element);
+
+        if (!children.isEmpty()) {
+            
+            for (Element child : children) {
+            
+                ifaceCount = countInterfaces(child, ifaceCount);
+            }
+        }
+        
+        return ifaceCount;
     }
 }

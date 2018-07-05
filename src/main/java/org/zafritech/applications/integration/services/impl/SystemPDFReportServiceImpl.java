@@ -22,11 +22,14 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.zafritech.applications.integration.constants.PDFConstants;
+import org.zafritech.applications.integration.data.converters.ElementListToElementViewDaoListConverter;
+import org.zafritech.applications.integration.data.converters.EntityListToEntityViewListDaoConverter;
 import org.zafritech.applications.integration.data.converters.InterfaceListToInterfaceViewListConverter;
 import org.zafritech.applications.integration.data.converters.VerificationListToVerificationVewDaoListConverter;
+import org.zafritech.applications.integration.data.dao.ElementViewDao;
+import org.zafritech.applications.integration.data.dao.EntityViewDao;
 import org.zafritech.applications.integration.data.dao.InterfaceViewDao;
 import org.zafritech.applications.integration.data.dao.VerificationViewDao;
-import org.zafritech.applications.integration.data.domain.IntegrationEntity;
 import org.zafritech.applications.integration.data.repositories.ElementRepository;
 import org.zafritech.applications.integration.data.repositories.IntegrationEntityRepository;
 import org.zafritech.applications.integration.data.repositories.IntegrationVerificationRepository;
@@ -60,6 +63,12 @@ public class SystemPDFReportServiceImpl implements SystemPDFReportService {
     
     @Autowired
     private InterfaceListToInterfaceViewListConverter interfaceListConverter;
+    
+    @Autowired
+    private EntityListToEntityViewListDaoConverter entityListConverter;
+    
+    @Autowired
+    private ElementListToElementViewDaoListConverter elementListConverter;
     
     @Autowired
     private VerificationListToVerificationVewDaoListConverter verificationListConverter;
@@ -157,11 +166,11 @@ public class SystemPDFReportServiceImpl implements SystemPDFReportService {
         addEmptyLine(distributionTitle, 1);
         document.add(distributionTitle);
         
-        List<IntegrationEntity> entities = entityRepository.findByProjectAndHasElementsOrderBySortOrderAsc(project, true);
+        List<EntityViewDao> entities = entityListConverter.convert(entityRepository.findByProjectAndHasElementsOrderBySortOrderAsc(project, true));
         
-        for (IntegrationEntity entity : entities) {
+        for (EntityViewDao entity : entities) {
          
-            float[] commentsColWidths = {1, 6, 1};
+            float[] commentsColWidths = {3, 20, 3, 3};
             PdfPTable table = new PdfPTable(commentsColWidths);
             table.setTotalWidth(555);
             table.setLockedWidth(true);
@@ -170,6 +179,7 @@ public class SystemPDFReportServiceImpl implements SystemPDFReportService {
             table.getDefaultCell().setBorderColor(BaseColor.GRAY);
             table.setComplete(false);
             
+            // Table Header
             phrase = new Phrase();
             phrase.add(new Chunk("SBS", new Font(Font.FontFamily.HELVETICA, 9, Font.BOLD, BaseColor.WHITE)));
             cell = new PdfPCell(phrase);
@@ -187,16 +197,23 @@ public class SystemPDFReportServiceImpl implements SystemPDFReportService {
             cell = new PdfPCell(phrase);
             cell.setHorizontalAlignment(Element.ALIGN_CENTER);
             table.addCell(setTableHeaderCellProperties(cell));
-
+            
             phrase = new Phrase();
-            phrase.add(new Chunk(entity.getSbs(),  new Font(Font.FontFamily.HELVETICA, 12, Font.BOLD)));
+            phrase.add(new Chunk("Interfaces", new Font(Font.FontFamily.HELVETICA, 9, Font.BOLD, BaseColor.WHITE)));
+            cell = new PdfPCell(phrase);
+            cell.setHorizontalAlignment(Element.ALIGN_CENTER);
+            table.addCell(setTableHeaderCellProperties(cell));
+
+            // Table Details Body
+            phrase = new Phrase();
+            phrase.add(new Chunk(entityRepository.findOne(entity.getId()).getSbs(),  new Font(Font.FontFamily.HELVETICA, 12, Font.BOLD)));
             cell = new PdfPCell(phrase);
             cell.setBackgroundColor(BaseColor.LIGHT_GRAY);
             cell.setHorizontalAlignment(Element.ALIGN_LEFT);
             table.addCell(setTableCellProperties(cell));
 
             phrase = new Phrase();
-            phrase.add(new Chunk(entity.getCompany().getCompanyName(),  new Font(Font.FontFamily.HELVETICA, 12, Font.BOLD)));
+            phrase.add(new Chunk(entityRepository.findOne(entity.getId()).getCompany().getCompanyName(),  new Font(Font.FontFamily.HELVETICA, 12, Font.BOLD)));
             cell = new PdfPCell(phrase);
             cell.setBackgroundColor(BaseColor.LIGHT_GRAY); 
             cell.setHorizontalAlignment(Element.ALIGN_LEFT);
@@ -208,12 +225,19 @@ public class SystemPDFReportServiceImpl implements SystemPDFReportService {
             cell.setBackgroundColor(BaseColor.LIGHT_GRAY);
             cell.setHorizontalAlignment(Element.ALIGN_CENTER);
             table.addCell(setTableCellProperties(cell));
+
+            phrase = new Phrase();
+            phrase.add(new Chunk(String.valueOf(entity.getInterfaceCount()),  new Font(Font.FontFamily.HELVETICA, 12, Font.BOLD)));
+            cell = new PdfPCell(phrase);
+            cell.setBackgroundColor(BaseColor.LIGHT_GRAY);
+            cell.setHorizontalAlignment(Element.ALIGN_CENTER);
+            table.addCell(setTableCellProperties(cell));
             
             document.add(table);
             
-            List<org.zafritech.applications.integration.data.domain.Element> elements = elementRepository.findByEntityAndParentOrderBySortOrder(entity, null);
+            List<ElementViewDao> elements = elementListConverter.convert(elementRepository.findByEntityAndParentOrderBySortOrder(entityRepository.findOne(entity.getId()), null));
             
-            for (org.zafritech.applications.integration.data.domain.Element element : elements) {
+            for (ElementViewDao element : elements) {
 
                 phrase = new Phrase();
                 phrase.add(new Chunk(element.getSbs(),  new Font(Font.FontFamily.HELVETICA, 10, Font.BOLD)));
@@ -228,16 +252,22 @@ public class SystemPDFReportServiceImpl implements SystemPDFReportService {
                 table.addCell(setTableCellProperties(cell));
 
                 phrase = new Phrase();
-                phrase.add(new Chunk(element.getEntity().getCompanyCode(),  new Font(Font.FontFamily.HELVETICA, 10, Font.BOLD)));
+                phrase.add(new Chunk(elementRepository.findOne(element.getId()).getEntity().getCompanyCode(),  new Font(Font.FontFamily.HELVETICA, 10, Font.BOLD)));
+                cell = new PdfPCell(phrase);
+                cell.setHorizontalAlignment(Element.ALIGN_CENTER);
+                table.addCell(setTableCellProperties(cell));
+
+                phrase = new Phrase();
+                phrase.add(new Chunk(String.valueOf(element.getInterfaceCount()),  new Font(Font.FontFamily.HELVETICA, 10, Font.BOLD)));
                 cell = new PdfPCell(phrase);
                 cell.setHorizontalAlignment(Element.ALIGN_CENTER);
                 table.addCell(setTableCellProperties(cell));
                 
                 document.add(table);
                 
-                List<org.zafritech.applications.integration.data.domain.Element> subElements = elementRepository.findByEntityAndParentOrderBySortOrder(entity, element);
+                List<ElementViewDao> subElements = elementListConverter.convert(elementRepository.findByEntityAndParentOrderBySortOrder(entityRepository.findOne(entity.getId()), elementRepository.findOne(element.getId())));
                 
-                for (org.zafritech.applications.integration.data.domain.Element subElement : subElements) {
+                for (ElementViewDao subElement : subElements) {
 
                     phrase = new Phrase();
                     phrase.add(new Chunk(subElement.getSbs(),  new Font(Font.FontFamily.HELVETICA, 9)));
@@ -252,7 +282,13 @@ public class SystemPDFReportServiceImpl implements SystemPDFReportService {
                     table.addCell(setTableCellProperties(cell));
 
                     phrase = new Phrase();
-                    phrase.add(new Chunk(subElement.getEntity().getCompanyCode(),  new Font(Font.FontFamily.HELVETICA, 9)));
+                    phrase.add(new Chunk(elementRepository.findOne(subElement.getId()).getEntity().getCompanyCode(),  new Font(Font.FontFamily.HELVETICA, 9)));
+                    cell = new PdfPCell(phrase);
+                    cell.setHorizontalAlignment(Element.ALIGN_CENTER);
+                    table.addCell(setTableCellProperties(cell));
+
+                    phrase = new Phrase();
+                    phrase.add(new Chunk(String.valueOf(subElement.getInterfaceCount()),  new Font(Font.FontFamily.HELVETICA, 9)));
                     cell = new PdfPCell(phrase);
                     cell.setHorizontalAlignment(Element.ALIGN_CENTER);
                     table.addCell(setTableCellProperties(cell));
