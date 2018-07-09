@@ -31,6 +31,8 @@ public interface ClaimService {
     
     List<User> findProjectMemberClaims(Project project);
     
+    List<User> findProjectMemberClaims(Project project, int pageSize, int pageNumber);
+    
     List<Project> findProjectMemberships(User user);
     
     List<User> findDocumentEditorClaims(Document document);

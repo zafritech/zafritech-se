@@ -56,4 +56,11 @@ public class PageNavigationDao {
     public void setLastPage(Integer lastPage) {
         this.lastPage = lastPage;
     }
+
+    @Override
+    public String toString() {
+        
+        return "PageNavigationDao{" + "itemCount=" + itemCount + ", pageCount=" + pageCount + 
+               ", pageList=" + pageList + ", lastPage=" + lastPage + '}';
+    }
 }

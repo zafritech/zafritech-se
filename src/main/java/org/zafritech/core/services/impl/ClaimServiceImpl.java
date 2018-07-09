@@ -8,6 +8,8 @@ package org.zafritech.core.services.impl;
 import java.util.ArrayList;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 import org.zafritech.core.data.dao.generic.ValuePairDao;
 import org.zafritech.core.data.domain.Claim;
@@ -161,6 +163,32 @@ public class ClaimServiceImpl implements ClaimService {
         Claim claim = claimRepository.findFirstByClaimTypeAndClaimValue(claimType, claimValue);
         
         List<UserClaim> userClaims = userClaimRepository.findByClaim(claim);
+        
+        userClaims.forEach((userClaim) -> {
+            
+            members.add(userClaim.getUser());
+        });
+        
+        return members;
+    }
+    
+    @Override
+    public List<User> findProjectMemberClaims(Project project, int pageSize, int pageNumber) {
+        
+        List<User> members = new ArrayList<>();
+        
+        if (project == null) {
+            
+            return members;
+        }
+        
+        PageRequest request = new PageRequest(pageNumber - 1, pageSize, Sort.Direction.ASC, "UserFirstName");
+        
+        ClaimType claimType = claimTypeRepository.findByTypeName("PROJECT_MEMBER");
+        Long claimValue = project.getId();
+        Claim claim = claimRepository.findFirstByClaimTypeAndClaimValue(claimType, claimValue);
+        
+        List<UserClaim> userClaims = userClaimRepository.findByClaim(claim, request); 
         
         userClaims.forEach((userClaim) -> {
             

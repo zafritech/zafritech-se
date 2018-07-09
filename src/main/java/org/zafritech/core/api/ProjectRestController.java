@@ -10,6 +10,7 @@ import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
@@ -21,6 +22,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import static org.springframework.web.bind.annotation.RequestMethod.GET;
 import static org.springframework.web.bind.annotation.RequestMethod.POST;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.servlet.ModelAndView;
+import org.zafritech.core.data.dao.PageNavigationDao;
 import org.zafritech.core.data.dao.generic.FiveValueDao;
 import org.zafritech.core.data.dao.ProjectDao;
 import org.zafritech.core.data.dao.generic.ImageItemDao;
@@ -38,6 +41,7 @@ import org.zafritech.core.data.domain.UserClaim;
 import org.zafritech.core.data.projections.UserView;
 import org.zafritech.core.data.repositories.ApplicationRepository;
 import org.zafritech.core.data.repositories.ClaimTypeRepository;
+import org.zafritech.core.data.repositories.CompanyRepository;
 import org.zafritech.core.data.repositories.EntityTypeRepository;
 import org.zafritech.core.data.repositories.InformationClassRepository;
 import org.zafritech.core.data.repositories.ProjectCompanyRoleRepository;
@@ -46,7 +50,10 @@ import org.zafritech.core.data.repositories.ProjectWbsPackageRepository;
 import org.zafritech.core.data.repositories.UserRepository;
 import org.zafritech.core.enums.ProjectSettingType;
 import org.zafritech.core.enums.ProjectStatus;
+import org.zafritech.core.services.ApplicationService;
 import org.zafritech.core.services.ClaimService;
+import org.zafritech.core.services.CommonService;
+import org.zafritech.core.services.CompanyService;
 import org.zafritech.core.services.ProjectService;
 import org.zafritech.core.services.UserService;
 import org.zafritech.core.services.UserSessionService;
@@ -60,11 +67,23 @@ import org.zafritech.core.services.UserSessionService;
 public class ProjectRestController {
     
     @Autowired
+    private ApplicationService applicationService;
+
+    @Autowired
     private ApplicationRepository applicationRepository;
-        
+      
+    @Autowired
+    private CompanyRepository companyRepository;
+    
+    @Autowired
+    private CommonService commonService;
+      
     @Autowired
     private ProjectRepository projectRepository;
     
+    @Autowired
+    private CompanyService companyService;
+  
     @Autowired
     private EntityTypeRepository entityTypeRepository;
     
@@ -362,5 +381,51 @@ public class ProjectRestController {
         List<ProjectWbsPackage> wbsList = wbsPackageRepository.findByProjectOrderByWbsName(project);
         
         return new ResponseEntity<>(wbsList, HttpStatus.OK);
+    }
+    
+    @RequestMapping(value = {"/api/project/company/pager/", "/api/project/company/pager/{s}", "/api/project/company/pager/{s}/{p}"})
+    public ModelAndView ProjectCompaniesListView(@PathVariable Optional<Integer> s, @PathVariable Optional<Integer> p) {
+
+        Integer pageNumber =  p.orElse(1);
+        Integer pageSize =  s.orElse(5);
+        
+        Project project = stateService.getLastOpenProject();
+        Integer companyCount = companyRoleRepository.findByProjectOrderByProjectProjectNameAsc(project).size();
+        PageNavigationDao navigator = commonService.getPageNavigator(companyCount, pageSize, pageNumber);
+        
+        ModelAndView modelView = new ModelAndView(applicationService.getApplicationTemplateName() + "/views/core/project/project_companies_pager");
+        
+        modelView.addObject("companies", companyService.findOrderByCompanyName(project, pageSize, pageNumber));
+        modelView.addObject("page", pageNumber);
+        modelView.addObject("size", pageSize);
+        modelView.addObject("count", navigator.getItemCount());
+        modelView.addObject("list", navigator.getPageList());
+        modelView.addObject("pages", navigator.getPageCount());
+        modelView.addObject("last", navigator.getLastPage());
+        
+        return modelView;
+    }
+    
+    @RequestMapping(value = {"/api/project/members/pager/", "/api/project/members/pager/{s}", "/api/project/members/pager/{s}/{p}"})
+    public ModelAndView ProjectMembersListView(@PathVariable Optional<Integer> s, @PathVariable Optional<Integer> p) {
+
+        Integer pageNumber =  p.orElse(1);
+        Integer pageSize =  s.orElse(5);
+        
+        Project project = stateService.getLastOpenProject();
+        Integer membersCount = claimService.findProjectMemberClaims(project).size();
+        PageNavigationDao navigator = commonService.getPageNavigator(membersCount, pageSize, pageNumber);
+        
+        ModelAndView modelView = new ModelAndView(applicationService.getApplicationTemplateName() + "/views/core/project/project_members_pager");
+        
+        modelView.addObject("members", claimService.findProjectMemberClaims(project, pageSize, pageNumber));
+        modelView.addObject("page", pageNumber);
+        modelView.addObject("size", pageSize);
+        modelView.addObject("count", navigator.getItemCount());
+        modelView.addObject("list", navigator.getPageList());
+        modelView.addObject("pages", navigator.getPageCount());
+        modelView.addObject("last", navigator.getLastPage());
+        
+        return modelView;
     }
 }

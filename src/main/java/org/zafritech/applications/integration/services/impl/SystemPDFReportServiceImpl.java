@@ -170,7 +170,7 @@ public class SystemPDFReportServiceImpl implements SystemPDFReportService {
         
         for (EntityViewDao entity : entities) {
          
-            float[] commentsColWidths = {3, 20, 3, 3};
+            float[] commentsColWidths = {3, 17, 3, 6, 4};
             PdfPTable table = new PdfPTable(commentsColWidths);
             table.setTotalWidth(555);
             table.setLockedWidth(true);
@@ -194,6 +194,12 @@ public class SystemPDFReportServiceImpl implements SystemPDFReportService {
             
             phrase = new Phrase();
             phrase.add(new Chunk("Entity", new Font(Font.FontFamily.HELVETICA, 9, Font.BOLD, BaseColor.WHITE)));
+            cell = new PdfPCell(phrase);
+            cell.setHorizontalAlignment(Element.ALIGN_CENTER);
+            table.addCell(setTableHeaderCellProperties(cell));
+            
+            phrase = new Phrase();
+            phrase.add(new Chunk("Verification", new Font(Font.FontFamily.HELVETICA, 9, Font.BOLD, BaseColor.WHITE)));
             cell = new PdfPCell(phrase);
             cell.setHorizontalAlignment(Element.ALIGN_CENTER);
             table.addCell(setTableHeaderCellProperties(cell));
@@ -224,6 +230,13 @@ public class SystemPDFReportServiceImpl implements SystemPDFReportService {
             cell = new PdfPCell(phrase);
             cell.setBackgroundColor(BaseColor.LIGHT_GRAY);
             cell.setHorizontalAlignment(Element.ALIGN_CENTER);
+            table.addCell(setTableCellProperties(cell));
+
+            phrase = new Phrase();
+            phrase.add(new Chunk("Not Confirmed",  new Font(Font.FontFamily.HELVETICA, 12, Font.BOLD)));
+            cell = new PdfPCell(phrase);
+            cell.setBackgroundColor(BaseColor.LIGHT_GRAY);
+            cell.setHorizontalAlignment(Element.ALIGN_LEFT);
             table.addCell(setTableCellProperties(cell));
 
             phrase = new Phrase();
@@ -258,6 +271,12 @@ public class SystemPDFReportServiceImpl implements SystemPDFReportService {
                 table.addCell(setTableCellProperties(cell));
 
                 phrase = new Phrase();
+                phrase.add(new Chunk("Not Confirmed",  new Font(Font.FontFamily.HELVETICA, 10, Font.BOLD, new BaseColor(0xE7, 0x4C, 0x3C))));
+                cell = new PdfPCell(phrase);
+                cell.setHorizontalAlignment(Element.ALIGN_LEFT);
+                table.addCell(setTableCellProperties(cell));
+
+                phrase = new Phrase();
                 phrase.add(new Chunk(String.valueOf(element.getInterfaceCount()),  new Font(Font.FontFamily.HELVETICA, 10, Font.BOLD)));
                 cell = new PdfPCell(phrase);
                 cell.setHorizontalAlignment(Element.ALIGN_CENTER);
@@ -285,6 +304,12 @@ public class SystemPDFReportServiceImpl implements SystemPDFReportService {
                     phrase.add(new Chunk(elementRepository.findOne(subElement.getId()).getEntity().getCompanyCode(),  new Font(Font.FontFamily.HELVETICA, 9)));
                     cell = new PdfPCell(phrase);
                     cell.setHorizontalAlignment(Element.ALIGN_CENTER);
+                    table.addCell(setTableCellProperties(cell));
+
+                    phrase = new Phrase();
+                    phrase.add(new Chunk("Not Confirmed",  PDFConstants.TABLE_CELL_SMALL_RED));
+                    cell = new PdfPCell(phrase);
+                    cell.setHorizontalAlignment(Element.ALIGN_LEFT);
                     table.addCell(setTableCellProperties(cell));
 
                     phrase = new Phrase();

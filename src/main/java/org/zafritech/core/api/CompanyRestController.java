@@ -7,9 +7,11 @@ package org.zafritech.core.api;
 
 import java.io.IOException;
 import java.text.ParseException;
+import java.util.ArrayList;
 import java.util.Arrays;
 import static java.util.Comparator.naturalOrder;
 import java.util.List;
+import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
@@ -23,14 +25,19 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import static org.springframework.web.bind.annotation.RequestMethod.GET;
+import org.springframework.web.servlet.ModelAndView;
 import org.zafritech.core.data.dao.CompanyCreateDao;
 import org.zafritech.core.data.dao.CompanyUpdateDao;
 import org.zafritech.core.data.dao.ContactDao;
+import org.zafritech.core.data.dao.PageNavigationDao;
 import org.zafritech.core.data.dao.generic.ImageItemDao;
 import org.zafritech.core.data.domain.Company;
 import org.zafritech.core.data.domain.Contact;
+import org.zafritech.core.data.domain.User;
 import org.zafritech.core.data.repositories.CompanyRepository;
 import org.zafritech.core.enums.CompanyRole;
+import org.zafritech.core.services.ApplicationService;
+import org.zafritech.core.services.CommonService;
 import org.zafritech.core.services.CompanyService;
 
 /**
@@ -99,7 +106,7 @@ public class CompanyRestController {
         Company company = companyRepository.findOne(id);
         Contact contact = companyService.updateCompanyContact(company, dao);
         
-        return new ResponseEntity<Contact>(contact, HttpStatus.OK);
+        return new ResponseEntity<>(contact, HttpStatus.OK);
     }
     
     @RequestMapping(value = "/api/admin/company/contact/{id}", method = GET)
@@ -113,7 +120,7 @@ public class CompanyRestController {
             return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
         }
                 
-        return new ResponseEntity<Contact>(contact, HttpStatus.OK);
+        return new ResponseEntity<>(contact, HttpStatus.OK);
     }
     
     @SuppressWarnings({"rawtypes", "unchecked"})

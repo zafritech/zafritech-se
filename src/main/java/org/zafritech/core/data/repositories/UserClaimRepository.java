@@ -6,6 +6,7 @@
 package org.zafritech.core.data.repositories;
 
 import java.util.List;
+import org.springframework.data.domain.Pageable;
 import org.springframework.data.repository.CrudRepository;
 import org.zafritech.core.data.domain.Claim;
 import org.zafritech.core.data.domain.ClaimType;
@@ -21,6 +22,8 @@ public interface UserClaimRepository extends CrudRepository<UserClaim, Long> {
     List<UserClaim> findByUser(User user);
     
     List<UserClaim> findByClaim(Claim claim);
+    
+    List<UserClaim> findByClaim(Claim claim, Pageable pageable);
     
     UserClaim findFirstByClaim(Claim claim);
     

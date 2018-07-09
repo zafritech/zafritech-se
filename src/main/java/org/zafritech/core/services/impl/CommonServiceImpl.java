@@ -25,12 +25,14 @@ public class CommonServiceImpl implements CommonService {
         PageNavigationDao navigator = new PageNavigationDao();
         
         Integer pageCount = (int)Math.ceil((float)(itemsCount / pageSize)) + 1;
+        pageCount = (itemsCount % pageSize) == 0 ? pageCount - 1 : pageCount;
         List<Integer> pageList = getPagesList(pageNumber, pageCount);
+        Integer lastPage = Collections.max(pageList);
         
         navigator.setItemCount(itemsCount); 
         navigator.setPageCount(pageCount);
         navigator.setPageList(pageList); 
-        navigator.setLastPage(Collections.max(pageList));
+        navigator.setLastPage(lastPage);
         
         return navigator;
     }

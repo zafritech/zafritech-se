@@ -6,6 +6,7 @@
 package org.zafritech.core.data.repositories;
 
 import java.util.List;
+import org.springframework.data.domain.Pageable;
 import org.springframework.data.repository.CrudRepository;
 import org.zafritech.core.data.domain.Project;
 import org.zafritech.core.data.domain.ProjectCompanyRole;
@@ -17,6 +18,8 @@ import org.zafritech.core.data.domain.ProjectCompanyRole;
 public interface ProjectCompanyRoleRepository extends CrudRepository<ProjectCompanyRole, Long> {
     
     List<ProjectCompanyRole> findByProjectOrderByProjectProjectNameAsc(Project project);
+    
+    List<ProjectCompanyRole> findByProjectOrderByProjectProjectNameAsc(Project project, Pageable pageable);
     
     ProjectCompanyRole findFirstByCompanyCompanyCode(String code);
 }

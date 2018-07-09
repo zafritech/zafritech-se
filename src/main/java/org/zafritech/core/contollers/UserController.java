@@ -5,6 +5,7 @@
  */
 package org.zafritech.core.contollers;
 
+import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -13,9 +14,12 @@ import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.zafritech.core.data.domain.Document;
+import org.zafritech.core.data.domain.Project;
 import org.zafritech.core.data.domain.User;
+import org.zafritech.core.data.domain.UserClaim;
 import org.zafritech.core.data.repositories.DocumentRepository;
 import org.zafritech.core.data.repositories.UserRepository;
 import org.zafritech.core.services.ApplicationService;
@@ -51,6 +55,14 @@ public class UserController {
         model.addAttribute("user", user);
 
         return applicationService.getApplicationTemplateName() + "/views/core/user/profile";
+    }
+
+    @RequestMapping(value = {"/users/profile/{uuid}"})
+    public String getOtherUserProfile(@PathVariable String uuid, Model model) {
+
+        model.addAttribute("user", userService.findByUuId(uuid));
+
+        return applicationService.getApplicationTemplateName() + "/views/core/user/user";
     }
 
     @RequestMapping(value = {"/user/dashboard", "/dashboard"})

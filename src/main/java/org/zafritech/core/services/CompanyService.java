@@ -14,6 +14,8 @@ import org.zafritech.core.data.dao.ContactDao;
 import org.zafritech.core.data.dao.generic.ImageItemDao;
 import org.zafritech.core.data.domain.Company;
 import org.zafritech.core.data.domain.Contact;
+import org.zafritech.core.data.domain.Project;
+import org.zafritech.core.data.domain.ProjectCompanyRole;
 
 /**
  *
@@ -24,6 +26,8 @@ public interface CompanyService {
     List<Company> findOrderById(int pageSize, int pageNumber);
     
     List<Company> findOrderByCompanyName(int pageSize, int pageNumber);
+    
+    List<ProjectCompanyRole> findOrderByCompanyName(Project project, int pageSize, int pageNumber);
     
     Company createNewCompany(CompanyCreateDao dao) throws IOException, ParseException;
     

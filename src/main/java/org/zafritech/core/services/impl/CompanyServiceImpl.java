@@ -24,9 +24,12 @@ import org.zafritech.core.data.dao.ContactDao;
 import org.zafritech.core.data.dao.generic.ImageItemDao;
 import org.zafritech.core.data.domain.Company;
 import org.zafritech.core.data.domain.Contact;
+import org.zafritech.core.data.domain.Project;
+import org.zafritech.core.data.domain.ProjectCompanyRole;
 import org.zafritech.core.data.repositories.CompanyRepository;
 import org.zafritech.core.data.repositories.ContactRepository;
 import org.zafritech.core.data.repositories.CountryRepository;
+import org.zafritech.core.data.repositories.ProjectCompanyRoleRepository;
 import org.zafritech.core.services.CompanyService;
 import org.zafritech.core.services.FileIOService;
 
@@ -42,6 +45,9 @@ public class CompanyServiceImpl implements CompanyService {
 
     @Autowired
     private CompanyRepository companyRepository;
+    
+    @Autowired
+    private ProjectCompanyRoleRepository companyRoleRepository;
     
     @Autowired
     private FileIOService fileIOService;
@@ -73,6 +79,18 @@ public class CompanyServiceImpl implements CompanyService {
         
         return companies;
     }
+    
+    @Override
+    public List<ProjectCompanyRole> findOrderByCompanyName(Project project, int pageSize, int pageNumber) {
+        
+        List<ProjectCompanyRole> companyRoles = new ArrayList<>();
+        PageRequest request = new PageRequest(pageNumber - 1, pageSize, Sort.Direction.ASC, "companyCompanyName");
+        
+        companyRoleRepository.findByProjectOrderByProjectProjectNameAsc(project, request).forEach(companyRoles::add);
+        
+        return companyRoles;
+    }
+    
     
     @Override
     public Company createNewCompany(CompanyCreateDao dao) throws IOException, ParseException {
