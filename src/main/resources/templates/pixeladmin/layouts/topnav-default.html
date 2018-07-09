@@ -231,8 +231,8 @@
                         </a>
                         <ul class="dropdown-menu">
                             <li><a href="/profile"><span class="label label-warning pull-xs-right"><i class="fa fa-asterisk"></i></span>Profile</a></li>
-                            <li><a href="/account"><i class="dropdown-icon fa fa-id-card-o"></i>&nbsp;&nbsp;Account</a></li>
-                            <li><a href="/messages"><i class="dropdown-icon fa fa-envelope"></i>&nbsp;&nbsp;Messages</a></li>
+                            <li sec:authorize="hasRole('ROLE_ADMIN')"><a href="/account"><i class="dropdown-icon fa fa-id-card-o"></i>&nbsp;&nbsp;Account</a></li>
+                            <li sec:authorize="hasRole('ROLE_ADMIN')"><a href="/messages"><i class="dropdown-icon fa fa-envelope"></i>&nbsp;&nbsp;Messages</a></li>
                             <li class="divider"></li>
                             <li><a href="/logout"><i class="dropdown-icon fa fa-power-off"></i>&nbsp;&nbsp;Log Out</a></li>
                         </ul>

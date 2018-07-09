@@ -6,6 +6,11 @@
 
 /* global bootbox */
 
+$(document).ready(function () {
+    
+    loadPagedCompanyList();
+});
+
 function CompanyCreateNew() {
     
     $.ajax({

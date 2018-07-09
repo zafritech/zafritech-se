@@ -11,6 +11,8 @@ var zTreeObj = null;
 $(document).ready(function () {
     
     zTreeProjectLoad();
+    loadPagedCompanyList();
+    loadPagedMembersList();
 });
 
 function zTreeProjectLoad() {
@@ -52,6 +54,20 @@ function zTreeProjectLoad() {
             $('#collapse-applicationSideNav1').addClass("in");
         }
     });
+}
+
+function loadPagedCompanyList(s = 5, p = 1) {
+
+    var url = "/api/project/company/pager/" + s + "/" + p;
+
+    $('#pagedCompaniesListContent').load(url);
+}
+
+function loadPagedMembersList(s = 5, p = 1) {
+
+    var url = "/api/project/members/pager/" + s + "/" + p;
+
+    $('#pagedMembersListContent').load(url);
 }
 
 function zTreeExpandByIdNode(nodeId) {

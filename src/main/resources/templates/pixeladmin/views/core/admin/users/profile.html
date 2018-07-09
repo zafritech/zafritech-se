@@ -85,7 +85,7 @@
                                                 </tr>
                                                 <tr>
                                                     <td><strong>Email:</strong></td>
-                                                    <td th:text="${user.email}">email@example.com</td>
+                                                    <td><a th:href="'mailto:' + ${user.email}"><span th:text="${user.email}">email@example.com</span></a></td>
                                                 </tr>
                                                 <tr>
                                                     <td><strong>Login ID:</strong></td>
