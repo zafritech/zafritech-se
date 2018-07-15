@@ -31,7 +31,6 @@ public class VerificationToVerificationVewDaoConverter implements Converter<Inte
         dao.setDescription(verification.getDescription());
         dao.setMethod(verification.getMethod() != null ? verification.getMethod().getEntityTypeName() : null);
         dao.setReference(verification.getReference() != null ? verification.getReference().getNumber() : null);
-        dao.setInterfaceCount(verification.getInterfaces().size());
         dao.setStatus(verification.getVerificationStatus() != null ? verification.getVerificationStatus().name() : null);
         
         return dao;

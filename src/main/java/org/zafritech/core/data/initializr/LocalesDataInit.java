@@ -9,11 +9,12 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import java.io.File;
 import java.io.IOException;
 import java.util.Arrays;
+import java.util.Iterator;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.transaction.Transactional;
-//import org.json.simple.JSONObject;
+import org.json.simple.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
@@ -36,27 +37,28 @@ public class LocalesDataInit {
     @Transactional
     public void init() {
         
-//        String file = data_dir + "initialisation/locales.json";
-//        
-//        ObjectMapper mapper = new ObjectMapper();
-//        
-//        try {
-//            
-//            List<JSONObject> jsonObjects = Arrays.asList(mapper.readValue(new File(file), JSONObject.class));
-//            JSONObject locales = jsonObjects.get(0); 
-//            
-//            for (Object key : locales.keySet()) {
-//                
-//                String keyStr = (String)key;
-//                Object keyValue = locales.get(keyStr);
-//                
-//                Locale locale = new Locale(keyStr, keyValue.toString());
-//                localeRepository.save(locale);
-//            }
-//            
-//        } catch (IOException ex) {
-//            
-//            Logger.getLogger(LocalesDataInit.class.getName()).log(Level.SEVERE, null, ex);
-//        }
+        String file = data_dir + "initialisation/locales.json";
+        
+        ObjectMapper mapper = new ObjectMapper();
+        
+        try {
+            
+            List<JSONObject> jsonObjects = Arrays.asList(mapper.readValue(new File(file), JSONObject.class));
+            JSONObject locales = jsonObjects.get(0); 
+            
+            for (Iterator it = locales.keySet().iterator(); it.hasNext();) {
+                
+                Object key = it.next();
+                String keyStr = (String)key;
+                Object keyValue = locales.get(keyStr);
+                Locale locale = new Locale(keyStr, keyValue.toString());
+                
+                localeRepository.save(locale);
+            }
+            
+        } catch (IOException ex) {
+            
+            Logger.getLogger(LocalesDataInit.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 }

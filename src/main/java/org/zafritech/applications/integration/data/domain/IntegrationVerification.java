@@ -61,14 +61,6 @@ public class IntegrationVerification implements Serializable {
     @JoinColumn(name = "referenceId")
     private Reference reference;
 
-    @ManyToMany(cascade = CascadeType.MERGE, fetch = FetchType.EAGER)
-    @JoinTable(name = "INTEGRATION_VERIFICATION_INTERFACES",
-               joinColumns = {@JoinColumn(name = "verification_id", referencedColumnName = "id")},
-               inverseJoinColumns = {@JoinColumn(name = "interface_id", referencedColumnName = "id")}
-    )
-    @JsonBackReference
-    private Set<Interface> interfaces;
-    
     @Enumerated(EnumType.STRING)
     private InterfaceStatus verificationStatus;
     
@@ -153,14 +145,6 @@ public class IntegrationVerification implements Serializable {
         this.reference = reference;
     }
 
-    public Set<Interface> getInterfaces() {
-        return interfaces;
-    }
-
-    public void setInterfaces(Set<Interface> interfaces) {
-        this.interfaces = interfaces;
-    }
-
     public InterfaceStatus getVerificationStatus() {
         return verificationStatus;
     }
@@ -190,8 +174,7 @@ public class IntegrationVerification implements Serializable {
         
         return "IntegrationVerification{" + "id=" + id + ", uuId=" + uuId + ", systemId=" + systemId + 
                                         ", project=" + project + ", title=" + title + ", description=" + description + 
-                                        ", reference=" + reference + ", interfaces=" + interfaces + 
-                                        ", verificationStatus=" + verificationStatus + ", creationDate=" + creationDate + 
-                                        ", modifiedDate=" + modifiedDate + '}';
+                                        ", reference=" + reference + ", verificationStatus=" + verificationStatus + 
+                                        ", creationDate=" + creationDate +  ", modifiedDate=" + modifiedDate + '}';
     }
 }

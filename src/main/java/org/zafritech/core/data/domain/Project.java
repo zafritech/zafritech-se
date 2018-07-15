@@ -1,11 +1,14 @@
 package org.zafritech.core.data.domain;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import java.io.Serializable;
 import java.sql.Timestamp;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 import java.util.UUID;
 import javax.persistence.CascadeType;
@@ -20,6 +23,8 @@ import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
+import javax.persistence.OrderBy;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import org.zafritech.core.enums.ProjectStatus;
@@ -97,6 +102,15 @@ public class Project implements Serializable {
     @JsonBackReference
     private Set<User> projectMembers = new HashSet<User>();
     
+    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
+    @JoinTable(name = "CORE_PROJECT_DEFINITIONS",
+               joinColumns = {@JoinColumn(name = "project_id", referencedColumnName = "id")},
+               inverseJoinColumns = {@JoinColumn(name = "definition_id", referencedColumnName = "id")}
+    )
+    @JsonManagedReference
+    @OrderBy("term ASC")
+    private List<Definition> definitions = new ArrayList<>();
+
     @Enumerated(EnumType.STRING)
     private ProjectStatus status;
     
@@ -356,6 +370,14 @@ public class Project implements Serializable {
 
     public void setProjectMembers(Set<User> projectMembers) {
         this.projectMembers = projectMembers;
+    }
+
+    public List<Definition> getDefinitions() {
+        return definitions;
+    }
+
+    public void setDefinitions(List<Definition> definitions) {
+        this.definitions = definitions;
     }
 
     public ProjectStatus getStatus() {

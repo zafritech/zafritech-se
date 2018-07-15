@@ -45,8 +45,6 @@ public class Definition implements Serializable {
     @Enumerated(EnumType.STRING)
     private DefinitionScope definitionScope;
     
-    private Integer scopeEntityId;
-    
     @Temporal(TemporalType.TIMESTAMP)
     private Date creationDate;
 
@@ -56,8 +54,7 @@ public class Definition implements Serializable {
         return "Definition{" + "id=" + getId() + ", uuId=" + getUuId() + ", term=" + 
                 getTerm() + ", termDefinition=" + getTermDefinition() + ", definitionType=" + 
                 getDefinitionType() + ", applicationDomain=" + getApplicationDomain() + ", language=" + 
-                getLanguage() + ", definitionScope=" + getDefinitionScope() + ", scopeEntityId=" + 
-                getScopeEntityId() + ", creationDate=" + getCreationDate() + '}';
+                getLanguage() + ", definitionScope=" + getDefinitionScope() + ", scopeEntityId=" +'}';
     }
 
     public Definition() {
@@ -72,7 +69,6 @@ public class Definition implements Serializable {
         this.definitionType = type;
         this.applicationDomain = DefinitionDomain.DOMAIN_SYSTEMS;
         this.definitionScope = DefinitionScope.SCOPE_GLOBAL;
-        this.scopeEntityId = 0;
         this.creationDate = new Timestamp(System.currentTimeMillis());
     }
 
@@ -85,7 +81,6 @@ public class Definition implements Serializable {
         this.applicationDomain = DefinitionDomain.DOMAIN_SYSTEMS;
         this.language = language;
         this.definitionScope = DefinitionScope.SCOPE_GLOBAL;
-        this.scopeEntityId = 0;
         this.creationDate = new Timestamp(System.currentTimeMillis());
     }
 
@@ -147,14 +142,6 @@ public class Definition implements Serializable {
 
     public void setDefinitionScope(DefinitionScope definitionScope) {
         this.definitionScope = definitionScope;
-    }
-
-    public Integer getScopeEntityId() {
-        return scopeEntityId;
-    }
-
-    public void setScopeEntityId(Integer scopeEntityId) {
-        this.scopeEntityId = scopeEntityId;
     }
 
     public Date getCreationDate() {

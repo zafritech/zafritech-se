@@ -50,6 +50,7 @@ public class InterfaceListToInterfaceViewListConverter implements Converter<List
                     interfaceDao.setInterfaceTitle(iface.getInterfaceTitle());
                     interfaceDao.setInterfaceDescription(iface.getInterfaceDescription());
                     interfaceDao.setInterfaceNotes(iface.getInterfaceNotes());
+                    interfaceDao.setVerificationItemCount(iface.getVerificationItems().size());
                     interfaceDao.setStatus(iface.getStatus().name());
                     interfaceDao.setIssues(iface.getIssues().size());
                     

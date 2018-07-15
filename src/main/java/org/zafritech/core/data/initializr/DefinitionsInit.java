@@ -58,7 +58,6 @@ public class DefinitionsInit {
                                                        DefinitionTypes.ABBREVIATION, 
                                                        localeRepository.findByCode("en_US")); 
                 
-                definition.setScopeEntityId(0);
                 definition.setDefinitionScope(DefinitionScope.valueOf("SCOPE_" + _item.getScope().toUpperCase())); 
                 definition.setApplicationDomain(DefinitionDomain.valueOf("DOMAIN_" + _item.getDomain().toUpperCase())); 
                 

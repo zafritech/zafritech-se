@@ -51,6 +51,8 @@ public class InterfaceViewDao {
     
     private String interfaceNotes;
     
+    private Integer verificationItemCount;
+    
     private String status;    
     
     private Integer issues;
@@ -102,6 +104,7 @@ public class InterfaceViewDao {
         this.interfaceTitle = interfaceTitle;
         this.interfaceDescription = interfaceDescription;
         this.interfaceNotes = interfaceNotes;
+        this.verificationItemCount = 0;
         this.status = status;
         this.issues = issues;
     }
@@ -266,6 +269,14 @@ public class InterfaceViewDao {
         this.interfaceNotes = interfaceNotes;
     }
 
+    public Integer getVerificationItemCount() {
+        return verificationItemCount;
+    }
+
+    public void setVerificationItemCount(Integer verificationItemCount) {
+        this.verificationItemCount = verificationItemCount;
+    }
+
     public String getStatus() {
         return status;
     }
@@ -295,6 +306,6 @@ public class InterfaceViewDao {
                 ", secondaryElementSbs=" + secondaryElementSbs + ", secondaryElementName=" + secondaryElementName + 
                 ", interfaceLevel=" + interfaceLevel + ", interfaceTitle=" + interfaceTitle + 
                 ", interfaceDescription=" + interfaceDescription + ", interfaceNotes=" + interfaceNotes + 
-                ", status=" + status + ", issues=" + issues + '}';
+                ", verificationCount=" + verificationItemCount + ", status=" + status + ", issues=" + issues + '}';
     }
 }

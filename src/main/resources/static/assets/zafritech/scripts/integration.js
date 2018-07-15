@@ -939,11 +939,11 @@ function IntegrationInterfaceEdit(interfaceId) {
                                     $(e.currentTarget).find('select[name="secondaryEntityId"]').prop('value', interface.secondaryEntity.id);
                                     $(e.currentTarget).find('select[name="primaryElementId"]').prop('value', interface.primaryElement.id);
                                     $(e.currentTarget).find('select[name="secondaryElementId"]').prop('value', interface.secondaryElement.id);
+                                    $(e.currentTarget).find('input[name="interfaceTitle"]').prop('value', interface.interfaceTitle);
                                     $(e.currentTarget).find('textarea[name="interfaceDescription"]').prop('value', interface.interfaceDescription);
                                     $(e.currentTarget).find('select[name="interfaceLevel"]').prop('value', interface.interfaceLevel);
                                     $(e.currentTarget).find('select[name="interfaceStatus"]').prop('value', interface.interfaceStatus);
 
-                                    updateInterfaceTitle();
                                 });
                             });
                         });

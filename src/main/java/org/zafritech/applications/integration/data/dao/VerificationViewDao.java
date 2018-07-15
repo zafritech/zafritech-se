@@ -28,8 +28,6 @@ public class VerificationViewDao {
     
     private String reference;
     
-    private Integer interfaceCount;
-    
     private String status;
 
     public VerificationViewDao() {
@@ -44,7 +42,6 @@ public class VerificationViewDao {
                                String description, 
                                String method, 
                                String reference, 
-                               Integer interfaceCount, 
                                String status) {
         
         this.id = id;
@@ -55,7 +52,6 @@ public class VerificationViewDao {
         this.description = description;
         this.method = method;
         this.reference = reference;
-        this.interfaceCount = interfaceCount;
         this.status = status;
     }
 
@@ -123,14 +119,6 @@ public class VerificationViewDao {
         this.reference = reference;
     }
 
-    public Integer getInterfaceCount() {
-        return interfaceCount;
-    }
-
-    public void setInterfaceCount(Integer interfaceCount) {
-        this.interfaceCount = interfaceCount;
-    }
-
     public String getStatus() {
         return status;
     }
@@ -144,7 +132,7 @@ public class VerificationViewDao {
         
         return "VerificationViewDao{" + "id=" + id + ", uuId=" + uuId + ", systemId=" + systemId + 
                                     ", project=" + project + ", title=" + title + ", description=" + description + 
-                                    ", method=" + method + ", reference=" + reference + ", interfaceCount=" + interfaceCount + 
+                                    ", method=" + method + ", reference=" + reference +  
                                     ", status=" + status + '}';
     }
 }

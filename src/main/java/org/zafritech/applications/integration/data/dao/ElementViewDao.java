@@ -27,6 +27,8 @@ public class ElementViewDao {
 
     private Integer interfaceCount;
 
+    private Integer verificationItemCount;
+
     public ElementViewDao() {
         
     }
@@ -47,6 +49,7 @@ public class ElementViewDao {
         this.name = name;
         this.description = description;
         this.interfaceCount = 0;
+        this.verificationItemCount = 0;
     }
 
     public Long getId() {
@@ -113,6 +116,14 @@ public class ElementViewDao {
         this.interfaceCount = interfaceCount;
     }
 
+    public Integer getVerificationItemCount() {
+        return verificationItemCount;
+    }
+
+    public void setVerificationItemCount(Integer verificationItemCount) {
+        this.verificationItemCount = verificationItemCount;
+    }
+
     @Override
     public String toString() {
         
@@ -120,5 +131,4 @@ public class ElementViewDao {
                                ", parentId=" + parentId + ", sbs=" + sbs + ", name=" + name + 
                                ", description=" + description + ", interfaceCount=" + interfaceCount + '}';
     }
-
 }

@@ -521,7 +521,7 @@ public class SystemPDFReportServiceImpl implements SystemPDFReportService {
         document.add(verificationTitle);
         
         // [#] [SysID] [Title] [Descr] [Method] [Refs] [Status] [Interfaces]
-        float[] colWidths = {1, 3, 8, 12, 4, 4, 2, 2};
+        float[] colWidths = {1, 3, 8, 12, 4, 4, 2};
         PdfPTable table = new PdfPTable(colWidths);
         table.setTotalWidth(1130);
         table.setLockedWidth(true);
@@ -562,11 +562,6 @@ public class SystemPDFReportServiceImpl implements SystemPDFReportService {
         
         phrase = new Phrase();
         phrase.add(new Chunk("Status", new Font(Font.FontFamily.HELVETICA, 9, Font.BOLD, BaseColor.WHITE)));
-        cell = new PdfPCell(phrase);
-        table.addCell(setTableHeaderCellProperties(cell));
-        
-        phrase = new Phrase();
-        phrase.add(new Chunk("Interfaces", new Font(Font.FontFamily.HELVETICA, 9, Font.BOLD, BaseColor.WHITE)));
         cell = new PdfPCell(phrase);
         table.addCell(setTableHeaderCellProperties(cell));
         
@@ -635,12 +630,6 @@ public class SystemPDFReportServiceImpl implements SystemPDFReportService {
             cell = new PdfPCell(phrase);
             table.addCell(setTableCellProperties(cell));
             
-            phrase = new Phrase();
-            phrase.add(new Chunk(String.valueOf(verification.getInterfaceCount()), verification.getInterfaceCount() > 0 ? PDFConstants.TABLE_CELL_SMALL : PDFConstants.TABLE_CELL_SMALL_RED));
-            cell = new PdfPCell(phrase);
-            cell.setHorizontalAlignment(Element.ALIGN_CENTER);
-            table.addCell(setTableCellProperties(cell));
-
             if (count % 10 == 0) {
                 
                 document.add(table);

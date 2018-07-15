@@ -52,6 +52,14 @@ public class Element implements Serializable {
     private String description;
     
     @ManyToMany(cascade = CascadeType.MERGE, fetch = FetchType.EAGER)
+    @JoinTable(name = "INTEGRATION_ELEMENT_VERIFICATION_ITEMS",
+               joinColumns = {@JoinColumn(name = "element_id", referencedColumnName = "id")},
+               inverseJoinColumns = {@JoinColumn(name = "verification_item_id", referencedColumnName = "id")}
+    )
+    @JsonBackReference
+    private Set<IntegrationVerification> verificationItems;
+    
+    @ManyToMany(cascade = CascadeType.MERGE, fetch = FetchType.EAGER)
     @JoinTable(name = "INTEGRATION_ELEMENT_SYSTEM_ISSUES",
                joinColumns = {@JoinColumn(name = "element_id", referencedColumnName = "id")},
                inverseJoinColumns = {@JoinColumn(name = "system_issue_id", referencedColumnName = "id")}
@@ -141,6 +149,14 @@ public class Element implements Serializable {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public Set<IntegrationVerification> getVerificationItems() {
+        return verificationItems;
+    }
+
+    public void setVerificationItems(Set<IntegrationVerification> verificationItems) {
+        this.verificationItems = verificationItems;
     }
 
     public Set<IntegrationSystemIssue> getSystemIssues() {

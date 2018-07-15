@@ -102,6 +102,14 @@ public class Interface implements Serializable {
     @OrderBy("creationDate DESC")
     private List<InterfaceIssue> issues = new ArrayList<>();
     
+    @ManyToMany(cascade = CascadeType.MERGE, fetch = FetchType.EAGER)
+    @JoinTable(name = "INTEGRATION_INTERFACE_VERIFICATION_ITEMS",
+               joinColumns = {@JoinColumn(name = "interface_id", referencedColumnName = "id")},
+               inverseJoinColumns = {@JoinColumn(name = "verification_item_id", referencedColumnName = "id")}
+    )
+    @JsonBackReference
+    private Set<IntegrationVerification> verificationItems;
+    
     @Enumerated(EnumType.STRING)
     private InterfaceStatus status;
     
@@ -228,6 +236,14 @@ public class Interface implements Serializable {
 
     public void setReferences(Set<Reference> references) {
         this.references = references;
+    }
+
+    public Set<IntegrationVerification> getVerificationItems() {
+        return verificationItems;
+    }
+
+    public void setVerificationItems(Set<IntegrationVerification> verificationItems) {
+        this.verificationItems = verificationItems;
     }
 
     public int getInterfaceLevel() {

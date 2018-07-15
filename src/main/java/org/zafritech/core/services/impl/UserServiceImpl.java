@@ -70,7 +70,7 @@ public class UserServiceImpl implements UserService, UserDetailsService {
     private ClaimService claimService;
     
     @SuppressWarnings({ "unchecked", "rawtypes" })
-	@Override 
+    @Override 
     public List<User> allUser() {
         
         return new ArrayList(userRepository.findAll());
