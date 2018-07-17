@@ -67,10 +67,13 @@ public class GlobalController {
                     userSession.setProjectUuId(null);
                 }
                 
+                userSession.setApplication(userSessionService.getActiveApplication()); 
+                
             } else {
                 
                 userSession.setHasOpenProject(false);
                 userSession.setProjectUuId(null);
+                userSession.setApplication(null); 
             }
 
             model.addAttribute("usersession", userSession);

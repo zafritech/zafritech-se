@@ -78,8 +78,8 @@ public class ProjectsInit {
         
         projectRepository.save(new Project(entityTypeRepository.findByEntityTypeKeyAndEntityTypeCode("PROJECT_TYPE_ENTITY", "SWD"), 
                                 projectService.generateProjectNumber(entityTypeRepository.findByEntityTypeKeyAndEntityTypeCode("PROJECT_TYPE_ENTITY", "SWD")), 
-                                "Zidingo RMS System", 
-                                "Zidingo RMS", 
+                                "Zafritech Systems Engineering", 
+                                "Zafritech SE", 
                                 companyRepository.findFirstByCompanyRole(CompanyRole.PRIMARY_ORGANISATION), 
                                 infoClass)
         );
@@ -178,32 +178,22 @@ public class ProjectsInit {
         
         projects.stream().map((project) -> {
             
-            wbsPackageRepository.save(new ProjectWbsPackage(project, "0101", "SLC", "System Level Concept"));
+            wbsPackageRepository.save(new ProjectWbsPackage(project, "0101", "SLP", "System Level Planning"));
             return project;
             
         }).map((project) -> {
             
-            wbsPackageRepository.save(new ProjectWbsPackage(project, "0102", "SLP", "System Level Planning"));
+            wbsPackageRepository.save(new ProjectWbsPackage(project, "0102", "SLS", "System Level Specification"));
             return project;
             
         }).map((project) -> {
             
-            wbsPackageRepository.save(new ProjectWbsPackage(project, "0103", "SLS", "System Level Specification"));
-            return project;
-            
-        }).map((project) -> {
-            
-            wbsPackageRepository.save(new ProjectWbsPackage(project, "0104", "SLD", "System Level Design"));
-            return project;
-            
-        }).map((project) -> {
-            
-            wbsPackageRepository.save(new ProjectWbsPackage(project, "0105", "SLI", "System Level Integration"));
+            wbsPackageRepository.save(new ProjectWbsPackage(project, "0103", "SLD", "System Level Design"));
             return project;
             
         }).forEachOrdered((project) -> {
             
-            wbsPackageRepository.save(new ProjectWbsPackage(project, "0106", "SLV", "System Level Verification and Validation"));
+            wbsPackageRepository.save(new ProjectWbsPackage(project, "0104", "SLV", "System Level Verification and Validation"));
         });
     }
 }

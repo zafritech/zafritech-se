@@ -73,6 +73,8 @@ public class IntegrationServiceImpl implements IntegrationService {
     @Override
     public List<SBSTreeDao> getSBSTree(Project project) {
         
+        String orgIcon = "/images/icons/chart-organisation-icon.png";
+        
         List<SBSTreeDao> sbsTree = new ArrayList<>();
         List<IntegrationEntity> entities = integrationEntityRepository.findByProjectAndHasElementsOrderBySortOrderAsc(project, true);
      
@@ -86,32 +88,23 @@ public class IntegrationServiceImpl implements IntegrationService {
 
             for (IntegrationEntity entity : entities) {
 
-                SBSTreeDao entityItem = new SBSTreeDao(level_1_id, 
-                                                       1L, 
-                                                       entity.getSbs() + " " + entity.getCompany().getCompanyCode() + " - " + entity.getCompany().getCompanyName(), 
-                                                       true, 
-                                                       true, 
-                                                       true, 
-                                                       "/images/icons/chart-organisation-icon.png", 
-                                                       entity.getId());
+                String nodeName = entity.getSbs() + " " + entity.getCompany().getCompanyCode() + " - " + entity.getCompany().getCompanyName();
+                
+                SBSTreeDao entityItem = new SBSTreeDao(level_1_id, 1L, nodeName, true, true, true, orgIcon, entity.getId());
 
                 sbsTree.add(entityItem);
 
-                List<TreeElementDao> treeItems = getElementsTree(entity);
+                List<TreeElementDao> treeItems = getElementsTreeByEntity(entity);
 
                 Long level_2_id = (level_1_id * 1000) + 1;
 
                 for (TreeElementDao item : treeItems) {
 
+                    String itemNodeName = item.getElement().getSbs() + " " + item.getElement().getName();
+                    
                     List<Element> children = elementRepository.findByParentOrderBySortOrder(item.getElement());
 
-                    SBSTreeDao element = new SBSTreeDao(level_2_id, 
-                                                        level_1_id, 
-                                                        item.getElement().getSbs() + " " + item.getElement().getName(),
-                                                        true,
-                                                        !children.isEmpty(),
-                                                        true,
-                                                        item.getElement().getId());
+                    SBSTreeDao element = new SBSTreeDao(level_2_id, level_1_id, itemNodeName, true, !children.isEmpty(), true, item.getElement().getId());
 
                     sbsTree.add(element);
 
@@ -170,7 +163,7 @@ public class IntegrationServiceImpl implements IntegrationService {
     }
 
     @Override
-    public List<TreeElementDao> getElementsTree(IntegrationEntity entity) {
+    public List<TreeElementDao> getElementsTreeByEntity(IntegrationEntity entity) {
  
         List<TreeElementDao> elementsTree = new ArrayList<>();
             
@@ -192,7 +185,7 @@ public class IntegrationServiceImpl implements IntegrationService {
     }
 
     @Override
-    public List<TreeElementDao> getElementsBubTreeByParent(Element parent) {
+    public List<TreeElementDao> getElementsTreeByParent(Element parent) {
         
         List<TreeElementDao> elementsTree = new ArrayList<>();
         

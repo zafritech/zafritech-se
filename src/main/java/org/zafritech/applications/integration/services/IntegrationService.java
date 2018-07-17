@@ -30,9 +30,9 @@ public interface IntegrationService {
     
     public List<TreeElementDao> getElementsTree();
     
-    public List<TreeElementDao> getElementsTree(IntegrationEntity entity);
+    public List<TreeElementDao> getElementsTreeByEntity(IntegrationEntity entity);
     
-    public List<TreeElementDao> getElementsBubTreeByParent(Element parent);
+    public List<TreeElementDao> getElementsTreeByParent(Element parent);
     
     public Element createNewElement(ElementCreateDao dao);
     

@@ -39,7 +39,11 @@ public interface DocumentRepository extends PagingAndSortingRepository<Document,
     List<Document> findByFolder(Folder folder);
     
     // Projection Views
+    List<DocumentView> findDocumentViewByProject(Project project);
+            
     List<DocumentView> findDocumentViewByOwner(User user);
 
     List<DocumentView> findDocumentViewByOwnerOrderByModifiedDateDesc(User user);
+
+    List<DocumentView> findDocumentViewByProjectAndOwnerOrderByModifiedDateDesc(Project project, User user);
 }

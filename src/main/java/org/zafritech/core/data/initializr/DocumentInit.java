@@ -55,10 +55,10 @@ public class DocumentInit {
         List<ClaimType> claimTypes = new ArrayList<>();
         claimTypeRepository.findByEntityType("DOCUMENT").forEach(claimTypes::add);
         
-        for (Project project : projects) {
+        projects.forEach((project) -> {
             
             documentService.initNewProjectDocuments(project, owner);
-        }
+        });
         
         initDocumentOwner(owner);
     }
@@ -68,10 +68,14 @@ public class DocumentInit {
         List<Document> documents = new ArrayList<>();
         documentRepository.findAll().forEach(documents::add);
         
-        for (Document document : documents) {
+        documents.stream().map((document) -> {
             
             document.setOwner(user);
+            return document;
+            
+        }).forEachOrdered((document) -> {
+            
             documentRepository.save(document);
-        }
+        });
     }
 }

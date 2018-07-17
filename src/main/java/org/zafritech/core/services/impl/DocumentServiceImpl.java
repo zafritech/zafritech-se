@@ -218,21 +218,9 @@ public class DocumentServiceImpl implements DocumentService {
 
             switch(folder.getFolderName()) {
 
-                case "Concept":
-
-                    wbs = wbsPackageRepository.findFirstByProjectAndWbsNumber(project, "0101");
-                    identRoot = project.getNumericNumber() + wbs.getWbsCode().toUpperCase();
-                    docType = entityTypeRepository.findByEntityTypeKeyAndEntityTypeCode("DOCUMENT_TYPE_ENTITY","OCD");
-                    ident = identRoot + '-' + docType.getEntityTypeCode().toUpperCase() + "-" + wbs.getWbsNumber() + String.format("%04d", 1);
-                    documentName = project.getProjectNumber() + " " + docType.getEntityTypeCode();
-                    documentLongName = project.getProjectNumber() + " " + docType.getEntityTypeName();
-                    documentRepository.save(new Document(ident, documentName, documentLongName, docType, descriptor, project, wbs, folder, infoClass, documentIssue));
-
-                break;
-
                 case "Planning":
 
-                    wbs = wbsPackageRepository.findFirstByProjectAndWbsNumber(project, "0102");
+                    wbs = wbsPackageRepository.findFirstByProjectAndWbsNumber(project, "0101");
                     identRoot = project.getNumericNumber() + wbs.getWbsCode().toUpperCase();
                     docType = entityTypeRepository.findByEntityTypeKeyAndEntityTypeCode("DOCUMENT_TYPE_ENTITY","SEMP");
                     ident = identRoot + '-' + docType.getEntityTypeCode().toUpperCase() + "-" + wbs.getWbsNumber() + String.format("%04d", 1);
@@ -244,7 +232,7 @@ public class DocumentServiceImpl implements DocumentService {
 
                 case "Specification":
 
-                    wbs = wbsPackageRepository.findFirstByProjectAndWbsNumber(project, "0103");
+                    wbs = wbsPackageRepository.findFirstByProjectAndWbsNumber(project, "0102");
                     identRoot = project.getNumericNumber() + wbs.getWbsCode().toUpperCase();
                     docType = entityTypeRepository.findByEntityTypeKeyAndEntityTypeCode("DOCUMENT_TYPE_ENTITY","SYS");
                     ident = identRoot + '-' + docType.getEntityTypeCode().toUpperCase() + "-" + wbs.getWbsNumber() + String.format("%04d", 1);
@@ -256,7 +244,7 @@ public class DocumentServiceImpl implements DocumentService {
 
                 case "Design":
 
-                    wbs = wbsPackageRepository.findFirstByProjectAndWbsNumber(project, "0104");
+                    wbs = wbsPackageRepository.findFirstByProjectAndWbsNumber(project, "0103");
                     identRoot = project.getNumericNumber() + wbs.getWbsCode().toUpperCase();
                     docType = entityTypeRepository.findByEntityTypeKeyAndEntityTypeCode("DOCUMENT_TYPE_ENTITY","SSDD");
                     ident = identRoot + '-' + docType.getEntityTypeCode().toUpperCase() + "-" + wbs.getWbsNumber() + String.format("%04d", 1);
@@ -266,21 +254,9 @@ public class DocumentServiceImpl implements DocumentService {
 
                 break;
 
-                case "Integration":
-
-                    wbs = wbsPackageRepository.findFirstByProjectAndWbsNumber(project, "0105");
-                    identRoot = project.getNumericNumber() + wbs.getWbsCode().toUpperCase();
-                    docType = entityTypeRepository.findByEntityTypeKeyAndEntityTypeCode("DOCUMENT_TYPE_ENTITY","ICD");
-                    ident = identRoot + '-' + docType.getEntityTypeCode().toUpperCase() + "-" + wbs.getWbsNumber() + String.format("%04d", 1);
-                    documentName = project.getProjectNumber() + " " + docType.getEntityTypeCode();
-                    documentLongName = project.getProjectNumber() + " " + docType.getEntityTypeName();
-                    documentRepository.save(new Document(ident, documentName, documentLongName, docType, descriptor, project, wbs, folder, infoClass, documentIssue));
-
-                break;
-
                 case "Validation":
 
-                    wbs = wbsPackageRepository.findFirstByProjectAndWbsNumber(project, "0106");
+                    wbs = wbsPackageRepository.findFirstByProjectAndWbsNumber(project, "0104");
                     identRoot = project.getNumericNumber() + wbs.getWbsCode().toUpperCase();
                     docType = entityTypeRepository.findByEntityTypeKeyAndEntityTypeCode("DOCUMENT_TYPE_ENTITY","VRS");
                     ident = identRoot + '-' + docType.getEntityTypeCode().toUpperCase() + "-" + wbs.getWbsNumber() + String.format("%04d", 1);
@@ -354,7 +330,7 @@ public class DocumentServiceImpl implements DocumentService {
     }
 
     @SuppressWarnings({ "rawtypes", "unchecked" })
-	@Override
+    @Override
     public List<Definition> addDefinition(DocumentDefinitionDao dao) {
         
         Definition def;

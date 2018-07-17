@@ -145,7 +145,7 @@ public class ItemServiceImpl implements ItemService {
         Pattern pattern = Pattern.compile(regex);
 
         List<Item> items = itemRepository.findByDocumentIdOrderBySortIndexAsc(id);
-        List<String> list = new ArrayList<String>();
+        List<String> list = new ArrayList<>();
 
         for (Item item : items) {
 
@@ -182,7 +182,7 @@ public class ItemServiceImpl implements ItemService {
         Pattern pattern = Pattern.compile(regex);
 
         List<Item> items = itemRepository.findByDocumentIdOrderBySortIndexAsc(id);
-        List<String> list = new ArrayList<String>();
+        List<String> list = new ArrayList<>();
 
         for (Item item : items) {
 
@@ -547,7 +547,7 @@ public class ItemServiceImpl implements ItemService {
     @Override
     public Integer importFromExcelFile(String filePath, Long documentId) {
         
-        Map<Integer, Item> parentsMap = new HashMap<Integer, Item>();
+        Map<Integer, Item> parentsMap = new HashMap<>();
         
         parentsMap.put(1, null);
         Integer headerSortIndex = 0;

@@ -59,11 +59,11 @@ $(document).ready(function () {
         
         var application = data;
 
-        if (application.docCentric === true) {
+        if (application.docCentric === true && $('#projectDocumentsListValid').length > 0 && $('#projectDocumentsListValid').val() > 0) {
           
             /* Hide Menu Items */
-            $('#projects-dropdon-menu-side-parent').hide();
-            $('#apps-dropdon-menu-side-parent').hide();
+            // $('#projects-dropdon-menu-side-parent').hide();
+            // $('#apps-dropdon-menu-side-parent').hide();
             
             $('#applicationSideNavTitle1').text("Documents");
             $('#applicationSideNav1').show();

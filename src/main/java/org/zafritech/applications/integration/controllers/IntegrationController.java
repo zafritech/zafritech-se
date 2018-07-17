@@ -82,7 +82,7 @@ public class IntegrationController {
         List<IntegrationEntity> entities = entityRepository.findByHasElements(true);
         IntegrationEntity entity = entities.get(0);
         
-        List<TreeElementDao> tree = elementService.getElementsTree(entity);
+        List<TreeElementDao> tree = elementService.getElementsTreeByEntity(entity);
         
         model.addAttribute("tree", tree);
         model.addAttribute("entity", entity);
@@ -99,7 +99,7 @@ public class IntegrationController {
         List<IntegrationEntity> entities = entityRepository.findByHasElements(true);
         IntegrationEntity entity = entityRepository.findByUuId(uuid);
                  
-        List<TreeElementDao> tree = elementService.getElementsTree(entity);
+        List<TreeElementDao> tree = elementService.getElementsTreeByEntity(entity);
    
         model.addAttribute("tree", tree);
         model.addAttribute("entity", entity);

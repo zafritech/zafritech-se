@@ -58,7 +58,7 @@ public class RequirementController {
         userSessionService.updateActiveApplication(applicationRepository.findFirstByApplicationName("requirements"));
         
         Project project = userSessionService.getLastOpenProject();
-        List<DocumentView> documents = documentRepository.findDocumentViewByOwnerOrderByModifiedDateDesc(userService.loggedInUser());
+        List<DocumentView> documents = documentRepository.findDocumentViewByProject(project);
 
         model.addAttribute("project", project);
         model.addAttribute("documents", documents);

@@ -1,0 +1,824 @@
+[
+  {
+	"entities": [
+      {
+		"identifier": "1",
+        "code": "CJV",
+        "displayCode": "FAST(CJV)",
+        "name": "FAST Construction Joint Venture",
+        "shortName": "FAST CJV",
+        "entityRole": "CONTRACTOR_ORGANISATION"
+      },
+      {
+		"identifier": "2",
+        "code": "TJV",
+        "displayCode": "FAST(TJV)",
+        "name": "FAST Track Joint Venture",
+        "shortName": "FAST TJV",
+        "entityRole": "CONTRACTOR_ORGANISATION"
+      },
+      {
+		"identifier": "3",
+        "code": "TSY",
+        "displayCode": "FAST(TSY)",
+        "name": "FAST Main Transit System",
+        "shortName": "FAST TSY",
+        "entityRole": "CONTRACTOR_ORGANISATION"
+      },
+      {
+		"identifier": "4",
+        "code": "PDG",
+        "displayCode": "FAST(PDG)",
+        "name": "FAST Programme Design Group",
+        "shortName": "FAST PDG",
+        "entityRole": "CONTRACTOR_ORGANISATION"
+      }
+    ],
+    "elements": [
+      {
+        "identifier": "1.1",
+        "name": "Mechanical System",
+        "entity": "CJV",
+        "parent": null,
+        "description": null
+      },
+      {
+        "identifier": "1.1.1",
+        "name": "HVAC (CWS)",
+        "entity": "CJV",
+        "parent": "1.1",
+        "description": null
+      },
+      {
+        "identifier": "1.1.2",
+        "name": "Chilling water system",
+        "entity": "CJV",
+        "parent": "1.1",
+        "description": null
+      },
+      {
+        "identifier": "1.1.3",
+        "name": "Lifts",
+        "entity": "CJV",
+        "parent": "1.1",
+        "description": null
+      },
+      {
+        "identifier": "1.1.4",
+        "name": "Escalators",
+        "entity": "CJV",
+        "parent": "1.1",
+        "description": null
+      },
+      {
+        "identifier": "1.2",
+        "name": "Plumbing & Drainage System",
+        "entity": "CJV",
+        "parent": null,
+        "description": null
+      },
+      {
+        "identifier": "1.2.1",
+        "name": "Plumbing system",
+        "entity": "CJV",
+        "parent": "1.2",
+        "description": null
+      },
+      {
+        "identifier": "1.2.2",
+        "name": "Drainage system",
+        "entity": "CJV",
+        "parent": "1.2",
+        "description": null
+      },
+      {
+        "identifier": "1.3",
+        "name": "Electrical System",
+        "entity": "CJV",
+        "parent": null,
+        "description": null
+      },
+      {
+        "identifier": "1.3.1",
+        "name": "LV Power",
+        "entity": "CJV",
+        "parent": "1.3",
+        "description": null
+      },
+      {
+        "identifier": "1.3.2",
+        "name": "UPS",
+        "entity": "CJV",
+        "parent": "1.3",
+        "description": null
+      },
+      {
+        "identifier": "1.3.3",
+        "name": "Earthing, Bonding and Lightning Protection",
+        "entity": "CJV",
+        "parent": "1.3",
+        "description": null
+      },
+      {
+        "identifier": "1.3.4",
+        "name": "Lighting",
+        "entity": "CJV",
+        "parent": "1.3",
+        "description": null
+      },
+      {
+        "identifier": "1.3.5",
+        "name": "Weather Stations",
+        "entity": "CJV",
+        "parent": "1.3",
+        "description": null
+      },
+      {
+        "identifier": "1.3.6",
+        "name": "Photo-voltaic",
+        "entity": "CJV",
+        "parent": "1.3",
+        "description": null
+      },
+      {
+        "identifier": "1.3.7",
+        "name": "Generator",
+        "entity": "CJV",
+        "parent": "1.3",
+        "description": null
+      },
+      {
+        "identifier": "1.4",
+        "name": "Security System",
+        "entity": "CJV",
+        "parent": null,
+        "description": null
+      },
+      {
+        "identifier": "1.4.1",
+        "name": "Access Control Instrusion Detection System",
+        "entity": "CJV",
+        "parent": "1.4",
+        "description": null
+      },
+      {
+        "identifier": "1.4.2",
+        "name": "CCTV (CWS)",
+        "entity": "CJV",
+        "parent": "1.4",
+        "description": null
+      },
+      {
+        "identifier": "1.5",
+        "name": "Fire Life Safety",
+        "entity": "CJV",
+        "parent": null,
+        "description": null
+      },
+      {
+        "identifier": "1.5.1",
+        "name": "Fire Detection",
+        "entity": "CJV",
+        "parent": "1.5",
+        "description": null
+      },
+      {
+        "identifier": "1.5.2",
+        "name": "Fire Suppression",
+        "entity": "CJV",
+        "parent": "1.5",
+        "description": null
+      },
+      {
+        "identifier": "1.6",
+        "name": "CW Communication System",
+        "entity": "CJV",
+        "parent": null,
+        "description": null
+      },
+      {
+        "identifier": "1.6.1",
+        "name": "Voice Evacuation System (VES) (CWS)",
+        "entity": "CJV",
+        "parent": "1.6",
+        "description": null
+      },
+      {
+        "identifier": "1.6.2",
+        "name": "PA / Passenger Information System (CWS)",
+        "entity": "CJV",
+        "parent": "1.6",
+        "description": null
+      },
+      {
+        "identifier": "1.6.3",
+        "name": "BMS (CWS)",
+        "entity": "CJV",
+        "parent": "1.6",
+        "description": null
+      },
+      {
+        "identifier": "1.6.4",
+        "name": "Telephone, PBX & Intercom / Help Points",
+        "entity": "CJV",
+        "parent": "1.6",
+        "description": null
+      },
+      {
+        "identifier": "1.6.5",
+        "name": "Local Area Network (LAN)",
+        "entity": "CJV",
+        "parent": "1.6",
+        "description": null
+      },
+      {
+        "identifier": "1.7",
+        "name": "Tunnel Ventilation",
+        "entity": "CJV",
+        "parent": null,
+        "description": null
+      },
+      {
+        "identifier": "1.8",
+        "name": "Viaduct and Bridges",
+        "entity": "CJV",
+        "parent": null,
+        "description": null
+      },
+      {
+        "identifier": "1.9",
+        "name": "At Grade Structures",
+        "entity": "CJV",
+        "parent": null,
+        "description": null
+      },
+      {
+        "identifier": "1.10",
+        "name": "Tunnel",
+        "entity": "CJV",
+        "parent": null,
+        "description": null
+      },
+      {
+        "identifier": "1.10.1",
+        "name": "TBM Tunnel",
+        "entity": "CJV",
+        "parent": "1.10",
+        "description": null
+      },
+      {
+        "identifier": "1.10.2",
+        "name": "C & C Tunnel",
+        "entity": "CJV",
+        "parent": "1.10",
+        "description": null
+      },
+      {
+        "identifier": "1.11",
+        "name": "Structures",
+        "entity": "CJV",
+        "parent": null,
+        "description": null
+      },
+      {
+        "identifier": "1.11.1",
+        "name": "Shallow UG Station",
+        "entity": "CJV",
+        "parent": "1.11",
+        "description": null
+      },
+      {
+        "identifier": "1.11.2",
+        "name": "Deep UG Station",
+        "entity": "CJV",
+        "parent": "1.11",
+        "description": null
+      },
+      {
+        "identifier": "1.11.3",
+        "name": "Elevated Station",
+        "entity": "CJV",
+        "parent": "1.11",
+        "description": null
+      },
+      {
+        "identifier": "1.11.4",
+        "name": "At Grade Station",
+        "entity": "CJV",
+        "parent": "1.11",
+        "description": null
+      },
+      {
+        "identifier": "1.11.5",
+        "name": "Depot Building",
+        "entity": "CJV",
+        "parent": "1.11",
+        "description": null
+      },
+      {
+        "identifier": "1.11.6",
+        "name": "OCC Building",
+        "entity": "CJV",
+        "parent": "1.11",
+        "description": null
+      },
+      {
+        "identifier": "1.11.7",
+        "name": "Park and Ride",
+        "entity": "CJV",
+        "parent": "1.11",
+        "description": null
+      },
+      {
+        "identifier": "1.11.8",
+        "name": "Ancillary Buildings",
+        "entity": "CJV",
+        "parent": "1.11",
+        "description": null
+      },
+      {
+        "identifier": "1.11.9",
+        "name": "Footbridge",
+        "entity": "CJV",
+        "parent": "1.11",
+        "description": null
+      },
+      {
+        "identifier": "1.12",
+        "name": "Roadway",
+        "entity": "CJV",
+        "parent": null,
+        "description": null
+      },
+      {
+        "identifier": "1.13",
+        "name": "Streetscaping and  Landscaping",
+        "entity": "CJV",
+        "parent": null,
+        "description": null
+      },
+      {
+        "identifier": "1.15",
+        "name": "Utilities",
+        "entity": "CJV",
+        "parent": null,
+        "description": null
+      },
+      {
+        "identifier": "2.1",
+        "name": "Track Slab",
+        "entity": "TJV",
+        "parent": null,
+        "description": null
+      },
+      {
+        "identifier": "2.2",
+        "name": "Track Construction",
+        "entity": "TJV",
+        "parent": null,
+        "description": null
+      },
+      {
+        "identifier": "2.3",
+        "name": "Switches and Crossings",
+        "entity": "TJV",
+        "parent": null,
+        "description": null
+      },
+      {
+        "identifier": "2.4",
+        "name": "Track Welds and Joints",
+        "entity": "TJV",
+        "parent": null,
+        "description": null
+      },
+      {
+        "identifier": "2.5",
+        "name": "Wheel and Buffer Stops",
+        "entity": "TJV",
+        "parent": null,
+        "description": null
+      },
+      {
+        "identifier": "2.6",
+        "name": "Electrical Rail Connections",
+        "entity": "TJV",
+        "parent": null,
+        "description": null
+      },
+      {
+        "identifier": "2.7",
+        "name": "Derailment Containment & Protection",
+        "entity": "TJV",
+        "parent": null,
+        "description": null
+      },
+      {
+        "identifier": "2.8",
+        "name": "Level Crossings",
+        "entity": "TJV",
+        "parent": null,
+        "description": null
+      },
+      {
+        "identifier": "2.9",
+        "name": "Conductor Rail Construction",
+        "entity": "TJV",
+        "parent": null,
+        "description": null
+      },
+      {
+        "identifier": "2.10",
+        "name": "TW - Cable Duct",
+        "entity": "TJV",
+        "parent": null,
+        "description": null
+      },
+      {
+        "identifier": "2.11",
+        "name": "TW - Signs and Markers",
+        "entity": "TJV",
+        "parent": null,
+        "description": null
+      },
+      {
+        "identifier": "3.1",
+        "name": "Rolling Stock (RST)",
+        "entity": "TSY",
+        "parent": null,
+        "description": null
+      },
+      {
+        "identifier": "3.1.1",
+        "name": "Rolling Stock",
+        "entity": "TSY",
+        "parent": "3.1",
+        "description": null
+      },
+      {
+        "identifier": "3.2",
+        "name": "Signalling",
+        "entity": "TSY",
+        "parent": null,
+        "description": null
+      },
+      {
+        "identifier": "3.2.1",
+        "name": "Interlocking (IXL)",
+        "entity": "TSY",
+        "parent": "3.2",
+        "description": null
+      },
+      {
+        "identifier": "3.2.2",
+        "name": "Automatic Train Supervision",
+        "entity": "TSY",
+        "parent": "3.2",
+        "description": null
+      },
+      {
+        "identifier": "3.2.3",
+        "name": "Automatic Train Control (ATC)",
+        "entity": "TSY",
+        "parent": "3.2",
+        "description": null
+      },
+      {
+        "identifier": "3.2.4",
+        "name": "Train Detection",
+        "entity": "TSY",
+        "parent": "3.2",
+        "description": null
+      },
+      {
+        "identifier": "3.2.5",
+        "name": "Trackside equipment",
+        "entity": "TSY",
+        "parent": "3.2",
+        "description": null
+      },
+      {
+        "identifier": "3.2.6",
+        "name": "Maintenance Support System (MSS)",
+        "entity": "TSY",
+        "parent": "3.2",
+        "description": null
+      },
+      {
+        "identifier": "3.2.7",
+        "name": "SER Power Supply cabinet",
+        "entity": "TSY",
+        "parent": "3.2",
+        "description": null
+      },
+      {
+        "identifier": "3.3",
+        "name": "SCADA",
+        "entity": "TSY",
+        "parent": null,
+        "description": null
+      },
+      {
+        "identifier": "3.3.1",
+        "name": "Supervision Control & Data acquisition (SCADA)",
+        "entity": "TSY",
+        "parent": "3.3",
+        "description": null
+      },
+      {
+        "identifier": "3.4",
+        "name": "Power Supply",
+        "entity": "TSY",
+        "parent": null,
+        "description": null
+      },
+      {
+        "identifier": "3.4.1",
+        "name": "Passage Post System",
+        "entity": "TSY",
+        "parent": "3.4",
+        "description": null
+      },
+      {
+        "identifier": "3.4.2",
+        "name": "Traction Substations",
+        "entity": "TSY",
+        "parent": "3.4",
+        "description": null
+      },
+      {
+        "identifier": "3.4.3",
+        "name": "Auxiliary Power Supply",
+        "entity": "TSY",
+        "parent": "3.4",
+        "description": null
+      },
+      {
+        "identifier": "3.4.4",
+        "name": "MV Loop",
+        "entity": "TSY",
+        "parent": "3.4",
+        "description": null
+      },
+      {
+        "identifier": "3.4.5",
+        "name": "Traction Emergency switch off System",
+        "entity": "TSY",
+        "parent": "3.4",
+        "description": null
+      },
+      {
+        "identifier": "3.4.6",
+        "name": "Monitoring & Control",
+        "entity": "TSY",
+        "parent": "3.4",
+        "description": null
+      },
+      {
+        "identifier": "3.4.7",
+        "name": "Traction Line Equipment",
+        "entity": "TSY",
+        "parent": "3.4",
+        "description": null
+      },
+      {
+        "identifier": "3.4.8",
+        "name": "Power Supply Panel (PP, TPS & LPS)",
+        "entity": "TSY",
+        "parent": "3.4",
+        "description": null
+      },
+      {
+        "identifier": "3.5",
+        "name": "LV Equipment",
+        "entity": "TSY",
+        "parent": null,
+        "description": null
+      },
+      {
+        "identifier": "3.5.1",
+        "name": "Radio Communication System",
+        "entity": "TSY",
+        "parent": "3.5",
+        "description": null
+      },
+      {
+        "identifier": "3.5.2",
+        "name": "Data Communication System (COM)",
+        "entity": "TSY",
+        "parent": "3.5",
+        "description": null
+      },
+      {
+        "identifier": "3.5.3",
+        "name": "Data Communication System (SIG)",
+        "entity": "TSY",
+        "parent": "3.5",
+        "description": null
+      },
+      {
+        "identifier": "3.5.4",
+        "name": "Clock System",
+        "entity": "TSY",
+        "parent": "3.5",
+        "description": null
+      },
+      {
+        "identifier": "3.5.5",
+        "name": "Public Address System",
+        "entity": "TSY",
+        "parent": "3.5",
+        "description": null
+      },
+      {
+        "identifier": "3.5.6",
+        "name": "Passenger Information System",
+        "entity": "TSY",
+        "parent": "3.5",
+        "description": null
+      },
+      {
+        "identifier": "3.5.7",
+        "name": "CCTV System",
+        "entity": "TSY",
+        "parent": "3.5",
+        "description": null
+      },
+      {
+        "identifier": "3.5.8",
+        "name": "PA/PIS/CCTV Integrated Controller (ISM)",
+        "entity": "TSY",
+        "parent": "3.5",
+        "description": null
+      },
+      {
+        "identifier": "3.6",
+        "name": "PSD, DEQ and ILS",
+        "entity": "TSY",
+        "parent": null,
+        "description": null
+      },
+      {
+        "identifier": "3.6.1",
+        "name": "Platform Screen Doors PSD",
+        "entity": "TSY",
+        "parent": "3.6",
+        "description": null
+      },
+      {
+        "identifier": "3.6.2",
+        "name": "PSD Power Supply cabinet",
+        "entity": "TSY",
+        "parent": "3.6",
+        "description": null
+      },
+      {
+        "identifier": "3.7",
+        "name": "Logistic Support Depot-Workshop & Maintenance",
+        "entity": "TSY",
+        "parent": null,
+        "description": null
+      },
+      {
+        "identifier": "3.7.1",
+        "name": "Machine, Equipment and Tools",
+        "entity": "TSY",
+        "parent": "3.7",
+        "description": null
+      },
+      {
+        "identifier": "3.8",
+        "name": "Operation & Maintenance Equipment",
+        "entity": "TSY",
+        "parent": null,
+        "description": null
+      },
+      {
+        "identifier": "3.8.1",
+        "name": "O&M Equipment",
+        "entity": "TSY",
+        "parent": "3.8",
+        "description": null
+      },
+      {
+        "identifier": "3.8.2",
+        "name": "Maintenance Management Database",
+        "entity": "TSY",
+        "parent": "3.8",
+        "description": null
+      },
+      {
+        "identifier": "4.1",
+        "name": "AFC (Gateline, TVMs & Infrastructure)",
+        "entity": "PDG",
+        "parent": null,
+        "description": null
+      },
+      {
+        "identifier": "4.2",
+        "name": "3rd Party GSM Operator",
+        "entity": "PDG",
+        "parent": null,
+        "description": null
+      },
+      {
+        "identifier": "4.3",
+        "name": "Saudi Electrical Company - SEC",
+        "entity": "PDG",
+        "parent": null,
+        "description": null
+      },
+      {
+        "identifier": "4.4",
+        "name": "Package 1 - BACS",
+        "entity": "PDG",
+        "parent": null,
+        "description": null
+      },
+      {
+        "identifier": "4.4.1",
+        "name": "STN 4A1",
+        "entity": "PDG",
+        "parent": "4.4",
+        "description": null
+      },
+      {
+        "identifier": "4.4.2",
+        "name": "STN 5A1",
+        "entity": "PDG",
+        "parent": "4.4",
+        "description": null
+      },
+      {
+        "identifier": "4.4.3",
+        "name": "STN 5C4 connection (if applicable)",
+        "entity": "PDG",
+        "parent": "4.4",
+        "description": null
+      },
+      {
+        "identifier": "4.4.4",
+        "name": "STN 6F1 connection (if applicable)",
+        "entity": "PDG",
+        "parent": "4.4",
+        "description": null
+      },
+      {
+        "identifier": "4.5",
+        "name": "Package 2 - ANM (STN 6H2)",
+        "entity": "PDG",
+        "parent": null,
+        "description": null
+      },
+      {
+        "identifier": "4.5.1",
+        "name": "STN 6H2",
+        "entity": "PDG",
+        "parent": "4.5",
+        "description": null
+      },
+      {
+        "identifier": "4.6",
+        "name": "Fire Brigade & Police",
+        "entity": "PDG",
+        "parent": null,
+        "description": null
+      },
+      {
+        "identifier": "4.7",
+        "name": "Transportation Control Center (TCC)",
+        "entity": "PDG",
+        "parent": null,
+        "description": null
+      },
+      {
+        "identifier": "4.8",
+        "name": "Airport Authority (GACA)",
+        "entity": "PDG",
+        "parent": null,
+        "description": null
+      },
+      {
+        "identifier": "4.9",
+        "name": "Local Telephone Company (PSTN)",
+        "entity": "PDG",
+        "parent": null,
+        "description": null
+      },
+      {
+        "identifier": "4.10",
+        "name": "Electromagnetic Environment",
+        "entity": "PDG",
+        "parent": null,
+        "description": null
+      },
+      {
+        "identifier": "4.11",
+        "name": "Whole Railway Electrical System",
+        "entity": "PDG",
+        "parent": null,
+        "description": null
+      }
+    ]
+  }
+]

@@ -48,10 +48,13 @@ function zTreeProjectLoad() {
         dataType: "json",
         success: function (data) {
 
-            zTreeObj = $.fn.zTree.init($("#applicationSideNavTree1"), setting, data);
+            if ($('#projectDocumentsListValid').length > 0 && $('#projectDocumentsListValid').val() > 0) {
+            
+                zTreeObj = $.fn.zTree.init($("#applicationSideNavTree1"), setting, data);
 
-            $('#applicationSideNavTitle1').text("Documents");
-            $('#collapse-applicationSideNav1').addClass("in");
+                $('#applicationSideNavTitle1').text("Documents");
+                $('#collapse-applicationSideNav1').addClass("in");
+            }
         }
     });
 }

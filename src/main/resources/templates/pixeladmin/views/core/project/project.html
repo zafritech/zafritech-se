@@ -5,7 +5,7 @@
       layout:decorator="pixeladmin/layouts/main-default">
 
     <head>
-        <title>Zafritech SE - Project</title>
+        <title th:text="'Zafritech SE - ' + ${project.projectName}">Zafritech SE - Project</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta charset="UTF-8" />
     </head>
@@ -14,6 +14,8 @@
 
         <!-- Content -->
         <div layout:fragment="content" class="px-content">
+            
+            <input type="hidden" id="projectDocumentsListValid" value="0" />
             
             <div style="height:calc(100vh - 145px); overflow-x: hidden;; overflow-y: auto; padding-right: 15px;"> <!-- Scrolling area -->
                 

@@ -5,6 +5,7 @@
  */
 package org.zafritech.core.data.projections;
 
+import java.util.Date;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.data.rest.core.config.Projection;
 import org.zafritech.core.data.domain.Document;
@@ -24,7 +25,10 @@ public interface DocumentView {
     @Value("#{target.documentName}")
     String getDocumentName();
 
-    @Value("#{target.documentName}")
+    @Value("#{target.documentLongName}")
+    String getDocumentLongName();
+
+    @Value("#{target.project.projectName}")
     String getProjectName();
 
     @Value("#{target.project.projectShortName}")
@@ -34,5 +38,5 @@ public interface DocumentView {
     String getVersion();
 
     @Value("#{target.modifiedDate}")
-    String getModDate();
+    Date getModDate();
 }

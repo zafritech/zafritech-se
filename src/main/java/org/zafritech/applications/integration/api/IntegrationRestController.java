@@ -170,7 +170,7 @@ public class IntegrationRestController {
 
         IntegrationEntity entity = entityRepository.findOne(entityId);
         List<IntegrationEntity> entities = entityRepository.findByHasElements(true);
-        List<TreeElementDao> tree = elementService.getElementsTree(entity);
+        List<TreeElementDao> tree = elementService.getElementsTreeByEntity(entity);
 
         String title = "System Interfaces";
         if (entity != null) {
@@ -204,7 +204,7 @@ public class IntegrationRestController {
         }
         
         List<IntegrationEntity> entities = entityRepository.findByHasElements(true);
-        List<TreeElementDao> tree = elementService.getElementsBubTreeByParent(element);
+        List<TreeElementDao> tree = elementService.getElementsTreeByParent(element);
         List<Interface> ifaces = interfaceRepository.findByPrimaryElementOrSecondaryElement(element, element);
         
         if (ifaces.size() > 0) {
